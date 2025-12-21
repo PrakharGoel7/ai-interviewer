@@ -36,7 +36,7 @@ Rules:
   }
 - Ensure all numeric values used for interpretation are present in chart_spec.data.
 - The chart primary_question must explicitly ask for 2–3 observations AND implications/next steps.
-- The math question must be solvable from stated data, and should be 1–2 steps of mental math.
+- The math question should contain all the data needed to solve the question, and should be 4-5 steps of mental math.
 
 EXAMPLES (for style + structure only; do not copy verbatim text, names, industries, or numbers)
 

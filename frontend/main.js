@@ -2,7 +2,8 @@ const transcriptEl = document.getElementById("transcript");
 const startBtn = document.getElementById("start-btn");
 const form = document.getElementById("response-form");
 const textarea = document.getElementById("response-text");
-const voiceBtn = document.getElementById("voice-btn");
+const enableVoiceBtn = document.getElementById("enable-voice-btn");
+const recordBtn = document.getElementById("record-btn");
 const voiceStatus = document.getElementById("voice-status");
 const tableContainer = document.getElementById("tableContainer");
 let chartInstance = null;
@@ -114,11 +115,35 @@ function handleTurns(turns) {
   }
 }
 
+function speak(text) {
+  if (!text) {
+    return;
+  }
+  if (window.audioManager) {
+    window.audioManager.play(text).catch((err) => {
+      console.error("TTS playback failed:", err);
+      fallbackSpeak(text);
+    });
+    return;
+  }
+  fallbackSpeak(text);
+}
+
+function fallbackSpeak(text) {
+  if (!window.speechSynthesis) {
+    return;
+  }
+  const utterance = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+}
+
 function initSpeech() {
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
-    voiceBtn.disabled = true;
+    enableVoiceBtn.disabled = true;
+    recordBtn.disabled = true;
     voiceStatus.textContent = "Voice not supported";
     return;
   }
@@ -130,27 +155,21 @@ function initSpeech() {
   recognition.addEventListener("start", () => {
     isRecording = true;
     voiceStatus.textContent = "Listening...";
+    recordBtn.classList.add("recording");
+    recordBtn.textContent = "Stop Recording";
   });
 
   recognition.addEventListener("end", () => {
     isRecording = false;
-    if (!voiceEnabled) {
-      voiceStatus.textContent = "Voice disabled";
-      return;
-    }
-    if (pendingListenTimeout) {
-      clearTimeout(pendingListenTimeout);
-    }
-    pendingListenTimeout = setTimeout(() => {
-      pendingListenTimeout = null;
-      voiceStatus.textContent = "Listening...";
-      startListening();
-    }, 800);
+    recordBtn.classList.remove("recording");
+    recordBtn.textContent = "Start Recording";
+    voiceStatus.textContent = voiceEnabled ? "Ready to record" : "Voice disabled";
   });
 
   recognition.addEventListener("result", (event) => {
     const transcript = event.results[0][0].transcript.trim();
     if (transcript) {
+      stopListening();
       sendResponse(transcript);
     }
   });
@@ -158,54 +177,27 @@ function initSpeech() {
   recognition.addEventListener("error", (event) => {
     console.error("Speech recognition error:", event.error);
     voiceStatus.textContent = "Error. Try again.";
+    recordBtn.classList.remove("recording");
+    recordBtn.textContent = "Start Recording";
   });
 
-  voiceBtn.addEventListener("click", () => {
+  enableVoiceBtn.addEventListener("click", () => {
     if (!recognition) return;
     voiceEnabled = true;
-    voiceBtn.disabled = true;
-    voiceBtn.textContent = "Voice Enabled";
-    voiceStatus.textContent = "Waiting for prompt...";
-    recognition.start();
+    enableVoiceBtn.disabled = true;
+    enableVoiceBtn.textContent = "Voice Enabled";
+    recordBtn.disabled = false;
+    voiceStatus.textContent = "Ready to record";
   });
-}
 
-function speak(text) {
-  if (window.audioManager) {
-    window.audioManager
-      .play(text)
-      .catch((err) => {
-        console.error("TTS playback failed:", err);
-        fallbackSpeak(text);
-      })
-      .finally(() => scheduleAutoListen());
-    return;
-  }
-  fallbackSpeak(text);
-}
-
-function fallbackSpeak(text) {
-  if (!window.speechSynthesis) {
-    scheduleAutoListen();
-    return;
-  }
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.onend = () => scheduleAutoListen();
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
-}
-
-function scheduleAutoListen() {
-  if (!voiceEnabled || !recognition) {
-    return;
-  }
-  if (pendingListenTimeout) {
-    clearTimeout(pendingListenTimeout);
-  }
-  pendingListenTimeout = setTimeout(() => {
-    pendingListenTimeout = null;
-    startListening();
-  }, 500);
+  recordBtn.addEventListener("click", () => {
+    if (!voiceEnabled || !recognition) return;
+    if (isRecording) {
+      stopListening();
+    } else {
+      startListening();
+    }
+  });
 }
 
 function startListening() {
@@ -217,6 +209,13 @@ function startListening() {
   } catch (err) {
     // ignore consecutive start errors
   }
+}
+
+function stopListening() {
+  if (!recognition || !isRecording) {
+    return;
+  }
+  recognition.stop();
 }
 
 async function startCase() {

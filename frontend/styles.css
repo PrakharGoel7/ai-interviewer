@@ -77,11 +77,17 @@ button:hover {
   margin-bottom: 12px;
 }
 
+
 .voice-controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
+}
+
+#record-btn.recording {
+  background: #dc2626;
 }
 
 #voice-status {

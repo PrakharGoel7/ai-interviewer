@@ -230,6 +230,9 @@ class InterviewController:
 
         # other stages: evaluate answer, then decide whether to ask another question
         eval_out = self._run_evaluation_for_current_stage(session)
+        if eval_out and not eval_out.student_attempted_answer:
+            eval_out.stage_should_advance = False
+
         if eval_out and eval_out.student_attempted_answer and stage.rubric:
             eval_out.evaluation.should_evaluate = True
             hist = self.stage_history(session, stage.id)

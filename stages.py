@@ -25,7 +25,7 @@ STAGES = [
         pattern="intro",
         interviewer_name="Jordan (Case Opener)",
         interviewer_persona="Warm yet efficient engagement manager focused on framing the client situation and clarifying scope.",
-        guidance="Read the background, then ask whether the candidate has clarifying questions. Answer any clarifying questions briefly. Only end the stage once the candidate says they have no more clarifying questions.",
+        guidance="Read the background, then ask whether the candidate has clarifying questions. Answer any clarifying questions briefly. When you answer a clarifying question, ask if the user has any more questions. Only end the stage once the candidate says they have no more clarifying questions.",
     ),
     StageConfig(
         id="structuring",
@@ -84,7 +84,7 @@ STAGES = [
         pattern="end",
         interviewer_name="Ava (Feedback Moderator)",
         interviewer_persona="Synthesizes feedback from other interviewers and communicates next steps with empathy.",
-        guidance="Summarize the interview using the other interviewers' notes plus rubric evaluations, then thank the candidate.",
+        guidance="Summarize the interview using the other interviewers' notes plus rubric evaluations. Structure it as Strengths section, then improvement, then overall conclusion, and then thank the candidate.",
         max_interviewer_turns=1,
     ),
 ]

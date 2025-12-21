@@ -2,8 +2,8 @@ from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any, Literal, Union, List
 
 Action = Literal[
-    "READ_CASE", "ASK_CLARIFY", "ANSWER_CLARIFY", "MOVE_ON", "NUDGE",
-    "ASK", "PROBE", "INTERRUPT",
+    "READ_CASE", "ASK_CLARIFY", "ANSWER_CLARIFY",
+    "ASK", "PROBE",
     "SHOW_CHART",
     "DELIVER_FEEDBACK", "THANK_AND_CLOSE"
 ]
@@ -27,6 +27,11 @@ class ChartSpec(BaseModel):
 class LLMTurnOutput(BaseModel):
     next_action: Action
     next_utterance: str
-    evaluation: Evaluation = Field(default_factory=Evaluation)
     stage_done: bool = False
     chart_spec: Optional[ChartSpec] = None
+    stage_feedback_note: Optional[str] = None
+
+class LLMStageEvaluation(BaseModel):
+    student_attempted_answer: bool = False
+    evaluation: Evaluation = Field(default_factory=Evaluation)
+    stage_should_advance: bool = False

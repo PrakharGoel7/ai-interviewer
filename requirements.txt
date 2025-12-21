@@ -1,0 +1,6 @@
+openai>=1.6.0
+matplotlib>=3.8.0
+sounddevice>=0.4.6
+numpy>=1.26.0
+simpleaudio>=1.0.4
+flask>=3.0.0

@@ -2,26 +2,54 @@ TURN_SYSTEM = """You are a McKinsey-style case interviewer.
 Rules:
 - No hints or coaching.
 - Ask one thing at a time.
-- Use only allowed_actions.
+- Only use valid interview actions: READ_CASE, ASK_CLARIFY, ANSWER_CLARIFY, ASK, PROBE, SHOW_CHART, DELIVER_FEEDBACK, THANK_AND_CLOSE.
 - If forced_action is provided, you MUST use that action.
 - Output ONLY valid JSON.
+- Every interviewer response must end with a clear question or prompt for the student to answer; do not simply say you're moving on without asking the actual next question.
+- Adopt the persona described in the payload's interviewer block. You are the unique interviewer for this stage; never refer to handling previous or future stages.
+- Follow the provided stage_guidance instructions exactly for question order and completion. Inspect stage_history to understand which steps have already been taken and what comes next.
+- When you finish the stage (set stage_done=true), supply `stage_feedback_note` with a concise perspective for the final moderator.
 """
 
-def build_turn_payload(*, stage_id, stage_title, allowed_actions, rubric, substep, stage_history, case_context, forced_action=None):
+def build_turn_payload(*, stage_id, stage_title, allowed_actions, substep, stage_history, case_context, interviewer, stage_guidance, forced_action=None):
     return {
         "stage": {"id": stage_id, "title": stage_title},
         "substep": substep,
         "allowed_actions": allowed_actions,
-        "rubric": rubric,
         "forced_action": forced_action,
         "stage_history": stage_history,
         "case_context": case_context,
+        "interviewer": interviewer,
+        "stage_guidance": stage_guidance,
         "schema": {
             "next_action": "string",
             "next_utterance": "string",
-            "evaluation": {"should_evaluate": "bool", "rubric_scores": "object", "notes_internal": "string"},
             "stage_done": "bool",
-            "chart_spec": "optional"
+            "chart_spec": "optional",
+            "stage_feedback_note": "optional"
+        }
+    }
+
+EVAL_SYSTEM = """You are evaluating a student's response to a McKinsey-style case interview question.
+Rules:
+- Review the stage history (interviewer questions + latest student response) and the stage guidance to understand where we are in the flow.
+- Decide whether the student attempted to answer the question. Set `student_attempted_answer` to true only if they tried to answer (even partially); otherwise false.
+- If stage guidance indicates the student has satisfied the requirement (e.g., no more clarifying questions, finished probing), set `stage_should_advance` to true; otherwise false.
+- Only when `student_attempted_answer` is true should you score using the rubric and add concise internal notes.
+- Output ONLY valid JSON.
+"""
+
+def build_eval_payload(*, stage_id, stage_title, rubric, stage_history, case_context, stage_guidance):
+    return {
+        "stage": {"id": stage_id, "title": stage_title},
+        "rubric": rubric,
+        "stage_history": stage_history,
+        "case_context": case_context,
+        "stage_guidance": stage_guidance,
+        "schema": {
+            "student_attempted_answer": "bool",
+            "stage_should_advance": "bool",
+            "evaluation": {"should_evaluate": "bool", "rubric_scores": "object", "notes_internal": "string"}
         }
     }
 
@@ -31,11 +59,13 @@ Rules:
 - Reference rubric categories.
 - Give 2-3 strengths and 2-3 improvements.
 - Suggest 2 drills.
+- Incorporate the named interviewers' notes so the student knows which stage drove each insight.
 Return plain text (not JSON).
 """
 
-def build_feedback_payload(background, evaluations):
+def build_feedback_payload(background, evaluations, stage_feedback_notes):
     return {
         "case_background": background,
-        "evaluations": evaluations
+        "evaluations": evaluations,
+        "stage_feedback_notes": stage_feedback_notes,
     }

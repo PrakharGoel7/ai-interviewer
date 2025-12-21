@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AI Case Interviewer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>AI Case Interviewer</h1>
+        <button id="start-btn">Start New Case</button>
+      </header>
+      <main>
+        <section class="transcript" id="transcript"></section>
+        <section class="chart-panel">
+          <h2>Chart</h2>
+          <canvas id="chartCanvas"></canvas>
+          <div id="tableContainer"></div>
+        </section>
+      </main>
+      <section class="input-panel">
+        <div class="voice-controls">
+          <button id="voice-btn">Enable Voice</button>
+          <span id="voice-status">Voice disabled</span>
+        </div>
+        <form id="response-form">
+          <textarea id="response-text" rows="3" placeholder="Fallback text input..."></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+    <script src="audio.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

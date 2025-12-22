@@ -1,5 +1,6 @@
 import os
 import base64
+import tempfile
 from typing import List, Dict, Any
 
 from flask import Flask, jsonify, request, send_from_directory
@@ -105,6 +106,30 @@ def api_tts():
     audio_bytes = resp.read()
     audio_b64 = base64.b64encode(audio_bytes).decode("utf-8")
     return jsonify({"audio_base64": audio_b64, "mime": "audio/mpeg"})
+
+
+@app.route("/api/transcribe", methods=["POST"])
+def api_transcribe():
+    audio = request.files.get("audio")
+    if not audio:
+        return jsonify({"error": "audio file required"}), 400
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".webm", delete=False) as tmp:
+            audio.save(tmp)
+            tmp_path = tmp.name
+        with open(tmp_path, "rb") as f:
+            resp = client.audio.transcriptions.create(
+                model=os.getenv("STT_MODEL", "gpt-4o-mini-transcribe"),
+                file=f,
+            )
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+    text = getattr(resp, "text", "").strip()
+    return jsonify({"text": text})
 
 
 if __name__ == "__main__":

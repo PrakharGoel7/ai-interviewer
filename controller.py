@@ -46,6 +46,19 @@ class InterviewController:
         self.llm = llm_client
         self.case_generator_fn = case_generator_fn
 
+    def _ensure_case(self, session: Session) -> None:
+        case_loaded = False
+        if getattr(session, "case_generated", False):
+            try:
+                self.case_store.load_case(session.case_id)
+                case_loaded = True
+            except KeyError:
+                case_loaded = False
+        if not case_loaded:
+            case_obj = self.case_generator_fn()
+            self.case_store.put_case(session.case_id, case_obj)
+            session.case_generated = True
+
     def current_stage(self, session: Session) -> StageConfig:
         return STAGES[session.stage_index]
 
@@ -83,10 +96,7 @@ class InterviewController:
         substep: 'START', 'PRIMARY_ASKED', 'PROBE_ASKED'
         """
         # Ensure a case exists
-        if not getattr(session, "case_generated", False):
-            case_obj = self.case_generator_fn()
-            self.case_store.put_case(session.case_id, case_obj)
-            session.case_generated = True
+        self._ensure_case(session)
 
         idx = next(i for i, s in enumerate(STAGES) if s.id == stage_id)
         session.stage_index = idx
@@ -163,10 +173,7 @@ class InterviewController:
 
     def start(self, session: Session) -> Dict[str, Any]:
         # 1) generate case once
-        if not getattr(session, "case_generated", False):
-            case_obj = self.case_generator_fn()
-            self.case_store.put_case(session.case_id, case_obj)
-            session.case_generated = True
+        self._ensure_case(session)
 
         # 2) deterministic first utterance: read case + ask clarifying
         stage = self.current_stage(session)  # should be case_intro
@@ -195,6 +202,7 @@ class InterviewController:
         return {"next_action": "READ_CASE", "next_utterance": utterance, "chart_spec": None, "stage_id": stage.id}
 
     def step(self, session: Session, student_text: str) -> Dict[str, Any]:
+        self._ensure_case(session)
         stage = self.current_stage(session)
 
         print(f"[PAYLOAD] stage={stage.id} substep={session.substep} utterances={session.utterances_this_stage} -> {student_text!r}")

@@ -2,84 +2,130 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>AI Case Interviewer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Minerva — AI Consulting Case Interviewer</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <main class="interview-room">
-      <section class="control-panel">
-        <div class="panel-header">
-          <div class="brand-stack">
-            <span class="brand">Atlas Insights</span>
-            <span class="session-pill live" id="session-status">Live session</span>
-          </div>
-          <div class="header-actions">
-            <button id="start-btn" class="primary-btn">Start session</button>
-            <button id="end-session-btn" class="secondary-btn ghost-btn">End session</button>
-          </div>
-        </div>
+    <header class="nav-shell">
+      <div class="nav-inner">
+        <div class="wordmark">Minerva</div>
+        <nav>
+          <a href="#how-it-works">How it works</a>
+          <button class="primary-btn">Start a live case</button>
+        </nav>
+      </div>
+    </header>
 
-        <div class="card prompt-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">Interviewer</p>
-              <h2>Current prompt</h2>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Consulting case interview practice</p>
+          <h1>Practice interviews the way they’re actually judged.</h1>
+          <p class="subhead">
+            Minerva is a voice-first AI case interviewer for consulting candidates — realistic prompts, exhibits, and calibrated evaluation.
+          </p>
+          <button class="primary-btn">Start a live case</button>
+        </div>
+        <div class="hero-visual">
+          <div class="mock-card prompt-card">
+            <div class="mock-header">
+              <span>Current prompt</span>
+              <span class="stage-pill">Stage: Structure</span>
             </div>
-            <button id="repeat-prompt-btn" class="text-btn" type="button">
-              <span aria-hidden="true">⟳</span>
-              Repeat prompt
-            </button>
+            <p>
+              “Walk me through how you’d decompose the profitability decline across this client’s regions. Where would you start?”
+            </p>
           </div>
-          <p id="current-prompt" class="prompt-text">Waiting to begin.</p>
-          <div id="loading-indicator" class="loading-indicator hidden">
-            <span class="spinner" aria-hidden="true"></span>
-            <span id="loading-text">Awaiting interviewer…</span>
+          <div class="mock-card voice-card">
+            <div class="mock-header">
+              <span>Voice response</span>
+              <span class="timer">07:12</span>
+            </div>
+            <div class="voice-status">
+              <div class="dot"></div>
+              Mic listening — answer when ready
+            </div>
+            <div class="waveform">
+              <span></span><span></span><span></span><span></span>
+            </div>
           </div>
-        </div>
-
-        <div class="card voice-card">
-          <div class="card-header">
-            <h3>Voice channel</h3>
+          <div class="mock-card exhibit-card">
+            <div class="mock-header">
+              <span>Exhibit workspace</span>
+            </div>
+            <div class="chart">
+              <div style="height: 55%"></div>
+              <div style="height: 80%"></div>
+              <div style="height: 32%"></div>
+              <div style="height: 65%"></div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Segment</th>
+                  <th>Growth</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Corporate</td>
+                  <td>+4.2%</td>
+                </tr>
+                <tr>
+                  <td>SMB</td>
+                  <td>-1.6%</td>
+                </tr>
+                <tr>
+                  <td>International</td>
+                  <td>+6.1%</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <button id="record-btn" class="primary-btn" disabled>Start recording</button>
-          <div class="voice-meta">
-            <span id="voice-status">Mic inactive</span>
-            <span id="recording-timer">00:00</span>
-          </div>
-          <div class="voice-waveform" id="voice-waveform" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="card scratchpad-card">
-          <div class="card-header">
-            <h3>Scratchpad</h3>
-          </div>
-          <textarea
-            id="scratchpad"
-            rows="4"
-            placeholder="Jot down your notes here before you start speaking. These stay private and are not shown to your interviewer."
-          ></textarea>
         </div>
       </section>
 
-      <section class="card exhibit-panel">
-        <div class="card-header">
-          <div>
-            <h2>Graph Workspace</h2>
-            <p class="muted">Relevant graphs will be displayed here for the case.</p>
-          </div>
+      <section class="cred-strip">
+        <p>Our users have secured offers at:</p>
+        <div class="logo-row">
+          <span>McKinsey</span>
+          <span>Bain</span>
+          <span>BCG</span>
+          <span>EY</span>
+          <span>Deloitte</span>
+          <span>Accenture</span>
+          <span>KPMG</span>
+          <span>Strategy&amp;</span>
         </div>
-        <canvas id="chartCanvas"></canvas>
-        <div id="tableContainer"></div>
+      </section>
+
+      <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+          <p class="eyebrow">How it works</p>
+          <h2>Three steps to real consulting readiness</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Start a live case</h3>
+            <p>Choose difficulty and case archetype. Every prompt follows McKinsey, Bain, or BCG-style interviews.</p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Respond naturally</h3>
+            <p>Speak your answers while Minerva listens, probes, and displays exhibits — exactly like the real conversation.</p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>Get calibrated feedback</h3>
+            <p>Receive structured scoring across structure, math, and synthesis so you know how you’d perform in the room.</p>
+          </article>
+        </div>
+        <div class="cta-row">
+          <button class="primary-btn">Start a live case</button>
+        </div>
       </section>
     </main>
-    <script src="audio.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>

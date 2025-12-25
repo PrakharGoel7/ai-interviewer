@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Minerva Live Case</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <main class="interview-room">
+      <section class="control-panel">
+        <div class="panel-header">
+          <div class="brand-stack">
+            <span class="brand">Minerva</span>
+            <span class="session-pill live" id="session-status">Live session</span>
+          </div>
+          <div class="header-actions">
+            <button id="start-btn" class="primary-btn">Start session</button>
+            <button id="end-session-btn" class="secondary-btn ghost-btn">End session</button>
+          </div>
+        </div>
+
+        <div class="card prompt-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Interviewer</p>
+              <h2>Current prompt</h2>
+            </div>
+            <button id="repeat-prompt-btn" class="text-btn" type="button">
+              <span aria-hidden="true">⟳</span>
+              Repeat prompt
+            </button>
+          </div>
+          <p id="current-prompt" class="prompt-text">Waiting to begin.</p>
+          <div id="loading-indicator" class="loading-indicator hidden">
+            <span class="spinner" aria-hidden="true"></span>
+            <span id="loading-text">Awaiting interviewer…</span>
+          </div>
+        </div>
+
+        <div class="card voice-card">
+          <div class="card-header">
+            <h3>Voice channel</h3>
+          </div>
+          <button id="record-btn" class="primary-btn" disabled>Start recording</button>
+          <div class="voice-meta">
+            <span id="voice-status">Mic inactive</span>
+            <span id="recording-timer">00:00</span>
+          </div>
+          <div class="voice-waveform" id="voice-waveform" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="card scratchpad-card">
+          <div class="card-header">
+            <h3>Scratchpad</h3>
+          </div>
+          <textarea
+            id="scratchpad"
+            rows="4"
+            placeholder="Jot down your notes here before you start speaking. These stay private and are not shown to your interviewer."
+          ></textarea>
+        </div>
+      </section>
+
+      <section class="card exhibit-panel">
+        <div class="card-header">
+          <div>
+            <h2>Exhibit workspace</h2>
+            <p class="muted">Relevant exhibits will be displayed here during the case.</p>
+          </div>
+        </div>
+        <canvas id="chartCanvas"></canvas>
+        <div id="tableContainer"></div>
+      </section>
+    </main>
+    <script src="audio.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

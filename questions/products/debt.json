@@ -1,0 +1,218 @@
+[
+  {
+    "question": "What is the difference between a bond and a leveraged loan?",
+    "answer": "A leveraged loan is a private lending arrangement between a borrower and one bank or a small syndicate (banks/institutional investors). It is typically floating-rate (often LIBOR + a spread), usually secured by collateral, and often has stricter covenants with principal repaid through amortization and/or a bullet at maturity. Corporate bonds are public securities (registered with the SEC), issued to a broad investor base and traded in secondary markets. Bonds are often fixed-rate with semi-annual coupons, typically have longer maturities, and usually repay principal as a balloon at maturity. Bonds tend to have looser covenants and are often unsecured, so they generally carry higher yields than loans."
+  },
+  {
+    "question": "What is the difference between investment-grade and speculative-grade debt?",
+    "answer": "Investment-grade debt has credit ratings above BBB/Baa and is issued by companies with stronger credit profiles and lower default risk, so it generally carries lower interest rates. Speculative-grade (high-yield) debt has ratings below BB/Ba, is issued by more leveraged and riskier borrowers with higher default risk, and therefore must offer materially higher interest rates to compensate investors."
+  },
+  {
+    "question": "What does it mean when a debt tranche is denoted as 1st lien or 2nd lien?",
+    "answer": "A lien indicates the seniority and priority of payment (and claim on collateral) relative to other debt tranches. 1st lien debt is the most senior and is secured by the company’s assets with first claim on collateral in liquidation/bankruptcy (e.g., revolvers, term loans). 2nd lien debt is junior to 1st lien and is repaid only after 1st lien lenders are made whole; it is therefore riskier and more expensive for the borrower."
+  },
+  {
+    "question": "Tell me about the different classifications of term loans.",
+    "answer": "Term Loan A (TLA) is typically syndicated to banks, often packaged with a revolver, has a shorter maturity (~5 years), and has higher, straight-line amortization. Term Loan B/C/D are institutional term loans syndicated to non-bank investors (e.g., hedge funds, CLOs, mutual funds, insurance companies), usually have longer maturities, minimal/nominal amortization, and a large bullet payment at maturity. The B/C/D letter is more about investor base than priority rank."
+  },
+  {
+    "question": "What is the difference between a secured and unsecured loan?",
+    "answer": "Secured loans are backed by pledged collateral; if the borrower defaults or enters bankruptcy, lenders have a legal claim on that collateral. Leveraged loans (e.g., many term loans and revolvers) are commonly secured. Unsecured loans are not backed by specific collateral, so investors take more risk and therefore demand higher yields; typical buyers include pension funds, mutual funds, insurance companies, and hedge funds."
+  },
+  {
+    "question": "How are leveraged loans usually priced?",
+    "answer": "Leveraged loans are usually floating-rate instruments priced as a reference rate (commonly LIBOR historically) plus a spread. They often include a LIBOR floor. Example: “LIBOR + 3%” with a 2% LIBOR floor implies the rate cannot fall below 5%."
+  },
+  {
+    "question": "What does LIBOR stand for?",
+    "answer": "LIBOR stands for London Interbank Offered Rate, a benchmark rate representing the rate at which banks lend to one another and historically used as a common reference rate for floating-rate debt pricing."
+  },
+  {
+    "question": "What is SOFR, the expected replacement of LIBOR?",
+    "answer": "SOFR (Secured Overnight Financing Rate) is a benchmark based on overnight borrowing costs collateralized by U.S. Treasury securities—i.e., a repo-based funding rate derived from observed overnight transactions."
+  },
+  {
+    "question": "In terms of debt terminology, what does the coupon rate mean?",
+    "answer": "The coupon rate is the annual interest rate paid on a debt obligation, calculated on the outstanding principal. Interest expense is modeled as a percentage of principal (often using beginning/ending balances). Senior bank debt commonly pays interest quarterly, while most bonds pay semi-annually."
+  },
+  {
+    "question": "How does the coupon on a bond differ from the yield?",
+    "answer": "The coupon is the stated annual interest rate applied to the bond’s face value and is fixed for the bond’s term. Yield is the investor’s annual return, which reflects coupon payments adjusted for the bond’s purchase price (premium/discount) and market conditions, so yield can move even when the coupon does not."
+  },
+  {
+    "question": "What does it mean when a bond is trading at a discount, par, or premium?",
+    "answer": "Discount: Price < 100, so yield is greater than the coupon. Par: Price = 100, so yield equals the coupon. Premium: Price > 100, so yield is less than the coupon."
+  },
+  {
+    "question": "What is the difference between a fixed and floating interest rate?",
+    "answer": "Fixed interest rates remain constant regardless of changes in market rates and are common for riskier debt like high-yield bonds and mezzanine financing. Floating interest rates reset based on a reference rate (historically LIBOR) plus a spread (e.g., LIBOR + 2–4%) and are more common for senior debt like term loans and revolvers."
+  },
+  {
+    "question": "When would an investor prefer fixed rates over floating rates (and vice versa)?",
+    "answer": "If interest rates are expected to fall, investors would prefer fixed rates. If interest rates are expected to rise, investors would prefer floating rates."
+  },
+  {
+    "question": "What are some different debt amortization schedules?",
+    "answer": "Bullet maturity: all principal is repaid at the end of the loan term. Straight-line amortization: principal is repaid in equal installments through maturity. Minimum amortization: small annual principal payments (e.g., ~5–10% per year), leaving a large balance due at maturity."
+  },
+  {
+    "question": "What is a callable bond and how does it benefit the issuer or borrower?",
+    "answer": "A callable bond can be redeemed by the issuer before maturity at the issuer’s discretion. It benefits the issuer by allowing early repayment/refinancing if cash flows are strong or if rates fall. Because this gives the issuer flexibility, investors are typically compensated with a higher interest rate versus non-callable bonds."
+  },
+  {
+    "question": "When would the prepayment optionality of certain debt tranches be unattractive to lenders?",
+    "answer": "Prepayment can be unattractive when lenders want to lock in future interest income. If the borrower repays principal early, future interest payments fall because interest is calculated on outstanding principal. To limit this reinvestment/prepayment risk, lenders may include call protection or prepayment penalties."
+  },
+  {
+    "question": "A bond has a call protection clause of NC/2. What does this mean?",
+    "answer": "NC/2 means the bond is not callable for the first two years. After that two-year period, the issuer can call (repay) the bond, typically subject to a prepayment/call penalty."
+  },
+  {
+    "question": "What is a revolving credit facility and what purpose does it serve to the borrower?",
+    "answer": "A revolver is a revolving line of credit that a company can draw, repay, and reborrow as needed—often used like a “corporate credit card” to cover short-term liquidity or working capital needs when free cash flow is temporarily insufficient."
+  },
+  {
+    "question": "What is the undrawn commitment fee associated with revolvers?",
+    "answer": "It is an annual fee (typically < 1%) paid to the lender on the unused portion of the revolver—i.e., a fee charged on undrawn commitments."
+  },
+  {
+    "question": "What is the difference between an asset-based loan and a cash flow revolver?",
+    "answer": "An asset-based (ABL) revolver’s borrowing capacity is determined by liquid collateral and borrowing-base formulas (often tied to A/R and inventory, e.g., 80% of A/R + 65% of inventory). A cash flow revolver’s capacity is based on the borrower’s historical and projected cash flows; because future cash flows can’t be pledged/seized like physical assets, terms are generally less favorable and covenants more restrictive."
+  },
+  {
+    "question": "Why do revolvers normally not have a leverage test?",
+    "answer": "Revolvers usually have simpler covenant structures (often just an interest coverage test) because they sit at the top of the capital structure and have first claim on the borrower’s assets. Since revolver lenders are highly protected, they are less concerned if the borrower raises additional debt, as the revolver would still be made whole in a downside scenario."
+  },
+  {
+    "question": "What is unitranche debt and what are its benefits?",
+    "answer": "Unitranche debt is a hybrid that combines senior and subordinated debt into a single tranche priced at a blended interest rate. Instead of separate 1st and 2nd lien facilities from different lenders, one lender provides the entire financing package. The main benefit is convenience: one set of documents, one set of covenants, faster execution, and simpler negotiations for the borrower."
+  },
+  {
+    "question": "What is the difference between a bond’s coupon rate and the bond’s current yield?",
+    "answer": "The coupon rate (nominal yield) is the annual coupon divided by the bond’s face value. Current yield equals the annual coupon divided by the bond’s current market price. While the coupon rate is fixed, the current yield fluctuates as the bond’s price changes."
+  },
+  {
+    "question": "What is the difference between current yield and yield to maturity (YTM)?",
+    "answer": "Current yield equals the bond’s coupon payment divided by its price and does not account for principal repayment or reinvestment of coupons. Yield to maturity (YTM) is the internal rate of return of the bond, incorporating coupon payments, principal repayment at maturity, time to maturity, and the assumption that coupons are reinvested at the same rate."
+  },
+  {
+    "question": "Could you define fixed income and name a few examples?",
+    "answer": "Fixed-income securities provide investors with fixed periodic interest payments and the return of principal at maturity. Examples include Treasury bills, notes, and bonds, municipal bonds, money market instruments, and certificates of deposit (CDs)."
+  },
+  {
+    "question": "What does the money market refer to and what is the typical maturity range?",
+    "answer": "The money market refers to the trading of short-term debt instruments, typically overnight to short-term maturities. The maximum maturity is generally 397 days (about 13 months), and investors are usually risk-averse."
+  },
+  {
+    "question": "What are the two main classifications of money market accounts?",
+    "answer": "The two main types are Government Money Market Funds (e.g., T-bills, agency discount notes, reverse repos) and Prime Money Market Funds (e.g., commercial paper, short-term bonds, certificates of deposit)."
+  },
+  {
+    "question": "What is a municipal bond and what distinct benefit does it have for investors?",
+    "answer": "A municipal bond is issued by a state, municipality, or county to fund public projects such as infrastructure. Its key benefit is tax exemption: interest is typically exempt from federal taxes and often from state and local taxes as well."
+  },
+  {
+    "question": "What is the difference between coupon bonds and discount (zero-coupon) bonds?",
+    "answer": "Coupon bonds pay periodic interest payments over their life. Discount or zero-coupon bonds make no interim payments and are issued at a discount to face value, with the investor receiving the full face value at maturity."
+  },
+  {
+    "question": "What is the difference between Macaulay duration and modified duration?",
+    "answer": "Macaulay duration measures the weighted average time to receive a bond’s cash flows. Modified duration adjusts Macaulay duration to estimate the percentage price change of a bond for a 1% change in yield, making it a practical measure of interest rate sensitivity."
+  },
+  {
+    "question": "What is the relationship between duration and the coupon?",
+    "answer": "For coupon-paying bonds, duration is always shorter than time to maturity. Lower coupon bonds have longer duration (closer to maturity) because less cash is received earlier, while higher coupon bonds have shorter duration since larger coupon payments arrive sooner and reduce the weighted average timing of cash flows."
+  },
+  {
+    "question": "What is convexity used to measure?",
+    "answer": "Convexity measures the curvature of the relationship between a bond’s price and its yield. It helps assess how sensitive a bond or portfolio is to changes in interest rates, with higher convexity indicating greater price sensitivity to rate movements."
+  },
+  {
+    "question": "What are the three types of covenants found in lending agreements?",
+    "answer": "Affirmative covenants require the borrower to perform certain actions (e.g., financial reporting, paying taxes). Negative covenants restrict certain actions (e.g., issuing dividends, raising additional debt). Financial covenants include maintenance covenants (tested periodically) and incurrence covenants (tested when specific actions are taken)."
+  },
+  {
+    "question": "What is the purpose of covenants in debt financing?",
+    "answer": "Covenants protect lenders by restricting borrower behavior and ensuring financial health. Breaching covenants can trigger default, allowing lenders to take protective actions. They reduce downside risk and increase the likelihood that lenders receive full repayment."
+  },
+  {
+    "question": "What are maintenance covenants and provide some examples?",
+    "answer": "Maintenance covenants are financial tests the borrower must meet on a regular basis (usually quarterly) to demonstrate ongoing ability to service debt. Examples include maximum Total Debt/EBITDA, maximum Debt/Equity, and minimum Interest Coverage Ratio thresholds."
+  },
+  {
+    "question": "What are incurrence covenants and give some examples?",
+    "answer": "Incurrence covenants restrict the borrower from taking certain actions unless specific conditions are met and are tested only when those actions occur. Examples include restrictions on issuing new debt, making acquisitions, or paying dividends without lender approval."
+  },
+  {
+    "question": "What is one key difference between maintenance and incurrence covenants?",
+    "answer": "Maintenance covenants are tested periodically (e.g., quarterly) regardless of actions taken, while incurrence covenants are tested only when a triggering action occurs, such as issuing new debt or making an acquisition."
+  },
+  {
+    "question": "Leveraged loans have become increasingly covenant-lite. What does this entail?",
+    "answer": "Covenant-lite loans replace traditional maintenance covenants with looser incurrence covenants. Compliance is required only if the borrower takes certain actions, rather than being tested regularly, giving borrowers greater flexibility."
+  },
+  {
+    "question": "What are subordinated notes?",
+    "answer": "Subordinated notes are junior debt instruments with longer maturities and higher interest rates to compensate investors for increased risk. They allow borrowers to increase leverage beyond what senior lenders provide and typically have fewer covenants but limited prepayment flexibility."
+  },
+  {
+    "question": "What are the characteristics of mezzanine financing?",
+    "answer": "Mezzanine financing sits between senior debt and equity, is unsecured, and carries the highest interest rates among debt tranches. It often includes features like PIK interest, convertibility, or equity participation (e.g., warrants), offering investors upside while increasing cost and dilution for the borrower."
+  },
+  {
+    "question": "What are bridge loans?",
+    "answer": "Bridge loans provide temporary financing when permanent debt commitments are not yet in place by deal closing. Investment banks may offer bridge loan commitments to ensure a transaction can close without delay while long-term financing is finalized."
+  },
+  {
+    "question": "What is staple financing and which type of lender provides it?",
+    "answer": "Staple financing is debt financing arranged by the sell-side investment bank and offered to potential buyers in an M&A process. Large, diversified investment banks with lending capabilities (e.g., bulge bracket banks) typically provide it, though it can create potential conflicts of interest."
+  },
+  {
+    "question": "What is a firm commitment letter?",
+    "answer": "A firm commitment letter is a binding financing commitment from lenders outlining agreed debt terms after a buyer submits a letter of intent. It enhances buyer credibility by signaling that financing is effectively guaranteed at closing."
+  },
+  {
+    "question": "How does a highly confident letter differ from a firm commitment letter?",
+    "answer": "A highly confident letter indicates that the lender believes it can raise the necessary capital but does not legally commit or backstop the financing. A firm commitment letter, by contrast, obligates the lender to fund at closing."
+  },
+  {
+    "question": "Other than covenants, what provisions can be included to protect lender interests?",
+    "answer": "Commitment letters often include conditions precedent that allow lenders to withdraw if adverse events occur, commonly phrased as no “material adverse effect.” These provisions protect lenders from being obligated to fund in significantly deteriorated circumstances."
+  },
+  {
+    "question": "What is commercial paper and which types of companies issue it?",
+    "answer": "Commercial paper is short-term, unsecured debt issued at a discount (zero-coupon) by large, highly rated corporations to fund working capital needs. Typical maturities are around 270 days."
+  },
+  {
+    "question": "Besides market risk, what other risks do bond investors face?",
+    "answer": "Key risks include default risk (borrower credit deterioration), liquidity risk (reduced ability to trade the bond), and event risk (company-specific events such as M&A or regulatory actions that affect credit quality)."
+  },
+  {
+    "question": "What is the debt lender and equity investor “story disconnect”?",
+    "answer": "Debt lenders focus on downside protection and historical performance, emphasizing cash flow stability and recession resilience. Equity investors focus on upside potential and growth. Since lenders do not participate in upside, they prioritize certainty of repayment over optimistic projections."
+  },
+  {
+    "question": "Why is the lender case usually less optimistic than equity projections when raising capital?",
+    "answer": "Lender cases are conservative to ensure debt serviceability and covenant compliance even in downturns. Higher projected EBITDA raises covenant thresholds, so borrowers prefer conservative assumptions to maintain operational cushion."
+  },
+  {
+    "question": "What does refinancing risk involve?",
+    "answer": "Refinancing risk is the risk that a borrower cannot refinance existing debt at similar terms due to credit deterioration or tighter market conditions, potentially leading to higher interest costs or inability to refinance at all."
+  },
+  {
+    "question": "From the perspective of an investor, what is interest rate risk?",
+    "answer": "Interest rate risk refers to the risk that changes in market interest rates will affect the value of a bond. Bonds with longer maturities are more exposed, since investors are locked into fixed payments for a longer period and would demand higher yields to compensate for this risk."
+  },
+  {
+    "question": "What is prepayment risk?",
+    "answer": "Prepayment risk (or reinvestment risk) is the risk that a borrower repays debt earlier than expected, forcing the lender to reinvest the returned principal at potentially lower market rates. To compensate, lenders may restrict prepayments or charge prepayment penalties."
+  },
+  {
+    "question": "In mezzanine financing, what is an equity kicker?",
+    "answer": "An equity kicker is a feature added to mezzanine financing that allows investors to increase returns through equity participation, often boosting returns by 100–200 basis points. It lowers the borrower’s cash cost of debt while giving investors upside potential."
+  },
+  {
+    "question": "What are the main types of equity kickers?",
+    "answer": "Equity kickers include warrants (options to buy common equity, often 1–2% ownership), co-investment rights alongside sponsors, and conversion features that allow debt or preferred stock to convert into common equity."
+  }
+]

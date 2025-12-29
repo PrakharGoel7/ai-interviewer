@@ -2,6 +2,8 @@ const startBtn = document.getElementById("start-btn");
 const form = document.getElementById("response-form");
 const textarea = document.getElementById("response-text");
 const recordBtn = document.getElementById("record-btn");
+const firmSelect = document.getElementById("firm-select");
+const caseTypeSelect = document.getElementById("case-type-select");
 const voiceStatus = document.getElementById("voice-status");
 const currentPromptEl = document.getElementById("current-prompt");
 const repeatPromptBtn = document.getElementById("repeat-prompt-btn");
@@ -30,9 +32,12 @@ let analyser = null;
 let silenceCheckInterval = null;
 let lastSoundTimestamp = 0;
 let loadingDepth = 0;
+let reportRedirected = false;
+let recordingStartMs = 0;
 
 const SILENCE_THRESHOLD = 0.02;
 const SILENCE_DURATION_MS = 1500;
+const MIN_RECORDING_MS = 4000;
 
 recordBtn.disabled = true;
 
@@ -50,6 +55,12 @@ async function api(path, options = {}) {
 
 function updatePrompt(events) {
   if (!Array.isArray(events) || !events.length) {
+    const placeholderOptions = currentPromptEl.dataset.placeholderOptions;
+    if (placeholderOptions) {
+      const options = JSON.parse(placeholderOptions);
+      const choice = options[Math.floor(Math.random() * options.length)];
+      currentPromptEl.textContent = choice;
+    }
     return;
   }
   const lastInterviewer = [...events].reverse().find((evt) => evt.role === "interviewer");
@@ -148,6 +159,17 @@ function handleTurns(turns) {
     currentPromptEl.textContent = latest.next_utterance;
     speak(latest.next_utterance);
   }
+  if (
+    latest &&
+    latest.stage_id === "end_feedback" &&
+    !reportRedirected &&
+    (latest.next_action === "THANK_AND_CLOSE" || latest.next_action === "DELIVER_FEEDBACK")
+  ) {
+    reportRedirected = true;
+    setTimeout(() => {
+      window.location.href = "report.html";
+    }, 1200);
+  }
 }
 
 function speak(text) {
@@ -185,6 +207,7 @@ function initSpeech() {
 
     recognition.addEventListener("start", () => {
       isRecording = true;
+      recordingStartMs = Date.now();
       setVoiceStatus("Recording…");
       startTimer();
       voiceWaveform.classList.add("active");
@@ -198,6 +221,7 @@ function initSpeech() {
       voiceWaveform.classList.remove("active");
       recordBtn.classList.remove("recording");
       recordBtn.textContent = "Start recording";
+      recordingStartMs = 0;
       setVoiceStatus(voiceEnabled ? "Mic ready" : "Mic inactive");
     });
 
@@ -264,6 +288,7 @@ async function startMediaRecording() {
     return;
   }
 
+  recordingStartMs = Date.now();
   recordedChunks = [];
   mediaRecorder = new MediaRecorder(mediaStream);
   mediaRecorder.addEventListener("dataavailable", (event) => {
@@ -277,6 +302,7 @@ async function startMediaRecording() {
       mediaStream.getTracks().forEach((track) => track.stop());
       mediaStream = null;
     }
+    recordingStartMs = 0;
     recordBtn.classList.remove("recording");
     recordBtn.textContent = "Start recording";
     voiceWaveform.classList.remove("active");
@@ -313,7 +339,7 @@ function setupAudioAnalysis(stream) {
     const now = Date.now();
     if (rms > SILENCE_THRESHOLD) {
       lastSoundTimestamp = now;
-    } else if (now - lastSoundTimestamp > SILENCE_DURATION_MS) {
+    } else if (now - lastSoundTimestamp > SILENCE_DURATION_MS && hasMetMinimumRecordingTime()) {
       stopMediaRecording();
     }
   }, 150);
@@ -332,9 +358,14 @@ function cleanupAudioAnalysis() {
 }
 
 function stopMediaRecording() {
-  if (mediaRecorder && mediaRecorder.state === "recording") {
-    mediaRecorder.stop();
+  if (!mediaRecorder || mediaRecorder.state !== "recording") {
+    return;
   }
+  if (!hasMetMinimumRecordingTime()) {
+    setVoiceStatus("Keep speaking for at least 4 seconds");
+    return;
+  }
+  mediaRecorder.stop();
 }
 
 async function transcribeRecording() {
@@ -454,7 +485,14 @@ async function ensureMicPermission() {
 async function startCase() {
   setLoading(true, "Connecting with your interviewer…");
   try {
-    const data = await api("/api/start", { method: "POST" });
+    const payload = {
+      firm: firmSelect ? firmSelect.value : undefined,
+      case_type: caseTypeSelect ? caseTypeSelect.value : undefined,
+    };
+    const data = await api("/api/start", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    });
     updatePrompt(data.events);
     handleTurns(data.turns);
     return true;
@@ -520,14 +558,20 @@ form.addEventListener("submit", (e) => {
   sendResponse(text);
 });
 
-repeatPromptBtn.addEventListener("click", () => {
-  if (latestPromptText) {
-    speak(latestPromptText);
-  }
-});
+if (repeatPromptBtn) {
+  repeatPromptBtn.addEventListener("click", () => {
+    if (latestPromptText) {
+      speak(latestPromptText);
+    }
+  });
+}
 
 skipBtn.addEventListener("click", () => {
   sendResponse("I'd like to skip ahead to the next question.");
 });
 
 initSpeech();
+function hasMetMinimumRecordingTime() {
+  if (!recordingStartMs) return false;
+  return Date.now() - recordingStartMs >= MIN_RECORDING_MS;
+}

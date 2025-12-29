@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Minerva — Case Performance Report</title>
+    <link rel="stylesheet" href="report.css" />
+  </head>
+  <body class="report-page">
+    <main class="report-shell">
+      <header class="report-header">
+        <a href="/" class="brand-link" aria-label="Minerva home">
+          <img src="logo.svg" alt="Minerva" />
+        </a>
+        <span class="pill">Case Performance Report</span>
+      </header>
+
+      <section class="card summary-card" id="summary-card">
+        <div class="summary-main">
+          <div class="summary-left">
+            <p class="eyebrow">Case</p>
+            <h1 id="case-title">Loading case…</h1>
+            <div class="summary-tags">
+              <span class="tag" id="case-type">—</span>
+              <span class="tag" id="case-industry">—</span>
+            </div>
+          </div>
+          <div class="overall-band">
+            <p class="eyebrow">Overall band</p>
+            <span class="band-value" id="overall-band">—</span>
+          </div>
+        </div>
+        <dl class="summary-stats">
+          <div>
+            <dt>Completed</dt>
+            <dd id="case-completed">—</dd>
+          </div>
+          <div>
+            <dt>Duration</dt>
+            <dd><span id="case-duration">—</span> min</dd>
+          </div>
+        </dl>
+        <p class="executive-summary" id="executive-summary"></p>
+      </section>
+
+      <section class="card rubrics-card">
+        <div class="rubric-header">
+          <div>
+            <p class="eyebrow">Rubric scorecard</p>
+            <h2>Dimension-by-dimension performance</h2>
+          </div>
+          <p class="muted">Tap a row to review detailed evidence.</p>
+        </div>
+        <div id="rubric-list" class="rubric-list"></div>
+      </section>
+
+      <section class="card report-cta">
+        <div>
+          <h3>Run another mock interview</h3>
+          <p class="muted">Apply the feedback while it’s fresh. Pick the track you want to practice next.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="interview.html">Start consulting case</a>
+          <a class="btn ghost" href="ib_interview.html">Start IB case</a>
+        </div>
+      </section>
+    </main>
+    <script src="report.js"></script>
+  </body>
+</html>

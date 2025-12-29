@@ -1,0 +1,190 @@
+[
+  {
+    "question": "Can you define M&A and explain the difference between a merger and an acquisition?",
+    "answer": "Mergers and acquisitions (M&A) is an umbrella term that refers to the combination of two businesses. For buyers, M&A serves as an alternative to organic growth, while for sellers it provides an opportunity to cash out or share in the risk and reward of the newly formed entity. A merger usually refers to the combination of two similarly sized companies, often structured as a stock-for-stock transaction where shareholders of both firms remain owners, and the combined company may operate under a new or joint name. An acquisition typically implies that a larger company purchases a smaller one; over time the target’s name may fade as it is integrated, or it may continue operating as a subsidiary if its brand is valuable."
+  },
+  {
+    "question": "What are some potential reasons that a company might acquire another company?",
+    "answer": "Companies acquire others to create value through revenue and cost synergies, obtain ownership of technology assets such as IP or patents, acquire talent, expand geographically or into new products and services, diversify revenue sources to reduce risk and lower cost of capital, reduce time to market for new products, increase distribution channels, achieve market leadership and reduce competition through horizontal integration, improve supply chain efficiency through vertical integration, and capture tax benefits such as net operating losses."
+  },
+  {
+    "question": "What are the differences among vertical, horizontal, and conglomerate mergers?",
+    "answer": "A vertical merger involves companies at different stages of the value chain and aims to increase control over supply or distribution to eliminate inefficiencies. A horizontal merger combines companies that compete directly in the same or similar markets, reducing competition and often increasing pricing power and geographic reach. A conglomerate merger involves companies in unrelated industries and is primarily motivated by diversification, as seen in firms like Berkshire Hathaway."
+  },
+  {
+    "question": "In terms of vertical integration, what is the difference between forward and backward integration?",
+    "answer": "Backward integration occurs when a company moves upstream by acquiring suppliers or manufacturers of its inputs. Forward integration occurs when a company moves downstream by acquiring businesses closer to the end customer, such as distributors or service providers."
+  },
+  {
+    "question": "Describe a recent M&A deal.",
+    "answer": "In M&A interviews, candidates should be prepared to discuss a recent transaction in detail, including the names and business profiles of the acquirer and target, the strategic rationale for the deal, approximate transaction size, premium offered, form of consideration, post-announcement share price movements, and a personal assessment of whether the deal was attractive. This information is typically gathered from press releases, regulatory filings such as Form S-4, and industry commentary."
+  },
+  {
+    "question": "What are synergies and why are they important in a deal?",
+    "answer": "Synergies are expected cost savings or incremental revenues resulting from an acquisition. They are important because anticipated synergies justify paying a premium for the target. Revenue synergies include cross-selling, upselling, bundling, new distribution channels, geographic expansion, access to new markets, and increased pricing power. Cost synergies include eliminating overlapping functions, consolidating facilities, streamlining processes, gaining purchasing power, and realizing tax savings such as using NOLs."
+  },
+  {
+    "question": "Why should companies acquired by strategic acquirers expect to fetch higher premiums than those selling to private equity buyers?",
+    "answer": "Strategic buyers can often realize synergies from acquisitions, enabling them to pay higher prices. Although private equity buyers historically could not compete on price, the rise of add-on acquisitions and platform strategies has allowed them to achieve synergies as well, narrowing the gap in some auctions."
+  },
+  {
+    "question": "How do you perform premiums paid analysis in M&A?",
+    "answer": "Premiums paid analysis involves reviewing comparable historical transactions to determine the average premium paid over unaffected share prices. This average premium is used as a reference or sanity check for the premium offered in a current deal."
+  },
+  {
+    "question": "Tell me about the two main types of auction structures in M&A.",
+    "answer": "In a broad auction, the sell-side advisor contacts many potential buyers to maximize competition and valuation. In a targeted auction, only a shortlist of buyers with strong strategic fit or existing relationships is approached."
+  },
+  {
+    "question": "What is a negotiated sale?",
+    "answer": "A negotiated sale involves discussions with a small number of potential buyers, often when the seller has a specific buyer in mind. Benefits include confidentiality, speed of execution, and more cooperative deal terms, particularly when the seller intends to remain involved post-transaction."
+  },
+  {
+    "question": "What are some of the most common reasons that M&A deals fail to create value?",
+    "answer": "Common reasons include overpaying due to overestimated synergies, inadequate due diligence, lack of a clear strategic plan, and poor post-merger integration. Cultural incompatibility is often one of the most difficult risks to assess and manage."
+  },
+  {
+    "question": "If many M&A deals destroy shareholder value, why do companies still engage in M&A?",
+    "answer": "Companies often pursue M&A defensively to protect market share, respond to technological disruption, or maintain competitive parity. As firms mature and dominate markets, the focus shifts from growth to defending existing positions, making acquisitions a tool to fend off emerging threats and acquire new capabilities."
+  },
+  {
+    "question": "What is the purpose of a teaser?",
+    "answer": "A teaser is a short, anonymous marketing document prepared by a sell-side banker to generate initial buyer interest. It provides limited information about the business without revealing its identity and aims to encourage buyers to sign an NDA to receive the CIM."
+  },
+  {
+    "question": "What does a confidential information memorandum (CIM) consist of?",
+    "answer": "A CIM provides an in-depth overview of the business for sale, including a company profile, market and industry analysis, investment highlights, business segments, products or services, historical financials, management projections, management biographies, and transaction details."
+  },
+  {
+    "question": "What are the typical components found in a letter of intent (LOI)?",
+    "answer": "An LOI outlines proposed initial deal terms such as purchase price, form of consideration, and financing sources. It is typically non-binding and serves as a framework for negotiating a definitive agreement."
+  },
+  {
+    "question": "What are no-shop provisions in M&A deals?",
+    "answer": "No-shop provisions prevent the seller from soliciting or negotiating with other buyers during exclusivity. Violations trigger breakup fees. Sellers may also negotiate reverse termination fees to protect against buyers walking away."
+  },
+  {
+    "question": "What is a material adverse change (MAC), and could you provide some examples?",
+    "answer": "A MAC is a negotiated clause allowing a buyer to exit a deal if significant adverse events occur between signing and closing. Examples include major economic or market disruptions, regulatory changes, litigation, natural disasters, geopolitical events, or failure to meet agreed financial targets."
+  },
+  {
+    "question": "Contrast asset sales, stock sales, and a 338(h)(10) election.",
+    "answer": "In an asset sale, the buyer purchases individual assets and receives a step-up in tax basis, gaining higher depreciation and amortization deductions, while the seller may face double taxation. In a stock sale, the buyer acquires shares, gains control of the business, but does not receive a stepped-up tax basis; the seller is taxed only at the shareholder level. A 338(h)(10) election is legally a stock sale but treated as an asset sale for tax purposes, allowing the buyer to benefit from asset step-ups while the seller still faces double taxation."
+  },
+  {
+    "question": "Contrast a friendly acquisition and a hostile takeover attempt.",
+    "answer": "A friendly acquisition occurs with the consent of both management teams and boards. A hostile takeover proceeds without the target board’s approval, often after failed negotiations, and involves going directly to shareholders."
+  },
+  {
+    "question": "What are the two most common ways that hostile takeovers are pursued?",
+    "answer": "The two main methods are tender offers, where the acquirer offers to buy shares directly from shareholders at a premium, and proxy fights, where the acquirer seeks to replace the board by convincing shareholders that management is mismanaging the company."
+  },
+  {
+    "question": "How does a tender offer differ from a merger?",
+    "answer": "A tender offer is a public solicitation to buy shares directly from shareholders, often hostile, while a merger involves negotiated agreement between companies and their boards."
+  },
+  {
+    "question": "What are some preventive measures used to block a hostile takeover attempt?",
+    "answer": "Preventive measures include poison pills, golden parachutes, dead hand provisions, and crown jewel defenses, all designed to make the target less attractive or more costly to acquire."
+  },
+  {
+    "question": "What are some active defense measures to block a hostile takeover attempt?",
+    "answer": "Active defenses include white knight and white squire strategies, making acquisitions to weaken the balance sheet, Pac-Man defenses where the target attempts to acquire the bidder, and greenmail, though the latter is now rare due to regulation."
+  },
+  {
+    "question": "What is a staggered board and how does it fend off hostile takeover attempts?",
+    "answer": "A staggered board divides directors into classes with different term lengths, making it harder and slower for a hostile acquirer to gain board control."
+  },
+  {
+    "question": "What is a divestiture and why would one be completed?",
+    "answer": "A divestiture is the sale of a business segment to focus on core operations, cut costs, unlock value, meet regulatory requirements, or improve liquidity. Activist investors often push for divestitures."
+  },
+  {
+    "question": "How does an equity carve-out differ from a divestiture?",
+    "answer": "An equity carve-out involves selling a minority stake in a subsidiary to public investors, usually retaining majority ownership, whereas a divestiture involves selling the business outright."
+  },
+  {
+    "question": "What is a spin-off and why are they completed?",
+    "answer": "A spin-off creates an independent company by distributing shares of a subsidiary to existing shareholders on a pro-rata basis, often due to shareholder pressure to unlock value."
+  },
+  {
+    "question": "What is the difference between a subsidiary and an affiliate company?",
+    "answer": "A subsidiary is majority-owned by the parent company, while an affiliate is owned on a minority basis."
+  },
+  {
+    "question": "What is a reverse merger and what benefits does it provide?",
+    "answer": "A reverse merger occurs when a private company merges with a public company, allowing the private firm to become public without undergoing an IPO."
+  },
+  {
+    "question": "What is an S-4 filing and when does it have to be filed?",
+    "answer": "An S-4 is an SEC filing required before a merger or acquisition, containing information about the deal rationale, terms, risks, and pro forma financials."
+  },
+  {
+    "question": "What is the difference between Schedule 13-D and 13-G filings?",
+    "answer": "Schedule 13-D is filed by investors acquiring 5% or more with intent to influence control, while Schedule 13-G is a shorter form filed by passive investors with no intent to control."
+  },
+  {
+    "question": "Can you explain what the winner’s curse is in M&A?",
+    "answer": "The winner’s curse refers to the tendency for the winning bidder to overpay, often due to competitive auctions, leading to buyer’s remorse, impairments, and difficulty achieving target returns."
+  },
+  {
+    "question": "What is a holdback in M&A?",
+    "answer": "A holdback places a portion of the purchase price in escrow post-closing to protect the buyer if the seller breaches deal terms."
+  },
+  {
+    "question": "What type of material is found in an M&A pitchbook?",
+    "answer": "An M&A pitchbook includes an introduction to the bank and team, client overview, market and industry trends, valuation analysis, deal strategy, credentials, and supporting financial models."
+  },
+  {
+    "question": "Walk me through a simple M&A model.",
+    "answer": "A simple M&A model involves setting purchase price and funding assumptions, determining sources of funds, consolidating balance sheets with purchase accounting adjustments, reflecting deal financing and equity changes, and combining income statements to assess EPS accretion or dilution."
+  },
+  {
+    "question": "What does accretion/dilution analysis tell you about a transaction?",
+    "answer": "Accretion/dilution analysis shows whether pro forma EPS increases or decreases, which affects investor perception but does not necessarily indicate long-term value creation."
+  },
+  {
+    "question": "What does it mean when a transaction is done on a cash-free, debt-free basis?",
+    "answer": "A cash-free, debt-free transaction assumes the seller retains excess cash and pays off debt before closing, so the buyer pays only for the enterprise value of the business."
+  },
+  {
+    "question": "What is an earnout in the context of M&A?",
+    "answer": "An earnout is a contingent payment mechanism where part of the purchase price is paid later if the seller meets specified performance targets."
+  },
+  {
+    "question": "Which side do you believe an earn-out helps more: the buyer or seller?",
+    "answer": "An earn-out is generally more beneficial to the buyer because it shifts the risk of underperformance to the seller. The seller bears the burden of meeting financial or operational targets to receive the full purchase consideration, aligning the seller’s incentives with the buyer’s goals. Sellers are often reluctant to agree to earn-outs due to payment uncertainty, but earn-outs are frequently necessary to bridge valuation gaps and close deals. If targets are met, sellers can receive most or all of their desired consideration; if not, buyers avoid overpaying. As such, earn-outs function as a risk-allocation mechanism with deferred payment contingent on performance."
+  },
+  {
+    "question": "How are earn-outs typically structured?",
+    "answer": "Earn-outs are highly negotiated and typically last one to five years, with payments made in installments rather than as a lump sum. The total earn-out amount is divided into percentage-based tiers with annual hurdles. Common structures include compensating the seller based on a percentage of future performance, where partial credit may be given if targets are nearly met, and binary or all-or-nothing payments, where no payout is made unless the target is fully achieved, placing greater risk on the seller."
+  },
+  {
+    "question": "For earn-outs, why is EBITDA the most common metric to use as the target?",
+    "answer": "EBITDA is the most common earn-out metric because valuations are often expressed as multiples of EBITDA, making it a natural compromise between buyers and sellers. EBITDA balances growth and profitability and serves as a proxy for value creation. Revenue targets can encourage short-term, risky behavior, while net income can be manipulated through accounting decisions, cost-cutting, reduced capex, or asset sales, making them less reliable."
+  },
+  {
+    "question": "How would an earn-out be modeled on the three financial statements?",
+    "answer": "Earn-outs are not reflected in the Sources and Uses table at closing because no cash is paid upfront. On the income statement, changes in the estimated value of the contingent consideration are recorded as non-operating gains or losses based on the probability of payout. On the balance sheet, the earn-out is recorded as a contingent consideration liability at fair value, which is remeasured periodically as probabilities change. On the cash flow statement, actual earn-out payments are recorded when targets are met, while changes in fair value are shown as non-cash adjustments."
+  },
+  {
+    "question": "Which industries would you expect earn-outs to be more prevalent?",
+    "answer": "Earn-outs are most prevalent in healthcare due to regulatory complexity, compliance requirements, and uncertainty around product development and approvals. Increased scrutiny from regulators such as the FTC and DOJ has amplified risk in healthcare M&A, leading buyers and sellers to rely on contingencies tied to events like FDA approval, classification decisions, patent approvals, production milestones, and product sales targets."
+  },
+  {
+    "question": "In M&A, what is the purpose of seller notes?",
+    "answer": "Seller notes involve the seller receiving a portion of the purchase price as debt. They act as part of the purchase consideration and incentivize the seller to support a smooth transition. Because the seller becomes a lender, they prioritize downside protection and prudent management, increasing the likelihood of receiving full repayment. Seller notes also encourage risk-averse decision-making when the seller remains involved post-transaction."
+  },
+  {
+    "question": "How are seller notes in M&A modeled?",
+    "answer": "Seller notes are modeled like other debt instruments. They appear in the Sources and Uses schedule as a source of funds. Typically structured as subordinated debt with a high fixed interest rate, seller notes may include features such as payment-in-kind interest or conversion options."
+  },
+  {
+    "question": "What is the purpose of the working capital peg negotiation in M&A?",
+    "answer": "The working capital peg sets the normalized level of net working capital required for the business to operate post-closing. Its purpose is to prevent the seller from extracting excess cash before the transaction closes and to ensure the business can continue operating without additional capital injections immediately after closing."
+  },
+  {
+    "question": "Can you name a scenario when post-deal EPS accretion or dilution would not be a significant consideration?",
+    "answer": "When a publicly traded buyer acquires a startup primarily for acqui-hiring purposes, post-deal EPS accretion or dilution is not a major consideration. In such cases, the strategic value lies in acquiring talent and intellectual property, and the EPS impact is negligible due to the size disparity between the buyer and the target."
+  }
+]

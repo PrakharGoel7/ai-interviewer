@@ -9,6 +9,9 @@ Action = Literal[
 ]
 
 class GeneratedCase(BaseModel):
+    title: Optional[str] = None
+    type: Optional[str] = None
+    industry: Optional[str] = None
     background: str
     stages: Dict[str, Dict[str, Any]]
 
@@ -35,3 +38,34 @@ class LLMStageEvaluation(BaseModel):
     student_attempted_answer: bool = False
     evaluation: Evaluation = Field(default_factory=Evaluation)
     stage_should_advance: bool = False
+
+
+class ReportEvidence(BaseModel):
+    text: str
+
+
+class RubricReport(BaseModel):
+    key: str
+    title: str
+    score: float
+    strengths: List[ReportEvidence]
+    improvements: List[ReportEvidence]
+
+
+class CaseMeta(BaseModel):
+    title: str
+    type: str
+    industry: str
+    completedAt: str
+    durationSec: int
+
+
+class CaseOverall(BaseModel):
+    band: str
+    executiveSummary: str
+
+
+class CasePerformanceReport(BaseModel):
+    case: CaseMeta
+    overall: CaseOverall
+    rubrics: List[RubricReport]

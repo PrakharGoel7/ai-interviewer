@@ -1,0 +1,210 @@
+[
+  {
+    "question": "What are the most common types of business models in the telecom and media industry?",
+    "answer": "Common telecom and media business models include: (1) Traditional equipment sales/wireless services (one-time equipment + monthly service plans), (2) Subscription-based streaming (growth via subscriber acquisition, churn reduction, and pricing), (3) Advertising-driven platforms (monetization via ads, driven by MAU/DAU and engagement), and (4) Media networks/diversified entertainment (content creation/acquisition/distribution monetized via ads, affiliate fees, subscriptions, licensing, product sales)."
+  },
+  {
+    "question": "What are a few notable trends going on in the TMT industry right now?",
+    "answer": "Notable trends include: convergence of business models (firms expanding into adjacent segments), scale-oriented M&A (consolidation for synergies and diversification), intensified “streaming wars” (more entrants and competition), hosted online events (growth in livestreaming/e-sports and virtual events), 5G & edge computing (infrastructure buildout and enterprise-led adoption), and rising consumer usage of AI assistants (smart home/WFH-driven adoption despite security concerns)."
+  },
+  {
+    "question": "Which valuation metrics are common to see for traditional telecom companies?",
+    "answer": "Traditional telecoms are often valued using enterprise-value multiples because leverage, depreciation, and capex make equity earnings noisy. Common metrics include EV/EBITDA (often normalized/run-rate), EV/(EBITDA − Capex) as an operating free cash flow proxy, and telecom-specific multiples like EV/Data Centers, EV/Net PP&E, EV/Route Miles, EV/Fiber Miles, EV/Access Lines, EV/Broadband Subscribers, and EV/Broadcast Revenue. SOTP valuation is often used for diversified operators."
+  },
+  {
+    "question": "What metrics would you use to measure user engagement?",
+    "answer": "Common user engagement KPIs include DAU and MAU, active subscriber count, time spent in-app per day/week, pageviews/website hits, churn rate (retention), and conversion rate (free to paid)."
+  },
+  {
+    "question": "Which multiples are most commonly used to value modern media companies?",
+    "answer": "For high-growth or unprofitable media companies, operational KPI-based multiples are common. EV/Revenue is used, but user-centric multiples like EV/MAU, EV/DAU, and EV/Monthly Subscriber Count can be more informative when growth and engagement are prioritized over near-term profitability."
+  },
+  {
+    "question": "For a company with a product meant for high frequency in usage, what is one way to assess user engagement?",
+    "answer": "A common “stickiness” metric is DAU/MAU. It measures the share of monthly active users who are active on a typical day: (DAU ÷ MAU) × 100. Higher ratios indicate more frequent usage."
+  },
+  {
+    "question": "What are economies of scale and could you give me an example?",
+    "answer": "Economies of scale occur when per-unit costs fall as output rises because fixed costs are spread across more units and purchasing leverage increases. Example: Apple can negotiate lower component costs due to massive iPhone volumes, reducing average cost per device."
+  },
+  {
+    "question": "What effect does having high operating leverage have on the scalability of a business?",
+    "answer": "High operating leverage means a larger share of costs are fixed. Once fixed costs are covered, incremental revenue contributes disproportionately to profit, improving margins as the business scales. Low operating leverage (high variable costs) means costs rise with revenue, limiting margin expansion."
+  },
+  {
+    "question": "Can you give me an example of a company benefiting from operating leverage?",
+    "answer": "A telecom provider after completing major network buildout is a classic example. Upfront capex is high, but once the network is in place, adding incremental customers is relatively low cost, so margins can expand meaningfully as subscriber count grows."
+  },
+  {
+    "question": "When might having high operating leverage not benefit a company?",
+    "answer": "If sales volume is lower than expected or declines, high fixed costs can create significant losses and raise the break-even point. Firms with mostly fixed costs have less flexibility to cut expenses quickly, increasing business risk during demand downturns."
+  },
+  {
+    "question": "What are network effects and can you provide some examples?",
+    "answer": "Network effects occur when a product’s value increases as more users join, often accelerating adoption after reaching critical mass. Examples: Facebook’s user growth improved its value to advertisers and users; Google Search improves results with more usage/data, reinforcing dominance and ad monetization."
+  },
+  {
+    "question": "What is pricing power and how would you measure it?",
+    "answer": "Pricing power is a company’s ability to raise prices without a large drop in demand or retention. A practical way to assess it is to ask: if prices rise ~25%, how much churn or volume loss occurs? Strong pricing power shows relatively stable retention and demand post-increase."
+  },
+  {
+    "question": "What is the difference between a cyclical and secular trend?",
+    "answer": "Cyclical trends fluctuate with the economic cycle and are hard to time (e.g., semiconductors tied to GDP and enterprise/consumer spending). Secular trends are long-term structural shifts driven by technology or behavior changes (e.g., OTT streaming disrupting cable; Netflix benefiting from sustained cord-cutting)."
+  },
+  {
+    "question": "What are some examples of barriers to entry that can help protect a company's profit margins?",
+    "answer": "Examples include network effects, economies of scale, proprietary technology/patents, high capex requirements, switching costs, and regulatory hurdles. These make it harder for new entrants to compete and help incumbents sustain profitability."
+  },
+  {
+    "question": "What is 5G, and what benefits will it provide?",
+    "answer": "5G is the next-generation wireless network standard with much higher speeds and lower latency than 4G at full capacity, enabling more reliable connectivity for IoT, smart cities, autonomous vehicles, industrial automation, VR, and other bandwidth/latency-sensitive applications. Deployment is gradual and can be uneven by region, but the long-term promise is materially improved throughput and responsiveness."
+  },
+  {
+    "question": "The term “latency” often comes up when discussing 5G. What does it mean?",
+    "answer": "Latency is the delay between sending and receiving data across a network. Lower latency means faster responsiveness (less lag), which improves user experience and enables real-time applications. It’s closely related to bandwidth and network congestion, though it’s not the same thing as bandwidth."
+  },
+  {
+    "question": "Which companies do you expect to benefit the most from the increased adoption of 5G?",
+    "answer": "In the US, major wireless carriers (AT&T, T-Mobile, Verizon) are positioned to benefit given their market share. Semiconductor suppliers tied to 5G infrastructure and devices are also expected to benefit (e.g., Qualcomm, Broadcom, Qorvo) due to demand for 5G chipsets and RF solutions."
+  },
+  {
+    "question": "Many enterprises are expected to test private 5G deployments. What are the implications?",
+    "answer": "Private 5G dedicates 5G radio and network resources to a specific enterprise, improving coverage in neglected areas, enabling higher security requirements, and supporting local data storage/processing near facilities. It can improve reliability and performance while shifting more control of security policies to the enterprise."
+  },
+  {
+    "question": "\"Edge AI\" is a common buzzword when discussing artificial intelligence. What does it involve?",
+    "answer": "Edge AI combines edge computing with ML by running algorithms locally on devices or nearby servers rather than centralized cloud data centers. Processing data closer to where it’s generated reduces latency, avoids bandwidth bottlenecks, and enables real-time responses even when connectivity is limited."
+  },
+  {
+    "question": "What do over-the-top services refer to and can you name a few examples of “OTT” providers?",
+    "answer": "OTT refers to delivering film/TV content over the internet, bypassing traditional cable/satellite distribution. Examples include Netflix, Hulu, and Amazon Prime Video. The trend is driven by cord-cutting and demand for more customizable, consumer-centric viewing experiences."
+  },
+  {
+    "question": "Tell me about the pricing models used in the OTT industry.",
+    "answer": "Three common OTT pricing models are: (1) SVOD—subscription video on demand (recurring fee for full catalog access, e.g., Netflix/Hulu/HBO), (2) TVOD—transactional VOD (pay-per-view or per title/package, e.g., Google Play/iTunes), and (3) AVOD—ad-based VOD (free content funded by ads; some platforms offer both AVOD and paid tiers)."
+  },
+  {
+    "question": "What is the “varied access” pricing model?",
+    "answer": "Varied access offers different subscription tiers with different levels of access or features (e.g., number of screens, resolution). Example: Netflix tiers ranging from single-screen to family/multi-screen plans with higher quality settings."
+  },
+  {
+    "question": "What are the two categories of programming we see in OTT?",
+    "answer": "OTT programming is often split into: (1) Original content (exclusive shows/films that differentiate the platform, e.g., Netflix originals), and (2) Licensed programming (content licensed from others; cheaper but less control and can be pulled back by licensors)."
+  },
+  {
+    "question": "How would you forecast the subscription revenue for Netflix?",
+    "answer": "A basic build: (1) forecast ending paid memberships driven by renewal rate/churn assumptions, (2) forecast net new subscriber additions, (3) forecast average monthly revenue per membership (ARPU) incorporating historical trends and pricing changes, (4) multiply projected subscriber base (net of churn) by annualized average membership fees to get annual subscription revenue, and extend across the forecast period."
+  },
+  {
+    "question": "For pricing, why does Disney undercut its competitors?",
+    "answer": "Disney can price aggressively because it’s diversified and can fund customer acquisition without relying solely on streaming profits. Undercutting helps steal share, leverage Disney’s IP and pulled-back licensed content, and supports a broader D2C ecosystem strategy that reinforces its other businesses (parks, studios, franchises) via a cross-platform flywheel."
+  },
+  {
+    "question": "Disney owns Disney+, Hulu, and ESPN+. Why does Disney not just bundle them in one offering?",
+    "answer": "Disney does offer bundles, but separate services reflect distinct value propositions and audience segments. Hulu provides general entertainment (and was a key Netflix competitor), Disney+ focuses on Disney IP/family content, and ESPN+ centers on live sports where traditional viewing patterns and ad breaks create different monetization dynamics (affiliate fees, pay-for-access, ads)."
+  },
+  {
+    "question": "Many investors initially dismissed Roku following their IPO. Why has the company far exceeded initial expectations to date?",
+    "answer": "Roku exceeded expectations by embedding Roku OS directly into TVs via manufacturer partnerships, offering a simple and affordable user experience, and staying platform-neutral by integrating major streaming apps (Netflix, Hulu, Disney+). This “independent aggregator” positioning made it a compelling connected-TV gateway for consumers."
+  },
+  {
+    "question": "Why has Apple shifted its focus from hardware to software?",
+    "answer": "As hardware upgrade cycles slowed and growth in device unit sales became harder, Apple expanded recurring, higher-stickiness services (App Store, iCloud, Apple Music, iTunes, ecosystem services). Services broaden TAM, improve retention, and deepen switching costs through ecosystem integration."
+  },
+  {
+    "question": "What is enterprise collaboration software?",
+    "answer": "Enterprise collaboration software helps teams communicate, coordinate work, share information, and manage projects. It spans chat/video, file sharing/content collaboration, and project management. Adoption has accelerated with remote work and distributed teams."
+  },
+  {
+    "question": "Tell me about a few of the ongoing trends in the enterprise collaboration software industry.",
+    "answer": "Key trends include: platform vendors vs. specialist players (suite advantage vs. single-product growth), more third-party integrations to improve workflows, increasing consolidation in a fragmented market, sustained shift toward remote/hybrid work, and heightened security/privacy focus as trust becomes a differentiator."
+  },
+  {
+    "question": "There are two distinct groups in enterprise collaboration software, platform vendors and specialist players. Could you tell me how they differ?",
+    "answer": "Platform vendors have broad product suites, established brands, and existing customer bases (e.g., Microsoft integrating Teams into Office 365). Specialist players are typically high-growth, single-product companies (e.g., Zoom) that must rapidly acquire and monetize new users, since they cannot subsidize offerings across a larger portfolio."
+  },
+  {
+    "question": "How were Microsoft Teams able to capture market share away from Zoom?",
+    "answer": "Microsoft Teams leveraged Microsoft’s existing enterprise relationships and Office user base. Adoption was easier for customers already embedded in Microsoft’s ecosystem, making Teams a convenient, low-friction alternative even without superior innovation."
+  },
+  {
+    "question": "Would you consider B2B software to be non-cyclical?",
+    "answer": "Yes. Many B2B software products are mission-critical, embedded into workflows, and sold via long-term contracts with high switching costs. As a result, software spend is often prioritized even during downturns, making B2B software relatively non-cyclical."
+  },
+  {
+    "question": "In the context of technology applications, what does product bundling mean and could you provide an example?",
+    "answer": "Product bundling is the practice of packaging complementary products together at a combined price. Examples include Adobe Creative Cloud bundling Photoshop, Illustrator, and After Effects, or Amazon Prime bundling Prime Video with shipping benefits."
+  },
+  {
+    "question": "Name a weakness in Spotify’s business model that explains its lack of profitability.",
+    "answer": "Spotify’s key weakness is high marginal costs from royalty payments to record labels, publishers, and artists. Unlike Netflix, Spotify has limited original content and therefore less leverage in negotiations, constraining margins despite scale."
+  },
+  {
+    "question": "Despite its low margins, why do you suppose Spotify offers so many discount pricing models on its offerings?",
+    "answer": "Spotify prioritizes customer acquisition and retention over near-term ARPU. Discount plans (e.g., student and bundled offers) reduce churn and grow its user base, strengthening network effects and long-term negotiating power with labels."
+  },
+  {
+    "question": "What is demand-aggregation and could you name some companies capitalizing on this trend?",
+    "answer": "Demand aggregation involves acting as a middleman that aggregates consumer demand and connects it with suppliers. Examples include Groupon (discount deals), Yelp (business reviews), and Apple News+ (aggregated news content)."
+  },
+  {
+    "question": "Tell me about the trend of livestreaming.",
+    "answer": "Livestreaming has grown rapidly as users enjoy real-time content and interaction with creators. Adoption accelerated globally, with platforms such as Facebook Live, Periscope, and Twitch benefiting from strong engagement and community-building."
+  },
+  {
+    "question": "Where do the opportunities for monetization in the Esports industry lie?",
+    "answer": "Esports monetization primarily comes from advertising, sponsorships, media rights, merchandising, and event revenues. Advertising dominates due to high engagement hours and strong community trust, though monetization is challenging given the young audience’s limited spending power."
+  },
+  {
+    "question": "Why is the semiconductor industry known for being cyclical?",
+    "answer": "Semiconductors are tied to GDP growth, enterprise IT spending, and consumer device cycles. Short product life cycles, rapid obsolescence, and inventory build-ups contribute to boom-bust patterns and cyclicality."
+  },
+  {
+    "question": "What are the five types of virtualization?",
+    "answer": "The five types are desktop virtualization, application virtualization, server virtualization, storage virtualization, and network virtualization—each improving efficiency by abstracting physical resources into virtual environments."
+  },
+  {
+    "question": "Could you name an example of virtualized distribution?",
+    "answer": "Cloud gaming is an example of virtualized distribution, where games run on remote servers and are streamed to users’ devices, reducing reliance on local hardware."
+  },
+  {
+    "question": "What impact did the success of Fortnite have on business models in the gaming industry?",
+    "answer": "Fortnite popularized the free-to-play model with monetization via in-game purchases, skins, and battle passes. Its success highlighted revenue opportunities beyond upfront game sales, including Esports, advertising, and digital goods."
+  },
+  {
+    "question": "What will the implications of Apple’s IDFA changes in iOS 14 have on advertising companies?",
+    "answer": "Apple’s IDFA changes require user consent for ad tracking, reducing available data for targeted advertising. This is expected to negatively impact ad measurement and effectiveness, particularly for companies reliant on mobile ad targeting such as Facebook."
+  },
+  {
+    "question": "What did Apple announce in 2020 that will negatively impact Intel?",
+    "answer": "Apple announced its transition away from Intel processors toward its own in-house ARM-based Apple Silicon chips for Macs, reducing Intel’s role as a key supplier over a multi-year transition period."
+  },
+  {
+    "question": "Tell me about the controversial T-Mobile and Sprint merger that brought up concerns of a monopoly and how it ended up being approved.",
+    "answer": "The T-Mobile–Sprint merger, announced in 2018 and completed in 2020, reduced the number of major US wireless carriers from four to three, raising monopoly concerns. Approval was granted after regulatory scrutiny when T-Mobile agreed not to raise prices for three years and to divest assets (e.g., Boost Mobile, spectrum, retail stores) to DISH, enabling DISH to become a viable fourth carrier."
+  },
+  {
+    "question": "How have the acquisitions of Time Warner and DirecTV by AT&T performed to date?",
+    "answer": "AT&T’s acquisitions significantly increased leverage and created overlapping streaming offerings. While intended to build a vertically integrated media conglomerate, the strategy resulted in heavy debt, higher prices for consumers, subscriber losses in traditional TV, and unclear returns—leaving the success of these acquisitions in question."
+  },
+  {
+    "question": "What is the FCC agency and what is its role as a regulatory agency?",
+    "answer": "The Federal Communications Commission (FCC) regulates interstate and international communications by radio, television, wire, satellite, and cable in the US. Its role is to protect consumers, ensure fair competition, prevent monopolistic behavior, and oversee industry standards and pricing practices."
+  },
+  {
+    "question": "What is net neutrality?",
+    "answer": "Net neutrality is the principle that internet service providers must treat all online data equally, without favoring or restricting specific content, users, or applications. Without it, ISPs could throttle speeds, block content, or prioritize certain services."
+  },
+  {
+    "question": "How did TikTok become such a popular app in an industry that's considered as being near a monopoly in terms of competition?",
+    "answer": "TikTok’s rapid growth came from its algorithmic emphasis on user-generated content and discovery, enabling unknown creators to go viral. Unlike platforms that promote established creators, TikTok lowered barriers to visibility, driving strong engagement and rapid adoption."
+  },
+  {
+    "question": "What major licensing deal did Spotify complete in 2020?",
+    "answer": "In 2020, Spotify signed an exclusive licensing deal reportedly worth $100 million with Joe Rogan for The Joe Rogan Experience, marking a major strategic move to strengthen Spotify’s position in podcasts and audio content."
+  },
+  {
+    "question": "Tell me about an ongoing trend in the news industry.",
+    "answer": "A key trend is the rise of independent, subscription-based newsletters. Journalists are increasingly launching paid newsletters on platforms like Substack, monetizing directly through subscriptions rather than advertising and contributing to the decentralization of news."
+  }
+]

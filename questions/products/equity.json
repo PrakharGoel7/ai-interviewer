@@ -1,0 +1,278 @@
+[
+  {
+    "question": "If a startup is bootstrapping, what does this mean?",
+    "answer": "Bootstrapping means the startup is funding operations through internal cash flows and the founder’s personal capital, avoiding outside financing to remain lean and maximize resource efficiency until it gains more leverage to raise capital later."
+  },
+  {
+    "question": "For an early-stage company, what are a few options for liquidity events?",
+    "answer": "Liquidity events may include partial cash-outs through venture capital financing rounds or a full exit via acquisition by a strategic buyer. These allow founders and early investors to realize returns on otherwise illiquid investments."
+  },
+  {
+    "question": "Who are angel investors?",
+    "answer": "Angel investors are typically wealthy, accredited individuals who invest their own capital in seed or early-stage startups, often before a company has a proven product. Their investments usually involve high risk and relatively small check sizes (often under $1 million)."
+  },
+  {
+    "question": "Walk me through the various funding rounds in venture capital.",
+    "answer": "Seed rounds involve friends, family, and angels. Series A is the first major institutional round focused on refining the product and business model. Series B and C fund scaling and expansion. Series D and beyond are late-stage rounds, often led by growth equity firms in preparation for an IPO."
+  },
+  {
+    "question": "From the perspective of an entrepreneur, what are the pros and cons of raising outside capital?",
+    "answer": "Pros include access to capital for growth, hiring, marketing, and strategic guidance from experienced investors. Cons include dilution of ownership and loss of some control, though this tradeoff is often necessary to scale the business."
+  },
+  {
+    "question": "What does the proof-of-concept stage involve?",
+    "answer": "At the proof-of-concept stage, there is no fully developed product—only an idea or prototype under development. Capital needs are minimal, and funding typically comes from friends, family, or angel investors to test feasibility and product-market fit."
+  },
+  {
+    "question": "What is the commercialization stage?",
+    "answer": "The commercialization stage occurs once product-market fit has been validated and institutional investors have committed capital. The focus shifts primarily to revenue growth rather than profitability. This stage usually corresponds to Series C, D, and later rounds, with multiple large venture and growth equity firms involved."
+  },
+  {
+    "question": "What is the power law of returns in venture capital investing and what are its implications?",
+    "answer": "The power law of returns means that a single successful investment can generate returns greater than the rest of a VC fund combined. Because most startups fail, VCs focus on companies with extremely large market potential, since one outsized winner can drive overall fund performance."
+  },
+  {
+    "question": "Why do venture capitalists target very large markets?",
+    "answer": "VCs target large markets because even if a startup succeeds, returns may be insufficient if the total addressable market is too small. Large markets increase the probability that a single investment can return the value of the entire fund."
+  },
+  {
+    "question": "What role does a lead investor have in a financing round?",
+    "answer": "The lead investor organizes the financing round, contributes the largest amount of capital, and helps set terms. They also use their credibility and network to attract other investors and provide strategic guidance to the startup."
+  },
+  {
+    "question": "Give an example of a drag-along provision in use.",
+    "answer": "A drag-along provision allows majority shareholders to force minority shareholders to participate in an exit, such as a sale of the company, preventing a small group of shareholders from blocking a transaction favored by the majority."
+  },
+  {
+    "question": "What are the typical characteristics of preferred stock?",
+    "answer": "Preferred stock is a hybrid between debt and equity. It has higher priority than common stock in dividends and liquidation, usually pays fixed dividends, may be convertible into common equity, and generally does not carry voting rights."
+  },
+  {
+    "question": "What are the two main types of preferred equity investments?",
+    "answer": "Participating preferred allows investors to receive both their preference and a share of common equity proceeds. Convertible (non-participating) preferred allows investors to choose between receiving their preference or converting into common equity."
+  },
+  {
+    "question": "What is a liquidation preference?",
+    "answer": "A liquidation preference determines how proceeds are distributed in an exit, specifying the amount preferred shareholders must receive before common shareholders. It is often expressed as a multiple of the original investment."
+  },
+  {
+    "question": "What does a 2.0x liquidation preference mean?",
+    "answer": "A 2.0x liquidation preference means the investor is entitled to receive twice their original investment before any proceeds are distributed to common shareholders."
+  },
+  {
+    "question": "What is a capped participation preference?",
+    "answer": "A capped participation preference allows preferred shareholders to participate in exit proceeds up to a specified multiple of their original investment, after which participation stops."
+  },
+  {
+    "question": "What is the difference between the pre-money and post-money valuation?",
+    "answer": "Pre-money valuation is the value of a company before a new financing round. Post-money valuation is the value after the new capital is added and equals the pre-money valuation plus the new financing amount (or investment divided by ownership percentage)."
+  },
+  {
+    "question": "What is the difference between an up round and a down round?",
+    "answer": "An up round occurs when a company raises new capital at a higher valuation than the previous round. A down round occurs when new capital is raised at a lower valuation than the prior round."
+  },
+  {
+    "question": "Can you give an example of when dilution would be beneficial for a founder?",
+    "answer": "Dilution can be beneficial when it occurs in an up round. For example, if a founder owns 100% of a $5M company and raises capital at a $20M valuation while selling 20%, the founder’s ownership drops to 80% but the value of their stake increases to $16M."
+  },
+  {
+    "question": "Can a startup recover from a down round?",
+    "answer": "Yes. Although down rounds are negative signals and cause dilution, the capital raised can prevent bankruptcy and give the company time to improve operations and regain momentum, potentially enabling future recovery."
+  },
+  {
+    "question": "What are anti-dilution protection clauses?",
+    "answer": "Anti-dilution clauses protect early investors from value loss in a down round by adjusting their conversion ratios to reduce the dilutive impact of issuing new shares at a lower price."
+  },
+  {
+    "question": "What is a term sheet in venture capital?",
+    "answer": "A term sheet is a non-binding document outlining the key terms of an investment, including valuation, amount raised, share class, investor rights, and protections. It forms the basis for legally binding agreements such as the stock purchase agreement."
+  },
+  {
+    "question": "What is a pay-to-play provision and what purpose does it serve?",
+    "answer": "A pay-to-play provision requires existing preferred investors to participate pro rata in future financing rounds or risk losing preferential rights such as liquidation preferences or anti-dilution protection."
+  },
+  {
+    "question": "What is a right of first refusal (ROFR) and how does it differ from a co-sale agreement?",
+    "answer": "A ROFR gives the company or investors the right to purchase shares before they are sold to a third party. A co-sale agreement allows certain shareholders to sell their shares alongside another shareholder under the same terms."
+  },
+  {
+    "question": "What are redemption rights?",
+    "answer": "Redemption rights allow preferred shareholders to force the company to repurchase their shares after a specified period. They provide downside protection but are rarely exercised due to limited company liquidity."
+  },
+  {
+    "question": "What is the difference between a full ratchet and a weighted average anti-dilution provision?",
+    "answer": "A full ratchet resets the investor’s conversion price to the lowest price of a down round, causing significant dilution to others. A weighted average provision adjusts the conversion price based on past issuance prices and share counts, resulting in less severe dilution."
+  },
+  {
+    "question": "What is the difference between broad-based and narrow-based weighted average anti-dilution provisions?",
+    "answer": "Both methods adjust conversion prices after a down round. Broad-based weighted average includes common stock, preferred stock, options, warrants, and option pools in the calculation, resulting in a smaller adjustment and less dilution. Narrow-based weighted average includes fewer share classes, leading to a larger adjustment and more dilution."
+  },
+  {
+    "question": "What is a capitalization table and what purpose does it serve?",
+    "answer": "A capitalization table (cap table) tracks a company’s equity ownership by share class and investor, including special terms like liquidation preferences and anti-dilution protections. It helps stakeholders understand ownership, dilution, and payout distributions in future financing rounds or exits."
+  },
+  {
+    "question": "What is an option pool?",
+    "answer": "An option pool is a reserved percentage of company shares (typically 5–20%) set aside to incentivize employees, advisors, or management. It is commonly used by startups that lack cash to offer competitive salaries."
+  },
+  {
+    "question": "What is an employee stock ownership plan (ESOP) pool?",
+    "answer": "An ESOP pool allocates shares specifically for future employees rather than founders or early hires. It is designed to attract talent as the company scales, and by Series A it typically represents about 10% of fully diluted equity."
+  },
+  {
+    "question": "What is growth equity and how does it differ from early-stage venture capital?",
+    "answer": "Growth equity involves minority investments in high-growth companies that are beyond the startup phase. Unlike early-stage VC, growth equity focuses less on product validation and more on scaling proven businesses, often with the goal of an IPO."
+  },
+  {
+    "question": "How does growth equity investing differ from traditional buyouts?",
+    "answer": "Traditional buyouts involve acquiring majority stakes in mature, stable companies and rely heavily on leverage. Growth equity typically involves minority stakes in rapidly growing companies, focuses on differentiation and organic growth, and often uses little or no debt."
+  },
+  {
+    "question": "When growth equity investors choose industries, how does this differ from traditional buyout firms?",
+    "answer": "Growth equity targets disruptive, winner-takes-all industries with outsized upside, while traditional buyouts focus on defensible industries with stable cash flows where multiple competitors can coexist."
+  },
+  {
+    "question": "What is an initial public offering (IPO)?",
+    "answer": "An IPO is the process by which a private company offers its shares to the public for the first time. It allows the company to raise capital through public markets and requires registration and disclosure with the SEC."
+  },
+  {
+    "question": "From management’s perspective, what are some downsides of going public?",
+    "answer": "Downsides include loss of control, increased disclosure and scrutiny from investors and competitors, and greater pressure to meet short-term performance expectations from public market investors."
+  },
+  {
+    "question": "What are the key differences between common stock and preferred stock?",
+    "answer": "Common stock represents ownership with voting rights and residual claims on assets. Preferred stock is a hybrid security with priority in dividends and liquidation, typically no voting rights, fixed payouts, and seniority over common stock but junior to debt."
+  },
+  {
+    "question": "What are preemptive rights?",
+    "answer": "Preemptive rights allow existing shareholders to purchase newly issued shares before they are offered to outside investors, helping protect them from dilution."
+  },
+  {
+    "question": "How can founders maintain control over their company post-IPO?",
+    "answer": "Founders can maintain control through dual-class share structures with super-voting shares, maintaining alliances with large early investors, and retaining influence over the board of directors by appointing trusted insiders."
+  },
+  {
+    "question": "What are no-vote common shares and which IPO brought them into discussion?",
+    "answer": "No-vote common shares are shares with no voting rights. They gained attention during Snap Inc.’s 2017 IPO, where public investors received non-voting shares while founders retained super-voting control."
+  },
+  {
+    "question": "During an IPO, what is the role of the underwriter?",
+    "answer": "The underwriter acts as an intermediary between the issuing company and investors, managing the roadshow, generating investor demand, pricing the IPO, and ensuring shares are sold to institutional investors."
+  },
+  {
+    "question": "What is the purpose of a syndicate of underwriters?",
+    "answer": "A syndicate spreads the risk of selling an IPO across multiple investment banks, increasing the likelihood that the entire issuance is successfully sold to investors."
+  },
+  {
+    "question": "What events take place during management roadshows?",
+    "answer": "During roadshows, company management presents the business and investment thesis to institutional investors to generate interest and demand for an upcoming equity or debt issuance."
+  },
+  {
+    "question": "What is the difference between the primary and secondary markets?",
+    "answer": "The primary market is where securities are first issued (e.g., IPOs). The secondary market is where investors trade previously issued securities among themselves."
+  },
+  {
+    "question": "What is a red herring and when is it filed with the SEC?",
+    "answer": "A red herring is a preliminary prospectus filed with the SEC that provides key information about an upcoming IPO, including business details, risks, and financials, and is used during the roadshow phase."
+  },
+  {
+    "question": "What is the S-1 filing and how does it differ from the red herring?",
+    "answer": "The S-1 is the formal registration statement required by the SEC for a US IPO, containing comprehensive financial and business disclosures. The red herring is a preliminary version circulated before final SEC approval."
+  },
+  {
+    "question": "Why is there a lockup period associated with IPOs?",
+    "answer": "The lockup period (typically 180 days) prevents insiders from selling shares immediately after an IPO, helping avoid a sudden surge in supply that could depress the stock price."
+  },
+  {
+    "question": "What is the difference between a seasoned equity offering (SEO) and a rights offering?",
+    "answer": "A seasoned equity offering (SEO) is when a public company issues additional shares after its IPO, often called a follow-on offering. A rights offering gives existing shareholders the right to purchase new shares at a discounted price on a pro rata basis."
+  },
+  {
+    "question": "During an IPO, what does a firm commitment mean?",
+    "answer": "A firm commitment means the underwriter agrees to purchase the entire issuance of shares from the company and bears the risk of not being able to sell all the shares to investors."
+  },
+  {
+    "question": "What do “best efforts” underwriting agreements involve?",
+    "answer": "Under best efforts underwriting, the underwriters commit to selling as much of the issuance as possible but do not guarantee that all securities will be sold, bearing no financial risk if the offering is undersubscribed."
+  },
+  {
+    "question": "Could you explain the Dutch auction pricing method in an IPO?",
+    "answer": "In a Dutch auction IPO, investors submit bids indicating how many shares they want and at what price. The offering price is set at the highest price at which all shares can be sold, and all investors pay that same clearing price."
+  },
+  {
+    "question": "What is a direct listing and how does it differ from a traditional IPO?",
+    "answer": "A direct listing allows a company to list its shares on an exchange without underwriters selling new shares. It avoids lockups, reduces fees, and limits dilution, but historically did not raise capital (though newer rules now allow it)."
+  },
+  {
+    "question": "What does the criticism of IPOs “leaving money on the table” refer to?",
+    "answer": "It refers to IPOs being underpriced, leading to large first-day price jumps. Critics argue companies could have raised more capital, while banks argue underpricing ensures successful distribution and builds investor relationships."
+  },
+  {
+    "question": "What is a greenshoe option in an IPO?",
+    "answer": "The greenshoe option allows underwriters to buy up to an additional 15% of shares at the offering price, either to meet excess demand or to stabilize the share price after the IPO."
+  },
+  {
+    "question": "What is commercial paper?",
+    "answer": "Commercial paper is short-term, unsecured debt issued by highly rated corporations, typically with maturities around 270 days, and is usually issued at a discount as a zero-coupon instrument."
+  },
+  {
+    "question": "What are some non-market risks faced by bond investors?",
+    "answer": "Non-market risks include default risk (credit deterioration), liquidity risk (difficulty selling the bond), and event risk (company-specific events such as M&A or legal issues)."
+  },
+  {
+    "question": "What is refinancing risk?",
+    "answer": "Refinancing risk is the risk that a borrower may not be able to refinance existing debt on similar terms due to worsened credit quality or tighter market conditions."
+  },
+  {
+    "question": "What is a special purpose acquisition company (SPAC)?",
+    "answer": "A special purpose acquisition company (SPAC), also known as a blank check company, is a shell company formed to raise capital through an IPO for the sole purpose of acquiring or merging with an existing private company. The capital raised is placed in escrow until a target is identified, and if no acquisition occurs within a specified timeframe, funds are returned to investors. Sponsors typically retain around 20% of post-IPO equity. SPACs became especially popular around 2020 due to their speed, valuation certainty, and reduced execution risk compared to traditional IPOs."
+  },
+  {
+    "question": "Why have SPACs become an attractive alternative to traditional IPOs?",
+    "answer": "SPACs offer a faster and simpler path to going public (often 4–6 months), valuation certainty through direct negotiation, reduced regulatory and marketing burden, and lower risk of underpricing or failing to sell shares. Most of the capital-raising and investor marketing is completed upfront by the SPAC sponsor."
+  },
+  {
+    "question": "What role does the SPAC sponsor play?",
+    "answer": "The sponsor forms the SPAC, raises capital, identifies and negotiates with acquisition targets, and typically retains a promote of around 20% of the equity as compensation for sourcing and executing the deal."
+  },
+  {
+    "question": "What happens to investor funds if a SPAC fails to find a target?",
+    "answer": "If a SPAC does not complete an acquisition within the allowed timeframe, the capital held in escrow is returned to investors, typically with interest."
+  },
+  {
+    "question": "What is a private placement?",
+    "answer": "A private placement is a capital raise in which securities are sold directly to a limited group of accredited or institutional investors rather than the general public. These securities are not registered with the SEC, making the process faster, cheaper, and less regulated than a public offering."
+  },
+  {
+    "question": "Who typically participates in private placements?",
+    "answer": "Participants usually include institutional investors such as hedge funds, mutual funds, pension funds, private equity firms, and other accredited investors."
+  },
+  {
+    "question": "What are the main advantages of a private placement?",
+    "answer": "Advantages include faster execution, reduced disclosure requirements, lower transaction costs, and greater flexibility in structuring terms compared to public offerings."
+  },
+  {
+    "question": "What is a shelf offering?",
+    "answer": "A shelf offering allows a company to register securities with the SEC (via an S-3 filing) and sell them incrementally over a period of up to three years instead of all at once. The securities remain \"on the shelf\" until market conditions are favorable."
+  },
+  {
+    "question": "Why might a company use a shelf offering?",
+    "answer": "Shelf offerings provide flexibility in timing, allowing companies to issue securities when market conditions are optimal, reduce issuance risk, and respond quickly to capital needs."
+  },
+  {
+    "question": "What does private investment in public equity (PIPE) mean?",
+    "answer": "A PIPE is a private placement of securities in a publicly traded company, typically sold to accredited investors at a discount. The securities are often unregistered and may be convertible or preferred equity."
+  },
+  {
+    "question": "Why are PIPEs attractive to public companies?",
+    "answer": "PIPEs offer a faster, cheaper, and more flexible alternative to secondary public offerings, with fewer regulatory requirements and no need for extensive roadshows."
+  },
+  {
+    "question": "Who typically invests in PIPE transactions?",
+    "answer": "PIPE investors usually include hedge funds, private equity firms, mutual funds, and other large institutional investors."
+  },
+  {
+    "question": "What are the risks associated with PIPE financing?",
+    "answer": "Risks include dilution for existing shareholders, signaling concerns if investors perceive financial distress, and potential selling pressure once securities become registered."
+  }
+]

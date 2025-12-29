@@ -1,0 +1,54 @@
+[
+  {
+    "question": "What are the three major subsectors that make up O&G? Tell me a bit about each.",
+    "answer": "Oil & gas is commonly divided into three subsectors:\n1) Upstream: Exploration & Production (E&P) and Oil-Field Services (OFS). OFS firms provide drilling rigs and technical services (e.g., seismic, geological/geophysical work) that support E&Ps, which ultimately produce oil and gas for sale.\n2) Midstream: Transportation and storage of hydrocarbons (pipelines, rail, terminals, gas/NGL storage). Gas processing into natural gas liquids (NGLs) is typically considered midstream (distinct from crude refining).\n3) Downstream: Refining crude oil into end products like motor gasoline (“mogas”), distillates, and other refined products."
+  },
+  {
+    "question": "How do you value each of the subsectors of O&G?",
+    "answer": "Valuation approaches vary by subsector:\n- OFS and refining: Often valued like “standard” industrial businesses using EV/EBITDA and P/E.\n- Midstream: Can be valued on EV/EBITDA, but many are organized as MLPs with Incentive Distribution Rights (IDRs) paid to the GP. The GP/IDR burden should be reflected in the numerator (often treated as part of net debt) when using EV/EBITDA. Midstream is also commonly valued via dividend discount models (or distribution discount models for MLPs).\n- E&P: While EV/EBITDA or EV/EBITDAX can be used, the predominant method is a NAV model: a long-dated (often 30+ year) DCF that depletes reserves to zero, then adjusts for balance sheet/non-operating items (net debt, non-operating assets, AROs, hedges, and G&A)."
+  },
+  {
+    "question": "Name a few O&G industry specific multiples beyond the typical multiples.",
+    "answer": "Common O&G-specific multiples include:\n- EV/EBITDAX: EBITDA plus add-back of exploration expense (for successful efforts accounting firms).\n- EV/DACF: Debt-adjusted cash flow, typically CFO plus after-tax interest expense (definition can vary on working capital inclusion).\n- EV/Daily Production: Often quoted as EV per flowing barrel (based on BOE or CFE).\n- EV/Reserves: In the US commonly EV/1P (proved reserves). Under Canadian IFRS filings it may be EV/2P (proved + probable).\n- Acreage value: $/acre for undeveloped land can be a major value driver (e.g., Permian transactions often have material value in undeveloped acreage in addition to flowing production)."
+  },
+  {
+    "question": "Describe the difference between full cost accounting and successful efforts accounting for E&Ps, and then the impact on the income statements and balance sheets of identical companies.",
+    "answer": "Key differences:\n- Successful efforts: Expenses geological/geophysical (G&G) costs as incurred and expenses exploratory dry holes immediately; development dry holes are still capitalized.\n- Full cost: Capitalizes G&G costs and capitalizes exploratory dry holes.\nImpact if companies are otherwise identical:\n- Successful efforts shows lower near-term profits because it expenses more up front.\n- Full cost can show higher near-term profits but tends to show lower later profits due to higher DD&A from the larger capitalized base and a higher likelihood of impairments/write-downs."
+  },
+  {
+    "question": "Describe the characteristics that make O&G different from more traditional industries, such as consumer staples.",
+    "answer": "Major differentiators include:\n- Commodity pricing: O&G firms are largely price-takers; they have limited pricing control (with indirect effects via hedging and sales points).\n- Depleting assets: Fields naturally decline, so drilling/investment is required to offset decline.\n- Asset intensive: Upstream/midstream/downstream assets are typically identifiable; in M&A there is often less need for goodwill relative to industries with more intangible value.\n- Cyclical: Severe boom-bust dynamics make forecasting challenging.\n- SFAS 69: E&Ps have specific disclosure/valuation requirements for reserves under SFAS 69."
+  },
+  {
+    "question": "For oil & gas companies, what is the SMOG disclosure requirement?",
+    "answer": "Under SFAS 69, companies disclose a standardized measure of discounted future net cash flows from proved oil and gas reserves (SMOG). Limitations include using historical pricing and historical costs (no escalation), excluding hedging and G&A, applying a mandated 10% discount rate, valuing only proved reserves, and excluding non-E&P assets like midstream or refining."
+  },
+  {
+    "question": "Describe the different categories of reserves.",
+    "answer": "Reserve categories are commonly framed probabilistically:\n- Proved reserves (1P): ~90% probability the reserves are at least the stated amount.\n- Probable reserves (2P = 1P + probable): ~50% probability the reserves are at least the stated amount.\n- Possible reserves (3P = 2P + possible): ~10% probability the reserves are at least the stated amount."
+  },
+  {
+    "question": "For reserves, how do 10-Ks under GAAP differ from IFRS filings?",
+    "answer": "GAAP 10-K filings generally allow disclosure of proved reserves (1P) only (while some non-official investor materials may reference broader categories). IFRS filings allow disclosure of proved + probable reserves (2P)."
+  },
+  {
+    "question": "What are some differences between the financial statements for an E&P company vs. a regular company?",
+    "answer": "Common differences include:\n- Hedge impacts: Realized and/or unrealized gains/losses on hedging instruments.\n- DD&A instead of D&A: Depletion, depreciation & amortization reflects depleting reserves.\n- Asset retirement obligations (AROs): Liabilities for future plug-and-abandon and remediation.\n- Exploration expense: Particularly visible under successful efforts accounting due to expensing of G&G and exploratory dry holes."
+  },
+  {
+    "question": "What are some metrics that would be looked at in an O&G M&A model?",
+    "answer": "In addition to traditional accretion/dilution (often less central outside large caps), O&G M&A focuses on:\n- NAV accretion/dilution.\n- Debt-adjusted per share growth: production/share growth neutralized for financing mix (often converting debt to shares at a reference share price).\n- Reserves-to-production (R/P): year-end reserves divided by annual production (years of proved reserves remaining).\n- Production replacement ratio: new reserves divided by production (often preferred when driven organically vs acquired).\n- Finding & development (F&D) costs: dollars spent per unit of new reserves; can be computed with or without acquisitions depending on analytical goal."
+  },
+  {
+    "question": "Would an E&P company be a good candidate for an LBO? Why or why not?",
+    "answer": "Generally no. E&P cash flows are highly sensitive to commodity prices (limited pricing control) and can be volatile and difficult to predict, which is unattractive for the leverage and debt-service requirements of an LBO."
+  },
+  {
+    "question": "What are IDCs, and what type of companies can use them?",
+    "answer": "IDCs are intangible drilling costs. For tax purposes, they can often be immediately expensed by non-integrated companies (i.e., companies without refining operations, simplifying the distinction)."
+  },
+  {
+    "question": "What is the energy equivalency between a barrel of oil and natural gas in cubic feet?",
+    "answer": "A common rule of thumb is ~6,000 cubic feet of natural gas per 1 barrel of oil (6 mcf ≈ 1 BOE), enabling conversions between BOE and gas volumes (e.g., mcf/d) on an energy-equivalent basis."
+  }
+]

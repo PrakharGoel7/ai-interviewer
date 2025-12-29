@@ -1,0 +1,470 @@
+[
+  {
+    "question": "Could you explain the concept of present value and how it relates to company valuations?",
+    "answer": "Present value is based on the idea that a dollar today is worth more than a dollar in the future because today’s dollar can be invested to earn a return. Present value is calculated by discounting a future cash flow by (1 + r)^t. In intrinsic valuation, a company’s value equals the sum of the present value of all future cash flows it generates. Higher valuations generally imply higher expected returns on invested capital from positive-NPV projects and/or lower perceived risk in cash flows."
+  },
+  {
+    "question": "What is equity value and how is it calculated?",
+    "answer": "Equity value (market capitalization) represents the value attributable to common equity shareholders. It is calculated as: Equity Value = Latest Closing Share Price × Total Diluted Shares Outstanding."
+  },
+  {
+    "question": "How do you calculate the fully diluted number of shares outstanding?",
+    "answer": "Fully diluted shares are commonly calculated using the Treasury Stock Method (TSM). You include in-the-money options/warrants and add them to basic shares, then assume exercise proceeds are used to repurchase shares at the current price to reduce net dilution."
+  },
+  {
+    "question": "What is enterprise value and how do you calculate it?",
+    "answer": "Enterprise value (EV) represents the value of a company’s operations to all capital providers (equity, debt, preferred, etc.) and is considered capital-structure neutral. A common formula is: Enterprise Value = Equity Value + Net Debt + Preferred Stock + Minority Interest."
+  },
+  {
+    "question": "How do you calculate equity value from enterprise value?",
+    "answer": "To move from EV to equity value, subtract non-common equity claims and net debt components. A common expression is: Equity Value = Enterprise Value − Net Debt − Preferred Stock − Minority Interest (and adjust for non-operating assets like cash, consistent with how net debt is defined)."
+  },
+  {
+    "question": "Which line items are included in the calculation of net debt?",
+    "answer": "Net debt includes interest-bearing debt (short-term and long-term loans/bonds) plus other non-equity financial claims (often including preferred stock and non-controlling interests in the broader ‘debt-like claims’ concept), minus cash and non-operating assets such as cash equivalents, short-term investments, and equity investments. A simplified formula is: Net Debt = Total Debt − Cash & Equivalents."
+  },
+  {
+    "question": "When calculating enterprise value, why do we add net debt?",
+    "answer": "Because cash on the balance sheet could be used to pay down debt, many analyses use net debt (debt net of cash) rather than gross debt. Adding net debt to equity value helps reflect the value of operations to all capital providers on a capital-structure-neutral basis."
+  },
+  {
+    "question": "What is the difference between enterprise value and equity value?",
+    "answer": "Equity value is the value attributable to common shareholders. Enterprise value is the value of the business to all stakeholders (equity, debt, preferred, etc.) and is more representative of the value of operations because it incorporates non-common equity claims and other ownership stakes."
+  },
+  {
+    "question": "Could a company have a negative net debt balance and have an enterprise value lower than its equity value?",
+    "answer": "Yes. Negative net debt means the company has more cash than debt. Since EV reflects operating value and typically excludes non-operating assets like excess cash, a cash-rich company can have EV lower than equity value."
+  },
+  {
+    "question": "Can the enterprise value of a company turn negative?",
+    "answer": "Yes, though it is rare. A negative EV generally implies a net cash balance (cash minus debt) that exceeds the company’s equity value."
+  },
+  {
+    "question": "If a company raises $250 million in additional debt, how would its enterprise value change?",
+    "answer": "In theory, EV should not change because it is capital structure neutral: debt increases and cash increases by the same amount, offsetting. In practice, financing costs (fees/interest) can reduce profitability and potentially lower valuation over time."
+  },
+  {
+    "question": "Why do we add minority interest to equity value in the calculation of enterprise value?",
+    "answer": "If a parent owns >50% but <100% of a subsidiary, accounting rules require consolidating 100% of the subsidiary’s financials. To avoid mismatch when using consolidated operating metrics in EV multiples, minority interest is added to EV so the numerator reflects claims on the consolidated earnings."
+  },
+  {
+    "question": "How are convertible bonds and preferred equity with a convertible feature accounted for when calculating enterprise value?",
+    "answer": "If the convertibles are in-the-money as of the valuation date (stock price above conversion/strike), they are treated like equity dilution (more shares). If out-of-the-money, they are treated as financial liabilities (similar to debt)."
+  },
+  {
+    "question": "What are the two main approaches to valuation?",
+    "answer": "1) Intrinsic valuation: value based on the present value of future cash flows (most commonly DCF). 2) Relative valuation: value based on market multiples from comparable companies (trading comps) and/or comparable transactions (transaction comps)."
+  },
+  {
+    "question": "What are the most common valuation methods used in finance?",
+    "answer": "Comparable company analysis (trading comps), comparable transactions analysis (transaction comps), discounted cash flow (DCF), leveraged buyout (LBO), and liquidation analysis."
+  },
+  {
+    "question": "Among the DCF, comparable companies analysis, and transaction comps, which approach yields the highest valuation?",
+    "answer": "Transaction comps often yield the highest valuation because acquired-company prices typically include a control premium, which can be significant (often cited around 25%–50% above market prices)."
+  },
+  {
+    "question": "Which of the valuation methodologies is the most variable in terms of output?",
+    "answer": "DCF is typically the most variable because it relies on forward-looking projections and discretionary assumptions (growth, margins, discount rate, terminal value)."
+  },
+  {
+    "question": "Contrast the discounted cash flow (DCF) approach to the trading comps approach.",
+    "answer": "DCF: Values a company based on forecasted cash flows and is often viewed as academically rigorous and fundamentals-based. Key drawbacks are high sensitivity to assumptions, difficulty forecasting long horizons, and reliance on inputs like beta/WACC; terminal value can be a large share of total value. Trading comps: Values a company based on how the market prices similar public companies (recent actual public-market prices). Drawbacks include scarcity of truly comparable companies (often ‘apples-to-oranges’), vulnerability to markets being wrong/irrational, and the fact that comps embed implicit assumptions rather than explicit modeled assumptions."
+  },
+  {
+    "question": "How can you determine which valuation method to use?",
+    "answer": "Because each method has shortcomings, analysts typically use multiple methods to triangulate a valuation range and sanity-check assumptions. DCF and comps are often used together: comps provide a market-based check on intrinsic value, and DCF provides a fundamentals-based check on market pricing. In M&A, transaction comps help anchor realistic paid premiums, while DCF can assess intrinsic value versus market-driven prices."
+  },
+  {
+    "question": "Would you agree with the statement that relative valuation relies less on the discretionary assumptions of individuals?",
+    "answer": "Not necessarily. Relative valuation still embeds assumptions about future cash flows, cost of capital, and returns—just implicitly through the market’s pricing rather than explicitly modeled. Differences between comps and DCF often arise from inconsistent implicit vs explicit assumptions; if perfectly consistent, they would theoretically converge."
+  },
+  {
+    "question": "What does free cash flow (FCF) represent?",
+    "answer": "Free cash flow represents discretionary cash flow remaining after recurring expenditures needed to operate. A simple definition is: FCF = Cash from Operations − Capex. Non-capex investing cash flows and financing cash flows are excluded because they are discretionary management decisions."
+  },
+  {
+    "question": "Why are periodic acquisitions excluded from the calculation of FCF?",
+    "answer": "FCF is intended to reflect recurring core operating cash flows. Acquisitions are typically one-time, non-recurring, discretionary events, while capex is recurring and required for ongoing operations."
+  },
+  {
+    "question": "Explain the importance of excluding non-operating income/(expenses) for valuations.",
+    "answer": "Valuation generally targets the value of core operations. For DCF, projected cash flows should come from recurring operations (selling goods/services), excluding non-recurring or discretionary items like investment income, dividends, or asset-sale gains. For comps, excluding non-core and non-recurring items improves comparability (‘apples-to-apples’) across peers."
+  },
+  {
+    "question": "Define free cash flow yield and compare it to dividend yield and P/E ratios.",
+    "answer": "FCF yield = (FCF per share) / (current share price), where FCF is typically cash from operations minus capex. Like dividend yield, it gauges equity returns relative to price, but it reflects cash generated rather than cash distributed. Inverting FCF yield gives share price / FCF per share, a cash-flow analog to P/E, with the benefit of using cash rather than accrual earnings but with the drawback that cash flows can be volatile due to working capital and deferred revenue swings."
+  },
+  {
+    "question": "Could you define what the capital structure of a company represents?",
+    "answer": "Capital structure is how a company funds operations and growth using a mix of debt and equity. As companies mature and demonstrate stable profitability, they often access debt more easily and may increase leverage."
+  },
+  {
+    "question": "Why would a company issue equity vs. debt (and vice versa)?",
+    "answer": "Equity: Pros include no required payments and flexibility around distributions; access to a broad investor base and network. Cons include ownership dilution, generally higher cost of capital, heavier regulatory/disclosure burden, and potential loss of control if shareholders vote management out. Debt: Pros include tax-deductible interest (subject to limits), no ownership dilution, typically lower cost of capital, and imposed discipline. Cons include required payments and default risk, restrictive covenants reducing flexibility, and less margin for error (bad decisions have harsher consequences under leverage)."
+  },
+  {
+    "question": "What are share buybacks and under which circumstances would they be most appropriate?",
+    "answer": "A share buyback is when a company uses cash to repurchase its own shares via tender offer or open market. It reduces shares outstanding, can increase EPS, and may be interpreted as a positive signal if management believes the stock is undervalued. It is most appropriate when management believes the market is undervaluing the company relative to intrinsic value."
+  },
+  {
+    "question": "Why would a company repurchase shares? What would the impact on the share price and financial statements be?",
+    "answer": "Companies repurchase shares to return excess cash to shareholders (an alternative to dividends). In theory, if shares are correctly priced, the effect on share price is neutral because share count falls but equity value also falls as cash is used. In practice, buybacks can move price depending on signaling and how investors value cash and growth prospects. Accounting example for a $100M buyback: cash decreases by $100M and treasury stock increases by $100M."
+  },
+  {
+    "question": "Why might a company prefer to repurchase shares over the issuance of a dividend?",
+    "answer": "Reasons include avoiding ‘double taxation’ of dividends, mechanically increasing EPS by reducing share count, offsetting dilution from stock-based compensation, signaling perceived undervaluation, and flexibility (buybacks can be one-time, whereas dividends are typically expected to be ongoing and cutting them is viewed negatively)."
+  },
+  {
+    "question": "A company with $100 million in net income and a P/E multiple of 15x is considering raising $200 million in debt to pay out a one-time cash dividend. How would you decide if this is a good idea?",
+    "answer": "Under the assumptions given (P/E stays 15x, cost of debt 5%), interest expense increases by $10M, reducing net income from $100M to $90M. Equity value would drop from $1,500M (15×100) to $1,350M (15×90), a $150M decline, while shareholders receive $200M cash—net benefit $50M ignoring taxes. However, the conclusion depends on assumptions: higher cost of debt, tax impacts, and—critically—P/E may compress as leverage raises equity risk (beta/cost of equity), which can wipe out or reverse the benefit. Generally, debt should fund value-creating investments, not simply extract cash indefinitely."
+  },
+  {
+    "question": "When would it be most appropriate for a company to distribute dividends?",
+    "answer": "Dividends are most common for low-growth, mature companies with fewer high-return projects. Paying dividends can signal confidence in stable long-term profitability and attracts dividend-oriented, long-term investors."
+  },
+  {
+    "question": "What is CAGR and how do you calculate it?",
+    "answer": "CAGR (compound annual growth rate) is the annualized growth rate required for an investment to grow from a beginning value to an ending value over t years. It is calculated as: CAGR = (Ending Value / Beginning Value)^(1/t) − 1."
+  },
+  {
+    "question": "What is the difference between CAGR and IRR?",
+    "answer": "CAGR uses only beginning value, ending value, and time, effectively smoothing growth. IRR (XIRR in Excel for irregular timing) accounts for multiple cash inflows and outflows and their timing. CAGR is commonly used for historical growth measurement; IRR is used more for investment decision-making with multiple cash flows."
+  },
+  {
+    "question": "How would you evaluate the buy vs. rent decision in NYC?",
+    "answer": "Set key assumptions (e.g., down payment available, 10-year horizon). For buying: model mortgage, taxes, maintenance, tax benefits, and eventual sale price (using assumed real estate appreciation), then compute IRR. For renting: estimate rent and escalations, invest the would-be down payment elsewhere (e.g., assumed 5–7% stock market return), then compute IRR. Compare IRRs while adjusting qualitatively for risk differences (leverage, liquidity); if IRRs are similar, renting may be preferred due to lower risk."
+  },
+  {
+    "question": "How would you value a painting?",
+    "answer": "A painting has no intrinsic cash flows, so it’s valued by what the market will pay. You’d use comparable transactions—prices paid for similar paintings in prior sales—to estimate value."
+  },
+  {
+    "question": "When would it be appropriate to use a sum-of-the-parts approach to valuing a company?",
+    "answer": "Use SOTP when a company has multiple divisions with different risk/return profiles (e.g., a conglomerate). Value each segment separately using appropriate peer groups and discount rates, then sum segment values to get total company value."
+  },
+  {
+    "question": "How does valuing a private company differ from valuing a public company?",
+    "answer": "Private-company valuation is constrained by limited/less standardized data because private firms need not disclose publicly. The process can be similar if financials are provided, but data quality and completeness may be weaker. Private companies are also less liquid, so an illiquidity discount (often cited ~10–30%) is typically applied."
+  },
+  {
+    "question": "What is an illiquidity discount?",
+    "answer": "It is a discount applied to private-company valuations to reflect the inability to exit quickly. Public-company shares embed a liquidity premium due to ease of sale; private shares lack that optionality, so their value is reduced accordingly."
+  },
+  {
+    "question": "Walk me through a DCF.",
+    "answer": "A typical unlevered DCF: (1) Forecast unlevered free cash flows (UFCF/FCFF) over ~5–10 years. (2) Compute terminal value using perpetuity growth or exit multiple. (3) Discount stage-1 cash flows and terminal value back to present using WACC. (4) Convert enterprise value to equity value by adjusting for net debt and other non-equity claims, adding non-operating assets like cash as appropriate. (5) Divide equity value by diluted shares to get implied value per share. (6) Run sensitivity analyses because results are highly assumption-dependent."
+  },
+  {
+    "question": "Conceptually, what does the discount rate represent?",
+    "answer": "The discount rate is the expected return required for an investment given its risk profile—effectively a minimum return threshold based on comparable-risk opportunities. Higher risk implies a higher discount rate, which reduces the present value of cash flows."
+  },
+  {
+    "question": "What is the difference between unlevered FCF (FCFF) and levered FCF (FCFE)?",
+    "answer": "Unlevered FCF (FCFF) are cash flows available to all capital providers before financing effects; a common formula is: FCFF = EBIT×(1−Tax Rate) + D&A − ΔNWC − Capex. Levered FCF (FCFE) are residual cash flows to equity after debt payments; you start from net income, adjust for non-cash items and working capital, subtract capex, and incorporate net borrowing (new debt minus repayments). A simplified expression shown is: FCFE = Cash from Operations − Capex − Debt Principal Payment."
+  },
+  {
+    "question": "What is the difference between the unlevered DCF and the levered DCF?",
+    "answer": "Unlevered DCF discounts unlevered cash flows to get enterprise value using WACC, then adjusts for net debt and non-operating assets to reach equity value. Levered DCF discounts levered cash flows to get equity value directly using cost of equity; to get enterprise value you would add back net debt. In theory, both should reconcile to similar values, but in practice it’s difficult to match exactly."
+  },
+  {
+    "question": "What is the appropriate cost of capital when unlevered FCF (FCFF) and levered FCF (FCFE)?",
+    "answer": "For unlevered DCF (FCFF), use WACC because cash flows accrue to both debt and equity providers. For levered DCF (FCFE), use the cost of equity because cash flows accrue only to equity holders."
+  },
+  {
+    "question": "What is the formula to calculate the weighted average cost of capital (WACC)?",
+    "answer": "WACC is the opportunity cost of capital for an investment given comparable risk. It is calculated using market-value weights: WACC = [E/(D+E)]×Re + [D/(D+E)]×Rd×(1−t), where Re is cost of equity, Rd is cost of debt, and t is the tax rate."
+  },
+  {
+    "question": "If a company carries no debt, what is its WACC?",
+    "answer": "If there is no debt, WACC equals the cost of equity."
+  },
+  {
+    "question": "How is the cost of equity calculated?",
+    "answer": "A common method is CAPM: Cost of Equity (Re) = Risk-Free Rate + Beta × Equity Risk Premium."
+  },
+  {
+    "question": "How do you determine the risk-free rate?",
+    "answer": "Conceptually it’s the yield on default-free government bonds matching the duration of the cash flows. In practice, for US-based valuations, the 10-year US Treasury yield is often used due to liquidity considerations in very long maturities."
+  },
+  {
+    "question": "What effect does a low-interest-rate environment have on DCF-derived valuations?",
+    "answer": "Lower prevailing rates reduce the risk-free rate and typically reduce the discount rate, raising DCF valuations all else equal. The passage also notes debate on whether to ‘normalize’ rates versus using current rates and current risk premiums."
+  },
+  {
+    "question": "Define the equity risk premium used in the CAPM formula.",
+    "answer": "Equity risk premium (ERP) is the excess return investors demand for equities over risk-free securities. A standard definition is: ERP = Expected Market Return − Risk-Free Rate, and it has historically often been cited in the ~4%–6% range."
+  },
+  {
+    "question": "Explain the concept of beta (β).",
+    "answer": "Beta measures a security’s systematic (non-diversifiable) risk relative to the market. It is the covariance of the asset’s returns with the market divided by the market’s return variance. Beta of 1 implies market-like sensitivity; >1 implies higher sensitivity/volatility; <1 implies lower sensitivity; 0 implies no market sensitivity; negative implies inverse relationship to the market."
+  },
+  {
+    "question": "What is the difference between systematic risk and unsystematic risk?",
+    "answer": "Systematic risk (market risk) is undiversifiable risk inherent to the overall market. Unsystematic risk is company- or industry-specific risk that can be reduced through diversification across assets/industries/geographies."
+  },
+  {
+    "question": "Does a higher beta translate into a higher or lower valuation?",
+    "answer": "Higher beta implies higher risk and a higher discount rate, which lowers the present value of cash flows and thus lowers valuation, all else equal."
+  },
+  {
+    "question": "What type of sectors would have higher or lower betas?",
+    "answer": "High-beta sectors tend to be cyclical (demand drops in recessions) such as automobiles, semiconductors, and construction. Low-beta sectors tend to sell essentials or provide essential services regardless of cycles, such as consumer staples (toiletries), hospitals/healthcare facilities, and utilities."
+  },
+  {
+    "question": "What are the benefits of the industry beta approach?",
+    "answer": "Using peer-group betas helps remove company-specific noise and provides a ‘normalized’ beta. Analysts often unlever comparable betas, average/median them, then relever to the target capital structure. It’s also useful for private companies that lack observable market betas."
+  },
+  {
+    "question": "What are the flaws of regression betas?",
+    "answer": "Key issues include: (1) backward-looking nature (past correlation may not predict future), (2) large standard errors and sensitivity to chosen index and company-specific events, and (3) implicit assumption of constant capital structure because it reflects historical average leverage rather than current/forward leverage."
+  },
+  {
+    "question": "What is the impact of leverage on the beta of a company?",
+    "answer": "Leverage increases equity (levered) beta because it adds financial risk (higher default/bankruptcy risk and more volatility). Unlevered beta reflects only business risk; levered beta equals or exceeds unlevered beta (never lower)."
+  },
+  {
+    "question": "What is the typical relationship between beta and the amount of leverage used?",
+    "answer": "Mature, lower-beta companies can often support more debt because their cash flows are stable and lenders provide cheaper financing. High-beta companies tend to use less debt or face worse terms because their volatility makes lending riskier."
+  },
+  {
+    "question": "What are the formulas used to unlever and relever beta?",
+    "answer": "Unlever comparable betas to remove leverage: β_unlevered = β_levered / [1 + (D/E)×(1−t)]. Then relever at the target capital structure: β_levered = β_unlevered × [1 + (1−t)×(D/E)]."
+  },
+  {
+    "question": "Is it possible for an asset to have a negative beta?",
+    "answer": "Yes. Gold is a common example cited: it can move inversely to the market, often rising when markets fall as investors seek a safe haven."
+  },
+  {
+    "question": "How do you estimate the cost of debt?",
+    "answer": "Cost of debt is observed as the market yield on comparable-risk debt. If the company has no publicly traded debt, it can be estimated via a synthetic rating and default spread derived from metrics like interest coverage."
+  },
+  {
+    "question": "Which is typically higher, the cost of debt or the cost of equity?",
+    "answer": "Cost of equity is typically higher because equity is riskier (residual claimant, no guaranteed payments) and because debt interest is generally tax-deductible, reducing its after-tax cost."
+  },
+  {
+    "question": "Since the cost of equity is higher than the cost of debt, why not finance using only debt?",
+    "answer": "As leverage increases, the required return on debt rises due to higher default risk. WACC can decrease initially due to the tax shield, but beyond an optimal point, expected financial distress costs and rising risk increase WACC. Debt also introduces restrictive covenants and reduces flexibility."
+  },
+  {
+    "question": "What is the difference between WACC and IRR?",
+    "answer": "IRR is the implied return rate of a project’s cash flows (discount rate that makes NPV = 0). WACC is the blended minimum required return demanded by debt and equity providers of capital. Projects are often pursued if IRR exceeds WACC."
+  },
+  {
+    "question": "Which would have more of an impact on a DCF, the discount rate or sales growth rate?",
+    "answer": "While both should be sensitized, changes in the discount rate typically have a much larger effect on DCF value than operational assumptions like sales growth."
+  },
+  {
+    "question": "How is the terminal value calculated?",
+    "answer": "Two common methods: (1) Perpetuity growth (Gordon growth): TV = FCF_(t+1) / (r − g). (2) Exit multiple: apply an assumed multiple (often on EBITDA) to the terminal-year metric based on mature comparable valuations."
+  },
+  {
+    "question": "Why is it necessary to discount the terminal value back to the present?",
+    "answer": "Terminal value is computed as a value at the end of the explicit forecast period (a future date). Since DCF values the company today, terminal value must be discounted back to present value using the appropriate discount rate."
+  },
+  {
+    "question": "For the perpetuity approach, how do you determine the long-term growth rate?",
+    "answer": "It should reflect sustainable steady-state growth, often around 1%–3% (sometimes cited up to ~5%), commonly anchored to long-run GDP growth or the risk-free rate. It must be realistic over very long horizons (e.g., can the company grow at that rate for decades?)."
+  },
+  {
+    "question": "How can the terminal value be sanity-checked if the exit multiple approach was used?",
+    "answer": "You can back into an implied perpetuity growth rate from the exit-multiple-derived terminal value to see if it is reasonable. You can also compute an implied exit multiple from a perpetuity-growth-derived terminal value and compare to market multiples."
+  },
+  {
+    "question": "What is the argument against using the exit multiple approach in a DCF?",
+    "answer": "A DCF is intended to be intrinsic and independent of market pricing. Using an exit multiple imports relative valuation into the terminal value. Despite this, it’s widely used because it’s simpler and often easier to defend in practice."
+  },
+  {
+    "question": "What is the purpose of using a mid-year convention in a DCF model?",
+    "answer": "It assumes cash flows are generated mid-period rather than at period-end, reflecting that cash flows occur throughout the year. Discounting from the midpoint effectively reduces the discounting time (e.g., year 5 becomes 4.5), which increases present value compared to an end-of-year assumption."
+  },
+  {
+    "question": "Could you give me an example of when the mid-year convention might be inappropriate?",
+    "answer": "For highly seasonal businesses where cash flows are concentrated late in the year (e.g., certain retailers with strong Q3/Q4 sales), assuming mid-year receipt may be inaccurate; an end-of-year assumption could better reflect timing."
+  },
+  {
+    "question": "How would raising additional debt impact a DCF analysis?",
+    "answer": "In an unlevered DCF, enterprise value is theoretically capital-structure neutral, so EV should be relatively unchanged. However, if leverage materially changes capital structure weights and increases cost of debt (and potentially WACC via higher risk), implied valuation can decrease."
+  },
+  {
+    "question": "Imagine that two companies have the same total leverage ratio with identical free cash flows and profit margins. Do both companies have the same amount of default risk?",
+    "answer": "Not necessarily. A company with significantly more cash is better positioned because cash can help pay down debt. This is why net debt leverage (Net Debt/EBITDA) is often used alongside gross leverage (Total Debt/EBITDA). Higher cash and lower net leverage generally imply lower bankruptcy risk and lower cost of debt."
+  },
+  {
+    "question": "When would a DCF be an inappropriate valuation method?",
+    "answer": "When you lack access to credible financial statements and projections, a DCF is hard to build and comps may be more realistic. DCFs can also be less feasible when a company is expected to generate negative cash flows for the foreseeable future, making the valuation heavily dependent on distant, uncertain terminal assumptions."
+  },
+  {
+    "question": "Why is a DCF not used to value early stage startups?",
+    "answer": "A DCF can be used in principle, but it becomes unreliable for early-stage startups because forecasting cash flows far enough to reach stable growth can require 15+ years, making projections and terminal assumptions highly uncertain. DCFs are most credible for mature companies with established positions."
+  },
+  {
+    "question": "If 80% of a DCF valuation comes from the terminal value, what should be done?",
+    "answer": "Either extend the explicit forecast period so the company reaches a more normalized steady state before terminal value, and/or adjust terminal assumptions downward if they are too aggressive. Excessive terminal dependence often signals insufficient explicit modeling or overly optimistic terminal inputs."
+  },
+  {
+    "question": "How would you handle stock options when calculating a company’s share count?",
+    "answer": "Standard practice is to include vested in-the-money options (strike below current price) in diluted shares using the Treasury Stock Method, assuming proceeds repurchase shares at current price. Some practitioners include all in-the-money options (vested and unvested) for conservatism, assuming unvested options will vest soon."
+  },
+  {
+    "question": "How would you handle restricted stock in the share count?",
+    "answer": "Some ignore unvested restricted stock, but increasingly practitioners include unvested restricted stock in diluted shares on the logic it will eventually vest and including it is more conservative."
+  },
+  {
+    "question": "How would you handle convertible preferred stock in the share count?",
+    "answer": "Assume conversion into common stock for diluted shares if the preferred’s effective conversion price (or liquidation value relative to conversion terms) is below the current share price (i.e., conversion is economically favorable). If you assume conversion for share count, remove preferred stock from net debt to avoid double counting."
+  },
+  {
+    "question": "How would you handle convertible bonds in the share count?",
+    "answer": "Assume conversion into common stock for diluted shares if the bond’s conversion price is below the current share price (in-the-money). If you assume conversion for share count, remove the convertible debt from net debt to avoid double counting."
+  },
+  {
+    "question": "How should operating leases be treated in a DCF valuation?",
+    "answer": "They should be capitalized when material because lease obligations resemble debt-like commitments. In that approach, rent expense is excluded from operating cash flow build-up, and the present value of lease obligations is included in net debt."
+  },
+  {
+    "question": "For forecasting purposes, do you use the effective or marginal tax rate?",
+    "answer": "Near-term forecasts often use the effective tax rate based on recent history (e.g., last 3–5 years). Over the longer term (especially approaching terminal/steady state), the tax rate should be normalized toward the marginal tax rate because deferrals (DTAs/DTLs) unwind and should not be assumed to persist indefinitely."
+  },
+  {
+    "question": "How does a lower tax rate impact the valuation from a DCF?",
+    "answer": "It can increase free cash flows by reducing taxes paid, raising value. But it can also increase after-tax cost of debt (less tax shield) and increase relevered beta, raising cost of equity and WACC, which can reduce value. Net impact depends on whether increased FCF outweighs higher discount rates in the full model."
+  },
+  {
+    "question": "How does a dividend discount model (DDM) differ from a discounted cash flow model (DCF)?",
+    "answer": "DDM values a company as the present value of future dividends, discounted at cost of equity, often with a terminal equity multiple (commonly P/E). It directly produces equity value and equity value per share. A traditional (unlevered) DCF values the firm as the present value of future free cash flows, discounted at WACC, producing enterprise value and then converting to equity value."
+  },
+  {
+    "question": "What are the major drawbacks of the dividend discount model (DDM)?",
+    "answer": "DDM is highly sensitive to payout and growth assumptions. It struggles for high-growth companies where growth may exceed required return (making the model break). It is best for mature dividend payers, yet dividend forecasting is still difficult. Many companies pay no dividends. DDM typically neglects buybacks, which are an important shareholder-return channel. Dividends can also be misleading because poorly run companies can still pay large dividends, distorting valuation."
+  },
+  {
+    "question": "What is the purpose of using multiples in valuation?",
+    "answer": "Multiples standardize value by expressing it relative to a metric (e.g., EV/EBITDA, P/E), enabling comparisons across companies since absolute values aren’t directly comparable. Meaningful use requires contextual understanding of the company’s fundamentals and industry drivers."
+  },
+  {
+    "question": "How do you determine what the appropriate numerator is for a multiple?",
+    "answer": "Match the stakeholder group represented in numerator and denominator. EV can pair with unlevered metrics like revenue, EBIT, EBITDA, and FCFF. Equity value can pair with levered metrics like net income, EPS, and FCFE."
+  },
+  {
+    "question": "Walk me through the process of “spreading comps.”",
+    "answer": "First clarify whether trading comps or transaction comps. Typical steps: (1) pick a comparable peer group (public peers for trading comps; recent M&A deals for transaction comps). (2) gather relevant qualitative info (industry trends, company context). (3) input and scrub financials for consistency (remove non-recurring items, align accounting, adjust for leverage differences, and calendarize if needed). (4) compute multiples (often LTM and NTM) and summarize distribution (min/max, quartiles, mean/median) and handle outliers. (5) apply an appropriate multiple (often median/mean) to the target metric to estimate value, supported by an understanding of fundamental drivers."
+  },
+  {
+    "question": "When putting together a peer group for comps, what would some key considerations be?",
+    "answer": "Consider operational profile (industry/sector, business model, products/services, end markets, competitive position, life-cycle stage, cyclicality/seasonality) and financial profile (size such as EV/equity value, margins like gross/operating/EBITDA, growth rates, credit/leverage and coverage ratios, and return metrics like ROIC/ROA/ROE)."
+  },
+  {
+    "question": "Should the target company being valued be included in its peer group?",
+    "answer": "Many exclude it to avoid skewing the multiple toward the target’s current market valuation. However, if the logic is that the market may misprice individual names but be broadly right on average, including the target can be justified as part of the market-based benchmark."
+  },
+  {
+    "question": "What are the primary advantages of the trading comps approach?",
+    "answer": "Advantages include easy access to public filings/data, less data required than a DCF (you can value using a few key metrics like EBITDA/revenue/net income), and up-to-date valuations reflecting current market sentiment and prices."
+  },
+  {
+    "question": "What are the main disadvantages of performing trading comps?",
+    "answer": "It can be hard to find true ‘pure-play’ comparables, comparisons are often ‘apples-to-oranges,’ explaining valuation gaps requires judgment, and market pricing can be emotional/irrational. Low liquidity or lightly followed stocks may not reflect true fundamental value, reducing usefulness."
+  },
+  {
+    "question": "To perform transaction comps, how would you compile the data?",
+    "answer": "Use deal announcement press releases, proxy filings, and merger agreements for terms; use target filings for historical financials; supplement with research reports and data vendors (e.g., Bloomberg, Capital IQ, FactSet) for share price history and earnings forecasts."
+  },
+  {
+    "question": "What do transaction comps tell you that trading comps cannot?",
+    "answer": "Transaction comps provide insight into control premiums in acquisitions and can indicate whether there are real buyers in private markets for a strategy/asset. Even if DCF and trading comps suggest value, lack of buyers can prevent an exit at the expected valuation."
+  },
+  {
+    "question": "In M&A, why is a control premium paid?",
+    "answer": "A control premium is paid to incentivize existing shareholders to sell. Acquirers typically must offer a premium over the prevailing market price to obtain control; otherwise, shareholders have little reason to give up ownership."
+  },
+  {
+    "question": "Besides incentivizing existing shareholders to sell, what other factors lead to higher control premiums being paid?",
+    "answer": "Higher premiums can result from competitive deal processes (more bidders), expected synergies, asset scarcity (a uniquely strategic asset), perceived undervaluation by the buyer, and perceived mismanagement where operational improvements and management replacement can unlock value."
+  },
+  {
+    "question": "Why is transaction comps analysis often more challenging than trading comps?",
+    "answer": "Relevant M&A activity may be limited or dated, and older deals may not reflect current market conditions. The pool is constrained by deal dates (often focusing on recent ~5 years). Deal context matters (consideration type, strategic vs financial buyer, auction vs negotiated, economic conditions, hostile/friendly, cyclicality at close). Data can be incomplete, especially for private targets where terms and prices may not be fully disclosed."
+  },
+  {
+    "question": "When putting together a peer group for transaction comps, what questions would you ask?",
+    "answer": "Ask about transaction rationale (buyer and seller), buyer type (strategic vs financial), competitiveness of the process, auction vs negotiated sale, economic conditions at the time, hostile vs friendly, form of consideration, and whether the industry cycle/seasonality affected timing of the deal."
+  },
+  {
+    "question": "When valuing a company using multiples, what are the trade-offs of using LTM vs. forward multiples?",
+    "answer": "LTM uses actual historical results (less subjective) and can be more reliable when guidance is limited. But LTM may be distorted by non-recurring items and requires scrubbing. Forward multiples align better with the fact that acquisitions and valuations often reflect future potential, but forecasts are subjective. Analysts commonly present both side-by-side."
+  },
+  {
+    "question": "Why might two companies with identical growth and cost of capital trade at different P/E multiples?",
+    "answer": "Drivers beyond growth and cost of capital include differences in ROIC, industry/geography differences, relative mispricing, and inconsistencies in EPS due to non-recurring items or differing accounting policies."
+  },
+  {
+    "question": "Should two identical companies with different leverage ratios trade at different EV/EBITDA multiples?",
+    "answer": "You would generally expect similar EV/EBITDA because both EV and EBITDA are capital-structure-neutral. They may not be exactly equal because EV is influenced by cost of capital and other factors, creating some variation."
+  },
+  {
+    "question": "Should two identical companies with different leverage ratios trade at different P/E multiples?",
+    "answer": "Yes, P/E can vary due to leverage. More debt increases interest expense, reducing EPS. Share price response depends on how debt is used: if debt funds no-return cash or value-destroying uses, share price and P/E may fall; if debt funds value-creating growth, P/E could rise. More leverage increases equity risk, which can pressure P/E lower absent compensating returns."
+  },
+  {
+    "question": "Which multiples are the most popular in valuation?",
+    "answer": "EV/EBITDA is most common, followed by EV/EBIT and P/E. Other multiples include P/B for financial institutions, EV/Revenue for unprofitable companies, and (EV − Capex)/EBITDA for capital-intensive businesses."
+  },
+  {
+    "question": "What are some common enterprise and equity value multiples?",
+    "answer": "Enterprise value multiples include EV/Revenue, EV/EBIT, EV/EBITDA. Equity value multiples include P/E, P/B, and price-to-levered-cash-flow type multiples."
+  },
+  {
+    "question": "Why would it be incorrect to use enterprise value and net income in a multiple?",
+    "answer": "Because it mismatches stakeholder groups. EV reflects value to all capital providers, while net income is residual earnings attributable to equity holders only."
+  },
+  {
+    "question": "Why might one company trade at a higher multiple than another?",
+    "answer": "Higher multiples are often supported by better fundamentals such as stronger growth prospects, higher ROIC, lower WACC, and stronger cash flow generation. Investors are forward-looking and reward efficient capital allocation and strong expected trajectories."
+  },
+  {
+    "question": "Intuitively, what does the P/E ratio mean?",
+    "answer": "P/E indicates how much the market is willing to pay for one dollar of a company’s earnings. It can be expressed as share price divided by EPS, or market capitalization divided by net income."
+  },
+  {
+    "question": "A company is currently trading at 12.5x EBITDA, is it overvalued?",
+    "answer": "It depends on the industry and peer-group context. A 12.5x multiple could be around median for software but unusually high for some sectors like Oil & Gas. The right assessment requires benchmarking against relevant comparable multiples and understanding sector dynamics."
+  },
+  {
+    "question": "What does a high P/E ratio relative to a peer group imply?",
+    "answer": "It could imply overvaluation, or it could reflect lower current earnings (e.g., younger company) and market expectations of future earnings growth. High P/E is often interpreted as optimism about growth and future profitability, especially when current earnings are depressed by investment/capex that may pay off later."
+  },
+  {
+    "question": "A company has an EPS of $2.00 that has declined to $1.00 four years later. Assume its share price has remained the same at $10. Is its current P/E ratio higher or lower than its four year-back P/E ratio, and how would you interpret this situation?",
+    "answer": "Current P/E is higher. Four years ago, P/E = $10 / $2 = 5.0x. Now, P/E = $10 / $1 = 10.0x. If EPS fell but price stayed flat, possible explanations include dilution from issuing shares (raising capital) or stock-funded acquisitions, where EPS declines due to a larger share count rather than deteriorating underlying business. The unchanged price suggests the market viewed the capital raise or acquisition positively; otherwise price likely would have fallen."
+  },
+  {
+    "question": "When would the use of the PEG ratio be appropriate?",
+    "answer": "PEG is used to normalize P/E by expected growth, enabling comparison across companies with different growth rates. A rule of thumb cited is PEG ≈ 1 as fairly valued, <1 undervalued, >1 overvalued. Growth can be trailing (historical) or forward (consensus/projection over 1–3 years)."
+  },
+  {
+    "question": "When would you value a business using the P/B ratio?",
+    "answer": "When book value captures a substantial portion of real economic value, such as for commercial banks where assets and liabilities are frequently re-valued and closer to market values."
+  },
+  {
+    "question": "When should you value a company using a revenue multiple vs. EBITDA?",
+    "answer": "Revenue multiples are often used when a company has negative profits or negative EBITDA, making EBITDA multiples meaningless."
+  },
+  {
+    "question": "How would you value a pre-revenue early stage internet company?",
+    "answer": "Use user/engagement-based metrics (e.g., subscribers, MAU, DAU, website hits) and apply appropriate multiples such as EV/MAU or EV/DAU."
+  },
+  {
+    "question": "Why is calendarization a required step when performing comps analysis?",
+    "answer": "Calendarization aligns companies with different fiscal year-ends (often standardizing to December year-end) so cyclicality and seasonality don’t distort comparisons. It improves apples-to-apples comparability across peers."
+  },
+  {
+    "question": "If the market matters most when valuing public companies, do we even need a comps analysis? Why not just use the market cap directly to value the company?",
+    "answer": "If markets were perfectly efficient, market cap would always be correct and comps would add little. But markets can misprice individual companies due to emotion and overreaction, even if broadly efficient on average. Comps can help benchmark and sanity-check whether a given market price is reasonable relative to peers."
+  },
+  {
+    "question": "When applying a peer group derived EV/EBITDA multiple onto your target company, what is an argument for using the group’s median multiple instead of the mean?",
+    "answer": "Medians reduce the distortive impact of outliers. As peer groups get larger, outliers can pull the mean materially, so the median often provides a more robust central tendency for valuation."
+  }
+]

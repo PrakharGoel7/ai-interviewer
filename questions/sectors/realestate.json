@@ -1,0 +1,86 @@
+[
+  {
+    "question": "Do REITs pay taxes?",
+    "answer": "REITs are pass-through entities, so profits are not taxed at the corporate level and instead are passed through to shareholders who pay tax at the individual level on REIT dividends. To qualify for REIT status, at least 90% of profits must be distributed as dividends, so REITs cannot retain earnings like a C-corp. REIT dividends are generally non-qualified and taxed at ordinary income rates rather than lower capital gains rates. While REITs typically avoid corporate income tax, they still pay property taxes on the real estate they own, which show up as part of direct real estate expenses on the income statement."
+  },
+  {
+    "question": "Walk me through the income statement of a REIT.",
+    "answer": "Rental income is the primary revenue source, with possible ancillary revenue such as management fees. Direct real estate expenses include utilities, marketing and advertising, payroll, maintenance, and property taxes. Revenue minus direct expenses equals net operating income (NOI), which reflects property-level profitability. From NOI, subtract corporate overhead, SG&A, and depreciation to reach GAAP operating profit (under US GAAP, depreciation is typically large given asset intensity; under IFRS there is generally no depreciation for REITs). Then subtract interest expense, which is often significant because REITs use leverage. REITs frequently buy and sell properties, so items such as discontinued operations and gains or losses on sales often appear below net income."
+  },
+  {
+    "question": "What is NOI and why is it an important metric?",
+    "answer": "Net operating income (NOI) equals rental income minus property-level operating expenses such as utilities, marketing and advertising, payroll, maintenance, and property taxes. NOI measures profitability before depreciation, corporate-level SG&A, and interest expense. It is important because it isolates property-level performance and enables comparisons across properties or portfolios without the noise of corporate overhead or leverage. NOI is the closest analog to gross profit for REITs and is also the numerator used to calculate cap rates."
+  },
+  {
+    "question": "Define funds from operations (FFO) and why is it important?",
+    "answer": "Funds from operations (FFO) is a common REIT performance measure used to assess operating performance. Under US GAAP, a typical formula is FFO = Net Income + D&A − Gain on Sale + Non-Controlling Interest − Cash to Non-Controlling Interests. FFO is similar to cash from operations because it generally excludes working capital changes. It can be thought of as a levered operating metric that captures the effect of non-common equity claims such as debt, preferred equity, and non-controlling interests, whereas EBITDA is intended to capture operating profitability."
+  },
+  {
+    "question": "For REITs valuing properties, how do regulations differ between GAAP and IFRS?",
+    "answer": "Under IFRS, REITs value properties as investment properties, meaning they are not depreciated and instead are regularly marked to market, with revaluation gains recognized on the income statement. Therefore, the bridge from IFRS net income to FFO does not require a depreciation add-back, and the revaluation gain must be subtracted from IFRS net income to arrive at FFO."
+  },
+  {
+    "question": "What is the difference between FFO and AFFO?",
+    "answer": "Adjusted funds from operations (AFFO), also called cash available for distribution (CAD), adjusts FFO to get closer to free cash flow by accounting for recurring capital expenditures. A typical expression is AFFO = FFO + Non-Recurring Expenses − Capex, which moves the metric toward distributable cash, though it still generally does not incorporate full working capital adjustments."
+  },
+  {
+    "question": "Walk me through a NAV valuation.",
+    "answer": "A NAV valuation builds up the fair value of a REIT by valuing NOI-generating real estate assets using cap rates and adding other income streams not captured in NOI, such as ancillary income, management fees, and JV income, often also capitalized with cap rate assumptions. NAV is then reduced by the present value of required future expenditures such as expected capex and corporate overhead needed to sustain properties that are not included in NOI. Next, non-operating assets like cash and construction in progress are added, typically at book value or with a premium if appropriate. Finally, debt and other non-equity claims are subtracted, usually at book value unless market values materially differ, resulting in NAV-derived equity value that can be compared to market cap or divided by shares to compare to share price."
+  },
+  {
+    "question": "Why might the NAV be preferable to a DCF for REITs?",
+    "answer": "NAV is well suited for real estate because REIT balance sheets contain real estate assets that often have comparable assets with observable market values. NAV effectively restates the balance sheet to fair market value using cap rate assumptions, whereas that approach is generally not feasible in most industries, where DCF is more common."
+  },
+  {
+    "question": "What is a cap rate, and why is it important?",
+    "answer": "A capitalization rate (cap rate) is a common real estate valuation multiple that compares a property’s unlevered profitability to its value, typically expressed as Cap Rate = NOI / Property Value. For example, a $2 million property with $100,000 of annual NOI has a 5.0% cap rate. Unlike many traditional multiples, the structure implies that a higher cap rate corresponds to a lower valuation (and vice versa). All else equal, a higher cap rate relative to comparables may indicate the property is undervalued or reflects higher risk, lower expected growth, or lower expected future returns."
+  },
+  {
+    "question": "What are the most common methods for valuing REITs?",
+    "answer": "Common valuation methods include net asset value (NAV), especially for US REITs where book values are not marked to fair value; price-to-book (P/B), which is more relevant for IFRS REITs due to revaluation rules; relative valuation through comps; and intrinsic approaches used less frequently such as the dividend discount model (DDM) and discounted cash flow (DCF). Common REIT multiples include equity value to FFO and equity value to AFFO."
+  },
+  {
+    "question": "Why is the self-storage industry known to be such a resilient performer?",
+    "answer": "Self-storage has historically been a reliable, relatively non-cyclical real estate asset class and performed strongly even during downturns such as the 2008 recession, when other categories like hospitality suffered large declines. Demand has been supported by increased urbanization and shifting consumer behavior, including lower homeownership among millennials, and self-storage has increasingly functioned as an extension of living space rather than solely a place for unwanted items."
+  },
+  {
+    "question": "What are the three methods for valuing real estate assets?",
+    "answer": "The three methods are cap rate valuation (Property Value = Property NOI / Market Cap Rate), comparable transactions (using price per unit or price per square foot and implied cap rates), and replacement cost (based on the principle that an investor would not pay more than the cost to build the property)."
+  },
+  {
+    "question": "Compare the cap rates and risk profiles for each of the main property types.",
+    "answer": "Hotels generally trade at the highest cap rates due to highly variable, short-term demand driven by nightly stays and more operational intensity. Retail cap rates reflect concerns about tenant creditworthiness and structural pressure from e-commerce. Office is correlated with the broader economy but typically has longer-term leases. Industrial benefits from e-commerce trends and typically has longer leases. Multifamily is often viewed as the safest asset class because housing demand persists across economic cycles."
+  },
+  {
+    "question": "Walk me through a basic cash flow pro forma for a real estate asset.",
+    "answer": "Start with revenue, primarily rental income, then adjust for vacancy and leasing incentives such as abatements and concessions. Subtract operating expenses to arrive at NOI. After NOI, subtract capital expenditures and include purchase and sale cash flows to get unlevered cash flow. Finally, subtract financing costs to move from unlevered to levered cash flow."
+  },
+  {
+    "question": "Describe the four main real estate investment strategies.",
+    "answer": "Core is the least risky strategy with lower targeted returns and typically involves newer properties in strong locations with high occupancy and creditworthy tenants. Core-plus is slightly riskier than core and may involve minor leasing upside or modest capital improvements. Value-add targets higher returns with higher risk and often involves meaningful lease-up, older properties requiring significant improvements, tertiary locations, or weaker tenant quality. Opportunistic is the highest risk and targets the highest returns, often involving development or redevelopment."
+  },
+  {
+    "question": "If I paid $100 million for a building and it has 75% leverage, how much does it need to sell for to double my equity?",
+    "answer": "$125 million. With 75% leverage, equity is $25 million and debt is $75 million. Doubling equity means receiving $50 million to equity at exit while still repaying $75 million of debt, so total sale proceeds must be $50 million + $75 million = $125 million."
+  },
+  {
+    "question": "If you had two identical buildings in the same condition and right next to each other, what factors would you look at to determine which property is more valuable?",
+    "answer": "With physical characteristics and location held constant, valuation depends on cash flows and their risk. First assess the amount of cash flow by examining rent levels and occupancy, which can differ due to leasing and management execution. Then assess risk by reviewing the rent roll, tenant credit quality, and lease terms. Since value is NOI divided by cap rate, higher NOI increases value and lower perceived risk reduces the cap rate, so the building with stronger and safer cash flows should be worth more."
+  },
+  {
+    "question": "Assume you purchased a property for $1 million at a 7.5% cap rate, had 0% NOI growth throughout the holding period, and exited at the same cap rate after three years. What is your IRR?",
+    "answer": "7.5%. With no NOI growth and the same cap rate at exit, the property value remains $1 million, so there is no price appreciation and all returns come from the annual NOI. Annual NOI equals $1 million multiplied by 7.5%, and since that is the annual return with no terminal gain, the IRR equals 7.5%."
+  },
+  {
+    "question": "If you purchase a property for $1 million at a 5.0% cap rate with 60% leverage and a 5.0% fixed cost of debt, what is the cash-on-cash yield?",
+    "answer": "5.0%. Equity invested is $400,000 and debt is $600,000. NOI is 5.0% of $1,000,000, which is $50,000. Annual interest cost is 5.0% of $600,000, which is $30,000. Levered cash flow is $50,000 − $30,000 = $20,000. Cash-on-cash yield equals $20,000 divided by $400,000, which is 5.0%."
+  },
+  {
+    "question": "Do you have any questions for me? (REPE Context)",
+    "answer": "Examples of good questions include asking whether there is a strict delineation between acquisitions and asset management, how much exposure junior acquisition professionals get to the legal process of executing a deal, how much travel is expected for junior team members, whether the firm focuses on a single risk profile or multiple strategies, whether the firm invests in equity only or both debt and equity, and whether the firm does development or only acquisitions."
+  },
+  {
+    "question": "Walk me through a back-of-the-envelope multifamily real estate acquisition model.",
+    "answer": "This is typically a timed modeling test where you build a simplified acquisition model in roughly ten minutes, usually on paper or in Excel, focusing on core inputs like purchase price, NOI, leverage terms, and exit assumptions to estimate returns."
+  }
+]

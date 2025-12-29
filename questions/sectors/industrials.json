@@ -1,0 +1,154 @@
+[
+  {
+    "question": "Why have industrial manufacturers shifted their focus towards the aftermarket?",
+    "answer": "Industrial manufacturers have increasingly emphasized aftermarket services (maintenance, spare parts, and other value-added services) to reduce dependence on cyclical new equipment sales. New product development and equipment sales are often capital-intensive and costly, while aftermarket revenue is typically more predictable and recurring. In downturns, manufacturers with higher service revenue generally hold up better than those heavily reliant on new equipment sales. Many companies have expanded service capabilities either by building them in-house or through vertical integration via M&A. This shift accelerated during and after COVID-19 as end markets cut capex, reducing demand for new industrial equipment (notably in aerospace)."
+  },
+  {
+    "question": "What is the trend of servitization in manufacturing?",
+    "answer": "Servitization is the shift from pure equipment manufacturing toward building incremental revenue streams through service offerings delivered by the manufacturer rather than third parties. Common services include spare parts replacement, repairs, maintenance, overhauls, performance monitoring, and customer service. Manufacturers increasingly sell “systems” and focus on outcomes, providing services directly to improve customer satisfaction, retention, and margins, instead of relying on third-party vendors and specialists for after-sales support."
+  },
+  {
+    "question": "Why is there such a high level of M&A activity in the industrial manufacturing space?",
+    "answer": "Industrials has historically been highly active in M&A due to constant innovation and the industry’s highly specialized structure with many niche segments. Rather than spending heavily on R&D to build new capabilities in-house, incumbents often acquire companies with proven technologies and established customer bases. Financial sponsors are also active, buying niche players, growing them through add-on acquisitions, and then exiting to large strategic acquirers such as Honeywell, Siemens, ABB, ASSA ABLOY, and Johnson Controls. For many conglomerates, recent growth has been largely inorganic, reinforcing sustained deal activity."
+  },
+  {
+    "question": "Which valuation multiples are most often used to value companies in industrials?",
+    "answer": "The most common valuation multiple in industrials is EV/EBITDA, especially for industrial tech. For more traditional manufacturing businesses, EV/(EBITDA − Capex) is often used to better reflect capital intensity. In transportation and logistics, EV/EBITDAR can be used when key assets (like trucks) are rented. Additional logistics-specific multiples include EV/Total Freight Tonnage, EV/Volume, EV/Miles Driven, and EV/Average Revenue per Mile (or per weight unit)."
+  },
+  {
+    "question": "Let’s say you're looking at an industrials company. What business and industry characteristics would you first consider?",
+    "answer": "I would start with (1) End markets: customer base, diversification, cyclicality, customer relationships, and how essential the product is (driving recurring revenue). (2) Supply chain and distribution: supplier concentration, operational integration/efficiency, and distribution reach with potential channel expansion. (3) Product value and upgrade cycles: value proposition, replacement/upgrade cadence, and recurring service requirements (e.g., maintenance). (4) Competitive landscape: barriers to entry and differentiation versus competitors, which influence revenue stability and pricing power."
+  },
+  {
+    "question": "An industrials company has shown COVID-related impaired revenue. What metric would you look at to assess the damage and predict the pace of recovery?",
+    "answer": "Backlog build (or lack of backlog growth). A strong or increasing backlog despite near-term revenue decline suggests projects were delayed rather than lost, indicating potential pent-up demand and a faster recovery path. Weak backlog relative to peers can signal an inability to secure new commitments, project cancellations, or customer distress, implying slower recovery."
+  },
+  {
+    "question": "Walk me through the stages from Industry 1.0 to Industry 4.0.",
+    "answer": "Industry 1.0 (Industrial Revolution): mechanization powered by water/steam/coal, moving from human labor to machines. Industry 2.0 (Technological Revolution): electrification enabling higher volume production and more sophisticated machinery. Industry 3.0 (Digital Revolution): early computers and electronics laying the foundation for IT-driven manufacturing. Industry 4.0 (Automation Revolution): smart, connected factories where machines increasingly monitor, communicate, and optimize operations using technologies like IoT, cloud computing, big data, sensors, and advanced automation."
+  },
+  {
+    "question": "How did Industry 4.0 help bridge the gap between OEMs and their customers?",
+    "answer": "Industry 4.0 (particularly Industrial IoT) increased connectivity and visibility across the installed base, enabling OEMs to monitor performance, manage uptime, and engage more directly with customers over the asset lifecycle. This reduced reliance on third-party contractors for maintenance and improved service delivery via clearer data, tighter customer relationships, and the ability to offer and enforce service level agreements (SLAs)."
+  },
+  {
+    "question": "What are some concerns surrounding Industry 4.0 that exist to this day?",
+    "answer": "Common concerns include (1) reliability and mistrust in machine-to-machine (M2M) communication and IoT performance, (2) data security risks due to expanded connectivity and data collection, especially in facilities with outdated security infrastructure, and (3) the high cost of operational mistakes in manufacturing, which leads to gradual rollouts and cautious adoption at lower volumes."
+  },
+  {
+    "question": "What is Industry 5.0, and what will it do for manufacturing once this next phase arrives?",
+    "answer": "Industry 5.0 emphasizes collaboration between humans and smart machines/robots, with technology handling repetitive tasks while humans focus more on creative, perception-driven decisions and customization. It builds on Industry 4.0 technologies (IoT, big data, AI/ML) but shifts the framing toward human-machine partnership to meet rising consumer demand for customized products."
+  },
+  {
+    "question": "What are co-bots, and what makes them unique?",
+    "answer": "Co-bots (collaborative robots) are designed to operate safely alongside humans in close proximity. Unlike traditional industrial robots that require physical separation for safety, co-bots and humans can work next to each other on shared tasks."
+  },
+  {
+    "question": "What is the difference between customer support agreements and outcome contracts?",
+    "answer": "Customer support agreements specify the scope of work, terms and conditions, and pricing for particular services delivered (service-by-service). Outcome contracts are performance-based and tie pricing and terms to achieving measurable results and KPIs (i.e., outcomes like uptime, throughput, or quality targets)."
+  },
+  {
+    "question": "What is the difference between process manufacturing and discrete manufacturing?",
+    "answer": "Process manufacturing uses formulaic, blending approaches (recipes) to produce goods, common in food, beverage, chemicals, and pharmaceuticals. Discrete manufacturing produces countable, distinct units assembled from identifiable components and typically involves lower volumes and higher complexity (e.g., nuts, bolts, screws)."
+  },
+  {
+    "question": "Tell me about the differences between predictive, prescriptive, and condition-based maintenance.",
+    "answer": "Predictive maintenance uses sensor data (e.g., vibration, temperature, pressure) to forecast failures and address degradation before breakdowns occur. Prescriptive maintenance builds on predictive approaches by using ML/AI to recommend specific corrective actions, not just predict failures. Condition-based maintenance triggers maintenance based on predefined thresholds or rules (conditions being met), often after deterioration has begun, rather than forecasting failure probabilities."
+  },
+  {
+    "question": "What are some basic unit economics for a truck transportation company you would look at to forecast revenue?",
+    "answer": "Key inputs include the historical number of shipment orders (hauls), average miles per haul, and total annual shipping revenue to derive average revenue per mile. From there, refine forecasts using the number of repeat clients, shipment pipeline, expected new contract wins, and/or build a revenue model on a per-driver, per-truck, or per-project basis."
+  },
+  {
+    "question": "What are some of the cost drivers you would look at for a truck transportation company?",
+    "answer": "The largest drivers are typically (1) driver-related costs: headcount and compensation structure (often per-mile or hourly), and (2) capex and fleet costs: number of trucks, fleet age, replacement cycle, and ongoing repair/maintenance costs. Secondary drivers include sales and marketing, insurance, and rent, though these are usually less impactful than labor and fleet costs."
+  },
+  {
+    "question": "Would you consider distribution and transportation service providers to be a low-margin business?",
+    "answer": "Historically yes—distribution and transportation providers tend to have bottom-tier margins due to high costs and competitive pricing. However, technology improvements like route optimization (GIS) can improve efficiency and enable pricing power, while asset location tracking (e.g., barcode/QR scanning) can enhance accuracy, compliance, and differentiation, potentially improving margins."
+  },
+  {
+    "question": "Why does the airline industry have such low margins?",
+    "answer": "Airlines have thin margins due to a high fixed-cost structure (expensive fleets, maintenance, and large operational footprints) and meaningful variable costs (pilots, crews, airport staff, security). They have limited ability to cut costs because safety and reliability are high-stakes, and missteps can create major reputational damage. Intense competition on price, route availability, and geographic reach further reduces pricing power."
+  },
+  {
+    "question": "What is the difference between fully autonomous vehicles and self-driving cars?",
+    "answer": "A fully autonomous vehicle implies no human supervision is required (Level 5 autonomy). A self-driving car can handle driving under certain conditions but typically requires a human to be ready to take control (often framed as Level 3)."
+  },
+  {
+    "question": "Why has the rollout of Waymo and self-driving been done at such a slow pace?",
+    "answer": "Rollout has been cautious due to regulatory hurdles and the primacy of safety as deployments scale. A single severe incident could cause significant reputational damage and broader public mistrust, potentially halting commercialization, so progress tends to be incremental and heavily validated."
+  },
+  {
+    "question": "What does energy management software (EMS) refer to, and what role does it play in increasing the number of so-called \"smart buildings\"?",
+    "answer": "Energy management software (EMS) tracks and measures energy usage, identifies inefficiencies and waste, and enables smart-building functionality. It can optimize systems like HVAC and lighting through monitoring, simulation, and demand analysis, helping owners reduce utility bills, conserve energy, and comply with sustainability regulations."
+  },
+  {
+    "question": "What does industrial access control involve, and what value does it provide to end-users?",
+    "answer": "Industrial access control manages and restricts entry to facility areas to prevent unauthorized access for security and safety. Solutions can include electronic access devices, locks, and integrated surveillance, protecting both tangible assets (equipment) and intangible assets (documents, data), particularly in high-risk environments."
+  },
+  {
+    "question": "What is the difference between positive displacement pumps and centrifugal pumps?",
+    "answer": "Positive displacement pumps move fluid by trapping a fixed volume and forcing it through discharge, so flow is created first and pressure results; flow rate tends to stay constant even as pressure changes. Centrifugal pumps use rotational energy (via an impeller) to impart velocity to the fluid, creating pressure that drives flow; pressure is created first and then flow results. The core distinction is the mechanism: displacement/trapping versus imparting velocity via an impeller."
+  },
+  {
+    "question": "What are the two most common types of positive displacement pumps?",
+    "answer": "The two main types are (1) reciprocating pumps (e.g., diaphragm pumps, piston pumps, plunger pumps) that use a back-and-forth chamber mechanism to move fluid, and (2) rotary pumps (e.g., screw, peristaltic, vane, progressive cavity, gear, and lobe pumps) that use rotating elements to trap and transport fluid from intake to discharge."
+  },
+  {
+    "question": "List a few manufacturing KPIs you would look at to measure the efficiency of a factory.",
+    "answer": "Examples include throughput (units produced per time), on-time delivery (OTD: orders delivered on schedule divided by orders due), capacity utilization (actual output vs total capacity), first pass yield (FPY: quality units divided by total units produced), and machine downtime rate (downtime hours divided by downtime plus operational hours)."
+  },
+  {
+    "question": "What are some ongoing trends in the plastics industry?",
+    "answer": "Key trends include increased ESG focus (zero-waste initiatives and greater use of recycled materials), growing use of biodegradable plastics (e.g., plant-based bioresins), and the adoption of pro-degradant concentrates that make conventional thermoplastics more biodegradable."
+  },
+  {
+    "question": "What is reinforced plastic, and why are they increasingly being used?",
+    "answer": "Reinforced plastics are composites that incorporate materials such as carbon, glass, metal, or graphite to improve strength and durability. They are increasingly used as substitutes for traditional metals because they can be lightweight yet durable and offer design versatility. While historically driven by automotive demand, adoption is expanding into medical, defense, and construction applications."
+  },
+  {
+    "question": "What impact will the trend of electric vehicles (EVs) have on the polymer market?",
+    "answer": "The shift toward EVs is expected to increase polymer demand because automakers use polymers to reduce vehicle weight, improving energy efficiency and enabling manufacturable, versatile designs. Advanced polymers like polyphthalamide (PPA) and polyamide (PA) are expected to grow in relevance because they can withstand higher temperatures and support EV-specific systems and electronics (e.g., sensors and monitoring components)."
+  },
+  {
+    "question": "What is additive manufacturing, and what benefits does it provide?",
+    "answer": "Additive manufacturing (3D printing) builds parts through layering and uses CAD and scanning tools to produce customized, precise components quickly, often with shorter prototyping cycles (~1–2 weeks). Benefits include faster iteration and the ability to create lighter yet durable designs. However, it is typically used for rapid prototyping and small parts, and is generally limited to low-volume production runs despite promising quality and speed."
+  },
+  {
+    "question": "What are the differences between injection molding and urethane casting?",
+    "answer": "Injection molding injects molten plastic into a mold cavity and is best suited for high-temperature materials and high-volume production with thousands of cycles per day, enabling lower unit costs at scale. Urethane casting uses a silicone mold created by pouring silicone around a master pattern and is more common for prototypes because molds can be produced quickly but are not durable enough for high-volume runs. Both can produce robust parts, and the choice depends largely on production volume and the product development stage."
+  },
+  {
+    "question": "How does a maritime/shipping company generate revenue?",
+    "answer": "Shipping companies earn revenue by owning or operating vessels and securing charter agreements for transporting commodities or goods. Revenue structures include (1) time charters with fixed daily rates over typically 1–3 years where the charterer usually pays voyage expenses, (2) bareboat charters (long-term, often 5+ years) where the charterer covers nearly all operating and voyage expenses and the owner receives charter hire, and (3) spot charters for shorter, voyage-specific contracts (often 90–120 days) with rates tied to market conditions; spot can be more volatile and the shipping company often covers voyage costs like port and fuel, which influences the agreed daily rate."
+  },
+  {
+    "question": "How do the financials of a maritime/shipping company differ from a traditional company?",
+    "answer": "Shipping financials are broadly similar to other industries but often show depreciation and amortization as separate line items rather than embedded in operating expenses, making top-down EBITDA easier to derive (though adjustments for non-recurring items may still be needed). Taxes are often minimal because many firms are domiciled in low-tax jurisdictions, though certain regions may impose transportation-related taxes such as tonnage taxes, which would appear on the income statement."
+  },
+  {
+    "question": "Walk me through a shipping company’s income statement.",
+    "answer": "Revenue is primarily charter revenue (time charter, spot charter, pooled charter), often adjusted for ownership percentages. Operating expenses typically include voyage expenses (fuel, port costs, and any transport taxes), vessel operating expenses (crew, stores, lubricants, insurance, maintenance, repairs), G&A (salaries, legal, stock-based comp), and D&A (vessels and fixed assets). Other items like FX gains/losses or goodwill impairments may also appear. Below operating profit/EBITDA, non-operating items include net interest expense and other financing-related costs."
+  },
+  {
+    "question": "Walk me through a shipping company’s balance sheet.",
+    "answer": "Assets are dominated by vessels and vessels under construction, along with cash and cash equivalents. Liabilities are primarily current and long-term debt, and shipping companies often carry relatively little working capital. Equity includes common stock (and treasury stock), preferred stock, retained earnings, and other comprehensive income."
+  },
+  {
+    "question": "How do you value a shipping company?",
+    "answer": "Common valuation approaches include net asset value (NAV), enterprise value multiples (e.g., EV/EBITDA, EV/EBIT), and equity value multiples (e.g., price to cash flow, price/NAV)."
+  },
+  {
+    "question": "Walk me through a NAV valuation for a shipping company.",
+    "answer": "A shipping NAV typically starts by valuing vessels using observable market values from trade journals and transaction benchmarks (often anchored by steel/scrap value). Analysts may then estimate the present value of embedded charter contracts by comparing contracted daily rates to forward curves for time-charter rates and discounting those differences (a common WACC assumption cited is ~10%), adding this PV to steel value to get a charter-adjusted vessel value. From this vessel value, subtract debt and other debt-like claims (book value is commonly used unless market values differ materially), add non-operating assets like cash and construction in progress (book or projected market value), and the result is NAV-derived equity value. Comparing this to market cap yields price/NAV; trading at a premium to NAV is generally positive for equity performance."
+  },
+  {
+    "question": "Why might the NAV be preferable to a DCF for shipping companies?",
+    "answer": "NAV works well in shipping because the balance sheet is dominated by real assets (vessels) that have observable market values and comparables, allowing the balance sheet to be restated toward fair value. This asset-based recalibration is generally not feasible for most industries, where DCF is more commonly needed."
+  },
+  {
+    "question": "What are some factors that may affect the valuation of a shipping company?",
+    "answer": "Valuation is driven by daily revenue, charter rates, and vessel asset values. These are influenced by (1) supply and demand for the underlying commodities and trade flows being shipped (crude/refined oil, LNG, dry bulk like coal/iron ore/grain, and containerized trade), and (2) supply and demand for vessels (existing fleet and newbuild orderbook). Because ship construction lead times are long (often ~18 months), cycles can be amplified by oversupply when owners order aggressively during strong demand periods, making timing of asset purchases, newbuilds, and deployment critical."
+  }
+]

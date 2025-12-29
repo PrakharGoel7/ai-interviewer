@@ -1,0 +1,238 @@
+[
+  {
+    "question": "Walk me through a bank’s income statement.",
+    "answer": "A bank’s income statement typically starts with net interest income (interest income minus interest expense), which reflects the spread earned on loans funded by deposits/borrowings. Next is provision for credit losses, an accrual for expected loan losses. Net interest income minus provisions represents core operating profitability. Below that are non-interest income (fees, commissions, service charges, trading gains) and non-interest expenses (often dominated by compensation/benefits, plus occupancy, tech, amortization, marketing, insurance). Finally, taxes are applied to arrive at net income."
+  },
+  {
+    "question": "Walk me through a bank’s balance sheet.",
+    "answer": "On the asset side, the largest item is usually the loan portfolio (e.g., residential/commercial real estate, consumer and commercial loans), followed by investment securities and cash. On the liabilities side, deposits are typically the primary funding source; interest-bearing deposits drive interest expense while non-interest-bearing deposits do not. Other liabilities include short- and long-term borrowings. Equity includes common/preferred stock, treasury stock, retained earnings, and accumulated other comprehensive income."
+  },
+  {
+    "question": "How are the financials of a bank different from a traditional company?",
+    "answer": "For most non-banks, revenue, COGS, and SG&A drive operating income, and interest income/expense is treated as non-operating below operating profit. For banks, that separation doesn’t work because interest income is the core revenue and interest expense (deposit/borrow funding costs) is a core operating expense. A bank’s performance is driven directly by asset yields (loans/securities) and the cost of liabilities (deposits/borrowings) in a way that’s more central than for traditional companies."
+  },
+  {
+    "question": "What is the impact of an inverted yield curve on a bank’s profits?",
+    "answer": "Banks generally borrow short (deposits/interbank funding) and lend long (mortgages, longer-term loans). Their profitability depends on the spread between long-term and short-term rates. When the yield curve flattens or inverts (long-term yields fall relative to short-term yields), net interest margins typically compress, so profits are expected to decline—though sensitivity varies by each bank’s asset/liability mix and duration exposure."
+  },
+  {
+    "question": "How do you value a commercial bank?",
+    "answer": "Banks are typically valued with equity-based approaches because operations and financing are inseparable. Common methods include levered DCF (discounting levered free cash flow at cost of equity), dividend discount models (DDM), residual income models (RI), and public comps using equity value multiples such as P/B and P/E (rather than enterprise-value multiples like EV/EBITDA)."
+  },
+  {
+    "question": "Walk me through valuing a bank using a levered DCF.",
+    "answer": "You cannot do a traditional unlevered DCF for a bank because operating vs. financing cash flows can’t be cleanly separated. Instead: (1) forecast levered free cash flows for ~5–10 years, (2) estimate terminal value via perpetuity growth or an exit multiple, (3) discount the forecast cash flows and terminal value back at the cost of equity, and (4) sum the present values to get equity value."
+  },
+  {
+    "question": "Walk me through a bank valuation using the dividend discount model (DDM).",
+    "answer": "DDM values a bank’s equity by forecasting dividends and discounting them at the cost of equity, which is common given many banks pay meaningful dividends. A common framework is a 3-stage model: (1) Development stage (3–5 years): explicitly forecast dividends and discount them; (2) Maturity stage (3–5 years): dividends are derived under assumptions that ROE and cost of equity converge over time; (3) Terminal stage: value all future dividends beyond maturity using a perpetual growth rate or a terminal P/B multiple."
+  },
+  {
+    "question": "Walk me through a bank valuation using the residual income model. Why is it arguably better than the DCF or DDM?",
+    "answer": "Residual income values equity as: Book Value of Equity + PV of Residual Income, where residual income is net income minus a charge for equity capital (book value × cost of equity). Example: with $1B book value and 10% cost of equity, if next year net income is $150M, residual income is $50M. It’s often viewed as better than DDM/DCF for banks because it reduces sensitivity to terminal value—by assuming excess returns fade, terminal residual income goes toward zero, avoiding the heavy terminal-value dependence in DCF/DDM."
+  },
+  {
+    "question": "What multiples are appropriate for valuing a bank?",
+    "answer": "Appropriate bank multiples are equity-value multiples, most commonly P/B, P/E, and P/TBV (price to tangible book value)."
+  },
+  {
+    "question": "Why is the unlevered DCF approach inappropriate for banks?",
+    "answer": "Unlevered DCF requires separating operating cash flows from financing effects, but for banks interest income and interest expense are central to operations, and leverage is intrinsic to the business model. Because operating and financing are intertwined, an unlevered framework is not meaningful for banks."
+  },
+  {
+    "question": "How would you forecast the revenue of a boutique investment bank?",
+    "answer": "A boutique investment bank’s revenue is primarily fee-based (M&A advisory and capital raising). A practical approach is using revenue per employee as a key driver because deal flow is relationship-driven and tied to senior bankers. You forecast headcount growth and revenue per employee, then sanity-check by backing into implied deal count using assumptions on average deal size and fee rate. You also adjust for focus area (industry/product group), which affects deal volume, growth, and cyclicality."
+  },
+  {
+    "question": "How does a passively managed fund generate revenue?",
+    "answer": "Revenue is driven by assets under management (AUM) multiplied by a management fee rate. The fee (often summarized as a management expense ratio, or MER) is intended to cover portfolio oversight and operating costs, and is expressed as a percentage of AUM (typically average AUM over the period). Passive strategies generally charge lower fees than active strategies."
+  },
+  {
+    "question": "How would you value an actively managed alternative investment management firm?",
+    "answer": "Alternative managers (hedge funds/PE) typically have two cash flow streams: management fees (more stable, easier to model—often valued by applying a multiple to current/forward fee revenue) and performance fees/carried interest (lumpier, harder to forecast—often valued with a lower multiple). Because risk and predictability differ, a sum-of-the-parts approach is commonly used."
+  },
+  {
+    "question": "What types of multiples are used to value asset management firms?",
+    "answer": "Asset managers are often valued with P/E and EV/EBITDA. EV/AUM is sometimes used, but it’s only meaningful when the peer set has similar fee rates and business mix (e.g., not comparing passive vs. highly active strategies with very different economics)."
+  },
+  {
+    "question": "What is securities lending?",
+    "answer": "Securities lending is when a lender temporarily lends securities (stocks, bonds, etc.) to a borrower in exchange for collateral and a borrowing fee, with the borrower obligated to return the securities on demand or at the agreed date."
+  },
+  {
+    "question": "What are the three main types of securities lending models?",
+    "answer": "1) Direct lenders: large investors/asset managers with enough scale to run securities lending in-house (e.g., very large asset managers). 2) Custodian-led programs: custodians bundle custody, fund admin, and lending, pooling assets across clients. 3) Third-party lending agents: specialized securities lending providers (often linked to prime brokers or standalone agents) that run lending for assets not held in a custodian lending program."
+  },
+  {
+    "question": "What are the two fee models in securities lending?",
+    "answer": "1) Discretionary lending (best-efforts): the agent/principal negotiates loans transaction-by-transaction based on market demand and rates; the lender earns the market rate net of an agent fee. 2) Principal exclusive: an exclusive arrangement where a counterparty pays a flat fee for exclusive access to a portfolio (or portion); it trades off upside for more stable fees and may include profit-sharing above a threshold."
+  },
+  {
+    "question": "What is FinTech?",
+    "answer": "FinTech (financial technology) refers to technology-enabled delivery of financial services that improves speed, cost, and user experience—ranging from mobile banking and digital payments to investing apps and online money movement."
+  },
+  {
+    "question": "What multiples would you use to value a FinTech company?",
+    "answer": "Common FinTech valuation multiples include EV/Revenue, EV/EBITDA, and P/E. For higher-growth segments, forward multiples (1–2 years) are often more meaningful than LTM. Industry-specific operational multiples are also used, e.g.: (a) Digital banking/payments: EV/TPV and user counts; (b) Transfers/marketplaces: EV/GTV or origination volume; (c) Brokerages: EV/DARTS and premium subscribers."
+  },
+  {
+    "question": "How do most FinTech start-ups generate revenue?",
+    "answer": "Many use a brokerage/take-rate model where they earn a small fee as a percentage of transaction volume (common in payments, transfers, marketplaces, brokerages, and some lending platforms). Other models include subscription/service fees (e.g., robo-advisors) and net interest income/interest spreads for lenders that hold loans on their balance sheet."
+  },
+  {
+    "question": "Tell me about the trend of challenger banks.",
+    "answer": "Challenger banks are digital-first (often branch-light or branchless) banks that have grown rapidly by offering simpler onboarding, better mobile UX, fewer/clearer fees, and feature velocity. Well-known examples include Chime, N26, Revolut, Current, and Varo."
+  },
+  {
+    "question": "From the consumer perspective, what is the benefit of a challenger bank over a traditional bank?",
+    "answer": "Benefits typically include faster account setup, transparent pricing and fewer hidden fees, a more modern mobile experience, and features like quicker access to funds (e.g., earlier paycheck availability), plus lower-priced premium features versus incumbents."
+  },
+  {
+    "question": "Are challenger banks actually “banks” in the traditional sense?",
+    "answer": "Often, no—many start without their own banking license and operate through a partner bank (banking-as-a-service). As they scale, they may continue using partners or pursue their own license."
+  },
+  {
+    "question": "What is the difference between a neo bank and a challenger bank?",
+    "answer": "The terms are often used interchangeably, but a common distinction is: neo banks are fully digital with no physical presence and often rely on partner banks rather than holding a full license, while challenger banks are more likely to hold a banking license and may have some limited physical footprint."
+  },
+  {
+    "question": "Given their current business model, do challenger banks have a pathway to becoming profitable someday?",
+    "answer": "A common path is a freemium model: a free basic account to drive growth plus paid premium tiers (subscription plans) for advanced features (e.g., insurance bundles, travel perks, higher limits). Some aim to monetize via interchange income, but profitability can be challenging if customers treat the product as a secondary account rather than primary banking."
+  },
+  {
+    "question": "Why might consumer FinTech start-ups appear to be struggling to monetize their user base?",
+    "answer": "Many prioritize user growth over revenue, and much of the appeal is “free, fast, simple.” Monetization attempts (premium tiers/fees) can face resistance. In addition, interchange-only economics can be thin, and many users may not use the app as their primary financial relationship, limiting balances, engagement, and cross-sell opportunities."
+  },
+  {
+    "question": "Tell me about the current state of the banking services start-up scene.",
+    "answer": "Consumer digital banking has become crowded, and pressure has shifted from pure growth toward monetization and unit economics. Many startups have tightened “free” offerings (fees after thresholds, pushing premium plans). At the same time, incumbents have improved digital experiences, and Big Tech has explored banking-adjacent products via partnerships—raising competitive intensity and increasing consolidation/partnership pressure."
+  },
+  {
+    "question": "How have traditional financial institutions responded to the new trends of digital banking?",
+    "answer": "Legacy banks have upgraded mobile and digital platforms, improved digital customer service (chat, chatbots, faster support), and increased transparency to reduce the UX gap. This has slowed some challenger momentum by making incumbent offerings “good enough” for many customers."
+  },
+  {
+    "question": "Tell me about the controversy surrounding Robinhood and payment for order flow.",
+    "answer": "Payment for order flow (PFOF) is when brokerages route customer orders to market makers in exchange for compensation. The controversy is primarily around transparency and best execution—customers may not realize how routing decisions affect execution quality. Robinhood faced regulatory action for misleading disclosures about these payments and whether customers were getting the best available terms."
+  },
+  {
+    "question": "Why did N26 exit the UK market in early 2020?",
+    "answer": "N26 exited the UK due to Brexit-related regulatory changes. Many European FinTechs rely on “passporting,” which allows a banking license in one EU country to be used across the EU. After Brexit, N26 could no longer operate in the UK using its German license, prompting its withdrawal."
+  },
+  {
+    "question": "What does open banking mean?",
+    "answer": "Open banking refers to allowing third-party providers access to consumer banking and financial account data with the customer’s consent. This enables new integrations and services that enhance the consumer banking experience."
+  },
+  {
+    "question": "What role do APIs play in open banking?",
+    "answer": "APIs are the core enabler of open banking and Banking-as-a-Service (BaaS). They securely connect banks with third-party providers, allowing new product layers to be built on top of traditional banking infrastructure while safeguarding customer data."
+  },
+  {
+    "question": "Does open banking harm traditional financial institutions?",
+    "answer": "No. Open banking can benefit incumbents by enabling complementary third-party integrations that enhance offerings and create new revenue opportunities. Refusing to integrate risks customer attrition to more modern, connected providers."
+  },
+  {
+    "question": "What is the state of the payments industry landscape today, and how has it been changing?",
+    "answer": "The industry is shifting rapidly from cash to digital and contactless payments. Big Tech entrants and heightened security demands (e.g., biometrics) have increased competition. Established leaders like Square and PayPal face pressure from new entrants such as Apple Pay and Google Pay."
+  },
+  {
+    "question": "What impact do you predict COVID-19 to have on the usage of QR codes?",
+    "answer": "COVID-19 accelerated adoption of no-touch payments, making QR codes more widely accepted for digital and in-person transactions. Increased consumer familiarity and merchant acceptance could drive longer-term adoption."
+  },
+  {
+    "question": "What does peer-to-peer (P2P) lending involve?",
+    "answer": "P2P lending allows borrowers and lenders to transact directly without a traditional financial intermediary, typically via an online platform that matches parties and sets terms using automated credit assessment."
+  },
+  {
+    "question": "Can you tell me about some of the lending models that have emerged over the past few years?",
+    "answer": "Key models include P2P lending platforms, point-of-sale (BNPL) lending, FinTech–partner bank lending, supply-chain finance solutions, and FinTech-enabled lending marketplaces that connect borrowers with institutional investors."
+  },
+  {
+    "question": "What is point-of-sale lending?",
+    "answer": "Point-of-sale lending (also known as buy now, pay later) allows consumers to split purchases into installment payments at checkout, often for a small flat fee. It has gained traction due to flexibility and improved checkout experiences."
+  },
+  {
+    "question": "Why have lending companies such as Square relied less on the FICO score in recent years when assessing a borrower?",
+    "answer": "Digital lenders leverage proprietary transaction and payment data (e.g., volume, frequency, recurring customers) rather than traditional FICO scores, enabling faster, more data-driven credit decisions."
+  },
+  {
+    "question": "What are real-time payment (RTP) systems?",
+    "answer": "RTP systems allow payments to clear and settle instantly rather than over one to two days as with ACH. Introduced in the US in 2017, RTP supports faster transfers for consumers and businesses."
+  },
+  {
+    "question": "What role does Stripe play in the payments industry?",
+    "answer": "Stripe provides payment infrastructure and APIs that allow businesses to process online payments, manage transfers, handle fraud prevention, and integrate banking functionality, serving companies from startups to large enterprises."
+  },
+  {
+    "question": "What did Square accomplish in 2020 that was an important milestone for the FinTech industry?",
+    "answer": "Square received FDIC approval for a conditional Industrial Loan Company (ILC) charter, enabling it to operate as a bank and expand into lending and deposit products."
+  },
+  {
+    "question": "What led to the downfall of Lending Club, a former FinTech unicorn?",
+    "answer": "Lending Club faced governance issues and weaknesses in its credit risk algorithms. Its P2P model underperformed, leading to a strategic shift toward becoming a bank via the acquisition of Radius Bank and a move away from retail P2P lending."
+  },
+  {
+    "question": "What is a payday loan, and how does the process work?",
+    "answer": "A payday loan is a short-term, high-interest loan designed for emergency needs. Borrowers receive funds quickly and provide a post-dated check or authorization for repayment of principal plus interest on a near-term date."
+  },
+  {
+    "question": "What is InsurTech?",
+    "answer": "InsurTech refers to the application of technology to modernize insurance through automation, data analytics, machine learning, and digital platforms—improving underwriting, claims processing, fraud detection, and customer experience."
+  },
+  {
+    "question": "What is crowdfunding and what are some of its benefits?",
+    "answer": "Crowdfunding raises capital from many small investors via online platforms. It broadens access to funding for startups, encourages entrepreneurship, and allows individuals to invest in early-stage ventures."
+  },
+  {
+    "question": "What does card-not-present fraud mean?",
+    "answer": "Card-not-present fraud occurs when transactions are made without physically presenting the card, typically online or over the phone, making it a growing risk as digital payments increase."
+  },
+  {
+    "question": "What are Robo-Advisors?",
+    "answer": "Robo-advisors provide automated portfolio management using algorithms, offering low-cost, passive investment strategies with features like rebalancing and tax-loss harvesting, reducing reliance on human advisors."
+  },
+  {
+    "question": "What does the “underbanked” refer to?",
+    "answer": "The underbanked are individuals who lack access to traditional banking services or live in areas without nearby financial institutions. FinTech aims to expand access through digital, location-independent solutions."
+  },
+  {
+    "question": "What are cryptocurrencies?",
+    "answer": "Cryptocurrencies are digital stores of value secured by cryptography and based on decentralized blockchain systems, without reliance on a central authority."
+  },
+  {
+    "question": "How would you value Bitcoin?",
+    "answer": "Bitcoin has no intrinsic cash flows, so its value depends on market perceptions of its adoption as a store of value or medium of exchange—often compared to gold as a non-productive hedge asset."
+  },
+  {
+    "question": "What is an ICO?",
+    "answer": "An initial coin offering (ICO) is a fundraising method for crypto projects where investors receive digital tokens rather than equity. ICOs are largely unregulated and prone to scams."
+  },
+  {
+    "question": "What is the function of blockchain technology?",
+    "answer": "Blockchain is a secure, distributed digital ledger that records transactions in immutable, linked blocks, enabling transparency and trust without a central intermediary."
+  },
+  {
+    "question": "What does the trend toward “DeFi” signify?",
+    "answer": "Decentralized finance (DeFi) represents a shift toward financial services built on blockchain and smart contracts, reducing reliance on traditional intermediaries and central authorities."
+  },
+  {
+    "question": "What impact did Robinhood’s zero-commission pricing have on the brokerage industry?",
+    "answer": "Robinhood’s zero-commission model forced incumbents to eliminate or reduce trading fees, reshaping industry economics and contributing to consolidation, such as the Schwab–TD Ameritrade merger."
+  },
+  {
+    "question": "What is the purpose of a FinTech sandbox?",
+    "answer": "A FinTech sandbox allows companies to test new financial products in a controlled environment with regulatory safeguards before full market launch."
+  },
+  {
+    "question": "What does Anti-Money Laundering (AML) refer to?",
+    "answer": "AML refers to regulations and practices designed to prevent criminals from disguising illicit funds as legitimate income, requiring monitoring and reporting of suspicious activities."
+  },
+  {
+    "question": "What is RegTech?",
+    "answer": "RegTech uses technology to help financial institutions manage regulatory compliance, monitoring, reporting, and enforcement more efficiently."
+  },
+  {
+    "question": "What does “KYC” refer to in FinTech?",
+    "answer": "Know Your Customer (KYC) is the process of verifying a client’s identity to prevent fraud and comply with AML regulations through identification and background checks."
+  }
+]

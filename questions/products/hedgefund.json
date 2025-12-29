@@ -1,0 +1,430 @@
+[
+  {
+    "question": "What did the S&P 500 / Dow / NASDAQ close at last night?",
+    "answer": "Exact figures are not required. A strong response gives an approximate level and focuses on recent trends and drivers. For example: “The S&P 500 closed around 3,570 yesterday and opened slightly lower this morning following concerns around rising COVID cases.” The emphasis should be on market direction and catalysts rather than precise numbers."
+  },
+  {
+    "question": "What is the current 10-year risk-free rate?",
+    "answer": "An approximate answer is sufficient. For example: “The 10-year Treasury yield has been around 0.8% recently.” Candidates can add context by discussing recent trends, such as whether yields have been rising or falling and why."
+  },
+  {
+    "question": "What’s your near-term and long-term outlook on the equity markets?",
+    "answer": "Begin by describing the market’s current level and prevailing trends, then identify key catalysts that could move equities in the near and long term. A strong answer references earnings, valuation levels, macro risks, and monetary policy, and may contrast personal views with the bank’s published research outlook."
+  },
+  {
+    "question": "What do you think the Fed is going to do at the next FOMC Meeting?",
+    "answer": "A good response outlines the date of the next meeting, the current Fed Funds target range, the Fed’s most recent action, and what futures markets imply. Then, the candidate should state their own view, including whether changes are expected in rates, guidance, or asset purchases."
+  },
+  {
+    "question": "What is the key difference between the NYSE and the NASDAQ?",
+    "answer": "The NYSE is the older exchange with roots in floor-based trading, though most trades are now electronic. The NASDAQ is a fully electronic exchange launched in 1971 and has historically attracted more technology companies due to flexible listing requirements, though the distinction has narrowed over time."
+  },
+  {
+    "question": "What is the treasury yield curve, and what does its shape tell you?",
+    "answer": "The treasury yield curve plots yields across different maturities of U.S. Treasury securities and serves as a benchmark risk-free curve. It is normally upward sloping because investors demand higher yields for longer maturities, but expectations about future interest rates can flatten or invert the curve."
+  },
+  {
+    "question": "What does an inverted yield curve tell you?",
+    "answer": "An inverted yield curve occurs when long-term yields are lower than short-term yields. It is widely viewed as a leading indicator of economic slowdown or recession, reflecting expectations that future interest rates will fall due to weaker growth."
+  },
+  {
+    "question": "In terms of yield curve jargon, what does an upward sloping yield curve, inverted yield curve, steepening yield curve, and flattening yield curve imply?",
+    "answer": "Upward sloping means long-term yields exceed short-term yields. An inverted curve means long-term yields are below short-term yields. A steepening curve indicates the yield spread between long- and short-term bonds is increasing. A flattening curve indicates that spread is decreasing."
+  },
+  {
+    "question": "During a period of record unemployment and economic turmoil in 2020, the markets recovered faster and performed better than expected. What led to this disconnect between the equity market and the economy?",
+    "answer": "A major driver was the extremely low risk-free rate, which made bonds unattractive and pushed capital into equities. Strong performance by large-cap technology stocks, combined with aggressive monetary support from the Fed, lifted index valuations despite weak underlying economic conditions."
+  },
+  {
+    "question": "How does the current market compare to the peak of the Dot-com bubble in 2000?",
+    "answer": "During the dot-com peak, 10-year Treasury yields were around 6%, offering an attractive risk-free alternative to equities. In contrast, today’s near-zero rates leave investors with few alternatives, supporting higher equity valuations despite concerns about overpricing."
+  },
+  {
+    "question": "What is the definition of VIX and why is it used?",
+    "answer": "VIX measures the implied volatility of one-month S&P 500 options and is commonly referred to as the market’s “fear gauge.” A high VIX signals increased uncertainty and risk aversion, while a low VIX indicates market stability."
+  },
+  {
+    "question": "Where is the price of oil at?",
+    "answer": "Candidates should provide an approximate price and specify the benchmark (WTI or Brent), being careful not to confuse spot prices with futures prices."
+  },
+  {
+    "question": "What tools does the US government have to combat inflation or hyperinflation?",
+    "answer": "The government uses monetary policy tools such as adjusting interest rates, reserve requirements, and open market operations, as well as fiscal policy tools including taxation and government spending to manage inflation."
+  },
+  {
+    "question": "What is quantitative easing (QE)?",
+    "answer": "Quantitative easing is a monetary policy in which the central bank purchases long-term securities to increase liquidity and lower interest rates. QE aims to stimulate lending, investment, and economic growth when traditional rate cuts are insufficient."
+  },
+  {
+    "question": "What does it mean when the Fed is engaging in open market operations?",
+    "answer": "Open market operations involve the Fed buying or selling government securities to increase or decrease the money supply, thereby influencing short-term interest rates and overall liquidity in the financial system."
+  },
+  {
+    "question": "What is the relationship between bond prices and interest rates?",
+    "answer": "Bond prices and interest rates have an inverse relationship. When market interest rates rise, existing bonds with lower coupons become less attractive, causing their prices to fall. When interest rates fall, existing bonds become more attractive and their prices rise."
+  },
+  {
+    "question": "If the Fed wants to lower rates, what can it do?",
+    "answer": "The Fed can purchase Treasury securities in the open market, increasing demand and lowering yields. It can also use repurchase agreements (repos) to inject liquidity into the system, reducing banks’ demand for reserves and lowering the federal funds rate."
+  },
+  {
+    "question": "If the Fed wants to increase rates, what can it do?",
+    "answer": "The Fed can sell Treasury securities in the open market to reduce liquidity and raise yields. It can also conduct reverse repurchase agreements (reverse repos), borrowing cash from primary dealers to tighten credit conditions and raise the federal funds rate."
+  },
+  {
+    "question": "Besides direct purchases or sales, what is another policy tool the Fed can use to manipulate interest rates?",
+    "answer": "The Fed can adjust the interest paid on excess reserves (IOER). Lowering IOER encourages banks to lend more, while raising IOER discourages lending and tightens financial conditions."
+  },
+  {
+    "question": "What is a repurchase agreement (repo)?",
+    "answer": "A repurchase agreement is a short-term funding transaction in which a borrower sells securities, typically Treasuries, and agrees to repurchase them later at a higher price. The difference represents interest, known as the repo rate."
+  },
+  {
+    "question": "What are reverse repurchase agreements (reverse repo)?",
+    "answer": "A reverse repurchase agreement is the opposite side of a repo transaction, where the purchaser agrees to sell the securities back to the original seller at a later date. Repos and reverse repos are two perspectives of the same short-term lending arrangement."
+  },
+  {
+    "question": "What is the Federal Open Market Committee (FOMC)?",
+    "answer": "The Federal Open Market Committee is the monetary policy-making body of the Federal Reserve. It meets eight times a year to set interest rate policy and issue guidance on the economic outlook and future policy direction."
+  },
+  {
+    "question": "What is the federal funds rate?",
+    "answer": "The federal funds rate is the target interest rate set by the FOMC for overnight lending between banks of excess reserves. It influences borrowing costs across the economy, including rates on loans and short-term Treasury securities."
+  },
+  {
+    "question": "What is the federal discount rate?",
+    "answer": "The federal discount rate is the interest rate the Federal Reserve charges banks for short-term loans through the discount window. It is typically set above the federal funds target rate."
+  },
+  {
+    "question": "What are the reserve requirements set by the Fed?",
+    "answer": "Reserve requirements specify the minimum amount of cash banks must hold against deposits. Lowering reserve requirements is an expansionary policy that allows banks to make more loans."
+  },
+  {
+    "question": "What would happen if interest rates turned negative?",
+    "answer": "With negative interest rates, lenders effectively pay borrowers to hold money. This policy is used to encourage lending and discourage banks from hoarding cash during severe economic downturns."
+  },
+  {
+    "question": "From shortest to longest maturity, list treasury notes, treasury bonds, and treasury bills.",
+    "answer": "Treasury bills mature in less than one year, Treasury notes mature between two and ten years, and Treasury bonds mature between twenty and thirty years."
+  },
+  {
+    "question": "What is a certificate of deposit (CD)?",
+    "answer": "A certificate of deposit is a bank deposit agreement that pays interest over a specified term. CDs are issued at par, are typically short-term, and carry the same credit risk as bank deposits."
+  },
+  {
+    "question": "What is the money market yield?",
+    "answer": "The money market yield represents the annualized return earned on short-term, highly liquid securities with maturities of less than one year, such as Treasury bills and certificates of deposit."
+  },
+  {
+    "question": "What are treasury inflation-protected securities (TIPS)?",
+    "answer": "Treasury inflation-protected securities are U.S. Treasury bonds that adjust their principal value based on inflation. As inflation rises, both the principal and coupon payments increase, protecting investors’ real returns."
+  },
+  {
+    "question": "When does a liquidity trap occur?",
+    "answer": "A liquidity trap occurs when short-term interest rates are near zero, leaving central banks unable to stimulate the economy by lowering rates further. In this environment, consumers and businesses hoard cash rather than invest or spend, making monetary policy largely ineffective."
+  },
+  {
+    "question": "What does the consumer price index (CPI) measure?",
+    "answer": "The consumer price index (CPI) measures the average change over time in the prices consumers pay for a basket of goods and services, including housing, food, transportation, healthcare, education, and recreation. It is widely used as a measure of inflation."
+  },
+  {
+    "question": "Would you agree with the statement that deflation is worse than inflation?",
+    "answer": "Many economists argue deflation is worse than inflation because falling prices reduce corporate profits, lead to layoffs, lower wages, reduced spending, and higher unemployment. This can trigger a deflationary spiral that is difficult to reverse, as seen in Japan’s long period of stagnation."
+  },
+  {
+    "question": "From shortest to longest maturity, list treasury notes, treasury bonds, and treasury bills.",
+    "answer": "Treasury bills mature within one year, Treasury notes mature between two and ten years, and Treasury bonds mature between twenty and thirty years."
+  },
+  {
+    "question": "What is a certificate of deposit (CD)?",
+    "answer": "A certificate of deposit (CD) is a bank agreement in which funds are deposited for a fixed period in exchange for interest. CDs are typically short-term, issued at par, and carry the same credit risk as bank deposits."
+  },
+  {
+    "question": "What is the money market yield?",
+    "answer": "The money market yield is the annualized return earned on short-term, highly liquid securities with maturities under one year, such as Treasury bills, certificates of deposit, and certain municipal securities."
+  },
+  {
+    "question": "What are treasury inflation protected securities (TIPS)?",
+    "answer": "Treasury inflation protected securities (TIPS) are U.S. Treasury bonds designed to protect investors from inflation. Their principal value adjusts with inflation, which also changes the coupon payments, preserving real purchasing power."
+  },
+  {
+    "question": "What is the definition of VIX and why is it used?",
+    "answer": "VIX is an index measuring the implied volatility of one-month S&P 500 options. It is commonly referred to as the market’s “fear gauge” and is used to assess market sentiment and expected volatility."
+  },
+  {
+    "question": "Where is the price of oil at?",
+    "answer": "An acceptable answer provides an approximate level and specifies the benchmark, such as WTI or Brent, while avoiding confusion between spot prices and futures prices."
+  },
+  {
+    "question": "What tools does the US government have to combat inflation or hyperinflation?",
+    "answer": "The U.S. government uses monetary policy tools such as interest rate adjustments, reserve requirements, and open market operations, as well as fiscal policy tools including taxation and government spending to manage inflation."
+  },
+  {
+    "question": "What is quantitative easing (QE)?",
+    "answer": "Quantitative easing is a monetary policy in which a central bank purchases long-term securities to increase liquidity, lower interest rates, and stimulate economic activity when traditional rate cuts are insufficient."
+  },
+  {
+    "question": "What does it mean when the Fed is engaging in open market operations?",
+    "answer": "Open market operations refer to the Fed buying or selling government securities in the open market to increase or decrease the money supply and influence short-term interest rates."
+  },
+  {
+    "question": "What is the relationship between bond prices and interest rates?",
+    "answer": "Bond prices and interest rates move inversely. When interest rates rise, existing bond prices fall, and when interest rates fall, existing bond prices rise."
+  },
+  {
+    "question": "If the Fed wants to lower rates, what can it do?",
+    "answer": "The Fed can buy Treasury securities in the open market to increase demand and lower yields, or conduct repurchase agreements to inject liquidity and reduce the federal funds rate."
+  },
+  {
+    "question": "If the Fed wants to increase rates, what can it do?",
+    "answer": "The Fed can sell Treasury securities in the open market or conduct reverse repurchase agreements to withdraw liquidity, tightening credit conditions and raising the federal funds rate."
+  },
+  {
+    "question": "When does a liquidity trap occur?",
+    "answer": "A liquidity trap occurs when short-term interest rates are near zero, leaving central banks unable to stimulate the economy by lowering rates further. In this environment, consumers and businesses hoard cash rather than invest or spend, making monetary policy largely ineffective."
+  },
+  {
+    "question": "What does the consumer price index (CPI) measure?",
+    "answer": "The consumer price index (CPI) measures the average change over time in the prices consumers pay for a basket of goods and services, including housing, food, transportation, healthcare, education, and recreation. It is widely used as a measure of inflation."
+  },
+  {
+    "question": "Would you agree with the statement that deflation is worse than inflation?",
+    "answer": "Many economists argue deflation is worse than inflation because falling prices reduce corporate profits, lead to layoffs, lower wages, reduced spending, and higher unemployment. This can trigger a deflationary spiral that is difficult to reverse, as seen in Japan’s long period of stagnation."
+  },
+  {
+    "question": "Let’s say you're about to analyze an investment opportunity on a public company. What are some questions you would ask?",
+    "answer": "I would structure questions around (1) where the company has been, (2) where it is today, and (3) where it’s headed. Concretely: mission/value proposition; management background/tenure/track record; business model and how it generates cash flow; product/service mix and perceived customer value; growth strategy and how it has adapted; end markets served; recent financial performance; sustainability and recurrence of cash flows; competitive dynamics and risks to cash flows; and forward-looking drivers of revenue growth and profitability."
+  },
+  {
+    "question": "What is the company’s mission statement and what value do they provide to their customers?",
+    "answer": "This assesses the company’s purpose, who the customer is, what problem is being solved, and why the offering is differentiated. A clear mission tied to real customer value often signals stronger positioning and helps explain demand durability."
+  },
+  {
+    "question": "What is the background of the management team, how long have they been running the company, and what is their track record?",
+    "answer": "This evaluates leadership quality and credibility: prior roles, operating/industry experience, execution history (growth, margin improvement, capital allocation), tenure, and whether past results suggest they can deliver on current strategy."
+  },
+  {
+    "question": "What is the business model? How does the company generate cash flow?",
+    "answer": "This is about the mechanics of value capture: revenue streams, pricing, unit economics, cost structure, working capital needs, and capex intensity. Ultimately, it’s how earnings convert (or don’t convert) into sustainable free cash flow."
+  },
+  {
+    "question": "What types of products/services does the company sell? Would you consider them to be valuable?",
+    "answer": "You’d map the product/service portfolio, identify what drives willingness-to-pay, and assess differentiation (quality, brand, performance, switching costs). “Valuable” typically means the offering solves an important problem and customers keep paying without excessive discounting."
+  },
+  {
+    "question": "What is the company’s strategy to achieve growth? Has its strategy adapted alongside the market?",
+    "answer": "This tests whether growth is driven by credible levers (new products, new geographies, upsell, pricing, M&A) and whether management responds well to changing competition, technology shifts, regulation, and customer needs."
+  },
+  {
+    "question": "What are the end markets to whom the company sells its products/services?",
+    "answer": "You’d identify customer segments and industries, the size and growth of each end market, and how cyclicality, regulation, and competitive structure differ across segments—because end markets often dictate demand stability and margins."
+  },
+  {
+    "question": "How has the company’s financial performance been in recent years?",
+    "answer": "You’d look at revenue growth, margins, profitability, cash generation, balance sheet strength, and returns on capital over time to understand trend lines and whether performance is improving, deteriorating, or cyclical."
+  },
+  {
+    "question": "Is the company’s cash flows sustainable? Does its revenue have a recurring component?",
+    "answer": "Sustainability depends on retention, renewal behavior, pricing power, competitive pressure, and reinvestment requirements. A recurring revenue base (subscriptions, long-term contracts, repeat purchase behavior) generally improves predictability and reduces downside risk."
+  },
+  {
+    "question": "What are the risks to the company’s cash flows? How competitive is the market?",
+    "answer": "Key risks typically include pricing pressure, churn/volume declines, customer concentration, input cost volatility, disruption, regulation, and execution risk. Competitiveness is assessed via market share trends, barriers to entry, switching costs, and intensity of rivals."
+  },
+  {
+    "question": "What are the growth prospects of the cash flows? Where do you predict revenue growth and opportunities to create profitability to come from?",
+    "answer": "You’d forecast the main drivers of growth (market expansion, share gains, pricing, product mix, upsell) and margin levers (scale, efficiency, mix shift, operating leverage), then connect those to a coherent investment thesis on future free cash flow."
+  },
+  {
+    "question": "What has earnings per share (EPS) been historically, and how has it been trending in recent years?",
+    "answer": "This checks whether per-share earnings power is growing and why—operating performance vs. financial engineering (buybacks, leverage), margin changes, revenue growth, and share count dynamics."
+  },
+  {
+    "question": "What are some of the various investment strategies employed by hedge funds?",
+    "answer": "Common strategies include: long-short equity; event-driven; activist; quantitative/systematic; arbitrage/relative value; long-only (often value-oriented); short-only; and equity market neutral."
+  },
+  {
+    "question": "What is the investment rationale behind the long-short strategy?",
+    "answer": "The rationale is to buy stocks expected to rise (long) and short those expected to fall, using the shorts to hedge some market risk. The goal is to reduce exposure to broad market moves and focus returns more on security selection (company/industry-specific performance)."
+  },
+  {
+    "question": "How does a long-short fund differ from an equity market-neutral (EMN) fund?",
+    "answer": "Both use longs and shorts, but EMN targets near-equal long and short exposure to keep net market exposure close to zero (low correlation to the market). Long-short funds are typically more flexible and can run a net long or net short bias based on their market outlook."
+  },
+  {
+    "question": "Broadly, what is the purpose of hedging?",
+    "answer": "Hedging is used to reduce the risk of losses from adverse market moves. It usually involves taking an offsetting position (often via derivatives) that gains value if the original investment moves the wrong way, trading some upside for downside protection."
+  },
+  {
+    "question": "What is the difference between gross and net exposure?",
+    "answer": "Gross exposure measures total positioning (a leverage metric): Long % + Short %. Net exposure measures directional market risk: Long % − Short %."
+  },
+  {
+    "question": "What is a maximum drawdown?",
+    "answer": "Maximum drawdown (MDD) is the largest peak-to-trough percentage decline in a portfolio over a period—i.e., the maximum observed loss from the highest value to the lowest subsequent value during the measurement window."
+  },
+  {
+    "question": "How do investment strategies based on beta, enhanced beta, and alpha differ?",
+    "answer": "Beta strategies aim to track the market (e.g., index-like exposure). Enhanced beta mostly tracks an index but adds modest active overlays to outperform slightly while staying largely passive. Alpha strategies aim to generate returns above the market that are less correlated with broad market moves (i.e., “beat the market”)."
+  },
+  {
+    "question": "Explain the merger arbitrage investment strategy?",
+    "answer": "Merger arbitrage attempts to profit from the spread between a target’s current trading price and the announced acquisition price, reflecting deal risk and time-to-close. The investor typically buys the target (and may hedge with the acquirer’s stock in stock-for-stock deals) to capture that spread if the deal completes."
+  },
+  {
+    "question": "What is the event-driven turnaround investment strategy?",
+    "answer": "This strategy invests around a specific catalyst (often an operational or financial turnaround) in an underperforming company, betting that execution of a credible plan will improve fundamentals and re-rate the asset. A core diligence focus is whether the management team has the track record and alignment to execute the turnaround."
+  },
+  {
+    "question": "What is activist investing?",
+    "answer": "Activist investors target underperforming firms and push for changes in strategy, operations, capital allocation, or leadership—often acting as the catalyst themselves. Their involvement can move the stock as markets anticipate value-unlocking actions."
+  },
+  {
+    "question": "What does convertible bond arbitrage mean?",
+    "answer": "Convertible bond arbitrage typically involves going long a convertible bond and shorting the underlying stock to exploit mispricing between the convertible’s embedded option value and the equity. The short provides downside protection if the stock falls; if the stock rises, the bond’s conversion feature helps offset losses on the short."
+  },
+  {
+    "question": "What is momentum investing, and how does it differ from GARP?",
+    "answer": "Momentum investing seeks to ride existing price trends (“buy high, sell higher”), often using technical signals and shorter holding periods. GARP (growth at a reasonable price) is more fundamentals-driven, targeting companies with strong growth but trading at valuations viewed as reasonable relative to that growth."
+  },
+  {
+    "question": "How does momentum investing differ from mean reversion?",
+    "answer": "Momentum assumes trends persist and positions with the direction of recent moves. Mean reversion assumes prices overshoot due to overreaction and bets that they revert back toward historical averages after unusually large moves."
+  },
+  {
+    "question": "How does quant vs. human investment strategies compare?",
+    "answer": "Systematic/quant strategies are rules-based, scale to large data, avoid emotion, can be backtested, and may adapt via ML. Human traders emphasize judgment and adaptability, incorporating qualitative “market color” and nuanced information that may not be easily captured in structured data."
+  },
+  {
+    "question": "How does a hedge fund with a global macro strategy invest?",
+    "answer": "Global macro funds position based on broad economic, political, and policy views, using instruments across equities, fixed income, FX, commodities, futures, and options. They tend to focus on liquid markets and shift exposures as macro conditions and policy/regulatory regimes change."
+  },
+  {
+    "question": "Most large institutional asset management firms are multi-strat. What does this mean?",
+    "answer": "Multi-strat means the firm runs multiple investment strategies/asset classes under one umbrella (e.g., equities, credit, real estate, private equity, quant, macro). The intent is diversification, steadier returns, and better downside protection versus relying on one strategy."
+  },
+  {
+    "question": "Why would it be incorrect to compare a hedge fund’s returns to the market return?",
+    "answer": "Historically, many hedge funds targeted attractive risk-adjusted returns with hedging (lower market correlation), not raw market outperformance. A simple comparison to an equity index can ignore differing objectives, exposures, and volatility—though many modern hedge funds do explicitly aim to beat the market."
+  },
+  {
+    "question": "Why does it become more difficult to achieve high returns as a fund grows in AUM?",
+    "answer": "As AUM grows, the fund’s trades can move prices (capacity constraints), and it becomes harder to deploy capital into smaller, less-efficiently priced opportunities. Larger funds are often pushed toward large-cap, widely covered assets where mispricings are smaller and competition is higher."
+  },
+  {
+    "question": "Tell me about the Modern Portfolio Theory (MPT).",
+    "answer": "Modern Portfolio Theory (MPT), introduced by Harry Markowitz, states that investors can construct efficient portfolios that maximize expected return for a given level of risk through proper diversification. Assets should be evaluated based on how they contribute to overall portfolio risk rather than in isolation. By combining assets that are not perfectly correlated, investors can reduce unsystematic risk, leaving mostly systematic risk."
+  },
+  {
+    "question": "What is the Sharpe ratio and why does it have such popularity among investors?",
+    "answer": "The Sharpe ratio measures risk-adjusted returns by subtracting the risk-free rate from portfolio returns and dividing by the portfolio’s standard deviation. It is popular due to its simplicity and usefulness in comparing portfolios. A higher Sharpe ratio indicates better risk-adjusted performance, though it is often criticized for assuming returns are normally distributed."
+  },
+  {
+    "question": "Why do many investors disregard equity research reports?",
+    "answer": "Equity research reports are often viewed skeptically because analysts tend to have a positive bias to maintain relationships with company management and support investment banking activities. The rating system is skewed toward buy recommendations, and analysts are restricted from trading the stocks they cover, leading investors to rely more on independent analysis."
+  },
+  {
+    "question": "What would happen if the US stopped requiring quarterly earnings reports?",
+    "answer": "Eliminating quarterly reporting could reduce short-term pressure on management but may increase information asymmetry, worsen agency problems, and reduce market efficiency. While proponents argue it encourages long-term thinking, critics note it could allow poor performance to be concealed and increase volatility around less frequent reporting periods."
+  },
+  {
+    "question": "Walk me through the process of a hedge fund shorting a stock.",
+    "answer": "To short a stock, a hedge fund borrows shares from a broker and sells them in the open market. Later, the fund repurchases the shares and returns them to the lender. If the share price declines, the fund profits from buying back at a lower price, net of borrowing fees."
+  },
+  {
+    "question": "Name two of the key metrics to assess short interest.",
+    "answer": "Two key metrics are the short interest ratio (short interest divided by average daily trading volume) and short interest as a percentage of free float (short interest divided by the number of shares available for trading)."
+  },
+  {
+    "question": "Tell me about the difference between index shorting and alpha shorting.",
+    "answer": "Index shorting involves shorting a broad market index or using index derivatives to hedge portfolio exposure. Alpha shorting involves shorting individual securities to generate profit based on company-specific mispricing and is more difficult to execute successfully."
+  },
+  {
+    "question": "What is the difference between shorting a stock and purchasing a put option?",
+    "answer": "Shorting a stock has theoretically unlimited downside risk if the stock price rises. Purchasing a put option limits the maximum loss to the premium paid while providing downside exposure if the stock price falls."
+  },
+  {
+    "question": "Could you explain what a short squeeze is?",
+    "answer": "A short squeeze occurs when heavily shorted stocks experience positive news, forcing short sellers to cover positions by buying shares, which drives prices higher and accelerates the upward move."
+  },
+  {
+    "question": "List some characteristics of an ideal short.",
+    "answer": "Ideal shorts often include complacent incumbents threatened by disruption, companies benefiting from temporary consumer fads, structurally declining businesses unwilling to adapt, and firms with credible signs of accounting issues or fraud."
+  },
+  {
+    "question": "Why do many investors pay such close attention to special situations?",
+    "answer": "Special situations involve event-driven catalysts such as spin-offs, mergers, restructurings, or management changes that can create pricing inefficiencies and arbitrage opportunities, often leading to outsized returns."
+  },
+  {
+    "question": "Specifically, what does it mean when an investor is a “contrarian” investor?",
+    "answer": "A contrarian investor deliberately goes against market consensus, investing in companies the market has given up on due to overreaction or neglect. The approach relies on independent thinking, patience, and conviction rather than opposing consensus for its own sake."
+  },
+  {
+    "question": "Why have so many hedge funds closed in recent years?",
+    "answer": "Compressed returns, increased competition, higher AUM, and difficulty finding mispriced opportunities have led to underperformance relative to benchmarks like the S&P 500. As a result, many funds have shut down or returned capital."
+  },
+  {
+    "question": "What is the purpose of diversification in portfolio management?",
+    "answer": "Diversification aims to reduce unsystematic risk by holding assets across different industries, asset classes, and geographies that are not highly correlated, while still seeking to maximize returns."
+  },
+  {
+    "question": "Broadly, could you define what value investing entails?",
+    "answer": "Value investing focuses on identifying stocks trading below their intrinsic value due to market mispricing, often caused by emotional overreaction. Investors seek to profit when the market eventually corrects and the stock price converges toward intrinsic value."
+  },
+  {
+    "question": "What does it mean when a security has a sufficient margin of safety?",
+    "answer": "A margin of safety refers to purchasing a security at a price significantly below its estimated intrinsic value. This buffer protects investors against downside risk and errors in valuation. Many value investors require a margin of safety of around 20–30% before investing."
+  },
+  {
+    "question": "How do you determine whether a company has an “economic moat” or not?",
+    "answer": "An economic moat is a durable competitive advantage that protects a company’s long-term profitability. It can be identified through consistent margins and returns, and advantages such as patents, proprietary technology, strong branding, switching costs, network effects, or high capital requirements that are difficult for competitors to replicate."
+  },
+  {
+    "question": "Why would an investor use the “Scuttlebutt method”?",
+    "answer": "The Scuttlebutt method, coined by Phil Fisher, involves conducting proprietary, on-the-ground research—such as speaking with customers, employees, and industry experts—rather than relying solely on public reports, to gain deeper insight into a company’s true prospects."
+  },
+  {
+    "question": "Why does Warren Buffett dislike the EBITDA metric?",
+    "answer": "Warren Buffett dislikes EBITDA because it ignores capital expenditures, which are real cash outflows necessary to sustain a business. He argues that EBITDA can obscure true economic performance, especially for capital-intensive businesses."
+  },
+  {
+    "question": "What is Warren Buffett’s view on the capital asset pricing model (CAPM)?",
+    "answer": "Buffett is critical of CAPM because it uses beta as a proxy for risk. He believes volatility is not risk; instead, true risk is the probability of permanent capital loss, which depends on business fundamentals and valuation, not price fluctuations."
+  },
+  {
+    "question": "What is the difference between value investing and deep value investing?",
+    "answer": "Both strategies target undervalued securities, but deep value investors are willing to buy very cheap stocks even if business quality has deteriorated. They believe quality is already priced in and focus on extreme mispricing, often betting on turnarounds."
+  },
+  {
+    "question": "How do value investors deal with volatility in share price movement?",
+    "answer": "Value investors typically ignore short-term price volatility, focusing instead on long-term fundamentals. They often hold investments for many years and are not concerned with interim market fluctuations."
+  },
+  {
+    "question": "Explain to me what the purpose of dollar-cost averaging (DCA) is.",
+    "answer": "Dollar-cost averaging involves investing a fixed amount at regular intervals regardless of price. This reduces timing risk, smooths purchase prices during volatility, and prevents investors from attempting to time market bottoms."
+  },
+  {
+    "question": "Explain the growth at a reasonable price (GARP) investment strategy?",
+    "answer": "GARP is a hybrid of growth and value investing. It targets high-quality companies with strong, sustainable growth that are trading at reasonable valuations relative to their earnings and growth prospects."
+  },
+  {
+    "question": "What are value traps?",
+    "answer": "Value traps occur when a stock appears cheap due to a price decline but is actually fairly or overvalued because the business fundamentals are deteriorating. The low price reflects real structural problems rather than temporary mispricing."
+  },
+  {
+    "question": "Explain the efficient market hypothesis (EMH) and its three forms?",
+    "answer": "The EMH states that asset prices reflect all available information. Weak form: prices reflect past price data. Semi-strong form: prices reflect all public information. Strong form: prices reflect all public and private (inside) information."
+  },
+  {
+    "question": "If the efficient market hypothesis were true, what implication would this have on active management?",
+    "answer": "If markets were fully efficient, active managers would be unable to consistently outperform the market after fees, making active management largely unnecessary and favoring passive investing strategies."
+  },
+  {
+    "question": "Why has passive investing become more popular for everyday investors?",
+    "answer": "Passive investing has grown due to low costs, simplicity, and the belief that consistently beating the market is difficult. Index funds and ETFs allow investors to capture market returns efficiently without active management fees."
+  },
+  {
+    "question": "How does the random walk theory differ from the efficient market hypothesis?",
+    "answer": "Random walk theory argues price movements are unpredictable and driven by random events, while EMH argues prices are unpredictable because they already reflect all available information and are therefore fairly priced."
+  }
+]

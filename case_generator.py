@@ -2,9 +2,14 @@ import json
 from typing import Dict, Any, Optional
 from schemas import GeneratedCase
 
+CONSULTING_CASE_TYPES = ["M&A", "Market Entry", "Profitability", "Market Share"]
+
 CASE_GEN_SYSTEM = """You generate McKinsey-style case interview content.
 Return ONLY valid JSON matching the schema for GeneratedCase:
 {
+  "title": "string",
+  "type": "string",
+  "industry": "string",
   "background": "string",
   "stages": {
     "case_intro": {"readout": "string"},
@@ -12,11 +17,15 @@ Return ONLY valid JSON matching the schema for GeneratedCase:
     "chart": {"chart_spec": {...}, "primary_question": "string", "probe_question": "string"},
     "math": {"primary_question": "string"},
     "creative": {"primary_question": "string", "probe_question": "string"},
+    "recommendation": {"primary_question": "string"},
     "end_feedback": {}
   }
 }
 
 Rules:
+- Set `title` to a concise 5-8 word case descriptor (e.g., "Regional Airline Profitability Decline").
+- Set `type` to the interview archetype (e.g., Profitability, Market Entry, M&A).
+- Set `industry` to the client's primary industry.
 - Include realistic numbers.
 - Chart_spec must be one of type: bar/line/scatter/table and include title + data.
 - Math question must be solvable from stated data.
@@ -37,6 +46,8 @@ Rules:
 - Ensure all numeric values used for interpretation are present in chart_spec.data.
 - The chart primary_question must explicitly ask for 2–3 observations AND implications/next steps.
 - The math question should contain all the data needed to solve the question, and should be 4-5 steps of mental math.
+- The recommendation stage should include a prompt asking the candidate to synthesize a final recommendation, referencing the earlier findings and highlighting supporting evidence + next steps.
+- If a case_type is provided (e.g., M&A, Market Entry, Profitability, Market Share), tailor the overall situation, title, and questions to that archetype.
 
 EXAMPLES (for style + structure only; do not copy verbatim text, names, industries, or numbers)
 
@@ -66,13 +77,15 @@ END OF EXAMPLES
 Now generate ONE NEW case (different client + different industry + new numbers) that matches the same quality bar and stage intent. Return ONLY the JSON.
 """
 
-def generate_case(llm, case_theme: Optional[str] = None, difficulty: str = "medium") -> Dict[str, Any]:
+def generate_case(llm, case_theme: Optional[str] = None, difficulty: str = "medium", case_type: Optional[str] = None) -> Dict[str, Any]:
     user_payload = {
         "theme": case_theme or "surprise me (but business-realistic)",
         "difficulty": difficulty,
         "industries_allowed": ["airlines", "retail", "telecom", "saas", "consumer", "manufacturing", "banking"],
-        "stages_required": ["case_intro","structuring","chart","math","creative","end_feedback"]
+        "stages_required": ["case_intro","structuring","chart","math","creative","recommendation","end_feedback"],
     }
+    if case_type:
+        user_payload["case_type"] = case_type
 
     last_error = None
     for attempt in range(1, 4):

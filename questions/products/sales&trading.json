@@ -1,0 +1,347 @@
+[
+  {
+    "question": "What is the role of the sales & trading division in an investment bank?",
+    "answer": "Sales & Trading is responsible for selling securities and derivatives. Sales teams manage client relationships and idea generation, while traders execute trades, make markets, and sometimes manage risk positions."
+  },
+
+  {
+    "question": "What is a derivative?",
+    "answer": "A derivative is a financial instrument whose value is derived from an underlying asset or index. Common examples include options, futures, forwards, and swaps."
+  },
+  {
+    "question": "What are options?",
+    "answer": "Options are derivative contracts that give the holder the right, but not the obligation, to buy or sell an underlying asset at a specified price before or at expiration."
+  },
+  {
+    "question": "What is the difference between a call and a put option?",
+    "answer": "A call option gives the holder the right to buy an underlying asset at a specified price and benefits from price increases. A put option gives the holder the right to sell an underlying asset at a specified price and benefits from price decreases."
+  },
+  {
+    "question": "Tell me the differences among options that are in-the-money, out-of-the-money, and at-the-money.",
+    "answer": "An in-the-money option has intrinsic value and would be profitable to exercise. An out-of-the-money option has no intrinsic value and cannot be exercised profitably. An at-the-money option has a strike price equal to the underlying asset’s price and also has no intrinsic value."
+  },
+  {
+    "question": "What are cash equities trading groups at investment banks?",
+    "answer": "Cash equities trading groups handle the buying and selling of stocks. Today, these desks are much smaller than in the past due to electronic trading, with fewer human traders and greater reliance on automated execution."
+  },
+  {
+    "question": "What does a book of orders consist of on trading exchanges?",
+    "answer": "A book of orders consists of bids (buy orders) and offers (sell orders), each with a specified price and quantity, ranked by best price to match buyers and sellers efficiently."
+  },
+  {
+    "question": "What is the indicative cross size?",
+    "answer": "The indicative cross size represents the number of shares that can be matched between buyers and sellers at a given price, with the closing price typically set at the level that maximizes matched volume."
+  },
+  {
+    "question": "List some key volume indicators used by traders.",
+    "answer": "Key indicators include trading volume, VWAP (volume-weighted average price), and market depth, which measures how much can be traded without materially moving the price."
+  },
+  {
+    "question": "How does an order get routed?",
+    "answer": "Orders can be routed to exchanges, internalized by the bank, sent to electronic communication networks (ECNs), or distributed across venues using smart order routing algorithms."
+  },
+  {
+    "question": "What are some examples of off-exchange trading platforms?",
+    "answer": "Examples include block trades, dark pools, and OTC markets such as OTCBB and Pink Sheets, which facilitate trading outside traditional exchanges."
+  },
+  {
+    "question": "What is a stock index and how can one be traded in the public markets?",
+    "answer": "A stock index tracks the performance of a group of stocks and is not directly tradable, but investors can gain exposure through ETFs, futures, or options that replicate the index."
+  },
+  {
+    "question": "What are the key equity indices and their unique traits?",
+    "answer": "Major indices include the S&P 500 (market-cap weighted large-cap U.S. stocks), the Dow Jones Industrial Average (price-weighted 30 large-cap stocks), and the NASDAQ 100 (market-cap weighted large NASDAQ-listed stocks)."
+  },
+  {
+    "question": "What is a mutual fund?",
+    "answer": "A mutual fund pools investor capital to invest in a diversified portfolio of securities, is typically open-ended, priced at net asset value (NAV) once per day, and regulated by the SEC."
+  },
+  {
+    "question": "Could you define what an asset manager is?",
+    "answer": "An asset manager is a fiduciary that manages investments on behalf of clients, making portfolio decisions in the clients’ best interests, often through vehicles like mutual funds or separate accounts."
+  },
+  {
+    "question": "How do hedge funds differ from mutual funds?",
+    "answer": "Hedge funds are limited to accredited investors, pursue more complex and riskier strategies, are less regulated, and typically charge higher fees (e.g., 2 and 20), whereas mutual funds are retail-oriented, more regulated, and usually long-only."
+  },
+  {
+    "question": "Would sales & traders be considered as fiduciaries?",
+    "answer": "No. Sales and trading professionals are not fiduciaries. Their role is to execute trades for institutional or high-net-worth clients rather than provide advisory services or act in a fiduciary capacity."
+  },
+  {
+    "question": "What is an ETF?",
+    "answer": "An exchange-traded fund (ETF) is an investment vehicle that tracks an underlying index or basket of securities and trades on exchanges like a stock. ETFs combine diversification and passive management with intraday liquidity and typically lower fees."
+  },
+  {
+    "question": "What is the difference between the initial margin vs. the variation margin?",
+    "answer": "Initial margin is the upfront collateral required to cover potential future exposure and credit risk, often based on volatility. Variation margin reflects daily mark-to-market gains or losses and is paid or received as prices move."
+  },
+  {
+    "question": "What purpose do clearing houses serve in the derivatives market?",
+    "answer": "Clearing houses intermediate derivative transactions to reduce counterparty credit risk by becoming the buyer to every seller and the seller to every buyer, managing collateral and margin requirements."
+  },
+  {
+    "question": "What is securitization?",
+    "answer": "Securitization is the process of pooling financial assets and repackaging them into marketable securities, increasing liquidity and allowing investors to gain exposure to cash flows from the underlying assets."
+  },
+  {
+    "question": "What are collateralized debt obligations (CDOs)?",
+    "answer": "CDOs are structured financial products backed by a pool of debt instruments such as loans or bonds. Cash flows are divided into tranches with varying risk and return profiles."
+  },
+  {
+    "question": "Give me an overview of the mortgage-backed securities market.",
+    "answer": "Mortgage-backed securities (MBS) are bonds backed by pools of residential mortgages. Mortgage payments from homeowners flow through a special purpose vehicle to investors, making MBS a major source of mortgage financing."
+  },
+  {
+    "question": "How is the MBS market split in the US?",
+    "answer": "The US MBS market is divided into agency mortgages, which are guaranteed by government-sponsored entities like Fannie Mae and Freddie Mac, and non-agency mortgages, where investors bear the credit risk."
+  },
+  {
+    "question": "What is an asset-backed security (ABS), and how do they differ from MBS?",
+    "answer": "ABS are securities backed by non-mortgage assets such as credit card receivables, auto loans, or student loans. MBS are specifically backed by residential mortgages and are typically larger in scale."
+  },
+  {
+    "question": "What are collateralized loan obligations (CLOs)?",
+    "answer": "CLOs are structured securities backed by pools of leveraged corporate loans. They are tranched to appeal to investors with different risk appetites and are a subset of CDOs focused on corporate debt."
+  },
+  {
+    "question": "What is a forward contract?",
+    "answer": "A forward contract is a private, over-the-counter agreement between two parties to buy or sell an asset at a specified price on a future date."
+  },
+  {
+    "question": "What are futures contracts?",
+    "answer": "Futures contracts are standardized exchange-traded agreements that obligate buyers and sellers to transact an underlying asset at a predetermined price on a specified future date."
+  },
+  {
+    "question": "What is the difference between forwards and futures contracts?",
+    "answer": "Forwards are customized, OTC agreements that settle at maturity, while futures are standardized, exchange-traded contracts with daily mark-to-market and lower counterparty risk."
+  },
+  {
+    "question": "How does the spot exchange rate and forward exchange rate differ?",
+    "answer": "The spot exchange rate reflects the current market price for immediate currency exchange, while the forward exchange rate is a negotiated price for exchanging currencies at a specified future date."
+  },
+  {
+    "question": "What is the difference between a warrant and a stock option?",
+    "answer": "A warrant is issued by a company and results in new shares upon exercise, causing dilution. A stock option is a derivative traded between investors and does not create new shares when exercised."
+  },
+  {
+    "question": "What is implied volatility?",
+    "answer": "Implied volatility (IV) reflects the market’s expectation of future price movement in a security or index. It is a key input in options pricing, with higher IV leading to higher option premiums."
+  },
+  {
+    "question": "If the implied volatility were to rise, how would option prices be affected?",
+    "answer": "Option prices would increase for both calls and puts, since higher implied volatility implies greater expected price movement and therefore higher potential payoff."
+  },
+  {
+    "question": "How is the VIX traded?",
+    "answer": "The VIX itself is an index and not directly tradable. Investors gain exposure through VIX futures or exchange-traded notes (ETNs) linked to VIX futures."
+  },
+  {
+    "question": "If an investor wants to go long on the VIX, what factors would need to be considered?",
+    "answer": "An investor must consider roll yield, as VIX futures are usually in contango. Rolling futures contracts forward can create a drag on returns even if volatility remains elevated."
+  },
+  {
+    "question": "What will happen to the market if North Korea invades South Korea?",
+    "answer": "This would be a risk-off event: global equities would likely fall, especially in South Korea, while safe-haven assets such as US Treasuries, gold, and safe-haven currencies would rise. Treasury yields would decline, and credit spreads would widen."
+  },
+  {
+    "question": "Could you provide some examples of how swaps can hedge fixed income risks?",
+    "answer": "Swaps can hedge interest rate risk (interest rate swaps), credit risk (credit default swaps), and foreign exchange risk (FX swaps), allowing investors to manage exposure to rate movements, defaults, or currency fluctuations."
+  },
+  {
+    "question": "What are the four main types of trading on Wall Street?",
+    "answer": "The four main types are proprietary trading, flow trading, agency trading, and electronic trading."
+  },
+  {
+    "question": "What category of trading would most trades fall under today?",
+    "answer": "Most trades today are agency trades, where traders execute client orders and earn commissions rather than taking principal risk."
+  },
+  {
+    "question": "Explain how the Volcker Rule changed the sales & trading division of investment banks.",
+    "answer": "The Volcker Rule restricted banks from proprietary trading using their own capital, shifting focus toward agency and flow trading and reducing risk-taking activities within banks."
+  },
+  {
+    "question": "What is the “Chinese Wall” in investment banks?",
+    "answer": "The Chinese Wall is an information barrier separating private-side functions (e.g., M&A, capital markets) from public-side functions (e.g., equity research, sales & trading) to prevent misuse of material non-public information."
+  },
+  {
+    "question": "What is a credit default swap (CDS), and why are they used?",
+    "answer": "A credit default swap is a derivative that transfers credit risk from one party to another, functioning like insurance against default. Buyers gain protection if credit quality deteriorates, while sellers earn premiums if it does not."
+  },
+  {
+    "question": "How does the CDS market differ from the options market?",
+    "answer": "The CDS market focuses on changes in perceived creditworthiness rather than share price movements, unlike options which are tied directly to the price of an underlying asset."
+  },
+  {
+    "question": "What is an option premium, and who receives it: the buyer or seller?",
+    "answer": "The option premium is the price paid to purchase an option. It is paid by the buyer and received by the seller."
+  },
+  {
+    "question": "What are the three components of an option premium?",
+    "answer": "The three components are intrinsic value, time value, and implied volatility."
+  },
+  {
+    "question": "If an option has more time until expiration and greater implied volatility, would you expect the premium to be greater or smaller?",
+    "answer": "The premium would be greater, as more time and higher volatility increase the probability of favorable price movement."
+  },
+  {
+    "question": "Explain the role that time decay has in the value of an option.",
+    "answer": "Time decay (theta) measures how an option’s value declines as time passes and the expiration date approaches. As expiration nears, the rate of decay accelerates because there is less time for the underlying asset’s price to move favorably. In-the-money options generally decay more slowly than out-of-the-money options."
+  },
+  {
+    "question": "What would you expect the theta of a long-term option to be?",
+    "answer": "A long-term option would have a theta close to zero because its expiration date is far away, so it loses relatively little value each day compared to a short-term option."
+  },
+  {
+    "question": "What is the relationship between delta and gamma?",
+    "answer": "Delta measures how much an option’s price changes for a $1 change in the underlying asset, while gamma measures how much delta itself changes for a $1 move in the underlying. Gamma reflects the stability of delta."
+  },
+  {
+    "question": "What is the difference between American options and European options?",
+    "answer": "American options can be exercised at any time before expiration, while European options can only be exercised on the expiration date. This flexibility generally makes American options more valuable, all else equal."
+  },
+  {
+    "question": "What are eurobonds?",
+    "answer": "Eurobonds are bonds denominated in a currency different from the currency of the country in which they are issued and sold. The term “euro” refers to external issuance rather than Europe specifically."
+  },
+  {
+    "question": "What is the bid-ask spread?",
+    "answer": "The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask). Less liquid assets typically have wider spreads."
+  },
+  {
+    "question": "What is a black swan event?",
+    "answer": "A black swan event is a highly improbable and unexpected event that has severe consequences and outsized impact on markets and economies."
+  },
+  {
+    "question": "What did the S&P 500 / Dow / NASDAQ close at last night?",
+    "answer": "Exact figures are not required. A strong response gives an approximate level and focuses on recent trends and drivers. For example: “The S&P 500 closed around 3,570 yesterday and opened slightly lower this morning following concerns around rising COVID cases.” The emphasis should be on market direction and catalysts rather than precise numbers."
+  },
+  {
+    "question": "What is the current 10-year risk-free rate?",
+    "answer": "An approximate answer is sufficient. For example: “The 10-year Treasury yield has been around 0.8% recently.” Candidates can add context by discussing recent trends, such as whether yields have been rising or falling and why."
+  },
+  {
+    "question": "What’s your near-term and long-term outlook on the equity markets?",
+    "answer": "Begin by describing the market’s current level and prevailing trends, then identify key catalysts that could move equities in the near and long term. A strong answer references earnings, valuation levels, macro risks, and monetary policy, and may contrast personal views with the bank’s published research outlook."
+  },
+  {
+    "question": "What do you think the Fed is going to do at the next FOMC Meeting?",
+    "answer": "A good response outlines the date of the next meeting, the current Fed Funds target range, the Fed’s most recent action, and what futures markets imply. Then, the candidate should state their own view, including whether changes are expected in rates, guidance, or asset purchases."
+  },
+  {
+    "question": "What is the key difference between the NYSE and the NASDAQ?",
+    "answer": "The NYSE is the older exchange with roots in floor-based trading, though most trades are now electronic. The NASDAQ is a fully electronic exchange launched in 1971 and has historically attracted more technology companies due to flexible listing requirements, though the distinction has narrowed over time."
+  },
+  {
+    "question": "What is the treasury yield curve, and what does its shape tell you?",
+    "answer": "The treasury yield curve plots yields across different maturities of U.S. Treasury securities and serves as a benchmark risk-free curve. It is normally upward sloping because investors demand higher yields for longer maturities, but expectations about future interest rates can flatten or invert the curve."
+  },
+  {
+    "question": "What does an inverted yield curve tell you?",
+    "answer": "An inverted yield curve occurs when long-term yields are lower than short-term yields. It is widely viewed as a leading indicator of economic slowdown or recession, reflecting expectations that future interest rates will fall due to weaker growth."
+  },
+  {
+    "question": "In terms of yield curve jargon, what does an upward sloping yield curve, inverted yield curve, steepening yield curve, and flattening yield curve imply?",
+    "answer": "Upward sloping means long-term yields exceed short-term yields. An inverted curve means long-term yields are below short-term yields. A steepening curve indicates the yield spread between long- and short-term bonds is increasing. A flattening curve indicates that spread is decreasing."
+  },
+  {
+    "question": "During a period of record unemployment and economic turmoil in 2020, the markets recovered faster and performed better than expected. What led to this disconnect between the equity market and the economy?",
+    "answer": "A major driver was the extremely low risk-free rate, which made bonds unattractive and pushed capital into equities. Strong performance by large-cap technology stocks, combined with aggressive monetary support from the Fed, lifted index valuations despite weak underlying economic conditions."
+  },
+  {
+    "question": "How does the current market compare to the peak of the Dot-com bubble in 2000?",
+    "answer": "During the dot-com peak, 10-year Treasury yields were around 6%, offering an attractive risk-free alternative to equities. In contrast, today’s near-zero rates leave investors with few alternatives, supporting higher equity valuations despite concerns about overpricing."
+  },
+  {
+    "question": "What is the definition of VIX and why is it used?",
+    "answer": "VIX measures the implied volatility of one-month S&P 500 options and is commonly referred to as the market’s “fear gauge.” A high VIX signals increased uncertainty and risk aversion, while a low VIX indicates market stability."
+  },
+  {
+    "question": "Where is the price of oil at?",
+    "answer": "Candidates should provide an approximate price and specify the benchmark (WTI or Brent), being careful not to confuse spot prices with futures prices."
+  },
+  {
+    "question": "What tools does the US government have to combat inflation or hyperinflation?",
+    "answer": "The government uses monetary policy tools such as adjusting interest rates, reserve requirements, and open market operations, as well as fiscal policy tools including taxation and government spending to manage inflation."
+  },
+  {
+    "question": "What is quantitative easing (QE)?",
+    "answer": "Quantitative easing is a monetary policy in which the central bank purchases long-term securities to increase liquidity and lower interest rates. QE aims to stimulate lending, investment, and economic growth when traditional rate cuts are insufficient."
+  },
+  {
+    "question": "What does it mean when the Fed is engaging in open market operations?",
+    "answer": "Open market operations involve the Fed buying or selling government securities to increase or decrease the money supply, thereby influencing short-term interest rates and overall liquidity in the financial system."
+  },
+  {
+    "question": "What is the relationship between bond prices and interest rates?",
+    "answer": "Bond prices and interest rates have an inverse relationship. When market interest rates rise, existing bonds with lower coupons become less attractive, causing their prices to fall. When interest rates fall, existing bonds become more attractive and their prices rise."
+  },
+  {
+    "question": "If the Fed wants to lower rates, what can it do?",
+    "answer": "The Fed can purchase Treasury securities in the open market, increasing demand and lowering yields. It can also use repurchase agreements (repos) to inject liquidity into the system, reducing banks’ demand for reserves and lowering the federal funds rate."
+  },
+  {
+    "question": "If the Fed wants to increase rates, what can it do?",
+    "answer": "The Fed can sell Treasury securities in the open market to reduce liquidity and raise yields. It can also conduct reverse repurchase agreements (reverse repos), borrowing cash from primary dealers to tighten credit conditions and raise the federal funds rate."
+  },
+  {
+    "question": "Besides direct purchases or sales, what is another policy tool the Fed can use to manipulate interest rates?",
+    "answer": "The Fed can adjust the interest paid on excess reserves (IOER). Lowering IOER encourages banks to lend more, while raising IOER discourages lending and tightens financial conditions."
+  },
+  {
+    "question": "What is a repurchase agreement (repo)?",
+    "answer": "A repurchase agreement is a short-term funding transaction in which a borrower sells securities, typically Treasuries, and agrees to repurchase them later at a higher price. The difference represents interest, known as the repo rate."
+  },
+  {
+    "question": "What are reverse repurchase agreements (reverse repo)?",
+    "answer": "A reverse repurchase agreement is the opposite side of a repo transaction, where the purchaser agrees to sell the securities back to the original seller at a later date. Repos and reverse repos are two perspectives of the same short-term lending arrangement."
+  },
+  {
+    "question": "What is the Federal Open Market Committee (FOMC)?",
+    "answer": "The Federal Open Market Committee is the monetary policy-making body of the Federal Reserve. It meets eight times a year to set interest rate policy and issue guidance on the economic outlook and future policy direction."
+  },
+  {
+    "question": "What is the federal funds rate?",
+    "answer": "The federal funds rate is the target interest rate set by the FOMC for overnight lending between banks of excess reserves. It influences borrowing costs across the economy, including rates on loans and short-term Treasury securities."
+  },
+  {
+    "question": "What is the federal discount rate?",
+    "answer": "The federal discount rate is the interest rate the Federal Reserve charges banks for short-term loans through the discount window. It is typically set above the federal funds target rate."
+  },
+  {
+    "question": "What are the reserve requirements set by the Fed?",
+    "answer": "Reserve requirements specify the minimum amount of cash banks must hold against deposits. Lowering reserve requirements is an expansionary policy that allows banks to make more loans."
+  },
+  {
+    "question": "What would happen if interest rates turned negative?",
+    "answer": "With negative interest rates, lenders effectively pay borrowers to hold money. This policy is used to encourage lending and discourage banks from hoarding cash during severe economic downturns."
+  },
+  {
+    "question": "From shortest to longest maturity, list treasury notes, treasury bonds, and treasury bills.",
+    "answer": "Treasury bills mature in less than one year, Treasury notes mature between two and ten years, and Treasury bonds mature between twenty and thirty years."
+  },
+  {
+    "question": "What is a certificate of deposit (CD)?",
+    "answer": "A certificate of deposit is a bank deposit agreement that pays interest over a specified term. CDs are issued at par, are typically short-term, and carry the same credit risk as bank deposits."
+  },
+  {
+    "question": "What is the money market yield?",
+    "answer": "The money market yield represents the annualized return earned on short-term, highly liquid securities with maturities of less than one year, such as Treasury bills and certificates of deposit."
+  },
+  {
+    "question": "What are treasury inflation-protected securities (TIPS)?",
+    "answer": "Treasury inflation-protected securities are U.S. Treasury bonds that adjust their principal value based on inflation. As inflation rises, both the principal and coupon payments increase, protecting investors’ real returns."
+  },
+  {
+    "question": "When does a liquidity trap occur?",
+    "answer": "A liquidity trap occurs when short-term interest rates are near zero, leaving central banks unable to stimulate the economy by lowering rates further. In this environment, consumers and businesses hoard cash rather than invest or spend, making monetary policy largely ineffective."
+  },
+  {
+    "question": "What does the consumer price index (CPI) measure?",
+    "answer": "The consumer price index (CPI) measures the average change over time in the prices consumers pay for a basket of goods and services, including housing, food, transportation, healthcare, education, and recreation. It is widely used as a measure of inflation."
+  },
+  {
+    "question": "Would you agree with the statement that deflation is worse than inflation?",
+    "answer": "Many economists argue deflation is worse than inflation because falling prices reduce corporate profits, lead to layoffs, lower wages, reduced spending, and higher unemployment. This can trigger a deflationary spiral that is difficult to reverse, as seen in Japan’s long period of stagnation."
+  }
+]

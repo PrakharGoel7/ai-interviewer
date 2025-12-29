@@ -1,6 +1,13 @@
 from dataclasses import dataclass
 from typing import List, Optional
-from rubrics import STRUCTURING_RUBRIC, CHART_RUBRIC, MATH_RUBRIC, CREATIVE_RUBRIC
+from rubrics import (
+    FRAMEWORK_RUBRIC,
+    GRAPH_RUBRIC,
+    QUANT_RUBRIC,
+    CREATIVE_RUBRIC,
+    SYNTHESIS_RUBRIC,
+    COMMUNICATION_RUBRIC,
+)
 
 @dataclass
 class StageConfig:
@@ -31,7 +38,7 @@ STAGES = [
         id="structuring",
         title="Structuring question",
         allowed_actions=["ASK", "PROBE"],
-        rubric=list(STRUCTURING_RUBRIC.keys()),
+        rubric=list(FRAMEWORK_RUBRIC.keys()) + list(COMMUNICATION_RUBRIC.keys()),
         needs_chart=False,
         pattern="ask_probe",
         interviewer_name="Riya (Structure Lead)",
@@ -43,7 +50,7 @@ STAGES = [
         id="chart",
         title="Graph interpretation question",
         allowed_actions=["SHOW_CHART", "ASK", "PROBE"],
-        rubric=list(CHART_RUBRIC.keys()),
+        rubric=list(GRAPH_RUBRIC.keys()) + list(COMMUNICATION_RUBRIC.keys()),
         needs_chart=True,
         pattern="ask_only",
         interviewer_name="Leo (Insights Specialist)",
@@ -55,7 +62,7 @@ STAGES = [
         id="math",
         title="Math question",
         allowed_actions=["ASK", "PROBE"],
-        rubric=list(MATH_RUBRIC.keys()),
+        rubric=list(QUANT_RUBRIC.keys()) + list(COMMUNICATION_RUBRIC.keys()),
         needs_chart=False,
         pattern="ask_probe",
         interviewer_name="Sofia (Quant Coach)",
@@ -67,13 +74,25 @@ STAGES = [
         id="creative",
         title="Creative question",
         allowed_actions=["ASK", "PROBE"],
-        rubric=list(CREATIVE_RUBRIC.keys()),
+        rubric=list(CREATIVE_RUBRIC.keys()) + list(COMMUNICATION_RUBRIC.keys()),
         needs_chart=False,
         pattern="ask_probe",
         interviewer_name="Marcus (Brainstorm Facilitator)",
         interviewer_persona="Encouraging senior partner pushing for bold, structured ideation and business judgment.",
         guidance="Run a creative brainstorming question with at most one follow-up probe to push depth. Each utterance should open with a short acknowledgement of the candidate's prior answer before asking the next question. Wrap once the candidate has responded.",
         max_interviewer_turns=2,
+    ),
+    StageConfig(
+        id="recommendation",
+        title="Recommendation summary",
+        allowed_actions=["ASK"],
+        rubric=list(SYNTHESIS_RUBRIC.keys()) + list(COMMUNICATION_RUBRIC.keys()),
+        needs_chart=False,
+        pattern="ask_only",
+        interviewer_name="Elena (Client Lead)",
+        interviewer_persona="Executive sponsor focused on clear, confident synthesis that ties back to business impact.",
+        guidance="Prompt the candidate once to summarize their recommendation to the client, explicitly asking for supporting evidence and next steps. Do not probe further—listen to their response and then close the stage.",
+        max_interviewer_turns=1,
     ),
     StageConfig(
         id="end_feedback",

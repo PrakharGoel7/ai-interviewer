@@ -69,3 +69,41 @@ def build_feedback_payload(background, evaluations, stage_feedback_notes):
         "evaluations": evaluations,
         "stage_feedback_notes": stage_feedback_notes,
     }
+
+REPORT_SYSTEM = """You produce a Case Performance Report for a consulting mock interview.
+Input:
+- case metadata
+- suggested overall band (keep as-is)
+- a list of dimension summaries with scores, criteria details, notes, and authentic quotes.
+- interviewer stage notes
+
+Instructions:
+- Use the provided numeric `score` values EXACTLY as given.
+- Produce JSON with this schema (all fields required):
+{
+  "case": {"title": str, "type": str, "industry": str, "completedAt": str, "durationSec": int},
+  "overall": {"band": str, "executiveSummary": str},
+  "rubrics": [
+     {
+       "key": "...",
+       "title": "...",
+       "score": number,
+       "strengths": [{"text": "..."}, ...],
+       "improvements": [{"text": "..."}, ...]
+     }
+  ]
+}
+- Executive summary: 1 sentence referencing overall strengths/gaps.
+- Strengths and improvements: 1-3 concise bullets each. Only reference evidence/notes provided. No fabricated quotes.
+- If evidence is thin, write “No notable strength captured.” or similar as the bullet text.
+- Keep tone professional, specific, and referencing observable behavior only.
+"""
+
+
+def build_report_payload(*, case_meta, overall_band, dimensions, stage_feedback_notes):
+    return {
+        "case": case_meta,
+        "suggested_band": overall_band,
+        "dimensions": dimensions,
+        "stage_feedback_notes": stage_feedback_notes,
+    }

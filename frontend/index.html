@@ -9,10 +9,15 @@
   <body>
     <header class="nav-shell">
       <div class="nav-inner">
-        <img src="logo.svg" alt="Minerva" class="nav-logo" />
-        <nav>
-          <a href="#how-it-works">How it works</a>
-          <a class="primary-btn" href="interview.html">Start a live case</a>
+        <a href="/" class="nav-brand" aria-label="Minerva home">
+          <img src="logo.svg" alt="Minerva" class="nav-logo" />
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="#how-it-works">How it works</a>
+          <div class="nav-cta">
+            <a class="nav-pill-btn" href="interview.html">Start consulting case</a>
+            <a class="nav-pill-btn" href="ib_interview.html">Start IB mock interview</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -20,12 +25,15 @@
     <main class="page">
       <section class="hero">
         <div class="hero-text">
-          <p class="eyebrow">Consulting case interview practice</p>
+          <p class="eyebrow">Consulting & Finance interview practice</p>
           <h1>Practice interviews the way they’re actually judged.</h1>
           <p class="subhead">
-            Minerva is a voice-first AI case interviewer for consulting candidates — realistic prompts, exhibits, and calibrated evaluation.
+            Minerva is a voice-first AI interviewer for consulting and finance recruiting, simulating firm-specific and role-specific interviews with instant, calibrated feedback.
           </p>
-          <a class="primary-btn" href="interview.html">Start a live case</a>
+          <div class="cta-row">
+            <a class="primary-btn" href="interview.html">Consulting Case</a>
+            <a class="primary-btn" href="ib_interview.html">IB Mock Interview</a>
+          </div>
         </div>
         <div class="hero-visual">
           <div class="mock-card prompt-card">
@@ -70,40 +78,125 @@
           <span>McKinsey</span>
           <span>Bain</span>
           <span>BCG</span>
-          <span>EY</span>
-          <span>Deloitte</span>
-          <span>Accenture</span>
-          <span>KPMG</span>
-          <span>Strategy&amp;</span>
+          <span>Goldman Sachs</span>
+          <span>JP Morgan</span>
+          <span>Evercore</span>
+          <span>Morgan Stanley</span>
         </div>
       </section>
 
       <section id="how-it-works" class="how-it-works">
         <div class="section-header">
           <p class="eyebrow">How it works</p>
-          <h2>Three steps to master consulting interviews</h2>
+          <h2>Tailored prep for every track</h2>
         </div>
-        <div class="steps">
-          <article>
-            <span class="step-number">01</span>
-            <h3>Start a live case</h3>
-            <p>Choose difficulty and case archetype. Every prompt follows McKinsey, Bain, or BCG-style interviews.</p>
-          </article>
-          <article>
-            <span class="step-number">02</span>
-            <h3>Respond naturally</h3>
-            <p>Speak your answers while Minerva listens, probes, and displays exhibits — exactly like the real conversation.</p>
-          </article>
-          <article>
-            <span class="step-number">03</span>
-            <h3>Get calibrated feedback</h3>
-            <p>Receive structured scoring across structure, math, and synthesis so you know how you’d perform in the room.</p>
-          </article>
+        <div class="tabs" role="tablist" aria-label="Interview tracks">
+          <button
+            class="tab active"
+            role="tab"
+            id="tab-consulting"
+            aria-selected="true"
+            aria-controls="panel-consulting"
+          >
+            Consulting
+          </button>
+          <button
+            class="tab"
+            role="tab"
+            id="tab-ib"
+            aria-selected="false"
+            aria-controls="panel-ib"
+          >
+            Investment Banking
+          </button>
         </div>
-        <div class="cta-row">
-          <a class="primary-btn" href="interview.html">Start a live case</a>
+        <div
+          class="tab-panel"
+          id="panel-consulting"
+          role="tabpanel"
+          aria-labelledby="tab-consulting"
+        >
+          <div class="steps">
+            <article>
+              <span class="step-number">01</span>
+              <h3>Pick your track</h3>
+              <p>Select your target firm and desired case type for highly relevant case practice.</p>
+            </article>
+            <article>
+              <span class="step-number">02</span>
+              <h3>Respond naturally</h3>
+              <p>Speak your answers while Minerva listens, evaluates, asks follow-ups, and shares exhibits like a real interviewer.</p>
+            </article>
+            <article>
+              <span class="step-number">03</span>
+              <h3>Get calibrated feedback</h3>
+              <p>Receive structured, recruiter-calibrated feedback on framework quality, exhibit interpretation, and quantitative rigor.</p>
+            </article>
+          </div>
+          <div class="cta-row">
+            <a class="primary-btn" href="interview.html">Start consulting case</a>
+          </div>
+        </div>
+        <div
+          class="tab-panel hidden"
+          id="panel-ib"
+          role="tabpanel"
+          aria-labelledby="tab-ib"
+          hidden
+        >
+          <div class="steps">
+            <article>
+              <span class="step-number">01</span>
+              <h3>Pick your track</h3>
+              <p>Select your desired product group (e.g. M&A, LevFin, ECM) and sector group for highly relevant interview questions.</p>
+            </article>
+            <article>
+              <span class="step-number">02</span>
+              <h3>Answer under pressure</h3>
+              <p>Speak your answers while Minerva listens, evaluates, and probes deeper with follow-ups.</p>
+            </article>
+            <article>
+              <span class="step-number">03</span>
+              <h3>Get calibrated feedback</h3>
+              <p>Receive feedback on technical accuracy and communication aligned with industry standards.</p>
+            </article>
+          </div>
+          <div class="cta-row">
+            <a class="primary-btn" href="ib_interview.html">Start IB mock interview</a>
+          </div>
         </div>
       </section>
     </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const panels = document.querySelectorAll(".tab-panel");
+
+      function activateTab(tab) {
+        tabs.forEach((t) => {
+          const isActive = t === tab;
+          t.classList.toggle("active", isActive);
+          t.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+        panels.forEach((panel) => {
+          const isMatch = panel.id === tab.getAttribute("aria-controls");
+          panel.classList.toggle("hidden", !isMatch);
+          if (isMatch) {
+            panel.removeAttribute("hidden");
+          } else {
+            panel.setAttribute("hidden", "hidden");
+          }
+        });
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => activateTab(tab));
+        tab.addEventListener("keydown", (evt) => {
+          if (evt.key === "Enter" || evt.key === " ") {
+            evt.preventDefault();
+            activateTab(tab);
+          }
+        });
+      });
+    </script>
   </body>
 </html>

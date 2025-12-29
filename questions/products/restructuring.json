@@ -1,0 +1,118 @@
+[
+  {
+    "question": "What are the most common reasons for a company to become distressed?",
+    "answer": "Companies most commonly become distressed due to liquidity problems from missed interest or principal payments caused by unexpected financial underperformance. Other reasons include accelerated payment provisions such as make-whole clauses, failed leveraged buyouts that leave companies over-levered, inability to pay suppliers or vendors, covenant violations that trigger forced calls or liquidation, industry disruption that renders products or services obsolete, and black swan events such as financial crises or pandemics."
+  },
+  {
+    "question": "What are a few typical signs that a debtor is planning to file for bankruptcy soon?",
+    "answer": "Common signs include maxing out revolving credit facilities, breached or imminently breached debt covenants, delayed payments to suppliers or vendors, and timing the filing immediately before a large payment becomes due in order to conserve cash."
+  },
+  {
+    "question": "Other than declaring bankruptcy, what alternatives does a company have to stay afloat?",
+    "answer": "Alternatives include refinancing existing debt, although this is often unrealistic for distressed firms; raising additional equity, which is difficult due to the low likelihood of investor interest; and out-of-court restructuring, where debt terms are renegotiated with creditors through maturity extensions, PIK interest, payment deferrals, or principal haircuts to avoid formal bankruptcy."
+  },
+  {
+    "question": "As a company nears becoming distressed, how might its accounts receivable, deferred revenue, and accounts payable balances change?",
+    "answer": "Deferred revenue often increases as companies offer discounts for upfront payments to generate liquidity. Accounts payable typically increase as the company delays payments to suppliers. Accounts receivable may grow as companies extend more credit to boost the borrowing base, while customers may delay payments due to bankruptcy concerns."
+  },
+  {
+    "question": "What does operational restructuring involve?",
+    "answer": "Operational restructuring focuses on improving business performance through cost-cutting, headcount reduction, improved working capital management, and asset restructuring such as selling non-core or underperforming assets. Companies may also retain restructuring advisors or third-party consultants to assist with these efforts."
+  },
+  {
+    "question": "What is the difference between a voluntary and involuntary petition?",
+    "answer": "A voluntary petition is filed by the debtor itself and allows advantages such as choosing jurisdiction. An involuntary petition is filed by creditors to force the company into bankruptcy, usually due to technical defaults or covenant violations, and is relatively rare."
+  },
+  {
+    "question": "Contrast an out-of-court restructuring with an in-court restructuring.",
+    "answer": "Out-of-court restructuring occurs without court supervision and requires unanimous creditor consent, making it faster, cheaper, and private but susceptible to holdout problems and lacking access to DIP financing. In-court restructuring under Chapter 11 is court-supervised, allows contract rejections, provides an automatic stay, resolves holdouts through class voting, enables DIP financing, but is more costly, public, and time-consuming."
+  },
+  {
+    "question": "What is the purpose of the automatic stay provision?",
+    "answer": "The automatic stay temporarily prohibits creditors from pursuing collections or legal actions against the debtor after a bankruptcy filing, allowing the company to continue operating and clearly separating pre-petition claims from post-petition liabilities."
+  },
+  {
+    "question": "Which claim holders get priority in a bankruptcy?",
+    "answer": "Priority follows this order: super-priority DIP claims, secured pre-petition claims, administrative claims, priority unsecured claims such as wages and taxes, general unsecured claims, and finally preferred and common equity, which often receive nothing."
+  },
+  {
+    "question": "Following a bankruptcy filing, will the management team be replaced or remain on board?",
+    "answer": "Typically, the existing management team remains in place unless there is evidence of fraud or misconduct. Often, external turnaround consultants are added to support management during restructuring."
+  },
+  {
+    "question": "In Chapter 11, under which circumstances might a Court appoint a trustee to replace the existing CEO?",
+    "answer": "A trustee may be appointed if management engaged in fraud, dishonesty, criminal misconduct, or if the Court determines replacement is in the best interest of stakeholders due to gross mismanagement and widespread mistrust."
+  },
+  {
+    "question": "Can a decline in a company's share price and valuation cause it to become distressed?",
+    "answer": "A decline in share price alone does not cause distress, but it may reflect anticipated distress. As long as the company can service debt and comply with covenants, it can operate, though declining valuation may hinder supplier relationships and capital raising."
+  },
+  {
+    "question": "From an advisory standpoint, what are the two sides to a restructuring deal?",
+    "answer": "Advisory work can be on the creditor side, representing lenders or bondholders often grouped together, or on the debtor side, advising the distressed company and leading its operational and financial turnaround."
+  },
+  {
+    "question": "Broadly, what are the two main types of bankruptcies?",
+    "answer": "The two main types are Chapter 7, which involves liquidation and distribution of assets based on absolute priority, and Chapter 11, which involves court-supervised reorganization through a plan of reorganization."
+  },
+  {
+    "question": "What is a pre-pack in a bankruptcy?",
+    "answer": "A pre-packaged bankruptcy is when a plan of reorganization is negotiated and agreed upon before filing Chapter 11, enabling faster court approval and emergence, sometimes in as little as 45 days."
+  },
+  {
+    "question": "What information is contained in a plan of reorganization (POR)?",
+    "answer": "A POR outlines how a debtor’s assets, liabilities, and equity will be treated upon exit from bankruptcy, including recoveries, claim classifications, and forms of consideration for each stakeholder group."
+  },
+  {
+    "question": "What are the four tests representing the minimum standards of fairness for a POR to be approved?",
+    "answer": "The tests are the Best Interests of Creditors test, the Good Faith test, the Feasibility test, and Consent or Cramdown, which allows approval despite rejection by impaired classes."
+  },
+  {
+    "question": "What is the absolute priority rule, and why is it important?",
+    "answer": "The absolute priority rule states that higher-priority claim holders must be paid in full before any recovery flows to lower-priority classes. While deviations occur in practice due to negotiation and litigation risk, it underpins bankruptcy recoveries."
+  },
+  {
+    "question": "What is distressed debt?",
+    "answer": "Distressed debt refers to debt trading at significant discounts to face value or at very high spreads due to anticipated or ongoing financial distress and restructuring."
+  },
+  {
+    "question": "What is a fulcrum security in a restructuring?",
+    "answer": "The fulcrum security is the most senior security that does not receive full recovery and is therefore most likely to convert into equity post-restructuring, giving its holders substantial influence over the reorganization."
+  },
+  {
+    "question": "What does the phrase \"debt to control\" mean?",
+    "answer": "Debt to control is a strategy where investors acquire distressed debt with the goal of converting it into equity through restructuring, ultimately gaining control of the reorganized company."
+  },
+  {
+    "question": "What is DIP financing and why is it considered safe for the lender?",
+    "answer": "Debtor-in-possession financing is provided after a bankruptcy filing and sits at the top of the capital structure with super-priority status, strong collateral, and strict covenants, making it highly secure for lenders."
+  },
+  {
+    "question": "What is the purpose of the thirteen-week cash flow (TWCF) model?",
+    "answer": "The TWCF model tracks short-term liquidity on a cash basis during distress or bankruptcy, providing transparency into near-term cash inflows and outflows and informing borrowing needs such as revolver usage or DIP financing."
+  },
+  {
+    "question": "What is a Section 363 sale?",
+    "answer": "A Section 363 sale allows a distressed company to sell assets during Chapter 11 with court approval, often involving stalking horse bidders, higher competing bids, and credit bidding by secured creditors."
+  },
+  {
+    "question": "What is credit bidding?",
+    "answer": "Credit bidding allows secured creditors to use their debt claims as currency to purchase collateral assets in bankruptcy without providing new cash."
+  },
+  {
+    "question": "What is a fraudulent conveyance?",
+    "answer": "A fraudulent conveyance occurs when an insolvent company transfers assets with the intent to defraud creditors. If proven, courts can claw back the transferred value."
+  },
+  {
+    "question": "What is a cramdown?",
+    "answer": "A cramdown occurs when the court confirms a plan of reorganization over the objection of an impaired class, provided legal requirements are met."
+  },
+  {
+    "question": "How does the fiduciary duty of management change during bankruptcy?",
+    "answer": "Once a company enters the zone of insolvency, management’s fiduciary duties shift from equity holders to creditors."
+  },
+  {
+    "question": "Do equity shareholders receive compensation during Chapter 11?",
+    "answer": "In theory, both preferred and common equity holders are wiped out during Chapter 11 because equity sits at the bottom of the capital structure, though in rare cases they may receive a nominal recovery."
+  }
+]

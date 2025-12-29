@@ -1,0 +1,298 @@
+[
+  {
+    "question": "What is a leveraged buyout (LBO)?",
+    "answer": "In a leveraged buyout (LBO), a private equity firm (financial sponsor) acquires a company using a capital structure where most of the purchase price is funded with debt (e.g., loans, bonds), and the sponsor contributes the remainder as equity. The sponsor typically secures the financing package before the transaction closes. After gaining majority control, the sponsor focuses on improving operations (streamlining, restructuring, asset sales, etc.) to increase cash flow generation so the company can service and pay down the large debt burden. The typical investment horizon is 5–7 years, and exits commonly occur via a sale to another private equity firm or a strategic acquirer, or by taking the company public via an IPO. Financial sponsors often target ~20–25% returns."
+  },
+  {
+    "question": "Explain the basic concept of an LBO to me using a real-life example.",
+    "answer": "A common metaphor for an LBO is “house flipping” using mostly borrowed money. You buy a house using a large mortgage and a smaller down payment. You must repay principal and interest, but you rent out rooms to generate cash flow to cover payments and fund renovations. Over about five years, you improve the property and benefit from a rising market, then sell it at a higher price. You repay the remaining mortgage balance and keep the residual proceeds; because you paid down principal along the way, your equity ownership increases, boosting your return on the initial down payment."
+  },
+  {
+    "question": "What is the intuition underlying the usage of debt in an LBO?",
+    "answer": "Debt allows the sponsor to contribute less equity up front, which can magnify equity returns as the company uses free cash flow to pay down debt over time (deleveraging). Sponsors try to maximize leverage while keeping it manageable to avoid default risk. Debt also tends to have a lower cost of capital than equity because it sits higher in the capital structure, and interest expense is tax-deductible, creating a tax shield that improves after-tax cash flows."
+  },
+  {
+    "question": "What is the typical capital structure prevalent in LBO transactions?",
+    "answer": "LBO capital structures vary with credit conditions, but there has been a shift from around 80% debt / 20% equity in the 1980s to roughly 60% debt / 40% equity in more recent years. Debt tranches can include revolvers and term loans, senior notes, subordinated notes, high-yield bonds, and mezzanine financing. Most debt is typically senior secured loans before riskier junior capital is used. On the equity side, the sponsor is usually the largest contributor, and management may roll over equity to participate in upside. Sponsors often reserve roughly 3% to 20% of total equity to incentivize management."
+  },
+  {
+    "question": "What are the main levers in an LBO that drive returns?",
+    "answer": "The main return drivers are: (1) debt paydown (deleveraging), where free cash flow reduces debt and increases the sponsor’s equity value over time; (2) EBITDA growth, achieved through operational improvements (e.g., margin expansion via cost cutting or price increases), new growth strategies, and accretive add-on acquisitions; and (3) multiple expansion, where the sponsor exits at a higher EV/EBITDA multiple than entry due to improved sentiment, better market conditions, increased scale/diversification, or favorable sale dynamics."
+  },
+  {
+    "question": "What attributes make a business an ideal LBO candidate?",
+    "answer": "Ideal LBO targets typically have: strong and predictable free cash flow generation to support interest and principal payments; recurring revenue (e.g., long-term contracts or mission-critical products/services) that reduces cash flow volatility; an economic moat (e.g., brand, patents/IP, proprietary tech, scale, network effects, switching costs) to protect margins; favorable unit economics with limited capex and working capital needs so more cash can service debt; a strong and committed management team to execute the plan; the ability to buy at an undervalued multiple (lower entry valuation improves returns and reduces overpay risk); and identifiable value-add opportunities (e.g., divest non-core assets, cost reductions, better sales/marketing execution)."
+  },
+  {
+    "question": "What types of industries attract more deal flow from financial buyers?",
+    "answer": "Industries that often attract PE deal flow include: non-cyclical or mature/low-growth industries (where inorganic growth and consolidation are viable and exit demand from strategics can be strong); subscription-based or contractual businesses (stable, recurring revenue, e.g., B2B enterprise software); high R&D or technical-product industries (incumbents may prefer buying proven tech vs. building it, creating acquisition demand); industries with strong synergy potential (revenue synergies like cross-sell/upsell and cost synergies via scale and process improvements, e.g., industrial tech/software for revenue synergies, healthcare services for cost efficiencies); and sectors with favorable tailwinds (industry trends that support steady improvement rather than disruptive upheaval that forces heavy reinvestment)."
+  },
+  {
+    "question": "What would be the ideal type of products/services of a potential LBO target?",
+    "answer": "Ideal products/services are typically mission-critical (customers need them for business continuity), recurring or contract-based (predictable revenue from long-term agreements), have high switching costs (customers are reluctant to change providers), and are often more technical/high-tech (higher barriers to entry and stronger pricing power). Some targets also benefit from location-based competition (fragmented, local service markets like landscaping or commercial cleaning), which can reduce competitive intensity and support long-term customer relationships."
+  },
+  {
+    "question": "What is the relationship between debt and purchase price?",
+    "answer": "Using debt enables a private equity firm to buy larger companies than it could with equity alone, because leverage increases purchasing power. High leverage also preserves more sponsor capital (“dry powder”) for other investments or add-on acquisitions across the portfolio."
+  },
+  {
+    "question": "How is the maximum leverage used in an LBO typically determined?",
+    "answer": "Maximum leverage depends on the target’s fundamentals, industry, and market conditions. A common reference range is roughly 5.0x to 7.0x Debt/EBITDA, and leverage can rise as valuations increase, though levels vary significantly by sector and credit environment. Historically, LBOs used much higher leverage (up to ~90% debt in the 1980s), but leverage has moderated due to risk."
+  },
+  {
+    "question": "Why might a private equity firm not raise leverage to the maximum leverage, even if it had the option to do so?",
+    "answer": "A sponsor might choose less than maximum leverage due to: increased default risk if the business can’t reliably support the debt under downside cases; reputational concerns (avoiding the perception of over-levering a company purely for extraction); fundraising and portfolio implications (a bankruptcy can impair fund returns and hurt future fundraising and lender willingness); and strategic planning for a future dividend recap when terms might be better (leaving debt capacity for later refinancing or recapitalization)."
+  },
+  {
+    "question": "What determines a company's debt capacity?",
+    "answer": "Debt capacity is typically assessed through: (1) industry risk (growth, cyclicality, barriers to entry, disruption risk, regulation); (2) the company’s competitive positioning and substitution risk; (3) historical performance and forecasts focused on downside scenarios to test cash flow resiliency; and (4) scenario analysis to determine a maximum leverage multiple (Total Debt/EBITDA) that leaves enough cushion to meet obligations even under underperformance (e.g., EBITDA down 20–25%), considering leverage and coverage ratios and the lending environment."
+  },
+  {
+    "question": "In the context of an LBO, what is the “tax shield”?",
+    "answer": "The tax shield is the reduction in taxable income created by interest expense deductions. Because interest on debt is tax-deductible, higher leverage can reduce cash taxes and increase after-tax cash flows, making debt financing more attractive."
+  },
+  {
+    "question": "Since senior debt is cheaper, why don't financial sponsors fund the entire debt portion of the capital structure with senior debt?",
+    "answer": "Senior lenders will only lend up to a certain risk tolerance (often roughly 2.0x to 3.0x EBITDA). Beyond that level, additional leverage increases default risk and requires more expensive, junior forms of debt. Senior debt is cheaper because it is higher in the capital structure, typically secured, and comes with stricter covenants; junior debt is less restrictive but carries higher interest rates."
+  },
+  {
+    "question": "How do financial sponsors exit their investments?",
+    "answer": "Common exits include: selling to a strategic buyer (often faster and can achieve higher valuation due to synergies), selling to another private equity firm (a secondary buyout or sponsor-to-sponsor deal), or taking the company public through an IPO (more common for larger companies/mega-funds)."
+  },
+  {
+    "question": "What is the one caveat of an IPO exit?",
+    "answer": "An IPO is not an immediate exit; it is often a path toward an eventual exit. The process is time-consuming and typically includes a lock-up period (often 90 to 180 days) during which existing shareholders cannot sell shares."
+  },
+  {
+    "question": "What is a secondary buyout?",
+    "answer": "A secondary buyout (sponsor-to-sponsor deal) is when a PE firm sells a portfolio company to another PE firm. These can generate lower returns than traditional buyouts because many obvious operational improvements and value-add initiatives may already have been implemented by the prior owner."
+  },
+  {
+    "question": "What is a dividend recapitalization?",
+    "answer": "A dividend recapitalization is when a sponsor raises additional debt after an LBO and uses the proceeds to pay itself a dividend. This often happens after some initial debt has been paid down, creating incremental debt capacity. Dividend recaps allow partial monetization and can improve IRR by returning capital earlier without a full exit."
+  },
+  {
+    "question": "How might operating a highly levered company differ from operating a company with minimal or no debt?",
+    "answer": "Highly levered companies have less margin for error because interest and principal payments are fixed obligations. Leverage forces tighter financial controls, disciplined cost management, and more conservative capital spending and strategic initiatives (e.g., expansions or acquisitions) due to reduced flexibility."
+  },
+  {
+    "question": "How can a private equity firm increase the probability of achieving multiple expansion during the sale process?",
+    "answer": "A sponsor can increase the odds of multiple expansion by improving the quality of the business (entering new markets via geographic expansion, product development, and strategic add-ons) and by selling into favorable conditions (strong sector sentiment, improved market environment, and/or strategic buyers that may value synergies)."
+  },
+  {
+    "question": "Why is multiple expansion viewed as a less than ideal lever for value creation?",
+    "answer": "Because future market multiples are unpredictable, relying on multiple expansion to hit return hurdles is risky. Standard LBO practice is to assume an exit multiple equal to the entry multiple and to sensitize the exit multiple, since EBITDA growth and debt paydown are more controllable and easier to plan for than hoping the market re-rates the asset higher."
+  },
+  {
+    "question": "Can you name a scenario when multiple contraction is common?",
+    "answer": "For very large LBOs, modest multiple contraction can be common because as a company grows, the number of potential buyers that can afford it shrinks, reducing competition and potentially lowering exit multiples. Even with some contraction, returns can still be strong if EBITDA grows and debt is paid down; an IPO can also be an alternative exit path depending on circumstances."
+  },
+  {
+    "question": "What are some risks you would look out for when assessing potential investment opportunities?",
+    "answer": "Common risks include: industry cyclicality (less predictable demand); customer concentration (e.g., a single customer > ~5–10% of revenue); high customer or employee churn (weak retention, high acquisition needs, organizational issues); temporarily inflated valuations (“buying at the top,” making multiple expansion harder); past institutional ownership (secondary buyouts can have lower remaining value-add); and dependence on key management that may retire during the hold period, complicating the exit."
+  },
+  {
+    "question": "If you had to pick, would you rather invest in a company that sells B2C or B2B?",
+    "answer": "All else equal, B2B revenue is often viewed as higher quality due to a higher likelihood of long-term contracts, greater customer spending power, and stronger “stickiness” from switching costs and lower price sensitivity relative to consumers."
+  },
+  {
+    "question": "Imagine that you're performing diligence on the CIM of a potential LBO investment. Which questions would you attempt to answer?",
+    "answer": "Key diligence questions include: whether management is strong and will stay on; what value the product/service provides; what drives recurring revenue and whether long-term contracts exist; where growth and operational improvement opportunities are; what has driven recent revenue growth (price, volume, upsell); competitive threats and whether a defensible moat exists; what value-creation levers the PE firm can realistically pull; whether the industry is cyclical; how concentrated revenue is by customer/end market; and whether a viable exit strategy exists with sufficient buyer demand."
+  },
+  {
+    "question": "What is a management buyout (MBO)?",
+    "answer": "A management buyout is an LBO where a significant portion of post-transaction equity is contributed by the existing management team (cash equity and/or rolled-over equity), often alongside a sponsor or other investors. The premise is management believes it can run the business better and create more value, and MBOs can occur after underperformance and shareholder scrutiny. Debt financing is similar to a traditional LBO."
+  },
+  {
+    "question": "What is rollover equity and why do private equity firms perceive it as a positive sign?",
+    "answer": "Rollover equity is when management reinvests some or all of its existing equity (and sometimes adds new capital) into the post-LBO company. It reduces the required sponsor equity and/or leverage. Sponsors view rollover positively because it signals management confidence in future upside and creates alignment (“skin in the game”)."
+  },
+  {
+    "question": "When might a PE firm prefer to use term loans rather than subordinated notes in an LBO?",
+    "answer": "Term loans are typically cheaper (lower interest rates) and often allow optional prepayments, providing flexibility. If the company expects to be active in M&A (add-ons/divestitures), the sponsor may also prefer term loans because subordinated notes often have restrictive incurrence covenants that could limit strategic actions."
+  },
+  {
+    "question": "Would a private equity firm prefer high growth or stability in revenue?",
+    "answer": "Most traditional buyout firms prefer stability and predictability in revenue over rapid growth when forced to choose, because high leverage increases the importance of consistent cash flows to service debt and reduces tolerance for volatility."
+  },
+  {
+    "question": "Why might a higher average selling price (ASP) or average order value (AOV) not always be better?",
+    "answer": "Higher prices can reduce the addressable customer base if the product becomes unaffordable, limiting expansion and new customer acquisition. The company must balance pricing power with market size and growth potential."
+  },
+  {
+    "question": "Can a highly capital-intensive industry be appealing to PE investors?",
+    "answer": "Yes. While asset-light businesses can be attractive due to lower reinvestment needs, capital-intensive industries can have higher barriers to entry that deter competitors and support pricing power. Also, substantial fixed assets (PP&E) can be pledged as collateral, potentially improving borrowing terms and increasing debt capacity."
+  },
+  {
+    "question": "When might customer concentration be considered being at a manageable level?",
+    "answer": "Customer concentration can be more tolerable if there are long-term, irrevocable customer contracts in place. Even then, concentration risk may still warrant a discount in purchase price."
+  },
+  {
+    "question": "Explain the strategic rationale behind add-on acquisitions and how it creates value.",
+    "answer": "An add-on acquisition is when a PE-owned platform company acquires a smaller business that complements its offerings. Add-ons can create value by enabling synergies, expanding into new end markets, and accelerating inorganic growth. Many PE firms specialize in buy-and-build strategies in fragmented industries, where consolidation is viable. Add-ons can also help platforms compete with strategics in auctions because synergies can be realized."
+  },
+  {
+    "question": "How can value be created during a consolidation play?",
+    "answer": "Value creation levers in consolidation include: increased pricing power from a stronger brand and bundled offerings; greater bargaining power with suppliers (e.g., longer payables, bulk discounts); lower customer acquisition costs through improved systems and scale efficiencies; and improved cost structure via economies of scale, consolidation of functions/offices, elimination of redundancies, and reduced overhead (e.g., marketing, accounting, IT)."
+  },
+  {
+    "question": "What does “multiple arbitrage” in a roll-up acquisition scenario imply?",
+    "answer": "Multiple arbitrage refers to acquiring add-on targets at lower valuation multiples than the platform’s multiple. After closing, the add-on’s cash flows are valued at the platform’s higher multiple (even before operational improvements), which can increase the combined company’s implied value."
+  },
+  {
+    "question": "A private equity firm has tripled its initial investment in five years, estimate the IRR.",
+    "answer": "If an investment triples (3.0x MoM) over five years, a common approximation is ~25% IRR (often cited as ~24.6%). Common IRR approximations include: 2.0x in 3 years ≈ 25% IRR; 2.0x in 5 years ≈ 15% IRR; 2.5x in 3 years ≈ 35% IRR; 2.5x in 5 years ≈ 20% IRR; 3.0x in 3 years ≈ 45% IRR; 3.0x in 5 years ≈ 25% IRR."
+  },
+  {
+    "question": "How many years would it take to double a $100,000 investment at a 9% annual return?",
+    "answer": "Using the Rule of 72, the approximate doubling time is 72 / 9 = 8 years. A related heuristic, the Rule of 115, estimates time to triple an investment as 115 divided by the annual return."
+  },
+  {
+    "question": "If an LBO target had no existing debt on its closing balance sheet, would this increase the returns to the financial buyer?",
+    "answer": "Typically, no. An LBO recapitalizes the target at closing, effectively replacing the prior capital structure, so pre-LBO debt levels generally do not directly affect sponsor returns. Sponsor returns are primarily driven by the initial equity outflow and subsequent cash inflows (dividends, fees, and exit proceeds). A minor consideration is whether management is inexperienced with leverage, which could be a risk factor, but it is usually not a primary return driver."
+  },
+  {
+    "question": "Where do financial sponsors typically get their capital?",
+    "answer": "Financial sponsors raise capital from limited partners such as insurance companies, pension funds, sovereign wealth funds, endowments, high net worth individuals, and financial institutions."
+  },
+  {
+    "question": "In the private markets, what does \"dry powder\" mean?",
+    "answer": "Dry powder is committed but unallocated capital that a firm has available to deploy. High dry powder levels often signal fewer attractive opportunities, which can intensify competition in auctions and push purchase multiples higher."
+  },
+  {
+    "question": "What is proprietary deal sourcing and how does it compare to intermediated deals?",
+    "answer": "Proprietary deals originate from direct outreach or existing relationships (not a bank-run auction). They can have friendlier terms due to relationship dynamics, but sourcing can be labor-intensive and uncertain (many cold calls/emails). Intermediated deals are run by investment banks via competitive auctions with many buyers, which can drive higher prices as the sell-side seeks to maximize valuation."
+  },
+  {
+    "question": "From a limited partner's perspective, what are the advantages/disadvantages of the private equity asset class?",
+    "answer": "Advantages include the potential for higher returns (commonly targeted in excess of ~20–25%) and active ownership/value creation by managers. Disadvantages include higher bankruptcy risk in leveraged portfolio companies and illiquidity, since LPs generally cannot freely sell their stakes like public equities."
+  },
+  {
+    "question": "Explain the “2 and 20” compensation structure in private equity.",
+    "answer": "“2 and 20” refers to a common PE fee model: a 2% management fee on assets under management to cover operating costs, and 20% carried interest (a performance fee) on profits above a defined threshold/hurdle, paid to the general partners."
+  },
+  {
+    "question": "What is a distribution waterfall schedule in private equity?",
+    "answer": "A distribution waterfall is the priority-based allocation of proceeds from investments among stakeholders. A classic waterfall is: (1) return LP capital and a minimum hurdle return; (2) GP catch-up, where the GP receives most or all profits until it reaches the agreed profit split; and (3) the remaining profits are split, commonly 80% to LPs and 20% to GPs (though terms can vary)."
+  },
+  {
+    "question": "In the distribution waterfall in private equity, what is the catch-up clause?",
+    "answer": "The catch-up clause states that after LPs receive their initial capital back plus a hurdle return, the GP then receives the majority (or all) of subsequent profits until the GP’s share “catches up” to the agreed carry split, aligning the overall distribution with the contracted profit-sharing terms."
+  },
+  {
+    "question": "What is a clawback provision?",
+    "answer": "A clawback provision allows LPs to reclaim carried interest previously paid to GPs if, by the end of the fund, overall performance means LPs did not receive the agreed return of capital and profit share. It addresses situations where early exits inflate carry payments but later exits underperform."
+  },
+  {
+    "question": "What is the difference between a recapitalization and an LBO?",
+    "answer": "An LBO is accounted for as an acquisition, typically involving asset write-ups and the recognition of goodwill. A recapitalization is mechanically similar (a major change in capital structure) but is not accounted for as an acquisition; assets carry over at existing bases with no goodwill recognized. Because deal prices can exceed book equity without goodwill, recapitalizations can result in negative equity."
+  },
+  {
+    "question": "Why do some portfolio companies pay sponsor consulting fees?",
+    "answer": "Sponsor consulting fees (monitoring fees) are annual fees paid by the portfolio company to the PE sponsor, often justified by advisory support from operating partners or in-house consulting resources. These fees are typically negotiated as part of the investment agreement."
+  },
+  {
+    "question": "What is the impact of the 2017 tax reform on the private equity industry?",
+    "answer": "Key impacts include: corporate tax rate reduction from 35% to 21%; limits on interest deductibility (roughly capped around 30% of EBITDA, with details depending on rules and period), which affects highly levered structures; expanded ability to accelerate depreciation (beneficial for capital-intensive businesses); and changes to NOLs (no carryback, indefinite carryforward, and NOL usage limited to offsetting 80% of taxable income, versus 100% previously)."
+  },
+  {
+    "question": "For private equity funds, the limited partnership is called a “blind pool.” What does this mean?",
+    "answer": "A blind pool fund means LPs commit capital without approving each individual investment. Investment decisions are made at the discretion of the GPs and the firm’s investment team. LPs typically rely on trust in the GPs’ strategy, track record, and relationships rather than deal-by-deal selection."
+  },
+  {
+    "question": "In private equity, what is a capital call?",
+    "answer": "A capital call (drawdown) is when GPs request LPs to fund a portion of their committed capital, typically when a deal is nearing close. LPs must deliver the requested funds within the timeframe in the agreement (often around 7–12 days). LPs can invest their uncalled commitments elsewhere until called. Failure to meet a capital call can result in penalties or other consequences under the partnership agreement."
+  },
+  {
+    "question": "Walk me through the mechanics of building an LBO model.",
+    "answer": "An LBO model evaluates a sponsor buyout using debt and equity, focusing on valuation, returns (IRR/MoM), and financial statement impacts. Steps typically include: (1) entry valuation based on an entry EV/EBITDA multiple and LTM EBITDA (or offer price per share if public); (2) Sources & Uses to capture purchase of equity, refinancing of existing debt, and transaction/financing fees, funded by debt, sponsor equity, and possibly cash/management rollover; (3) a forecast and full 3-statement model over the 5–7 year hold with a debt schedule that updates balances and interest and models paydowns/draws based on excess cash; (4) exit valuation and sponsor returns using assumptions such as exit multiple and net debt at exit to compute IRR and MoM; and (5) sensitivities/scenarios (e.g., entry/exit multiples, leverage, growth, margins, or backing into maximum equity value given hurdle rates)."
+  },
+  {
+    "question": "What is the purpose of the “Sources & Uses” section of an LBO model?",
+    "answer": "Sources & Uses shows how much capital is required and how it will be funded. Uses answer what the sponsor is paying for (buying out existing equity, refinancing existing debt, and paying transaction and financing fees). Sources explain where funding comes from (new debt instruments, sponsor equity, excess balance sheet cash, and sometimes management rollover equity)."
+  },
+  {
+    "question": "How would you measure the credit health of a pre-LBO target company?",
+    "answer": "Credit health is commonly assessed using leverage ratios and interest coverage ratios. Total Debt/EBITDA in LBO contexts often falls around 5.0x to 7.0x, with senior debt around ~3.0x (though industry and market conditions matter). Interest coverage should generally be healthy; a common rule of thumb is interest coverage of at least ~2.0x in the first year post-buyout."
+  },
+  {
+    "question": "Why is LBO analysis used as a floor valuation when analyzing company value using several valuation methodologies?",
+    "answer": "LBO analysis provides a floor valuation because it answers what a financial sponsor can pay while still achieving a minimum hurdle IRR (often ~15% to 25%). The hurdle rates are higher than typical public-market cost of equity due to leverage risk and shorter holding periods, which implies a lower valuation than DCF or comps that assume lower discount rates and different risk profiles."
+  },
+  {
+    "question": "When analyzing the viability of undertaking an LBO, how do private equity firms estimate the company's value in the exit year?",
+    "answer": "A common approach is to assume exit at the same EV/EBITDA multiple as entry (e.g., buy at 10.0x, exit at 10.0x), and then sensitize the exit multiple because it materially impacts the deal IRR. Firms present a range of IRRs across different exit scenarios."
+  },
+  {
+    "question": "If you had to choose two variables to sensitize in an LBO model, which ones would you pick?",
+    "answer": "Entry and exit multiples are typically the most impactful sensitivity variables. Other common sensitivities include revenue growth, leverage at entry (debt turns), and EBITDA margin."
+  },
+  {
+    "question": "What are the capex and net working capital requirement considerations for a private equity firm looking at a potential investment?",
+    "answer": "High capex and high net working capital needs are generally negative for an LBO because both consume cash and reduce free cash flow available for interest payments, mandatory amortization, optional debt paydown, and reinvestment. Traditional buyout candidates ideally have limited capex needs (mostly maintenance capex) and manageable working capital, improving debt service capacity."
+  },
+  {
+    "question": "If management decides to rollover equity, how would you calculate their new ownership stake and proceeds received at exit?",
+    "answer": "First calculate the rollover equity amount as either a dollar input or a percent of total new equity: Rollover Equity = Total Equity × Rollover Equity %. Then compute management’s post-LBO ownership as: New Ownership Stake = Rollover Equity Amount / (Rollover Equity Amount + New Equity). At exit, management proceeds are typically: Rollover Equity Proceeds = Exit Equity Value × Management Implied Ownership %. Alternative structures can include thresholds, profit-sharing above a hurdle, or liquidation preferences."
+  },
+  {
+    "question": "What are the two most common return metrics used by private equity firms?",
+    "answer": "The two most common metrics are IRR and MoM (MOIC). IRR measures the time-weighted compounded annual return. MoM measures total cash inflows divided by total cash outflows, i.e., the multiple on invested equity."
+  },
+  {
+    "question": "If you're given the multiple of money (MoM) of an investment and the number of years the investment was held, what is the formula to calculate the internal rate of return (IRR)?",
+    "answer": "IRR can be approximated from MoM and holding period (t) as: IRR = MoM^(1/t) − 1."
+  },
+  {
+    "question": "What levers have a positive or negative impact on the IRR of an investment?",
+    "answer": "Positive IRR levers include earlier extraction of proceeds (dividend recap, earlier sale, cash interest vs PIK for debt investors, monitoring fees), increased free cash flow and EBITDA growth enabling more debt paydown, and multiple expansion (higher exit multiple than entry). Negative IRR levers include delayed proceeds (pushed-back sale, unfavorable markets, PIK interest for debt investors), decreased free cash flow due to underperformance or margin compression reducing debt paydown, and multiple contraction (exiting at a lower multiple)."
+  },
+  {
+    "question": "When measuring returns, why is it necessary to look at both the IRR and MoM?",
+    "answer": "MoM ignores time value of money, so a 3.0x multiple is very different if achieved in 5 years versus 30 years. IRR is time-weighted and sensitive to timing; early dividends can inflate IRR even if total value creation (MoM) is mediocre. Using both metrics avoids misleading conclusions."
+  },
+  {
+    "question": "Tell me how you would calculate IRR in Excel.",
+    "answer": "Use XIRR with actual dates because IRR assumes equal spacing between cash flows. The approach is: input the initial equity investment as a negative cash flow, then subsequent inflows (dividends, fees, exit proceeds) as positive cash flows with their corresponding dates, and compute IRR using =XIRR(range_of_cash_flows, range_of_dates)."
+  },
+  {
+    "question": "What is the difference between gross IRR and net IRR in private equity?",
+    "answer": "Gross IRR measures fund-level returns before management fees and carried interest, reflecting the GPs’ investment performance. Net IRR measures returns to LPs after fees and carry, representing what investors actually earn."
+  },
+  {
+    "question": "Tell me about the J-curve in private equity returns.",
+    "answer": "The J-curve describes how fund returns often start negative early due to capital outflows for investments and management fees, then improve later as portfolio companies are exited and proceeds are distributed, producing a J-shaped trajectory in realized net returns over time."
+  },
+  {
+    "question": "If a business that underwent an LBO has been operating as intended, why does the private equity firm not hold on to the investment for a longer duration (e.g., 10+ years)?",
+    "answer": "PE funds typically operate on a 5–7 year holding period because they must return capital to LPs within the fund lifecycle and raise subsequent funds. Holding assets much longer can reduce IRR, which is a key performance metric used by LPs to evaluate managers."
+  },
+  {
+    "question": "In the situation when a private equity firm has the option to exit within a 1 to 2-year time frame, why might the firm be reluctant to proceed with the sale?",
+    "answer": "Exiting in 1–2 years creates the need to quickly redeploy capital, and finding a replacement deal can take time. The firm must weigh opportunity cost and market conditions, and transaction costs also matter. Unless the return is unusually attractive, short holds are often avoided."
+  },
+  {
+    "question": "How would you calculate the levered free cash flow yield for a private equity investment, and when would it be used?",
+    "answer": "First compute levered free cash flow from the sponsor’s perspective by subtracting interest and mandatory debt amortization: Levered FCF = EBITDA − Taxes − Interest − Capex − Increase in NWC − Mandatory Debt Amortization. Then divide by the initial equity investment: Levered FCF Yield = Levered FCF / Initial Equity Investment. It can be used (less commonly than IRR/MoM) to gauge cash generation relative to invested equity and the company’s ability to reinvest or pay dividends, with year-over-year improvement being especially informative."
+  },
+  {
+    "question": "If we had not deducted interest and the mandatory debt amortization in calculating the free cash flow above, what metric would we be measuring?",
+    "answer": "That would be unlevered free cash flow. To compute an unlevered free cash flow yield consistent with enterprise-level cash flows, divide by entry enterprise value: Unlevered FCF Yield = Unlevered Free Cash Flow / Entry Enterprise Value."
+  },
+  {
+    "question": "How does the accounting treatment of financing fees differ from transaction fees in an LBO?",
+    "answer": "Financing fees (raising debt or issuing equity) are capitalized and amortized over the debt’s maturity (often ~5–7 years). Transaction fees (banker advisory fees, legal fees, etc.) are not amortized and are treated as one-time expenses that reduce retained earnings."
+  },
+  {
+    "question": "If an acquirer writes up the value of the intangible assets of a target, how are goodwill and amortization impacted?",
+    "answer": "Writing up intangible assets increases the fair value of identifiable assets acquired, which reduces the amount of goodwill needed as the plug between purchase price and fair value of net assets. A higher identifiable intangible base generally increases future amortization expense for those intangibles (depending on accounting treatment and useful lives). Under US GAAP, goodwill is not amortized for public companies, though private companies can elect goodwill amortization for certain reporting purposes."
+  },
+  {
+    "question": "What does a cash sweep refer to in LBO modeling?",
+    "answer": "A cash sweep uses excess free cash flow (after required items like revolver repayments) to make optional prepayments of debt tranches that allow early repayment. Optional prepayments may involve prepayment penalties because lenders receive less interest over time."
+  },
+  {
+    "question": "What is the purpose of the minimum cash balance in an LBO model?",
+    "answer": "The minimum cash balance ensures the company retains sufficient cash for day-to-day operations and working capital needs. The debt schedule is structured so cash does not fall below this level, which can increase required deal funding because that cash cannot be used to fund the purchase."
+  }
+]

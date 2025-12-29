@@ -1,0 +1,198 @@
+[
+  {
+    "question": "Provide a broad overview of how the healthcare industry is segmented.",
+    "answer": "The healthcare industry is commonly segmented into three major buckets: (1) Life Sciences (biotech, large pharma, specialty pharma, generics), (2) Healthcare Services (including payers, providers, and “other services” like CROs, PBMs, pharmacies, distributors, and healthcare IT), and (3) Med-Tech (medical devices and medical equipment)."
+  },
+  {
+    "question": "What are some ongoing industry trends in the healthcare sector?",
+    "answer": "Key trends include: (1) consolidation via M&A/alliances (e.g., payers integrating PBMs; retail pharmacy/distributor and pharmacy/payer alignment), (2) growth of Integrated Delivery Networks (IDNs) that align providers and health plans within geographies under a unified ecosystem/brand, (3) the shift from fee-for-service to value-based care (paying for outcomes vs. volume), and (4) consumer-centric healthcare expansion (urgent care, telemedicine, and broader access to personal health data)."
+  },
+  {
+    "question": "What are the main differences between biotech and other types of pharma companies?",
+    "answer": "Biotech companies generally use living organisms to create therapies, while other pharma segments primarily use chemical compounds. Biotech firms are often high-growth, more concentrated around one product or therapeutic area, whereas large pharma tends to be diversified across many products and multiple therapeutic areas."
+  },
+  {
+    "question": "What do inpatient and outpatient refer to when discussing providers?",
+    "answer": "Inpatient care refers to treatment where the patient stays overnight in a hospital or comparable facility. Outpatient care refers to treatment delivered without an overnight stay—patients receive care and leave the same day."
+  },
+  {
+    "question": "Tell me the difference between acute and post-acute care.",
+    "answer": "Acute care is typically short-term, higher-intensity treatment for severe conditions or emergencies in hospital settings (e.g., ER, ICU, urgent care). Post-acute care refers to care delivered after an acute hospital episode, often at non-hospital facilities, ranging from rehab to longer-term restorative services (e.g., skilled nursing, rehab facilities, physical therapy, psychiatric care)."
+  },
+  {
+    "question": "What are the two channels for pharmaceutical drug distribution?",
+    "answer": "The two main channels are: (1) the retail pharmacy channel, where drugs flow from manufacturers to distributors to retail pharmacies to patients (with significant negotiated pricing and spread opportunities involving PBMs, payers, pharmacies), and (2) the mail-order channel, where drugs flow from manufacturers to PBM-operated mail-order facilities and then to patients, with co-pays and payer payments flowing directly through PBMs."
+  },
+  {
+    "question": "What is the biggest cost driver for pharma companies?",
+    "answer": "R&D—especially clinical trials—is typically the largest cost driver for pharma. Production costs (API manufacturing) are generally the next major cost category, followed by sales & marketing, which is usually much smaller than the first two."
+  },
+  {
+    "question": "What roles do pharmacy benefit managers (PBMs) play in the industry?",
+    "answer": "PBMs manage pharmaceutical spend for insurers by negotiating drug prices with manufacturers and pharmacies, influencing which drugs are dispensed via formularies, and pushing levers like generic utilization and mail-order penetration. They often earn economics from the spread between what payers pay PBMs and what PBMs pay pharmacies/manufacturers."
+  },
+  {
+    "question": "Explain the purpose of rebates in the context of pharmaceutical pricing.",
+    "answer": "Rebates are effectively discounts that pharma companies offer to PBMs to incentivize inclusion on a formulary (the list of covered drugs). In competitive categories, larger rebates can help maintain or win formulary placement, but they reduce the pharma company’s net product revenue."
+  },
+  {
+    "question": "What type of services do contract research organizations (CROs) provide?",
+    "answer": "CROs run and manage clinical trials and other specialized activities on behalf of pharma/biotech companies in an outsourced model. They help clients execute trials safely and efficiently and can accelerate regulatory approval timelines without requiring the client to build a large permanent in-house trial operation."
+  },
+  {
+    "question": "What is the difference between a branded and generic pharma company?",
+    "answer": "Branded pharma companies sell patent-protected drugs and primarily compete on innovation and perceived quality. Generics companies sell off-patent equivalents in a commoditized market, competing largely on contract volume, supply reliability, and price; they typically have lower R&D/clinical trial burdens but more intense competition to secure pharmacy supply contracts."
+  },
+  {
+    "question": "What are the two pathways for a generics drug being approved?",
+    "answer": "There are two common pathways: (1) a Paragraph III filing, where the generics firm waits for patent expiry and enters alongside other generics, and (2) a Paragraph IV filing, where the generics firm challenges a patent pre-expiry; if successful, it can receive 180 days of exclusivity before other generics enter."
+  },
+  {
+    "question": "Let’s say you're valuing a pharmaceutical company selling drugs approved for therapeutic usage. What would the basic drivers of revenue be?",
+    "answer": "Core drivers are typically: the number of patients using the drug, the average price per unit (or per patient), and the average dosage/usage intensity prescribed over time."
+  },
+  {
+    "question": "What assumption would you look at to value a clinical-stage biotechnology company?",
+    "answer": "Clinical-stage biotech is usually valued as a portfolio of drug candidates, each modeled separately with risk-adjusted cash flows. Key assumptions include: pipeline size and stages, peak revenue opportunity, indication(s), timelines to complete trials, launch date and uptake curve to peak, and the company’s cash balance (given high cash burn)."
+  },
+  {
+    "question": "What does the “probability of success” rate refer to in receiving FDA approval?",
+    "answer": "Probability of success (POS) reflects the likelihood a given drug candidate progresses through clinical stages and ultimately gets FDA approval. In models, POS is applied to revenues/cash flows to create risk-adjusted forecasts (often multiplying by cumulative POS over development phases)."
+  },
+  {
+    "question": "Provide an overview of the path to becoming an approved therapy by the FDA.",
+    "answer": "A typical pathway includes: pre-clinical discovery (non-human testing), Phase 0 (very small exploratory human dosing), Phase 1 (safety/tolerability and dosing), Phase 2 (efficacy and dosing refinement), Phase 3 (large-scale comparative testing vs. standard of care), submission of a New Drug Application (NDA) for FDA review initiation, and then a final review/decision process (often described as Phase 4/post-market work once approved, including ongoing monitoring)."
+  },
+  {
+    "question": "How would you build a revenue model for a recently launched generic drug company?",
+    "answer": "A common approach is: start with recent launches and pipeline; benchmark branded pre-LOE sales and pricing; size the market (volume × price) and project low growth; estimate generic penetration over time (often high and rising post-LOE); model competitive entry (more entrants → price erosion and share dilution, e.g., ~10% price drop per new entrant as a simplifying assumption); allocate market share (even split as a simplification, adjusted for contracting and reliability); then compute revenue as price × company volume/share using observed market prices or negotiated pricing where available."
+  },
+  {
+    "question": "On average, how does the pricing of generics compare to branded drugs?",
+    "answer": "Generic drug pricing is typically a fraction of branded pricing—often cited around ~15–20% of the branded price on average."
+  },
+  {
+    "question": "How would projecting revenue from drugs in the pipeline differ from recently launched generics?",
+    "answer": "Pipeline generics forecasts often require a risk-weight (probability of reaching FDA bioequivalence approval), particularly for complex generics that may face manufacturing or quality-control risk. Recently launched products are generally modeled with realized/near-term commercial data and competitive/pricing dynamics rather than development risk."
+  },
+  {
+    "question": "How would you build a revenue model for a hospital?",
+    "answer": "Hospital revenue models typically start with facility count (hospitals/outpatient centers) and growth (often acquisition-driven), then utilization (beds, admissions, equivalent admissions, length of stay, daily census), occupancy rates, and payer mix with reimbursement rates (Medicare, Medicaid, managed variants, commercial). Revenue is often driven by volume (equivalent admissions) × revenue per equivalent admission, with separate builds for existing facilities and acquisitions (including ramp/occupancy conservatism and a mid-year convention for acquired hospitals)."
+  },
+  {
+    "question": "How do you calculate the equivalent admissions of a hospital?",
+    "answer": "Equivalent admissions are a proxy for combined inpatient and outpatient volume. A common formulation uses admissions scaled by the ratio of total inpatient+outpatient revenue to inpatient revenue to convert outpatient activity into an “admission-equivalent” measure."
+  },
+  {
+    "question": "What does the average occupancy rate represent, and how is it calculated?",
+    "answer": "Occupancy measures how fully a hospital uses its bed capacity and is a key profitability indicator. It is typically calculated as Average Daily Census divided by the weighted average number of beds. Benchmarks cited are ~75% as “most profitable” for many hospitals, and ~85% as “peak profitability” for high-end urban hospitals."
+  },
+  {
+    "question": "What are the differences between Medicare vs. Managed Medicare and Medicaid vs. Managed Medicaid?",
+    "answer": "Medicare is administered directly by the federal government, while Managed Medicare (Medicare Advantage) is administered by private managed care organizations (e.g., Humana, Aetna) under government contract and can include different benefits/cost structures (often including Part D). Medicaid is state-run government coverage, while Managed Medicaid refers to Medicaid benefits administered by managed care organizations under state contracts."
+  },
+  {
+    "question": "What are managed care organizations (MCOs)?",
+    "answer": "Managed care organizations are non-government payers that offer managed health plans. They generate revenue primarily from premiums and administrative fees paid by customers such as employers and individuals."
+  },
+  {
+    "question": "What impact did Medicaid expansion have on hospital reimbursements?",
+    "answer": "Medicaid expansion under the ACA increased insured coverage among lower-income populations, benefiting hospitals by reducing the uninsured population and improving reimbursement capture. The tradeoff included increased oversight and more outcome-based reimbursement dynamics and penalties for non-compliance."
+  },
+  {
+    "question": "How do you calculate the medical loss ratio (MLR) and why is it tracked?",
+    "answer": "MLR is calculated as Medical Costs divided by Premium Revenue. It is tracked to measure what share of premium dollars is spent on claims and quality-improving activities; ACA rules were designed to ensure insurers spend a minimum portion on care rather than overhead."
+  },
+  {
+    "question": "What are some of the main health plans used today?",
+    "answer": "Common health plan types include PPOs, HMOs, point-of-service (POS) plans, indemnity (fee-for-service) plans, and health savings accounts (HSAs)."
+  },
+  {
+    "question": "What are preferred provider organizations (PPOs)?",
+    "answer": "PPOs are networks where providers agree (via contracts) to deliver services at discounted rates to plan members. Payers steer patient volume to in-network providers in exchange for negotiated reimbursement terms."
+  },
+  {
+    "question": "What are health maintenance organizations (HMOs)?",
+    "answer": "HMOs provide coverage within a contracted provider network for a periodic fee, typically requiring members to start with a primary care physician (PCP) and often restricting out-of-network care. They usually have lower premiums but less flexibility."
+  },
+  {
+    "question": "What are point-of-service plans (POS)?",
+    "answer": "POS plans blend features of HMOs and PPOs: members have a designated in-network PCP like an HMO, but can access out-of-network services like a PPO, with benefits varying based on network usage."
+  },
+  {
+    "question": "What do indemnity healthcare plans involve?",
+    "answer": "Indemnity (fee-for-service) plans give patients broad choice of providers and reimburse a set portion of incurred charges. Patients typically pay a deductible and out-of-pocket costs first, then submit claims for partial reimbursement based on “usual, customary, and reasonable” (UCR) charges."
+  },
+  {
+    "question": "What do usual, customary and reasonable (UCR) fees refer to?",
+    "answer": "UCR fees are benchmarks used to determine reimbursement amounts, based on what comparable nearby providers typically charge for the same or similar medical services, varying by geography."
+  },
+  {
+    "question": "Could you explain what issue an integrated delivery network (IDN) is attempting to fix?",
+    "answer": "IDNs aim to reduce fragmentation and misaligned incentives by integrating facilities and specialties under a single parent organization, improving coordination, communication, resource utilization, and ultimately clinical outcomes and cost efficiency across the care continuum."
+  },
+  {
+    "question": "What does interoperability mean in healthcare?",
+    "answer": "Interoperability is the ability of different healthcare IT systems to communicate and exchange data so patient information can move seamlessly across clinics, labs, hospitals, and pharmacies—improving efficiency, reducing errors, and lowering costs."
+  },
+  {
+    "question": "What is a physician-hospital organization (PHO)?",
+    "answer": "A PHO is a joint venture between hospitals and physicians/practices that contracts with managed care plans and coordinates services. It seeks integration, but can face friction if incentives between hospitals and physicians aren’t fully aligned."
+  },
+  {
+    "question": "What are physician organizations (POs)?",
+    "answer": "Physician organizations refer to the traditional model where physician groups and hospitals coexist without deep contractual integration. This model faces pressure as reforms push for tighter integration and incentive alignment."
+  },
+  {
+    "question": "What is a medical service organization (MSO)?",
+    "answer": "An MSO provides non-clinical management and administrative services for medical practices (e.g., billing, HR, recruiting, compliance). By taking over operational work, MSOs can support physician-hospital integration without practicing medicine."
+  },
+  {
+    "question": "What is an independent practice association (IPA)?",
+    "answer": "An IPA is an organization of independent physicians formed to contract with HMOs/payers, often to offer discounted rates and create a patient funnel to member physicians, while facilitating claims processing under negotiated terms."
+  },
+  {
+    "question": "What does a partially integrated medical group (PIMG) mean?",
+    "answer": "A PIMG is a consolidation of multiple practices into a single legal entity with some centralized governance, while still retaining meaningful operational independence and non-integrated elements (e.g., income allocation by center, preserved site identities)."
+  },
+  {
+    "question": "What does a fully integrated medical group (FIMG) include?",
+    "answer": "A FIMG is a more complete integration where practices operate under a single brand and unified governance, with fully integrated administrative operations, clinical systems, workflow management, and income distribution mechanisms."
+  },
+  {
+    "question": "Explain the 3rd party business model in how providers are paid in the healthcare industry.",
+    "answer": "Providers collect patient co-pays at the point of care and submit claims to payers describing services performed. Payers often use internal teams or third-party healthcare IT/payment integrity firms to audit claims for errors or misbilling before reimbursing providers under contracted rates (e.g., PPO reimbursement terms, physician fee schedules often linked to Medicare rates)."
+  },
+  {
+    "question": "Why is payment integrity such a point-of-conflict in the healthcare industry?",
+    "answer": "Payment integrity focuses on ensuring claims are paid correctly. Vendors often earn a share of identified overpayments, creating disputes (e.g., inpatient vs. outpatient classification). Complexity of services, high claim volumes, and difficulty distinguishing medically necessary care drive friction, and automation/AI is emerging as a potential solution but manual review remains significant."
+  },
+  {
+    "question": "What is telemedicine and how does the process work?",
+    "answer": "Telemedicine (telehealth) is remote patient care delivered via HIPAA-compliant video tools. Patients consult virtually, discuss symptoms, receive diagnoses and guidance, and determine if an in-person visit is needed—reducing unnecessary visits, improving convenience, and often lowering costs while supporting care coordination."
+  },
+  {
+    "question": "What are some limitations of telemedicine?",
+    "answer": "Telemedicine is not suitable for emergencies or conditions requiring hands-on treatment, imaging, or urgent interventions. It is best for non-urgent issues and follow-ups, and can help free capacity for providers to focus on urgent care needs."
+  },
+  {
+    "question": "What is utilization management in the healthcare context?",
+    "answer": "Utilization management is the periodic review of how healthcare resources are used to control costs and assess care quality. It helps identify inefficiencies, optimize demand/capacity, and improve patient experience while maintaining financial performance."
+  },
+  {
+    "question": "What is the difference between onsite and near-site healthcare, and what benefits do they provide to employees and employers?",
+    "answer": "Onsite clinics are located at the workplace and typically require higher upfront investment, often feasible for large employers. Near-site clinics are operated by third parties and located near (but not at) the workplace, offering multiple locations and lower employer capital requirements. Both reduce time away from work and support preventive care, helping manage employer healthcare costs and improve employee well-being."
+  },
+  {
+    "question": "Talk to me about the rising trend of D2C startups in the pharmaceutical industry.",
+    "answer": "D2C pharma/digital health models let patients consult online and receive prescriptions and home-delivered meds. Growth has been driven by convenience, privacy, and destigmatization of categories like acne, hair loss, and sexual health. Players include Hims & Hers, Ro, Capsule, NowRx, and PillPack (acquired by Amazon)."
+  },
+  {
+    "question": "Tell me about a healthcare startup you're closely following.",
+    "answer": "Truepill (founded 2016) is a B2B telehealth and pharmacy infrastructure company often described as “AWS for pharmacies.” It provides pharmacy APIs and fulfillment, enabling D2C brands and digital health companies to offer prescribing, dispensing, shipping, and real-time operational visibility while Truepill operates as the licensed pharmacy layer behind the scenes."
+  },
+  {
+    "question": "From a financial perspective, how were hospitals and healthcare facilities affected by the COVID-19 pandemic?",
+    "answer": "Hospitals saw profitability decline due to deferred elective procedures and reduced non-COVID volume, which hurt revenues while fixed costs remained high—driving cost-cutting, layoffs, and reduced hours in non-COVID areas. At the same time, certain areas (testing/diagnostics, disease control services, telemedicine, and digital infrastructure) saw increased demand and investment as providers modernized legacy systems."
+  }
+]

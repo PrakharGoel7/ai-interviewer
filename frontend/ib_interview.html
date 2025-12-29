@@ -3,41 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Minerva Live Case</title>
+    <title>Minerva — IB Mock Interview</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body class="interview-page">
     <main class="interview-shell">
-      <!-- Control bar -->
       <header class="control-bar card">
         <div class="brand-block">
           <a href="/" class="brand-link" aria-label="Minerva home">
             <img src="logo.svg" alt="Minerva" class="brand-logo" />
           </a>
-          <span class="session-pill">Consulting mock interview</span>
+          <span class="session-pill">IB mock interview</span>
         </div>
         <div class="control-fields">
           <label class="field">
-            <span>Target firm</span>
-            <select id="firm-select" class="select">
-              <option value="McKinsey">McKinsey</option>
-              <option value="BCG">BCG</option>
-              <option value="Bain">Bain</option>
+            <span>Product group</span>
+            <select id="product-select" class="select">
+              <option value="M&A">M&amp;A</option>
+              <option value="Equity Capital Markets">Equity Capital Markets</option>
+              <option value="Debt Capital Markets">Debt Capital Markets</option>
+              <option value="Leveraged Finance">Leveraged Finance</option>
+              <option value="Sales & Trading">Sales &amp; Trading</option>
+              <option value="Restructuring">Restructuring</option>
+              <option value="Hedge Fund Advisory">Hedge Fund Advisory</option>
             </select>
           </label>
           <label class="field">
-            <span>Case type</span>
-            <select id="case-type-select" class="select">
-              <option value="Profitability">Profitability</option>
-              <option value="M&A">M&amp;A</option>
-              <option value="Market Entry">Market Entry</option>
-              <option value="Market Share">Market Share</option>
+            <span>Industry group</span>
+            <select id="industry-select" class="select">
+              <option value="Consumer">Consumer</option>
+              <option value="FIG">FIG</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Industrials">Industrials</option>
+              <option value="Oil & Gas">Oil &amp; Gas</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="SaaS">SaaS</option>
+              <option value="TMT">TMT</option>
             </select>
           </label>
         </div>
         <div class="control-actions">
-          <button id="start-btn" class="btn btn-primary">Start session</button>
+          <button id="start-btn" class="btn btn-primary">Start IB session</button>
         </div>
       </header>
 
@@ -52,26 +58,13 @@
           <p
             id="current-prompt"
             class="prompt-quote empty"
-            data-placeholder-options='["Click Start session when you are ready","Take a moment, then press Start session to begin.","Gather your thoughts and click Start session whenever you’re set."]'
+            data-placeholder-options='["Choose your product & industry, then click start to begin.","Set your track and hit start when you’re ready.","Select a focus, then start the session to hear the first question."]'
           >
-            Choose your firm & case type, then click start to begin.
+            Choose your product & industry, then click start to begin.
           </p>
           <div id="loading-indicator" class="loading-indicator hidden">
             <span class="spinner" aria-hidden="true"></span>
             <span id="loading-text">Awaiting interviewer…</span>
-          </div>
-
-          <div class="exhibit-area" id="exhibit-area">
-            <div class="exhibit-header">
-              <p class="eyebrow">Exhibit workspace</p>
-            </div>
-            <div class="exhibit-output">
-              <canvas id="chartCanvas"></canvas>
-              <div id="tableContainer"></div>
-            </div>
-            <div class="exhibit-empty" id="exhibit-empty">
-              Exhibits will appear here when the interviewer provides one.
-            </div>
           </div>
         </div>
 
@@ -106,13 +99,13 @@
             <textarea
               id="scratchpad"
               rows="6"
-              placeholder="Capture math, structures, or reminders. This is private and never shared."
+              placeholder="Note down any details that you may find useful in answering the questions. This is private and not shared with the interviewer."
             ></textarea>
           </div>
         </div>
       </section>
     </main>
     <script src="audio.js"></script>
-    <script src="main.js"></script>
+    <script src="ib_main.js"></script>
   </body>
 </html>

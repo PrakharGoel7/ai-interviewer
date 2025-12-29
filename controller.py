@@ -1,10 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional, Literal
 import time
+from datetime import datetime
 
 from stages import STAGES, StageConfig
-from prompts import TURN_SYSTEM, EVAL_SYSTEM, FEEDBACK_SYSTEM, build_turn_payload, build_feedback_payload, build_eval_payload
-from schemas import ChartSpec, LLMStageEvaluation
+from rubrics import DIMENSION_CONFIG, DIMENSION_ORDER, CRITERION_TO_DIMENSION, STAGE_DIMENSION_MAP
+from prompts import (
+    TURN_SYSTEM,
+    EVAL_SYSTEM,
+    FEEDBACK_SYSTEM,
+    REPORT_SYSTEM,
+    build_turn_payload,
+    build_feedback_payload,
+    build_eval_payload,
+    build_report_payload,
+)
+from schemas import ChartSpec, LLMStageEvaluation, CasePerformanceReport
 
 Role = Literal["student", "interviewer"]
 
@@ -29,6 +40,11 @@ class Session:
     pending_outputs: List[Dict[str, Any]] = field(default_factory=list)
     stage_feedback_notes: List[Dict[str, Any]] = field(default_factory=list)
     utterances_this_stage: int = 0
+    case_params: Dict[str, Any] = field(default_factory=dict)
+    selected_firm: Optional[str] = None
+    started_at_ms: Optional[int] = None
+    completed_at_ms: Optional[int] = None
+    case_report: Optional[Dict[str, Any]] = None
 
 def advance_substep(stage: StageConfig, substep: str) -> str:
     if stage.pattern == "ask_probe":
@@ -55,7 +71,8 @@ class InterviewController:
             except KeyError:
                 case_loaded = False
         if not case_loaded:
-            case_obj = self.case_generator_fn()
+            params = getattr(session, "case_params", None) or {}
+            case_obj = self.case_generator_fn(**params)
             self.case_store.put_case(session.case_id, case_obj)
             session.case_generated = True
 
@@ -174,6 +191,8 @@ class InterviewController:
     def start(self, session: Session) -> Dict[str, Any]:
         # 1) generate case once
         self._ensure_case(session)
+        if session.started_at_ms is None:
+            session.started_at_ms = now_ms()
 
         # 2) deterministic first utterance: read case + ask clarifying
         stage = self.current_stage(session)  # should be case_intro
@@ -254,10 +273,19 @@ class InterviewController:
                     "student_last": student_last,
                 })
 
+        auto_followup_pending = (
+            stage.pattern == "ask_probe"
+            and stage.max_interviewer_turns
+            and session.utterances_this_stage < stage.max_interviewer_turns
+        )
+
         limit = stage.max_interviewer_turns or 0
-        should_ask = not (limit and session.utterances_this_stage >= limit)
-        if eval_out and eval_out.stage_should_advance:
-            should_ask = False
+        if auto_followup_pending:
+            should_ask = True
+        else:
+            should_ask = not (limit and session.utterances_this_stage >= limit)
+            if eval_out and eval_out.stage_should_advance:
+                should_ask = False
 
         out = None
         if should_ask:
@@ -337,16 +365,114 @@ class InterviewController:
         return result
 
     def _run_feedback(self, session: Session) -> Dict[str, Any]:
-        # feedback uses whole interview evals
         case = self.case_store.load_case(session.case_id)
-        payload = build_feedback_payload(case["background"], session.evaluations, session.stage_feedback_notes)
-        text = self.llm.run_text(FEEDBACK_SYSTEM, payload)
-        
-        stage = self.current_stage(session)  # end_feedback
-        session.events.append(Event(role="interviewer", stage_id=stage.id, text=text, ts_ms=now_ms(), meta={"action": "DELIVER_FEEDBACK"}))
+        session.completed_at_ms = now_ms()
+        report = self._generate_case_report(session, case)
+        session.case_report = report
 
-        # end
+        summary_text = report["overall"]["executiveSummary"]
+        spoken_summary = summary_text or "Thanks for working through the case today. Your detailed performance report is ready."
+
+        stage = self.current_stage(session)  # end_feedback
+        session.events.append(Event(role="interviewer", stage_id=stage.id, text=spoken_summary, ts_ms=now_ms(), meta={"action": "DELIVER_FEEDBACK"}))
+
         closing = "Thanks for your time — that’s the end of the interview."
         session.events.append(Event(role="interviewer", stage_id=stage.id, text=closing, ts_ms=now_ms(), meta={"action": "THANK_AND_CLOSE"}))
-        session.stage_index = len(STAGES)  # mark complete
-        return {"next_action": "DELIVER_FEEDBACK", "next_utterance": text, "chart_spec": None, "stage_id": stage.id}
+        session.stage_index = len(STAGES)
+        return {"next_action": "DELIVER_FEEDBACK", "next_utterance": spoken_summary, "chart_spec": None, "stage_id": stage.id}
+
+    def _generate_case_report(self, session: Session, case: Dict[str, Any]) -> Dict[str, Any]:
+        dimension_inputs = self._collect_dimension_inputs(session)
+        band = self._compute_overall_band(dimension_inputs)
+        case_meta = self._build_case_meta(session, case)
+        payload = build_report_payload(
+            case_meta=case_meta,
+            overall_band=band,
+            dimensions=dimension_inputs,
+            stage_feedback_notes=session.stage_feedback_notes,
+        )
+        report = self.llm.run_json(REPORT_SYSTEM, payload, output_model=CasePerformanceReport)
+        report_dict = report.model_dump()
+        report_dict["case"] = case_meta
+        report_dict["overall"]["band"] = band
+        return report_dict
+
+    def _build_case_meta(self, session: Session, case: Dict[str, Any]) -> Dict[str, Any]:
+        title = case.get("title") or case.get("background", "Generated case").split(".")[0].strip()
+        case_type = case.get("type") or session.case_params.get("case_type") or "Consulting Case"
+        industry = case.get("industry") or session.case_params.get("industry") or "General"
+        start_ms = session.started_at_ms or (session.events[0].ts_ms if session.events else now_ms())
+        end_ms = session.completed_at_ms or now_ms()
+        duration_sec = max(1, int((end_ms - start_ms) / 1000))
+        completed_at = datetime.fromtimestamp(end_ms / 1000).strftime("%b %d, %Y %I:%M %p")
+        return {
+            "title": title,
+            "type": case_type,
+            "industry": industry,
+            "completedAt": completed_at,
+            "durationSec": duration_sec,
+        }
+
+    def _collect_dimension_inputs(self, session: Session) -> List[Dict[str, Any]]:
+        dims: Dict[str, Dict[str, Any]] = {}
+        for key in DIMENSION_ORDER:
+            dims[key] = {
+                "key": key,
+                "title": DIMENSION_CONFIG[key]["title"],
+                "scores": [],
+                "criteria": {},
+                "notes": [],
+                "student_quotes": [],
+            }
+
+        for ev in session.evaluations:
+            stage_id = ev.get("stage_id")
+            stage_dim = STAGE_DIMENSION_MAP.get(stage_id)
+            scores = ev.get("scores") or {}
+            for criterion, value in scores.items():
+                dim_key = CRITERION_TO_DIMENSION.get(criterion)
+                if not dim_key:
+                    continue
+                dim_entry = dims[dim_key]
+                dim_entry["scores"].append(value)
+                dim_entry["criteria"].setdefault(criterion, []).append(value)
+            note = ev.get("notes")
+            quote = ev.get("student_last")
+            if note and stage_dim:
+                dims[stage_dim]["notes"].append(note)
+            if quote and stage_dim:
+                dims[stage_dim]["student_quotes"].append(quote)
+            if note:
+                dims["communication"]["notes"].append(note)
+            if quote:
+                dims["communication"]["student_quotes"].append(quote)
+
+        dimension_inputs: List[Dict[str, Any]] = []
+        for key in DIMENSION_ORDER:
+            entry = dims[key]
+            score = round(sum(entry["scores"]) / len(entry["scores"]), 1) if entry["scores"] else 0.0
+            criteria_summary = {
+                crit: round(sum(values) / len(values), 2)
+                for crit, values in entry["criteria"].items()
+            }
+        final_score = round(score)
+        dimension_inputs.append({
+            "key": key,
+            "title": entry["title"],
+            "score": final_score,
+            "criteria_scores": criteria_summary,
+            "notes": entry["notes"][:3],
+            "student_quotes": entry["student_quotes"][:3],
+        })
+        return dimension_inputs
+
+    def _compute_overall_band(self, dimensions: List[Dict[str, Any]]) -> str:
+        scores = [d["score"] for d in dimensions if d["score"] > 0]
+        if not scores:
+            return "Needs work"
+        avg = sum(scores) / len(scores)
+        if avg >= 4.2:
+            return "Strong"
+        if avg >= 3.2:
+            return "Solid"
+        return "Needs work"

@@ -1,0 +1,170 @@
+[
+  {
+    "question": "Could you name some ongoing trends in the consumer goods industry?",
+    "answer": "Key trends include convergence between brick-and-mortar and e-commerce, rapid product development and consumer testing, data-driven targeted marketing, direct-to-consumer (DTC) business models, subscription-based payments, increased demand for label transparency, same-day/one-day delivery and click-and-collect, and partnerships between DTC brands and physical retailers."
+  },
+  {
+    "question": "Which types of valuation multiples are often used for consumer and retail companies?",
+    "answer": "Common valuation multiples include P/E and EV/EBITDA due to the industry’s maturity. Retail-specific multiples include EV/EBITDAR (to normalize rent vs. ownership), EV/Total Stores, EV/Sales per Square Foot, EV/Sales per Store, and EV/Same-Store Sales. For e-commerce and marketplaces, EV/Gross Merchandise Volume (GMV) is frequently used."
+  },
+  {
+    "question": "What unit economics drive revenue in the consumer goods industry?",
+    "answer": "Revenue is driven primarily by volume and price. Volume drivers include store count, customer traffic, transactions per day, and items per basket. Price drivers depend on product quality, brand reputation, and competitive positioning. Most consumer companies focus on volume growth due to limited pricing power, except for premium brands."
+  },
+  {
+    "question": "What is the most significant cost driver for consumer product companies?",
+    "answer": "Advertising and marketing are major cost drivers. These expenses are critical for building brand awareness, emotional connection, and customer loyalty, which in turn support sales growth and pricing power."
+  },
+  {
+    "question": "What are the two main retail channels to sell products to customers?",
+    "answer": "The two main channels are brick-and-mortar stores, which involve physical retail locations, and e-commerce, which includes online and mobile transactions. These channels have increasingly converged as traditional retailers invest in digital platforms."
+  },
+  {
+    "question": "If you were a seller, would you prefer to sell your products on a marketplace or a personal ecommerce store?",
+    "answer": "Marketplaces offer built-in traffic, trust, and infrastructure with lower marketing effort but charge commissions (often 5–15%). Individual e-commerce stores require more marketing and setup effort but allow full brand control, customization, and avoid third-party commissions."
+  },
+  {
+    "question": "For a marketplace company, which KPIs would you pay the closest attention to?",
+    "answer": "Key KPIs include Gross Merchandise Volume (GMV), Average Order Value (AOV), and Take Rate—the percentage of GMV retained by the marketplace as revenue."
+  },
+  {
+    "question": "Explain how the “Amazon Effect” has impacted the entire retail industry.",
+    "answer": "The Amazon Effect refers to Amazon raising customer expectations across retail, particularly around fast shipping (1–2 days via Prime) and free returns. These standards have pressured margins and forced competitors to improve logistics and customer experience."
+  },
+  {
+    "question": "Why have many e-commerce platforms opened brick-and-mortar locations?",
+    "answer": "Physical locations enable emotional brand connection, support click-and-collect convenience, allow faster fulfillment, reduce return shipping costs, and provide easier product returns. Partnerships (e.g., Amazon returns at Kohl’s) further enhance convenience."
+  },
+  {
+    "question": "Many DTC companies have recently established partnerships with brick-and-mortar store chains and opened physical stores. What is the reasoning behind this trend?",
+    "answer": "DTC brands pursue omnichannel exposure to reach different customer segments. Physical stores allow customers to see products in person, support BOPIS (buy online, pick up in-store), and complement fast shipping models. Examples include Quip partnering with Target and brands like Casper and Warby Parker opening stores."
+  },
+  {
+    "question": "What are some benefits that brick-and-mortar stores have over e-commerce?",
+    "answer": "Benefits include richer in-person shopping experiences that build emotional connections and significantly lower return rates (around 9% in-store vs. ~30% online)."
+  },
+  {
+    "question": "Are multichannel and omnichannel marketing synonymous?",
+    "answer": "No. Multichannel marketing uses multiple independent channels with separate messaging, while omnichannel marketing integrates channels to create a seamless, customer-centric experience with consistent messaging."
+  },
+  {
+    "question": "Tell me about the significance of PayPal’s acquisition of Honey.",
+    "answer": "PayPal acquired Honey to integrate deal discovery and price comparison into its checkout ecosystem. Honey’s large user base strengthened PayPal and Venmo’s consumer engagement and positioned PayPal more competitively against Apple Pay and Cash App."
+  },
+  {
+    "question": "Could you define what consumer-packaged-goods (CPG) and retail are?",
+    "answer": "CPG refers to frequently used, replenished products with short usage cycles (e.g., toiletries, food, beverages). Retail refers to the process of selling goods to consumers, with retail sales data closely tracked as an economic indicator."
+  },
+  {
+    "question": "What is social commerce, and how is it different from social media marketing?",
+    "answer": "Social commerce enables purchases directly within social platforms (e.g., Instagram Shopping), whereas social media marketing only promotes products and redirects users elsewhere. Social commerce integrates discovery, engagement, and checkout in one place."
+  },
+  {
+    "question": "How are chatbots being used in the retail industry?",
+    "answer": "Retailers use chatbots to handle common customer inquiries instantly, reducing support costs. However, human agents are often needed for complex issues, as early chatbot experiences can frustrate users."
+  },
+  {
+    "question": "What is the difference between a discretionary product and a non-discretionary product?",
+    "answer": "Non-discretionary (consumer staples) are essential goods purchased regardless of economic conditions (e.g., soap, toothpaste). Discretionary products are non-essential and more sensitive to economic cycles (e.g., electronics, vehicles)."
+  },
+  {
+    "question": "What are some common characteristics of CPGs?",
+    "answer": "CPGs typically have low ASPs, are essential, consumed quickly, frequently repurchased, and require minimal customization."
+  },
+  {
+    "question": "What is the difference between CPG and durable goods?",
+    "answer": "CPGs are consumed and replenished frequently, while durable goods are higher-priced items purchased infrequently and used over long periods (e.g., appliances, furniture)."
+  },
+  {
+    "question": "What does it mean when a product has become commoditized?",
+    "answer": "A commoditized product has minimal differentiation across competitors, leading competition to focus primarily on price and often resulting in a race to the bottom."
+  },
+  {
+    "question": "Name a few KPIs that many retail chains report in their financial statements.",
+    "answer": "Common KPIs include Sales per Square Foot, Sales per Employee, Conversion Rate, Same-Store Sales, and Average Transaction Value (ATV)."
+  },
+  {
+    "question": "Tell me what the trend of voice commerce is and its use cases in retail.",
+    "answer": "Voice commerce allows consumers to search, compare, and purchase products using voice commands, streamlining discovery and checkout through voice-enabled assistants."
+  },
+  {
+    "question": "What is the gig economy?",
+    "answer": "The gig economy consists of flexible, short-term work facilitated by online platforms, enabling independent contractors to deliver services such as ride-hailing, food delivery, freelancing, and short-term rentals."
+  },
+  {
+    "question": "Tell me about an ongoing trend in e-commerce that you're following.",
+    "answer": "Pet food and supplies e-commerce has grown rapidly due to pet humanization, premiumization, and subscription models—accelerated further by COVID-19 and increased time spent at home."
+  },
+  {
+    "question": "Could you give me an example of how augmented reality is changing the consumer experience in the retail industry?",
+    "answer": "Augmented reality enables virtual try-ons, such as Warby Parker’s AR glasses feature, allowing customers to visualize products digitally before purchase, improving confidence and reducing returns."
+  },
+  {
+    "question": "While retail is known for being cyclical, can you name one resilient product segment?",
+    "answer": "Cosmetics and beauty products are relatively resilient, as demand is driven by intangible benefits and tends to remain steady even during economic downturns."
+  },
+  {
+    "question": "Why are luxury goods often not negatively affected during recessions?",
+    "answer": "Luxury consumers are typically high-income individuals whose spending habits are less sensitive to economic downturns, sustaining demand even during recessions."
+  },
+  {
+    "question": "How does pricing power in retail differ from other industries such as manufacturing?",
+    "answer": "Retail pricing power is driven by brand perception and emotional appeal rather than technical superiority. A well-marketed product can outperform higher-quality alternatives."
+  },
+  {
+    "question": "What makes the beauty products industry recurring in terms of revenue?",
+    "answer": "Beauty products are frequently consumed, non-reusable, and require constant replenishment, leading to highly recurring purchases and strong profitability."
+  },
+  {
+    "question": "Besides cyclicality, why do many private equity investors stay away from retail?",
+    "answer": "Retail growth is often volume-driven and requires constant adaptation to changing consumer preferences, making it less suitable for traditional leveraged buyout structures."
+  },
+  {
+    "question": "Tell me about the trend of connected fitness.",
+    "answer": "Connected fitness integrates home workout equipment with digital content and virtual trainers. COVID-19 accelerated adoption, with examples including Peloton and Lululemon’s acquisition of Mirror."
+  },
+  {
+    "question": "What is the trend of athleisure wear?",
+    "answer": "Athleisure blends athletic and casual wear, driven by comfort and versatility. It reflects changing workplace norms and has grown rapidly among younger consumers."
+  },
+  {
+    "question": "What does the phrase “fast fashion” mean?",
+    "answer": "Fast fashion refers to rapidly producing and distributing trendy apparel to capture short-lived demand spikes, often with limited inventory to create urgency."
+  },
+  {
+    "question": "What is the secondhand market?",
+    "answer": "The secondhand market involves resale of used goods and is growing rapidly as stigma declines and circular economy trends expand, with platforms enabling easy peer-to-peer resale."
+  },
+  {
+    "question": "Often retail-brand companies such as Supreme can sell clothing that will be resold for significantly more. Why does Supreme not just raise their prices?",
+    "answer": "Raising prices would limit accessibility and reduce brand buzz. Supreme’s strategy relies on scarcity at attainable prices to maintain broad cultural relevance and demand."
+  },
+  {
+    "question": "What is scrambled merchandising?",
+    "answer": "Scrambled merchandising is a strategy where retailers offer diverse product categories to position themselves as one-stop shops (e.g., pharmacies selling electronics)."
+  },
+  {
+    "question": "In the retail context, what does “channel surfing” mean?",
+    "answer": "Channel surfing (or showrooming) occurs when customers evaluate products in-store but purchase them online at lower prices or with online-only discounts."
+  },
+  {
+    "question": "What type of differentiated business model did Dollar Shave Club have?",
+    "answer": "Dollar Shave Club pioneered a subscription-based DTC model offering convenience, low pricing, and brand transparency, disrupting incumbents like Gillette."
+  },
+  {
+    "question": "Tell me about the trend of retailers using DOOH for their advertising.",
+    "answer": "Digital out-of-home (DOOH) advertising uses data-driven, digital displays in public spaces to target audiences dynamically, leveraging AdTech tools like geofencing and personalization."
+  },
+  {
+    "question": "What is a private label brand?",
+    "answer": "A private label brand is manufactured by a third party but sold under a retailer’s brand, often at lower prices, improving margins and differentiation for retailers."
+  },
+  {
+    "question": "Tell me about some trends related to the food industry.",
+    "answer": "Key trends include food delivery platforms, meal kit subscriptions, plant-based alternatives, lifestyle-based menu options, and increased transparency and sustainability."
+  },
+  {
+    "question": "Tell me about some trends in the beverage industry.",
+    "answer": "Notable trends include CBD-infused beverages, health-oriented hybrid drinks, and the rapid rise of hard seltzers driven by flavor variety and lifestyle positioning."
+  }
+]

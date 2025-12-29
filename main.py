@@ -5,7 +5,7 @@ from openai import OpenAI
 from case_store import CaseStore
 from llm_client import LLMClient
 from controller import Session, InterviewController
-from case_generator import generate_case
+from case_generator import generate_case, CONSULTING_CASE_TYPES
 from stages import STAGES
 from voice import create_voice_interface
 from chart_renderer import render_chart
@@ -16,6 +16,8 @@ def main():
     parser.add_argument("--theme", default="pricing for a SaaS product")
     parser.add_argument("--difficulty", default="medium")
     parser.add_argument("--voice_max_seconds", type=int, default=12)
+    parser.add_argument("--firm", choices=["McKinsey", "Bain", "BCG"], default="McKinsey")
+    parser.add_argument("--case_type", choices=CONSULTING_CASE_TYPES, default="Profitability")
     args = parser.parse_args()
 
     def display_turn(turn: dict) -> None:
@@ -32,13 +34,26 @@ def main():
     llm = LLMClient(client=client, model=os.getenv("MODEL", "gpt-4.1"))
     case_store = CaseStore()
 
+    def controller_case_generator(**params):
+        requested_case_type = params.get("case_type") or args.case_type
+        return generate_case(
+            llm,
+            case_theme=args.theme,
+            difficulty=args.difficulty,
+            case_type=requested_case_type,
+        )
+
     controller = InterviewController(
         case_store=case_store,
         llm_client=llm,
-        case_generator_fn=lambda: generate_case(llm, case_theme=args.theme, difficulty=args.difficulty),
+        case_generator_fn=controller_case_generator,
     )
 
-    session = Session(case_id="session_case_001")
+    session = Session(
+        case_id="session_case_001",
+        case_params={"case_type": args.case_type},
+        selected_firm=args.firm,
+    )
     voice = create_voice_interface(client, max_seconds=args.voice_max_seconds)
 
     # Always begin from the case intro and proceed sequentially.

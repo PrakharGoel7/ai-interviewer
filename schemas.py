@@ -55,6 +55,7 @@ class RubricReport(BaseModel):
 class CaseMeta(BaseModel):
     title: str
     type: str
+    productGroup: Optional[str] = None
     industry: str
     completedAt: str
     durationSec: int

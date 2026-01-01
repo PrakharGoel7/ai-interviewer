@@ -6,38 +6,55 @@
     <title>Minerva Live Case</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="nav-auth.js" defer></script>
   </head>
   <body class="interview-page">
+    <header class="nav-shell">
+      <div class="nav-inner">
+        <a href="/" class="nav-brand" aria-label="Minerva home">
+          <img src="logo.svg" alt="Minerva" class="nav-logo" />
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link nav-auth-link" data-auth-link href="/app/login?redirect=/interview.html">Log in</a>
+          <div class="nav-cta">
+            <a class="nav-pill-btn" href="interview.html">Consulting case</a>
+            <a class="nav-pill-btn" href="ib_interview.html">IB mock interview</a>
+          </div>
+        </nav>
+      </div>
+    </header>
     <main class="interview-shell">
       <!-- Control bar -->
       <header class="control-bar card">
-        <div class="brand-block">
-          <a href="/" class="brand-link" aria-label="Minerva home">
-            <img src="logo.svg" alt="Minerva" class="brand-logo" />
-          </a>
-          <span class="session-pill">Consulting mock interview</span>
+        <div class="mode-banner">
+          <span class="mode-label">Mode</span>
+          <h2 class="mode-title">Consulting Mock Interview</h2>
+          <div class="mode-divider" role="presentation"></div>
         </div>
-        <div class="control-fields">
-          <label class="field">
-            <span>Target firm</span>
-            <select id="firm-select" class="select">
-              <option value="McKinsey">McKinsey</option>
-              <option value="BCG">BCG</option>
-              <option value="Bain">Bain</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>Case type</span>
-            <select id="case-type-select" class="select">
-              <option value="Profitability">Profitability</option>
-              <option value="M&A">M&amp;A</option>
-              <option value="Market Entry">Market Entry</option>
-              <option value="Market Share">Market Share</option>
-            </select>
-          </label>
-        </div>
-        <div class="control-actions">
-          <button id="start-btn" class="btn btn-primary">Start session</button>
+        <div class="control-row">
+          <div class="control-fields">
+            <label class="field">
+              <span>Target firm</span>
+              <select id="firm-select" class="select">
+                <option value="McKinsey">McKinsey</option>
+                <option value="BCG">BCG</option>
+                <option value="Bain">Bain</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Case type</span>
+              <select id="case-type-select" class="select">
+                <option value="Profitability">Profitability</option>
+                <option value="M&A">M&amp;A</option>
+                <option value="Market Entry">Market Entry</option>
+                <option value="Market Share">Market Share</option>
+              </select>
+            </label>
+          </div>
+          <div class="control-actions">
+            <button id="start-btn" class="btn btn-primary">Start session</button>
+          </div>
         </div>
       </header>
 

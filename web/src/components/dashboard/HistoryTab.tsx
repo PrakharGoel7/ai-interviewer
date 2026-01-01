@@ -14,6 +14,7 @@ export interface HistoryFilters {
   minScore: number;
   maxScore: number;
   sort: SortOption;
+  rubric?: RubricKey | string | null;
 }
 
 interface HistoryTabProps {

@@ -4,6 +4,7 @@ import { fetchCases } from '../api/cases';
 import { useAuth } from '../context/AuthProvider';
 import ProgressTab from '../components/dashboard/ProgressTab';
 import HistoryTab from '../components/dashboard/HistoryTab';
+import IBProgressTab from '../components/dashboard/IBProgressTab';
 const DEFAULT_FILTERS = {
     dateRange: '30',
     type: 'all',
@@ -11,7 +12,10 @@ const DEFAULT_FILTERS = {
     minScore: 0,
     maxScore: 5,
     sort: 'recent',
+    rubric: null,
 };
+const isIBCase = (caseItem) => caseItem.track === 'ib' ||
+    ((caseItem.title || '').toLowerCase().includes('ib interview'));
 export default function Dashboard() {
     const { user, getAccessToken } = useAuth();
     const [cases, setCases] = useState([]);
@@ -21,7 +25,9 @@ export default function Dashboard() {
     const [hasMore, setHasMore] = useState(true);
     const [error, setError] = useState(null);
     const [activeTab, setActiveTab] = useState('progress');
-    const [filters, setFilters] = useState(DEFAULT_FILTERS);
+    const [consultingFilters, setConsultingFilters] = useState(DEFAULT_FILTERS);
+    const [ibFilters, setIbFilters] = useState(DEFAULT_FILTERS);
+    const [track, setTrack] = useState('consulting');
     useEffect(() => {
         const loadInitial = async () => {
             setLoading(true);
@@ -129,8 +135,14 @@ export default function Dashboard() {
         return { strongest: strongestKey, weakest: weakestKey };
     }, [recentCases]);
     const handleViewHistory = (key) => {
-        setFilters((prev) => ({ ...prev, rubric: key }));
+        setConsultingFilters((prev) => ({ ...prev, rubric: key }));
         setActiveTab('history');
     };
-    return (_jsxs("div", { className: "dashboard-shell", children: [_jsxs("div", { className: "view-toggle-row", children: [_jsx("div", {}), _jsxs("div", { className: "dashboard-tabs compact", children: [_jsx("button", { type: "button", className: activeTab === 'progress' ? 'tab active' : 'tab', onClick: () => setActiveTab('progress'), children: "Progress" }), _jsx("button", { type: "button", className: activeTab === 'history' ? 'tab active' : 'tab', onClick: () => setActiveTab('history'), children: "Case history" })] })] }), error && _jsx("div", { className: "banner error-banner", children: error }), loading && !cases.length ? (_jsx("div", { className: "card", children: _jsx("p", { children: "Loading your data\u2026" }) })) : activeTab === 'progress' ? (_jsx(ProgressTab, { cases: cases, onViewHistory: handleViewHistory })) : (_jsx(HistoryTab, { cases: cases, filters: filters, onChangeFilters: setFilters, onLoadMore: loadMore, hasMore: hasMore, loading: loadingMore }))] }));
+    const consultingCases = useMemo(() => cases.filter((caseItem) => !isIBCase(caseItem)), [cases]);
+    const ibCases = useMemo(() => cases.filter((caseItem) => isIBCase(caseItem)), [cases]);
+    const handleTrackChange = (value) => {
+        setTrack(value);
+        setActiveTab('progress');
+    };
+    return (_jsxs("div", { className: "dashboard-shell", children: [_jsxs("div", { className: "view-toggle-row", children: [_jsxs("div", { className: "track-toggle", children: [_jsx("button", { type: "button", className: track === 'consulting' ? 'active' : '', onClick: () => handleTrackChange('consulting'), children: "Consulting" }), _jsx("button", { type: "button", className: track === 'ib' ? 'active' : '', onClick: () => handleTrackChange('ib'), children: "Investment banking" })] }), _jsxs("div", { className: "dashboard-tabs compact", children: [_jsx("button", { type: "button", className: activeTab === 'progress' ? 'tab active' : 'tab', onClick: () => setActiveTab('progress'), children: "Progress" }), _jsx("button", { type: "button", className: activeTab === 'history' ? 'tab active' : 'tab', onClick: () => setActiveTab('history'), children: "Case history" })] })] }), error && _jsx("div", { className: "banner error-banner", children: error }), loading && !cases.length ? (_jsx("div", { className: "card", children: _jsx("p", { children: "Loading your data\u2026" }) })) : track === 'consulting' ? (activeTab === 'progress' ? (_jsx(ProgressTab, { cases: consultingCases, onViewHistory: handleViewHistory })) : (_jsx(HistoryTab, { cases: consultingCases, filters: consultingFilters, onChangeFilters: setConsultingFilters, onLoadMore: loadMore, hasMore: hasMore, loading: loadingMore }))) : activeTab === 'progress' ? (_jsx(IBProgressTab, { cases: ibCases })) : (_jsx(HistoryTab, { cases: ibCases, filters: ibFilters, onChangeFilters: setIbFilters, onLoadMore: loadMore, hasMore: hasMore, loading: loadingMore }))] }));
 }

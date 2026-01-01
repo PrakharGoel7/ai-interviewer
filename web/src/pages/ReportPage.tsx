@@ -54,7 +54,6 @@ export default function ReportPage() {
   useEffect(() => {
     const saveReport = async () => {
       if (!report || savingRef.current) return;
-       if (isIBMode) return;
       if (!user) {
         setSaveMessage('Create an account to save this report.');
         return;
@@ -78,7 +77,7 @@ export default function ReportPage() {
       }
     };
     saveReport();
-  }, [report, user, getAccessToken, isIBMode]);
+  }, [report, user, getAccessToken]);
 
   const rubricsInOrder = useMemo(() => {
     if (!report) return [];
@@ -134,22 +133,23 @@ export default function ReportPage() {
   };
 
   const heroSummary = useMemo(() => {
-    if (!report) return '';
-    const text = report.overall.executiveSummary || '';
+    const text = report?.overall.executiveSummary ?? '';
     if (!isIBMode) return text;
-    const firstSentence = text.split(/(?<=\.)\s+/)[0] || text;
-    return firstSentence.length > 200 ? `${firstSentence.slice(0, 197)}…` : firstSentence;
+    const sentences = text.split(/(?<=\.)\s+/).filter(Boolean);
+    const combined = sentences.slice(0, 2).join(' ') || text;
+    return combined.length > 220 ? `${combined.slice(0, 217)}…` : combined;
   }, [report, isIBMode]);
 
-  const formatEvidence = (items: { text: string }[], isImprovement: boolean) => {
-    if (!isIBMode || !isImprovement) return items;
-    return items.slice(0, 3).map((item) => {
-      const trimmed = item.text.trim();
-      const sentence = trimmed.split(/(?<=\.)\s+/)[0] || trimmed;
-      const shortened = sentence.length > 160 ? `${sentence.slice(0, 157)}…` : sentence;
-      return { text: shortened };
-    });
-  };
+  const tagList = useMemo(() => {
+    if (!report) return [];
+    const tags: string[] = [];
+    if (report.case.productGroup && report.case.productGroup !== report.case.type) {
+      tags.push(report.case.productGroup);
+    }
+    if (report.case.type) tags.push(report.case.type);
+    if (report.case.industry) tags.push(report.case.industry);
+    return tags;
+  }, [report]);
 
   if (error) {
     return <div className="page-shell">{error}</div>;
@@ -167,8 +167,11 @@ export default function ReportPage() {
           </p>
           <h1 className="hero-headline">{report.case.title}</h1>
           <div className="summary-tags">
-            <span className="tag">{report.case.type}</span>
-            <span className="tag">{report.case.industry}</span>
+            {tagList.map((tag) => (
+              <span key={tag} className="tag">
+                {tag}
+              </span>
+            ))}
           </div>
           <p className="hero-meta">
             Completed {report.case.completedAt} ·{' '}
@@ -279,14 +282,8 @@ export default function ReportPage() {
           <div className="scorecard-details" aria-live="polite">
             <h3>{selectedRubric.title}</h3>
             <div className="details-grid">
-              <EvidenceSection
-                title="Strengths"
-                items={formatEvidence(selectedRubric.strengths, false)}
-              />
-              <EvidenceSection
-                title="Areas for improvement"
-                items={formatEvidence(selectedRubric.improvements, true)}
-              />
+              <EvidenceSection title="Strengths" items={selectedRubric.strengths} />
+              <EvidenceSection title="Areas for improvement" items={selectedRubric.improvements} />
             </div>
           </div>
         )}

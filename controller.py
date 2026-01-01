@@ -455,15 +455,15 @@ class InterviewController:
                 crit: round(sum(values) / len(values), 2)
                 for crit, values in entry["criteria"].items()
             }
-        final_score = round(score)
-        dimension_inputs.append({
-            "key": key,
-            "title": entry["title"],
-            "score": final_score,
-            "criteria_scores": criteria_summary,
-            "notes": entry["notes"][:3],
-            "student_quotes": entry["student_quotes"][:3],
-        })
+            final_score = round(score)
+            dimension_inputs.append({
+                "key": key,
+                "title": entry["title"],
+                "score": final_score,
+                "criteria_scores": criteria_summary,
+                "notes": entry["notes"][:3],
+                "student_quotes": entry["student_quotes"][:3],
+            })
         return dimension_inputs
 
     def _compute_overall_band(self, dimensions: List[Dict[str, Any]]) -> str:

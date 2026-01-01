@@ -3,7 +3,8 @@ import { CaseSummary, fetchCases } from '../api/cases';
 import { useAuth } from '../context/AuthProvider';
 import ProgressTab from '../components/dashboard/ProgressTab';
 import HistoryTab, { HistoryFilters } from '../components/dashboard/HistoryTab';
-import { RUBRIC_LABELS, RubricKey } from '../constants/rubrics';
+import IBProgressTab from '../components/dashboard/IBProgressTab';
+import { RubricKey } from '../constants/rubrics';
 
 const DEFAULT_FILTERS: HistoryFilters = {
   dateRange: '30',
@@ -12,7 +13,12 @@ const DEFAULT_FILTERS: HistoryFilters = {
   minScore: 0,
   maxScore: 5,
   sort: 'recent',
+  rubric: null,
 };
+
+const isIBCase = (caseItem: CaseSummary) =>
+  caseItem.track === 'ib' ||
+  ((caseItem.title || '').toLowerCase().includes('ib interview'));
 
 export default function Dashboard() {
   const { user, getAccessToken } = useAuth();
@@ -23,7 +29,9 @@ export default function Dashboard() {
   const [hasMore, setHasMore] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'progress' | 'history'>('progress');
-  const [filters, setFilters] = useState<HistoryFilters>(DEFAULT_FILTERS);
+  const [consultingFilters, setConsultingFilters] = useState<HistoryFilters>(DEFAULT_FILTERS);
+  const [ibFilters, setIbFilters] = useState<HistoryFilters>(DEFAULT_FILTERS);
+  const [track, setTrack] = useState<'consulting' | 'ib'>('consulting');
 
   useEffect(() => {
     const loadInitial = async () => {
@@ -126,14 +134,43 @@ export default function Dashboard() {
   }, [recentCases]);
 
   const handleViewHistory = (key: RubricKey) => {
-    setFilters((prev) => ({ ...prev, rubric: key }));
+    setConsultingFilters((prev) => ({ ...prev, rubric: key }));
     setActiveTab('history');
+  };
+
+  const consultingCases = useMemo(
+    () => cases.filter((caseItem) => !isIBCase(caseItem)),
+    [cases]
+  );
+  const ibCases = useMemo(
+    () => cases.filter((caseItem) => isIBCase(caseItem)),
+    [cases]
+  );
+
+  const handleTrackChange = (value: 'consulting' | 'ib') => {
+    setTrack(value);
+    setActiveTab('progress');
   };
 
   return (
     <div className="dashboard-shell">
       <div className="view-toggle-row">
-        <div></div>
+        <div className="track-toggle">
+          <button
+            type="button"
+            className={track === 'consulting' ? 'active' : ''}
+            onClick={() => handleTrackChange('consulting')}
+          >
+            Consulting
+          </button>
+          <button
+            type="button"
+            className={track === 'ib' ? 'active' : ''}
+            onClick={() => handleTrackChange('ib')}
+          >
+            Investment banking
+          </button>
+        </div>
         <div className="dashboard-tabs compact">
           <button
             type="button"
@@ -158,13 +195,26 @@ export default function Dashboard() {
         <div className="card">
           <p>Loading your data…</p>
         </div>
+      ) : track === 'consulting' ? (
+        activeTab === 'progress' ? (
+          <ProgressTab cases={consultingCases} onViewHistory={handleViewHistory} />
+        ) : (
+          <HistoryTab
+            cases={consultingCases}
+            filters={consultingFilters}
+            onChangeFilters={setConsultingFilters}
+            onLoadMore={loadMore}
+            hasMore={hasMore}
+            loading={loadingMore}
+          />
+        )
       ) : activeTab === 'progress' ? (
-        <ProgressTab cases={cases} onViewHistory={handleViewHistory} />
+        <IBProgressTab cases={ibCases} />
       ) : (
         <HistoryTab
-          cases={cases}
-          filters={filters}
-          onChangeFilters={setFilters}
+          cases={ibCases}
+          filters={ibFilters}
+          onChangeFilters={setIbFilters}
           onLoadMore={loadMore}
           hasMore={hasMore}
           loading={loadingMore}

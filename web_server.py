@@ -4,6 +4,8 @@ import tempfile
 from typing import List, Dict, Any, Optional
 
 from flask import Flask, jsonify, request, send_from_directory
+from supabase_client import supabase
+from persistence import save_case_report, list_cases, get_case_report
 from openai import OpenAI
 
 from case_store import CaseStore
@@ -17,6 +19,9 @@ from ib_session import (
     DEFAULT_ACCOUNTING,
     DEFAULT_VALUATION,
 )
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+WEB_APP_DIST = os.path.join(BASE_DIR, "web", "dist")
 
 app = Flask(__name__, static_folder="frontend", static_url_path="")
 
@@ -38,6 +43,7 @@ controller = InterviewController(
 )
 session = Session(case_id="web_session_case")
 ib_session: Optional[IBInterviewSession] = None
+ib_report: Optional[Dict[str, Any]] = None
 
 
 def serialize_events(events: List[Any]) -> List[Dict[str, Any]]:
@@ -77,6 +83,48 @@ def take_turns(first_turn: Dict[str, Any]) -> List[Dict[str, Any]]:
 @app.route("/")
 def index():
     return send_from_directory(app.static_folder, "index.html")
+
+
+@app.route("/report")
+@app.route("/report.html")
+def report_page():
+    return send_from_directory(app.static_folder, "report.html")
+
+
+def _react_app_available() -> bool:
+    return os.path.exists(os.path.join(WEB_APP_DIST, "index.html"))
+
+
+def _require_supabase_user():
+    if supabase is None:
+        return None, jsonify({"error": "Supabase not configured"}), 500
+    auth_header = request.headers.get("Authorization", "")
+    if not auth_header.startswith("Bearer "):
+        return None, jsonify({"error": "missing bearer token"}), 401
+    access_token = auth_header.split(" ", 1)[1]
+    try:
+        user_resp = supabase.auth.get_user(access_token)
+    except Exception as exc:
+        app.logger.warning("Supabase auth failed: %s", exc)
+        return None, jsonify({"error": "invalid token"}), 401
+    user = getattr(user_resp, "user", None)
+    if not user:
+        return None, jsonify({"error": "invalid token"}), 401
+    return user, None, None
+
+
+@app.route("/app/", defaults={"path": ""})
+@app.route("/app/<path:path>")
+def dashboard_app(path: str):
+    """
+    Serve the bundled React dashboard from /web/dist once built.
+    """
+    if not _react_app_available():
+        return jsonify({"error": "dashboard not built"}), 404
+    asset_path = os.path.join(WEB_APP_DIST, path)
+    if path and os.path.exists(asset_path) and os.path.isfile(asset_path):
+        return send_from_directory(WEB_APP_DIST, path)
+    return send_from_directory(WEB_APP_DIST, "index.html")
 
 
 @app.route("/api/start", methods=["POST"])
@@ -122,6 +170,61 @@ def api_report():
     return jsonify(session.case_report)
 
 
+@app.route("/api/ib/report", methods=["GET"])
+def api_ib_report():
+    if not ib_report:
+        return jsonify({"error": "report not ready"}), 404
+    return jsonify(ib_report)
+
+
+@app.route("/api/cases/save", methods=["POST"])
+def api_save_case():
+    user, err_resp, status = _require_supabase_user()
+    if err_resp:
+        return err_resp, status
+
+    data = request.get_json(force=True) or {}
+    report = data.get("report")
+    if not report:
+        return jsonify({"error": "report required"}), 400
+    try:
+        case_id = save_case_report(user.id, report)
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+    return jsonify({"caseId": case_id})
+
+
+@app.route("/api/cases/<case_id>", methods=["GET"])
+def api_case_detail(case_id: str):
+    user, err_resp, status = _require_supabase_user()
+    if err_resp:
+        return err_resp, status
+
+    try:
+        report = get_case_report(user.id, case_id)
+    except ValueError:
+        return jsonify({"error": "not found"}), 404
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+    return jsonify({"report": report})
+
+
+@app.route("/api/cases", methods=["GET"])
+def api_cases_list():
+    user, err_resp, status = _require_supabase_user()
+    if err_resp:
+        return err_resp, status
+
+    limit = int(request.args.get("limit", 10))
+    page = int(request.args.get("page", 0))
+    offset = page * limit
+    try:
+        data, has_more = list_cases(user.id, limit=limit, offset=offset)
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+    return jsonify({"cases": data, "hasMore": has_more})
+
+
 @app.route("/api/tts", methods=["POST"])
 def api_tts():
     data = request.get_json(force=True) or {}
@@ -165,6 +268,7 @@ def api_transcribe():
 
 @app.route("/api/ib/start", methods=["POST"])
 def api_ib_start():
+    global ib_report
     data = request.get_json(force=True) or {}
     product = data.get("product_group")
     industry = data.get("industry_group")
@@ -187,6 +291,7 @@ def api_ib_start():
     question = session_obj.start()
     global ib_session
     ib_session = session_obj
+    ib_report = None
     return jsonify(
         {
             "events": session_obj.serialize_events(),
@@ -198,7 +303,7 @@ def api_ib_start():
 
 @app.route("/api/ib/respond", methods=["POST"])
 def api_ib_respond():
-    global ib_session
+    global ib_session, ib_report
     if ib_session is None:
         return jsonify({"error": "session not started"}), 400
     data = request.get_json(force=True) or {}
@@ -212,6 +317,8 @@ def api_ib_respond():
     stage_id = "summary"
     if not done and ib_session.current_stage_state:
         stage_id = ib_session.current_stage_state["stage"].id
+    if done:
+        ib_report = ib_session.get_report()
     return jsonify(
         {
             "events": ib_session.serialize_events(),

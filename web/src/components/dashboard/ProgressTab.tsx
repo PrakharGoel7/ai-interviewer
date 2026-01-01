@@ -88,7 +88,7 @@ export default function ProgressTab({ cases, onViewHistory }: ProgressTabProps) 
       <section className="card hero-card">
         <div className="hero-copy">
           <p className="kicker">Minerva dashboard</p>
-          <h1>Your interview readiness.</h1>
+          <h1>Your consulting interview readiness.</h1>
           <p className="hero-subhead">{heroCopy}</p>
           <p className="hero-meta">
             {lastUpdated

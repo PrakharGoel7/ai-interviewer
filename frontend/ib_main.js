@@ -28,6 +28,7 @@ let silenceCheckInterval = null;
 let lastSoundTimestamp = 0;
 let loadingDepth = 0;
 let interviewDone = false;
+let ibReportRedirected = false;
 
 const SILENCE_THRESHOLD = 0.02;
 const SILENCE_DURATION_MS = 1500;
@@ -317,10 +318,17 @@ function disableInteraction() {
   startBtn.disabled = false;
   interviewDone = true;
   setVoiceStatus("Interview complete");
+  if (!ibReportRedirected) {
+    ibReportRedirected = true;
+    setTimeout(() => {
+      window.location.href = "/app/report?mode=ib";
+    }, 1200);
+  }
 }
 
 async function startSession() {
   interviewDone = false;
+  ibReportRedirected = false;
   const product = productSelect.value;
   const industry = industrySelect.value;
   if (!product || !industry) {

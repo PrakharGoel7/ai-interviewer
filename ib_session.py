@@ -1,10 +1,14 @@
 import json
 import os
 import random
+import time
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Tuple
+from datetime import datetime
+from typing import Any, Dict, List, Optional, Tuple
 
 from llm_client import LLMClient
+from prompts import IB_REPORT_SYSTEM, build_ib_report_payload
+from schemas import CasePerformanceReport
 
 
 QUESTION_SYSTEM = """You are Minerva, an expert investment banking interviewer.
@@ -38,7 +42,7 @@ You are given:
 
 Your job:
 1. Score the candidate from 1-5 for this stage.
-2. Provide concise feedback (2-3 sentences) referencing the canonical answer and the adjustments.
+2. Provide concise feedback referencing the canonical answer and the adjustments. Keep feedback very short (ideally one or two sentences) so it can appear as a brief bullet in the final report.
 
 Return JSON: {"score": int 1-5, "feedback": "<text>"}.
 """
@@ -111,12 +115,15 @@ class IBInterviewSession:
         self.llm = llm_client
         self.product_group = product_group
         self.industry_group = industry_group
+        self.started_at_ms: Optional[int] = None
+        self.completed_at_ms: Optional[int] = None
+        self.report_data: Optional[Dict[str, Any]] = None
 
         self.stages: List[IBStage] = [
-            IBStage("accounting", "Accounting fundamentals", "Lena (Accounting VP)", _load_guide(accounting_guide)),
-            IBStage("valuation", "Valuation", "Marco (Valuation Specialist)", _load_guide(valuation_guide)),
-            IBStage("product", f"{product_group} deep dive", "Priya (Product Lead)", _load_guide(PRODUCT_GUIDES[product_group])),
-            IBStage("sector", f"{industry_group} nuances", "Noah (Industry Partner)", _load_guide(SECTOR_GUIDES[industry_group])),
+            IBStage("accounting", "Accounting Fundamentals", "Lena (Accounting VP)", _load_guide(accounting_guide)),
+            IBStage("valuation", "Valuation Basics", "Marco (Valuation Specialist)", _load_guide(valuation_guide)),
+            IBStage("product", "Product Group Specifics", "Priya (Product Lead)", _load_guide(PRODUCT_GUIDES[product_group])),
+            IBStage("sector", "Industry Nuances", "Noah (Industry Partner)", _load_guide(SECTOR_GUIDES[industry_group])),
         ]
 
         self.stage_index = 0
@@ -125,9 +132,12 @@ class IBInterviewSession:
         self.current_stage_state: Optional[Dict] = None
         self.events: List[Dict] = []
         self.evaluations: List[Dict] = []
+        self.case_title = f"{industry_group} · {product_group} IB interview"
 
     # ---- public API ----
     def start(self) -> str:
+        if self.started_at_ms is None:
+            self.started_at_ms = self._now_ms()
         question = self._start_stage()
         return question
 
@@ -153,6 +163,7 @@ class IBInterviewSession:
         evaluation = self._evaluate_stage(stage_state)
         self.evaluations.append(
             {
+                "stage_id": stage_state["stage"].id,
                 "stage_title": stage_state["stage"].title,
                 "score": evaluation.get("score"),
                 "feedback": evaluation.get("feedback"),
@@ -166,6 +177,9 @@ class IBInterviewSession:
             summary = self._build_summary()
             self._record_event("interviewer", summary, "summary")
             self.substate = "done"
+            if self.completed_at_ms is None:
+                self.completed_at_ms = self._now_ms()
+            self.report_data = self._build_report_dict()
             return summary, True
 
         question = self._start_stage()
@@ -258,3 +272,150 @@ class IBInterviewSession:
             "stage_id": stage_id,
             "text": text,
         })
+
+    def get_report(self) -> Optional[Dict[str, Any]]:
+        return self.report_data
+
+    # ---- report helpers ----
+    def _build_report_dict(self) -> Dict[str, Any]:
+        completed_ms = self.completed_at_ms or self._now_ms()
+        start_ms = self.started_at_ms or completed_ms
+        duration_sec = max(1, int((completed_ms - start_ms) / 1000))
+        completed_at = datetime.fromtimestamp(completed_ms / 1000).strftime("%b %d, %Y %I:%M %p")
+        case_meta = {
+            "title": self.case_title,
+            "type": self.product_group,
+            "productGroup": self.product_group,
+            "industry": self.industry_group,
+            "completedAt": completed_at,
+            "durationSec": duration_sec,
+        }
+        stage_rows = []
+        for idx, ev in enumerate(self.evaluations):
+            score = ev.get("score")
+            try:
+                score_val = float(score)
+            except (TypeError, ValueError):
+                score_val = 0.0
+            stage_rows.append(
+                {
+                    "id": ev.get("stage_id") or f"stage_{idx}",
+                    "title": ev.get("stage_title") or f"Stage {idx + 1}",
+                    "score": round(score_val, 1),
+                    "feedback": ev.get("feedback") or "No feedback captured.",
+                }
+            )
+
+        scores = [row["score"] for row in stage_rows if isinstance(row["score"], (int, float))]
+        avg_score = round(sum(scores) / len(scores), 1) if scores else 0.0
+        band = self._score_to_band(avg_score)
+
+        if not stage_rows:
+            return self._manual_report(case_meta, band, avg_score, stage_rows)
+
+        payload = build_ib_report_payload(
+            case_meta=case_meta,
+            average_score=avg_score,
+            suggested_band=band,
+            stages=stage_rows,
+        )
+        try:
+            report = self.llm.run_json(
+                IB_REPORT_SYSTEM, payload, output_model=CasePerformanceReport
+            )
+            data = report.model_dump()
+            data["case"] = case_meta
+            data["overall"]["band"] = band
+            data["overall"]["averageScore"] = avg_score
+            return data
+        except Exception:
+            return self._manual_report(case_meta, band, avg_score, stage_rows)
+
+    def _manual_report(
+        self,
+        case_meta: Dict[str, Any],
+        band: str,
+        avg_score: float,
+        stage_rows: List[Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        summary = self._build_exec_summary()
+        rubrics = []
+        for idx, stage in enumerate(stage_rows):
+            feedback = stage.get("feedback") or "No feedback captured."
+            score_val = stage.get("score") or 0.0
+            title = stage.get("title") or f"Stage {idx + 1}"
+            key = stage.get("id") or f"stage_{idx}"
+            if score_val >= 4:
+                strengths = [{"text": feedback}]
+                improvements = [{"text": "Keep pushing depth to stand out further."}]
+            elif score_val >= 3:
+                strengths = [{"text": "Solid foundation demonstrated."}]
+                improvements = [{"text": feedback}]
+            else:
+                strengths = [{"text": "No notable strength captured."}]
+                improvements = [{"text": feedback}]
+            rubrics.append(
+                {
+                    "key": key,
+                    "title": title,
+                    "score": round(score_val, 1),
+                    "strengths": strengths,
+                    "improvements": improvements,
+                }
+            )
+
+        if not rubrics:
+            rubrics.append(
+                {
+                    "key": "overall",
+                    "title": "Overall interview",
+                    "score": 0.0,
+                    "strengths": [{"text": "No notable strength captured."}],
+                    "improvements": [{"text": summary or "No improvement noted."}],
+                }
+            )
+
+        return {
+            "case": case_meta,
+            "overall": {
+                "band": band,
+                "executiveSummary": summary,
+                "averageScore": avg_score,
+            },
+            "rubrics": rubrics,
+        }
+
+    def _build_exec_summary(self) -> str:
+        if not self.evaluations:
+            return "Interview feedback is not available yet."
+        scored = [ev for ev in self.evaluations if isinstance(ev.get("score"), (int, float))]
+        if not scored:
+            return "Interview feedback is not available yet."
+        best = max(scored, key=lambda ev: ev.get("score", 0))
+        worst = min(scored, key=lambda ev: ev.get("score", 0))
+        if best is worst:
+            base = f"Overall performance on {best['stage_title']} was scored {best.get('score', 'N/A')}/5."
+            feedback = best.get("feedback", "").strip()
+            return f"{base} {feedback}".strip()
+        focus_text = worst.get("feedback", "").strip()
+        summary = (
+            f"Strongest area: {best['stage_title']} ({best.get('score', 'N/A')}/5). "
+            f"Focus next on {worst['stage_title']} ({worst.get('score', 'N/A')}/5)."
+        )
+        if focus_text:
+            summary = f"{summary} {focus_text}"
+        return summary
+
+    @staticmethod
+    def _score_to_band(score: float) -> str:
+        if score >= 4.0:
+            return "Strong"
+        if score >= 3.0:
+            return "Solid"
+        if score >= 2.0:
+            return "Developing"
+        return "Needs work"
+
+    @staticmethod
+    def _now_ms() -> int:
+        return int(time.time() * 1000)

@@ -14,6 +14,7 @@ export interface CaseReportJson {
   case: {
     title: string;
     type: string;
+    productGroup?: string;
     industry: string;
     completedAt: string;
     durationSec: number;

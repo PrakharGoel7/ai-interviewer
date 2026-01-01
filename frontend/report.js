@@ -112,6 +112,10 @@ async function fetchReport() {
     const data = await resp.json();
     renderSummary(data);
     renderRubrics(data.rubrics || []);
+
+    if (window.caseReportSaver) {
+      window.caseReportSaver(data);
+    }
   } catch (err) {
     execSummaryEl.textContent = "Report not available yet. Please return after completing a case.";
     console.error(err);

@@ -167,7 +167,7 @@ function handleTurns(turns) {
   ) {
     reportRedirected = true;
     setTimeout(() => {
-      window.location.href = "report.html";
+      window.location.href = "/app/report";
     }, 1200);
   }
 }

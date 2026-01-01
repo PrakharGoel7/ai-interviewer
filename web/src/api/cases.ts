@@ -11,6 +11,7 @@ export interface CaseSummary {
   overall_score: number;
   focus_keys: string[];
   high_keys: string[];
+  track?: 'consulting' | 'ib';
   rubrics: {
     key: string;
     title: string;

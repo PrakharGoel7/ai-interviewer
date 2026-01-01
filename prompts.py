@@ -93,7 +93,7 @@ Instructions:
      }
   ]
 }
-- Executive summary: 1 sentence referencing overall strengths/gaps.
+- Executive summary: 1 short sentence referencing overall strengths/gaps.
 - Strengths and improvements: 1-3 concise bullets each. Only reference evidence/notes provided. No fabricated quotes.
 - If evidence is thin, write “No notable strength captured.” or similar as the bullet text.
 - Keep tone professional, specific, and referencing observable behavior only.
@@ -106,4 +106,49 @@ def build_report_payload(*, case_meta, overall_band, dimensions, stage_feedback_
         "suggested_band": overall_band,
         "dimensions": dimensions,
         "stage_feedback_notes": stage_feedback_notes,
+    }
+
+IB_REPORT_SYSTEM = """You produce an Investment Banking Interview Performance Report.
+Input:
+- case metadata (title, type, industry, completedAt, durationSec)
+- average_score (float)
+- suggested_band (use exactly as provided)
+- stages: list of {"id": str, "title": str, "score": number, "feedback": str}
+
+Instructions:
+Input:
+- case metadata
+- suggested overall band (keep as-is)
+- a list of dimension summaries with scores, criteria details, notes, and authentic quotes.
+- interviewer stage notes
+
+Instructions:
+- Use the provided numeric `score` values EXACTLY as given.
+- Produce JSON with this schema (all fields required):
+{
+  "case": {"title": str, "productGroup": str, "industry": str, "completedAt": str, "durationSec": int},
+  "overall": {"band": str, "executiveSummary": str},
+  "rubrics": [
+     {
+       "key": "...",
+       "title": "...",
+       "score": number,
+       "strengths": [{"text": "..."}, ...],
+       "improvements": [{"text": "..."}, ...]
+     }
+  ]
+}
+- Executive summary: 1 sentence referencing overall strengths/gaps.
+- Strengths and improvements: 1-3 concise bullets each. Only reference evidence/notes provided. No fabricated quotes.
+- If evidence is thin, write “No notable strength captured.” or similar as the bullet text.
+- Keep tone professional, specific, and referencing observable behavior only.
+"""
+
+
+def build_ib_report_payload(*, case_meta, average_score, suggested_band, stages):
+    return {
+        "case": case_meta,
+        "average_score": average_score,
+        "suggested_band": suggested_band,
+        "stages": stages,
     }

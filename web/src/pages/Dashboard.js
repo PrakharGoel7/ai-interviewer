@@ -29,6 +29,9 @@ export default function Dashboard() {
     const [ibFilters, setIbFilters] = useState(DEFAULT_FILTERS);
     const [track, setTrack] = useState('consulting');
     useEffect(() => {
+        document.title = 'Minerva | Progress Dashboard';
+    }, []);
+    useEffect(() => {
         const loadInitial = async () => {
             setLoading(true);
             try {

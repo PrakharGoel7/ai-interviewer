@@ -17,6 +17,10 @@ export default function ReportPage() {
   const isIBMode = mode === 'ib';
 
   useEffect(() => {
+    document.title = 'Minerva | Performance Report';
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     let attempts = 0;
     setReport(null);

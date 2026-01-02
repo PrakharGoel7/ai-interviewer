@@ -12,6 +12,10 @@ export default function Login() {
   const [submitLoading, setSubmitLoading] = useState(false);
 
   useEffect(() => {
+    document.title = 'Minerva | Login';
+  }, []);
+
+  useEffect(() => {
     if (!authLoading && user) {
       const redirect = searchParams.get('redirect');
       if (redirect) {

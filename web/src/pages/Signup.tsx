@@ -13,6 +13,10 @@ export default function Signup() {
   const [submitLoading, setSubmitLoading] = useState(false);
 
   useEffect(() => {
+    document.title = 'Minerva | Sign Up';
+  }, []);
+
+  useEffect(() => {
     if (!loading && user) {
       const redirect = searchParams.get('redirect');
       if (redirect) {

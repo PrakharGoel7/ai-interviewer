@@ -33,6 +33,7 @@ interface PatternCard {
 
 const ROLLING_WINDOW = 3;
 const CASE_TYPE_WINDOW = 20;
+const SIGNAL_WINDOW = 3;
 const RING_SIZE = 120;
 const RING_STROKE = 6;
 const RING_RADIUS = (RING_SIZE - RING_STROKE) / 2;
@@ -320,24 +321,24 @@ function detectPatterns(cases: CaseSummary[]): PatternCard[] {
   RUBRIC_KEYS.forEach((key) => {
     const scores = buildRubricSeries(cases, key).map((p) => p.score);
     if (!scores.length) return;
-    const lastFive = scores.slice(-5);
-    const prevFive = scores.slice(-10, -5);
+    const lastWindow = scores.slice(-SIGNAL_WINDOW);
+    const prevWindow = scores.slice(-SIGNAL_WINDOW * 2, -SIGNAL_WINDOW);
     const lastEight = scores.slice(-8);
 
-    if (lastFive.length >= 5) {
-      const weakCount = lastFive.filter((score) => score <= 3).length;
-      if (weakCount >= 3) {
+    if (lastWindow.length >= SIGNAL_WINDOW) {
+      const weakCount = lastWindow.filter((score) => score <= 3).length;
+      if (weakCount >= Math.ceil(SIGNAL_WINDOW * 0.6)) {
         patterns.push({
           id: `${key}-weak`,
           key,
           title: `Recurring weak spot: ${RUBRIC_LABELS[key]}`,
-          description: 'Scored ≤3 in most of the last five cases. Revisit your toolkit here.',
+          description: 'Scored ≤3 in most of the last few cases. Revisit your toolkit here.',
           priority: 1,
         });
       }
 
-      const strongCount = lastFive.filter((score) => score >= 4).length;
-      if (strongCount >= 4) {
+      const strongCount = lastWindow.filter((score) => score >= 4).length;
+      if (strongCount >= Math.ceil(SIGNAL_WINDOW * 0.66)) {
         patterns.push({
           id: `${key}-strength`,
           key,
@@ -348,9 +349,9 @@ function detectPatterns(cases: CaseSummary[]): PatternCard[] {
       }
     }
 
-    if (lastFive.length >= 5 && prevFive.length >= 5) {
-      const lastAvg = average(lastFive);
-      const prevAvg = average(prevFive);
+    if (lastWindow.length >= SIGNAL_WINDOW && prevWindow.length >= SIGNAL_WINDOW) {
+      const lastAvg = average(lastWindow);
+      const prevAvg = average(prevWindow);
       if (lastAvg !== null && prevAvg !== null && lastAvg - prevAvg <= -0.6) {
         patterns.push({
           id: `${key}-regression`,

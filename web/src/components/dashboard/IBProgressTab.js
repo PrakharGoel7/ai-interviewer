@@ -94,7 +94,7 @@ export default function IBProgressTab({ cases }) {
                                             if (typeof val === 'number')
                                                 return val.toFixed(2);
                                             return val ?? '—';
-                                        } }), _jsx(Line, { type: "monotone", dataKey: "score", stroke: "#0F766E", strokeWidth: 2, dot: false, connectNulls: false })] }) })) : (_jsx("p", { className: "muted", children: "Not enough data yet." })) })] }), _jsxs("section", { className: "card ib-coverage-card", children: [_jsx("div", { className: "card-header", children: _jsxs("div", { children: [_jsx("p", { className: "kicker", children: "Performance by context" }), _jsx("h2", { children: "Product-group and industry-specific average scores" }), _jsx("p", { className: "muted micro", children: "Product group specifics and industry nuances across saved IB interviews." })] }) }), _jsxs("div", { className: "ib-coverage-grid", children: [_jsxs("div", { className: "coverage-column", children: [_jsx("p", { className: "column-title", children: "Product groups" }), _jsx("div", { className: "coverage-list", children: productCoverage.length ? (productCoverage.map((row) => _jsx(CoverageRow, { row: row }, row.label))) : (_jsx("p", { className: "muted micro", children: "Need additional interviews to show product-level data." })) })] }), _jsxs("div", { className: "coverage-column", children: [_jsx("p", { className: "column-title", children: "Industries" }), _jsx("div", { className: "coverage-list", children: industryCoverage.length ? (industryCoverage.map((row) => _jsx(CoverageRow, { row: row }, row.label))) : (_jsx("p", { className: "muted micro", children: "Need additional interviews to show industry-level data." })) })] })] })] }), _jsxs("section", { className: "card signals-card", children: [_jsx("div", { className: "card-header", children: _jsxs("div", { children: [_jsx("p", { className: "kicker", children: "Signals" }), _jsx("h2", { children: "Signals from your recent IB cases" })] }) }), patternCards.length ? (_jsx("div", { className: "signals-grid", children: patternCards.map((pattern) => (_jsxs("article", { className: "pattern-card", children: [_jsx("p", { className: "pattern-title", children: pattern.title }), _jsx("p", { className: "muted", children: pattern.description })] }, pattern.id))) })) : (_jsx("p", { className: "muted", children: "No standout patterns detected yet." }))] }), _jsxs("section", { className: "card recent-cases-card", children: [_jsx("div", { className: "card-header", children: _jsxs("div", { children: [_jsx("p", { className: "kicker", children: "Recent interviews" }), _jsx("h2", { children: "Latest IB sessions" })] }) }), _jsxs("div", { className: "recent-table", children: [_jsxs("div", { className: "recent-header", children: [_jsx("span", { children: "Interview" }), _jsx("span", { children: "Date" }), _jsx("span", { children: "Avg score" }), _jsx("span", { children: "Overall band" })] }), sortedCases.slice(0, 6).map((caseItem) => (_jsxs("div", { className: "recent-row", children: [_jsx("span", { children: caseItem.title }), _jsx("span", { children: new Date(caseItem.completed_at).toLocaleDateString() }), _jsx("span", { children: caseItem.overall_score?.toFixed(1) ?? '—' }), _jsx("span", { children: caseItem.overall_band })] }, caseItem.id)))] })] })] }));
+                                        } }), _jsx(Line, { type: "monotone", dataKey: "score", stroke: "#0F766E", strokeWidth: 2, dot: false, connectNulls: false })] }) })) : (_jsx("p", { className: "muted", children: "Not enough data yet." })) })] }), _jsxs("section", { className: "card ib-coverage-card", children: [_jsx("div", { className: "card-header", children: _jsxs("div", { children: [_jsx("p", { className: "kicker", children: "Performance by context" }), _jsx("h2", { children: "Product-group and industry-specific average scores" }), _jsx("p", { className: "muted micro", children: "Product group specifics and industry nuances across saved IB interviews." })] }) }), _jsxs("div", { className: "ib-coverage-grid", children: [_jsxs("div", { className: "coverage-column", children: [_jsx("p", { className: "column-title", children: "Product groups" }), _jsx("div", { className: "coverage-list", children: productCoverage.length ? (productCoverage.map((row) => _jsx(CoverageRow, { row: row }, row.label))) : (_jsx("p", { className: "muted micro", children: "Need additional interviews to show product-level data." })) })] }), _jsxs("div", { className: "coverage-column", children: [_jsx("p", { className: "column-title", children: "Industries" }), _jsx("div", { className: "coverage-list", children: industryCoverage.length ? (industryCoverage.map((row) => _jsx(CoverageRow, { row: row }, row.label))) : (_jsx("p", { className: "muted micro", children: "Need additional interviews to show industry-level data." })) })] })] })] }), _jsxs("section", { className: "card signals-card", children: [_jsx("div", { className: "card-header", children: _jsxs("div", { children: [_jsx("p", { className: "kicker", children: "Signals" }), _jsx("h2", { children: "Signals from your recent IB cases" })] }) }), patternCards.length ? (_jsx("div", { className: "signals-grid", children: patternCards.map((pattern) => (_jsxs("article", { className: "pattern-card", children: [_jsx("p", { className: "pattern-title", children: pattern.title }), _jsx("p", { className: "muted", children: pattern.description })] }, pattern.id))) })) : (_jsx("p", { className: "muted", children: "No standout patterns detected yet." }))] })] }));
 }
 function ringOffset(score) {
     if (score == null)
@@ -243,17 +243,25 @@ function detectIBPatterns(cases, productCoverage, industryCoverage) {
         const scores = stageScoreMap[key];
         if (!scores.length)
             return;
-        const lastFive = scores.slice(-5);
-        const prevThree = scores.slice(-6, -3);
         const lastThree = scores.slice(-3);
-        if (lastFive.length === 5) {
-            const weakCount = lastFive.filter((score) => score <= 3).length;
-            if (weakCount >= 3) {
+        const prevThree = scores.slice(-6, -3);
+        if (lastThree.length === 3) {
+            const weakCount = lastThree.filter((score) => score <= 3).length;
+            if (weakCount >= 2) {
                 patterns.push({
                     id: `${key}-weak`,
                     title: `Recurring weak spot: ${getLabelForStage(key)}`,
-                    description: 'Scored ≤3 in most of the last five IB interviews.',
+                    description: 'Scored ≤3 in most of the last few IB interviews.',
                     priority: 1,
+                });
+            }
+            const strongCount = lastThree.filter((score) => score >= 4).length;
+            if (strongCount >= 2) {
+                patterns.push({
+                    id: `${key}-strength`,
+                    title: `Consistent strength: ${getLabelForStage(key)}`,
+                    description: 'Recent IB interviews show repeated high performance here.',
+                    priority: 4,
                 });
             }
         }

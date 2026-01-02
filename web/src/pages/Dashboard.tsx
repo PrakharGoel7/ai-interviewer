@@ -155,37 +155,47 @@ export default function Dashboard() {
   return (
     <div className="dashboard-shell">
       <div className="view-toggle-row">
-        <div className="track-toggle">
-          <button
-            type="button"
-            className={track === 'consulting' ? 'active' : ''}
-            onClick={() => handleTrackChange('consulting')}
-          >
-            Consulting
-          </button>
-          <button
-            type="button"
-            className={track === 'ib' ? 'active' : ''}
-            onClick={() => handleTrackChange('ib')}
-          >
-            Investment banking
-          </button>
+        <div className="control-group mode-selector">
+          <p className="control-label">Mode</p>
+          <div className="track-toggle" role="tablist" aria-label="Interview mode">
+            <button
+              type="button"
+              className={track === 'consulting' ? 'active' : ''}
+              onClick={() => handleTrackChange('consulting')}
+              aria-pressed={track === 'consulting'}
+            >
+              Consulting
+            </button>
+            <button
+              type="button"
+              className={track === 'ib' ? 'active' : ''}
+              onClick={() => handleTrackChange('ib')}
+              aria-pressed={track === 'ib'}
+            >
+              Investment banking
+            </button>
+          </div>
         </div>
-        <div className="dashboard-tabs compact">
-          <button
-            type="button"
-            className={activeTab === 'progress' ? 'tab active' : 'tab'}
-            onClick={() => setActiveTab('progress')}
-          >
-            Progress
-          </button>
-          <button
-            type="button"
-            className={activeTab === 'history' ? 'tab active' : 'tab'}
-            onClick={() => setActiveTab('history')}
-          >
-            Case history
-          </button>
+        <div className="control-group view-selector">
+          <p className="control-label subtle">View</p>
+          <div className="dashboard-tabs compact view-tabs" role="tablist" aria-label="Dashboard view">
+            <button
+              type="button"
+              className={activeTab === 'progress' ? 'tab active' : 'tab'}
+              onClick={() => setActiveTab('progress')}
+              aria-pressed={activeTab === 'progress'}
+            >
+              Progress
+            </button>
+            <button
+              type="button"
+              className={activeTab === 'history' ? 'tab active' : 'tab'}
+              onClick={() => setActiveTab('history')}
+              aria-pressed={activeTab === 'history'}
+            >
+              Case history
+            </button>
+          </div>
         </div>
       </div>
 

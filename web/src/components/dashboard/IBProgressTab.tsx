@@ -348,30 +348,6 @@ export default function IBProgressTab({ cases }: Props) {
         )}
       </section>
 
-      <section className="card recent-cases-card">
-        <div className="card-header">
-          <div>
-            <p className="kicker">Recent interviews</p>
-            <h2>Latest IB sessions</h2>
-          </div>
-        </div>
-        <div className="recent-table">
-          <div className="recent-header">
-            <span>Interview</span>
-            <span>Date</span>
-            <span>Avg score</span>
-            <span>Overall band</span>
-          </div>
-          {sortedCases.slice(0, 6).map((caseItem) => (
-            <div key={caseItem.id} className="recent-row">
-              <span>{caseItem.title}</span>
-              <span>{new Date(caseItem.completed_at).toLocaleDateString()}</span>
-              <span>{caseItem.overall_score?.toFixed(1) ?? '—'}</span>
-              <span>{caseItem.overall_band}</span>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
@@ -571,17 +547,25 @@ function detectIBPatterns(
   (Object.keys(stageScoreMap) as IBStageKey[]).forEach((key) => {
     const scores = stageScoreMap[key];
     if (!scores.length) return;
-    const lastFive = scores.slice(-5);
-    const prevThree = scores.slice(-6, -3);
     const lastThree = scores.slice(-3);
-    if (lastFive.length === 5) {
-      const weakCount = lastFive.filter((score) => score <= 3).length;
-      if (weakCount >= 3) {
+    const prevThree = scores.slice(-6, -3);
+    if (lastThree.length === 3) {
+      const weakCount = lastThree.filter((score) => score <= 3).length;
+      if (weakCount >= 2) {
         patterns.push({
           id: `${key}-weak`,
           title: `Recurring weak spot: ${getLabelForStage(key)}`,
-          description: 'Scored ≤3 in most of the last five IB interviews.',
+          description: 'Scored ≤3 in most of the last few IB interviews.',
           priority: 1,
+        });
+      }
+      const strongCount = lastThree.filter((score) => score >= 4).length;
+      if (strongCount >= 2) {
+        patterns.push({
+          id: `${key}-strength`,
+          title: `Consistent strength: ${getLabelForStage(key)}`,
+          description: 'Recent IB interviews show repeated high performance here.',
+          priority: 4,
         });
       }
     }

@@ -8,6 +8,13 @@ from supabase_client import supabase
 from persistence import save_case_report, list_cases, get_case_report
 from openai import OpenAI
 
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except Exception:
+    pass
+
 from case_store import CaseStore
 from controller import Session, InterviewController
 from llm_client import LLMClient

@@ -370,16 +370,16 @@ class InterviewController:
         report = self._generate_case_report(session, case)
         session.case_report = report
 
-        summary_text = report["overall"]["executiveSummary"]
-        spoken_summary = summary_text or "Thanks for working through the case today. Your detailed performance report is ready."
-
         stage = self.current_stage(session)  # end_feedback
-        session.events.append(Event(role="interviewer", stage_id=stage.id, text=spoken_summary, ts_ms=now_ms(), meta={"action": "DELIVER_FEEDBACK"}))
-
-        closing = "Thanks for your time — that’s the end of the interview."
-        session.events.append(Event(role="interviewer", stage_id=stage.id, text=closing, ts_ms=now_ms(), meta={"action": "THANK_AND_CLOSE"}))
         session.stage_index = len(STAGES)
-        return {"next_action": "DELIVER_FEEDBACK", "next_utterance": spoken_summary, "chart_spec": None, "stage_id": stage.id}
+        # No closing narration — front-end will jump directly to the report when it
+        # sees this sentinel action.
+        return {
+            "next_action": "SHOW_REPORT",
+            "next_utterance": "",
+            "chart_spec": None,
+            "stage_id": stage.id,
+        }
 
     def _generate_case_report(self, session: Session, case: Dict[str, Any]) -> Dict[str, Any]:
         dimension_inputs = self._collect_dimension_inputs(session)

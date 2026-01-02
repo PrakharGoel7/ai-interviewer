@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Minerva — AI Consulting Case Interviewer</title>
+    <title>Minerva | Consulting & IB Interview Practice</title>
+    <link rel="icon" type="image/svg+xml" href="owl.svg" />
     <link rel="stylesheet" href="styles.css" />
     <script src="nav-auth.js" defer></script>
   </head>
@@ -14,13 +15,52 @@
           <img src="logo.svg" alt="Minerva" class="nav-logo" />
         </a>
         <nav class="nav-links" aria-label="Primary">
-          <a class="nav-link" href="#how-it-works">How it works</a>
-          <a class="nav-link nav-auth-link" data-auth-link href="/app/login?redirect=/">Log in</a>
-          <div class="nav-cta">
-            <a class="nav-pill-btn" href="interview.html">Start consulting case</a>
-            <a class="nav-pill-btn" href="ib_interview.html">Start IB mock interview</a>
+          <div class="practice-toggle" role="group" aria-label="Interview mode">
+            <a class="practice-link" href="interview.html">
+              <span class="chip-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6" />
+                  <path d="M10 22h4" />
+                  <path d="M7 9a5 5 0 1 1 10 0c0 1.7-.8 3.2-2.2 4.2-.5.4-.8 1-.8 1.6V17h-4v-2.2c0-.6-.3-1.2-.8-1.6A5 5 0 0 1 7 9z" />
+                </svg>
+              </span>
+              <span>Consulting Case</span>
+            </a>
+            <a class="practice-link" href="ib_interview.html">
+              <span class="chip-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  <path d="M3 13h18" />
+                </svg>
+              </span>
+              <span>Investment Banking Interview</span>
+            </a>
           </div>
+          <a class="nav-link progress-chip" data-progress-link href="/app/login?redirect=/">
+            <span class="chip-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18" />
+                <rect x="7" y="10" width="3" height="7" rx="0.5" />
+                <rect x="12" y="6" width="3" height="11" rx="0.5" />
+                <rect x="17" y="12" width="3" height="5" rx="0.5" />
+              </svg>
+            </span>
+            <span>Progress Dashboard</span>
+          </a>
         </nav>
+        <div class="nav-user">
+          <a class="nav-login-btn" data-login-chip href="/app/login?redirect=/">
+            <span class="chip-icon" data-login-icon aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="10" width="14" height="11" rx="2" />
+                <path d="M7 10V7a5 5 0 0 1 10 0v3" />
+                <path d="M12 16v2" />
+              </svg>
+            </span>
+            <span data-login-text>Sign in</span>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -30,32 +70,48 @@
           <p class="eyebrow">Consulting & Finance interview practice</p>
           <h1>Practice interviews the way they’re actually judged.</h1>
           <p class="subhead">
-            Minerva is a voice-first AI interviewer for consulting and finance recruiting, simulating firm-specific and role-specific interviews with instant, calibrated feedback.
+            Live, voice-first consulting and investment banking interview practice, tailored to your target firms and industry focus.
           </p>
-          <div class="cta-row">
-            <a class="primary-btn" href="interview.html">Consulting Case</a>
-            <a class="primary-btn" href="ib_interview.html">IB Mock Interview</a>
-            <a class="primary-btn ghost hidden" data-auth-visible="true" href="/app/">View progress</a>
+          <div class="cta-row hero-cta">
+            <a class="hero-cta-btn hero-cta-btn--wide" href="interview.html">
+              <span class="hero-cta-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6" />
+                  <path d="M10 22h4" />
+                  <path d="M7 9a5 5 0 1 1 10 0c0 1.7-.8 3.2-2.2 4.2-.5.4-.8 1-.8 1.6V17h-4v-2.2c0-.6-.3-1.2-.8-1.6A5 5 0 0 1 7 9z" />
+                </svg>
+              </span>
+              <span>Consulting Case</span>
+            </a>
+            <a class="hero-cta-btn hero-cta-btn--wide" href="ib_interview.html">
+              <span class="hero-cta-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  <path d="M3 13h18" />
+                </svg>
+              </span>
+              <span>IB Interview</span>
+            </a>
           </div>
         </div>
         <div class="hero-visual">
           <div class="mock-card prompt-card">
             <div class="mock-header">
-              <span>Current prompt</span>
-              <span class="stage-pill">Stage: Structure</span>
+              <span>Current question</span>
             </div>
             <p>
-              “Walk me through how you’d decompose the profitability decline across this client’s regions. Where would you start?”
+              Walk me through how you’d decompose the profitability decline across this client’s regions. Where would you start?
             </p>
           </div>
           <div class="mock-card voice-card">
             <div class="mock-header">
               <span>Voice response</span>
-              <span class="timer">07:12</span>
+              <span class="timer">01:12</span>
             </div>
             <div class="voice-status">
               <div class="dot"></div>
-              Mic listening — answer when ready
+              Answer when ready
             </div>
             <div class="waveform">
               <span></span><span></span><span></span><span></span>
@@ -136,9 +192,6 @@
               <p>Receive structured, recruiter-calibrated feedback on framework quality, exhibit interpretation, and quantitative rigor.</p>
             </article>
           </div>
-          <div class="cta-row">
-            <a class="primary-btn" href="interview.html">Start consulting case</a>
-          </div>
         </div>
         <div
           class="tab-panel hidden"
@@ -163,9 +216,6 @@
               <h3>Get calibrated feedback</h3>
               <p>Receive feedback on technical accuracy and communication aligned with industry standards.</p>
             </article>
-          </div>
-          <div class="cta-row">
-            <a class="primary-btn" href="ib_interview.html">Start IB mock interview</a>
           </div>
         </div>
       </section>
@@ -200,6 +250,7 @@
           }
         });
       });
+
     </script>
   </body>
 </html>

@@ -174,13 +174,11 @@ class IBInterviewSession:
         self.stage_index += 1
 
         if self.stage_index >= len(self.stages):
-            summary = self._build_summary()
-            self._record_event("interviewer", summary, "summary")
             self.substate = "done"
             if self.completed_at_ms is None:
                 self.completed_at_ms = self._now_ms()
             self.report_data = self._build_report_dict()
-            return summary, True
+            return "", True
 
         question = self._start_stage()
         return question, False

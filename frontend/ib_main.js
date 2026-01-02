@@ -322,7 +322,7 @@ function disableInteraction() {
     ibReportRedirected = true;
     setTimeout(() => {
       window.location.href = "/app/report?mode=ib";
-    }, 1200);
+    }, 200);
   }
 }
 

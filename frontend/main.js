@@ -154,21 +154,21 @@ function handleTurns(turns) {
     renderChart(chartTurn.chart_spec);
   }
   const latest = turns[turns.length - 1];
+  const shouldShowReport =
+    latest &&
+    latest.stage_id === "end_feedback" &&
+    (latest.next_action === "SHOW_REPORT" || !latest.next_utterance);
+  if (shouldShowReport && !reportRedirected) {
+    reportRedirected = true;
+    setTimeout(() => {
+      window.location.href = "/app/report";
+    }, 200);
+    return;
+  }
   if (latest && latest.next_utterance) {
     latestPromptText = latest.next_utterance;
     currentPromptEl.textContent = latest.next_utterance;
     speak(latest.next_utterance);
-  }
-  if (
-    latest &&
-    latest.stage_id === "end_feedback" &&
-    !reportRedirected &&
-    (latest.next_action === "THANK_AND_CLOSE" || latest.next_action === "DELIVER_FEEDBACK")
-  ) {
-    reportRedirected = true;
-    setTimeout(() => {
-      window.location.href = "/app/report";
-    }, 1200);
   }
 }
 

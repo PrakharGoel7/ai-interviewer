@@ -5,7 +5,8 @@ Action = Literal[
     "READ_CASE", "ASK_CLARIFY", "ANSWER_CLARIFY",
     "ASK", "PROBE",
     "SHOW_CHART",
-    "DELIVER_FEEDBACK", "THANK_AND_CLOSE"
+    "DELIVER_FEEDBACK", "THANK_AND_CLOSE",
+    "SHOW_REPORT",
 ]
 
 class GeneratedCase(BaseModel):

@@ -134,6 +134,21 @@ def dashboard_app(path: str):
     return send_from_directory(WEB_APP_DIST, "index.html")
 
 
+@app.route("/assets/<path:path>")
+def dashboard_assets(path: str):
+    """
+    Serve dashboard static assets when the SPA is hosted at /app but references
+    absolute /assets URLs (e.g., Netlify build).
+    """
+    if not _react_app_available():
+        return jsonify({"error": "dashboard not built"}), 404
+    assets_dir = os.path.join(WEB_APP_DIST, "assets")
+    file_path = os.path.join(assets_dir, path)
+    if not os.path.exists(file_path):
+        return jsonify({"error": "asset not found"}), 404
+    return send_from_directory(assets_dir, path)
+
+
 @app.route("/api/start", methods=["POST"])
 def api_start():
     global session

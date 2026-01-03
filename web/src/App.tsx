@@ -11,11 +11,15 @@ import ReportPage from './pages/ReportPage';
 function App() {
   const { user, loading } = useAuth();
   const rawBase = import.meta.env.BASE_URL || '/';
-  const basename =
+  const envBase =
     rawBase !== '/' && rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
+  const runtimeBase =
+    typeof window !== 'undefined' && window.location.pathname.startsWith('/app')
+      ? '/app'
+      : envBase || '/';
 
   return (
-    <BrowserRouter basename={basename || '/'}>
+    <BrowserRouter basename={runtimeBase}>
       <Navbar />
       <Routes>
         <Route

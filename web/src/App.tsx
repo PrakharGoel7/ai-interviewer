@@ -8,15 +8,22 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
 import ReportPage from './pages/ReportPage';
 
+function getBasename(): string {
+  const rawBase = import.meta.env.BASE_URL || '/';
+  const normalized =
+    rawBase !== '/' && rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
+  if (typeof window !== 'undefined' && window.__APP_BASENAME__) {
+    return window.__APP_BASENAME__;
+  }
+  if (typeof window !== 'undefined' && window.location.pathname.startsWith('/app')) {
+    return '/app';
+  }
+  return normalized || '/';
+}
+
 function App() {
   const { user, loading } = useAuth();
-  const rawBase = import.meta.env.BASE_URL || '/';
-  const envBase =
-    rawBase !== '/' && rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
-  const runtimeBase =
-    typeof window !== 'undefined' && window.location.pathname.startsWith('/app')
-      ? '/app'
-      : envBase || '/';
+  const basename = getBasename();
 
   return (
     <BrowserRouter basename={runtimeBase}>

@@ -310,7 +310,7 @@ a {
 .page {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 20px 32px 80px;
+  padding: 20px 32px 16px;
 }
 
 .hero {
@@ -605,6 +605,50 @@ th {
   box-shadow: var(--shadow);
 }
 
+.contactFooter {
+  margin-top: 40px;
+  padding: 0 32px;
+}
+
+.contactFooterInner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.contactFooterDivider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+.contactFooterPrompt {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.contactFooterEmail {
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 140ms ease;
+}
+
+.contactFooterEmail:hover,
+.contactFooterEmail:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .step-number {
   font-size: 0.85rem;
   letter-spacing: 0.35em;
@@ -698,7 +742,11 @@ th {
   }
 
   .page {
-    padding: 40px 20px 64px;
+    padding: 40px 20px 32px;
+  }
+
+  .contactFooter {
+    padding: 0 20px;
   }
 
   .logo-row {

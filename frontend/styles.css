@@ -184,6 +184,128 @@ a {
   background: rgba(15, 23, 42, 0.08);
 }
 
+.auth-shell {
+  max-width: 480px;
+  margin: 0;
+  background: #fff;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 10px 20px rgba(11, 18, 32, 0.08);
+}
+
+.auth-shell form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-shell input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(11, 18, 32, 0.2);
+}
+
+.auth-shell button {
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background: #163a2a;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.error {
+  color: #b91c1c;
+  margin: 0;
+}
+
+.auth-modal-container {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.auth-modal-container.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.auth-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 12, 20, 0.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-modal-card {
+  position: relative;
+  width: min(480px, 100%);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 35px 80px rgba(11, 18, 32, 0.25);
+  transform: translateY(16px) scale(0.96);
+  opacity: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.auth-modal-card.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.auth-modal-body {
+  padding: 8px;
+}
+
+.auth-modal-shell {
+  margin: 0;
+  box-shadow: none;
+  background: transparent;
+  max-width: 100%;
+}
+
+.auth-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: rgba(11, 18, 32, 0.5);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.auth-modal-close:hover {
+  color: rgba(11, 18, 32, 0.8);
+}
+
+.auth-link-btn {
+  border: none;
+  background: none;
+  color: #0f766e;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.auth-link-btn:hover {
+  text-decoration: underline;
+}
+
 
 .page {
   max-width: 1160px;
@@ -215,6 +337,14 @@ a {
 .hero-text .subhead {
   font-size: 1.08rem;
   margin-bottom: 28px;
+}
+
+.hero-text .subhead-note {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(15, 23, 42, 0.8);
+  margin-top: -14px;
+  margin-bottom: 32px;
 }
 
 .hero-cta {

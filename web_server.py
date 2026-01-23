@@ -86,6 +86,32 @@ def take_turns(first_turn: Dict[str, Any]) -> List[Dict[str, Any]]:
         turns.append(pending)
     return [serialize_turn(t) for t in turns if t]
 
+def _infer_audio_suffix(upload) -> str:
+    mimetype = (getattr(upload, "mimetype", "") or "").lower()
+    filename = (getattr(upload, "filename", "") or "").lower()
+    def _match_from_mime(mime: str) -> Optional[str]:
+        if not mime:
+            return None
+        if "mp4" in mime or "mpeg" in mime:
+            return ".mp4"
+        if "m4a" in mime:
+            return ".m4a"
+        if "ogg" in mime:
+            return ".ogg"
+        if "wav" in mime:
+            return ".wav"
+        if "webm" in mime:
+            return ".webm"
+        return None
+
+    suffix = _match_from_mime(mimetype)
+    if suffix:
+        return suffix
+    for ext in (".mp4", ".m4a", ".ogg", ".wav", ".webm"):
+        if filename.endswith(ext):
+            return ext
+    return ".webm"
+
 
 @app.route("/")
 def index():
@@ -254,14 +280,19 @@ def api_tts():
     voice = data.get("voice", "alloy")
     if not text:
         return jsonify({"error": "text required"}), 400
-    resp = client.audio.speech.create(
-        model=os.getenv("VOICE_MODEL", "gpt-4o-mini-tts"),
-        voice=voice,
-        input=text,
-    )
-    audio_bytes = resp.read()
-    audio_b64 = base64.b64encode(audio_bytes).decode("utf-8")
-    return jsonify({"audio_base64": audio_b64, "mime": "audio/mpeg"})
+    if not os.getenv("OPENAI_API_KEY"):
+        return jsonify({"error": "TTS not configured. Set OPENAI_API_KEY."}), 503
+    try:
+        resp = client.audio.speech.create(
+            model=os.getenv("VOICE_MODEL", "gpt-4o-mini-tts"),
+            voice=voice,
+            input=text,
+        )
+        audio_bytes = resp.read()
+        audio_b64 = base64.b64encode(audio_bytes).decode("utf-8")
+        return jsonify({"audio_base64": audio_b64, "mime": "audio/mpeg"})
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
 
 
 @app.route("/api/transcribe", methods=["POST"])
@@ -269,9 +300,12 @@ def api_transcribe():
     audio = request.files.get("audio")
     if not audio:
         return jsonify({"error": "audio file required"}), 400
+    if not os.getenv("OPENAI_API_KEY"):
+        return jsonify({"error": "Transcription not configured. Set OPENAI_API_KEY."}), 503
     tmp_path = None
     try:
-        with tempfile.NamedTemporaryFile(suffix=".webm", delete=False) as tmp:
+        suffix = _infer_audio_suffix(audio)
+        with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
             audio.save(tmp)
             tmp_path = tmp.name
         with open(tmp_path, "rb") as f:

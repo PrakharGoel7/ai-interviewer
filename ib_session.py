@@ -201,16 +201,16 @@ class IBInterviewSession:
             "interviewer": stage.agent,
             "stage_title": stage.title,
         }
-        question_text = self.llm.run_text(QUESTION_SYSTEM, payload)
         try:
+            question_text = self.llm.run_text(QUESTION_SYSTEM, payload)
             question_data = json.loads(question_text)
-        except json.JSONDecodeError as exc:
-            raise RuntimeError(f"LLM question output invalid JSON: {question_text}") from exc
-
-        primary = question_data.get("question")
-        adjustments = question_data.get("adjustment_notes", "")
-        if not primary:
-            raise RuntimeError("LLM failed to return a primary question.")
+            primary = question_data.get("question")
+            adjustments = question_data.get("adjustment_notes", "")
+            if not primary:
+                raise RuntimeError("LLM failed to return a primary question.")
+        except Exception:
+            primary = entry.get("question") or "Walk me through your approach."
+            adjustments = "Fallback: used base guide question."
 
         self.current_stage_state = {
             "stage": stage,
@@ -231,15 +231,15 @@ class IBInterviewSession:
             "product_group": self.product_group,
             "industry_group": self.industry_group,
         }
-        follow_text = self.llm.run_text(FOLLOWUP_SYSTEM, payload)
         try:
+            follow_text = self.llm.run_text(FOLLOWUP_SYSTEM, payload)
             data = json.loads(follow_text)
-        except json.JSONDecodeError as exc:
-            raise RuntimeError(f"LLM follow-up output invalid JSON: {follow_text}") from exc
-        follow_up = data.get("follow_up")
-        if not follow_up:
-            raise RuntimeError("LLM follow-up output missing question.")
-        return follow_up
+            follow_up = data.get("follow_up")
+            if not follow_up:
+                raise RuntimeError("LLM follow-up output missing question.")
+            return follow_up
+        except Exception:
+            return "What key assumptions or risks would you highlight here?"
 
     def _evaluate_stage(self, stage_state: Dict) -> Dict:
         payload = {
@@ -251,12 +251,12 @@ class IBInterviewSession:
             "adjustment_notes": stage_state["adjustment_notes"],
             "stage_title": stage_state["stage"].title,
         }
-        evaluation_text = self.llm.run_text(EVAL_SYSTEM, payload)
         try:
+            evaluation_text = self.llm.run_text(EVAL_SYSTEM, payload)
             data = json.loads(evaluation_text)
-        except json.JSONDecodeError as exc:
-            raise RuntimeError(f"LLM evaluation output invalid JSON: {evaluation_text}") from exc
-        return data
+            return data
+        except Exception:
+            return {"score": 3, "feedback": "Unable to auto-evaluate; using a neutral score."}
 
     def _build_summary(self) -> str:
         lines = ["Thank you. Here's your investment banking interview summary:"]

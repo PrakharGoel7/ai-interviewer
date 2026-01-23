@@ -20,6 +20,8 @@ let useSpeechRecognition = false;
 let mediaRecorder = null;
 let mediaStream = null;
 let recordedChunks = [];
+let recordedMimeType = "audio/webm";
+let recordedFileExtension = "webm";
 let isRecording = false;
 let voiceEnabled = false;
 let recordingInterval = null;
@@ -38,8 +40,11 @@ let recordingStartMs = 0;
 const SILENCE_THRESHOLD = 0.02;
 const SILENCE_DURATION_MS = 1500;
 const MIN_RECORDING_MS = 4000;
+const DISABLE_BROWSER_SPEECH_RECOGNITION = true;
 
-recordBtn.disabled = true;
+if (recordBtn) {
+  recordBtn.disabled = true;
+}
 
 async function api(path, options = {}) {
   const resp = await fetch(path, {
@@ -178,7 +183,9 @@ function speak(text) {
   }
   if (window.audioManager) {
     window.audioManager.play(text).catch((err) => {
-      console.error("TTS playback failed:", err);
+      if (!err || err.message !== "TTS disabled") {
+        console.error("TTS playback failed:", err);
+      }
       fallbackSpeak(text);
     });
     return;
@@ -196,6 +203,16 @@ function fallbackSpeak(text) {
 }
 
 function initSpeech() {
+  if (DISABLE_BROWSER_SPEECH_RECOGNITION) {
+    useSpeechRecognition = false;
+    recognition = null;
+    if (supportsMediaRecorder()) {
+      return;
+    }
+    recordBtn.disabled = true;
+    setVoiceStatus("Voice not supported");
+    return;
+  }
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   if (SpeechRecognition) {
@@ -234,12 +251,24 @@ function initSpeech() {
     });
 
     recognition.addEventListener("error", (event) => {
-      console.error("Speech recognition error:", event.error);
+      if (event.error !== "network") {
+        console.error("Speech recognition error:", event.error);
+      }
       stopTimer();
       voiceWaveform.classList.remove("active");
       setVoiceStatus("Error. Try again.");
       recordBtn.classList.remove("recording");
       recordBtn.textContent = "Start recording";
+      if (event.error === "network") {
+        useSpeechRecognition = false;
+        recognition = null;
+        if (supportsMediaRecorder()) {
+          setVoiceStatus("Voice recognition unavailable. Use record.");
+        } else {
+          recordBtn.disabled = true;
+          setVoiceStatus("Voice not supported");
+        }
+      }
     });
     return;
   }
@@ -255,6 +284,24 @@ function initSpeech() {
 
 function supportsMediaRecorder() {
   return !!(navigator.mediaDevices && window.MediaRecorder);
+}
+
+function inferExtensionFromMime(mimeType) {
+  if (!mimeType) return "webm";
+  const lower = mimeType.toLowerCase();
+  if (lower.includes("mp4") || lower.includes("mpeg")) {
+    return "mp4";
+  }
+  if (lower.includes("ogg")) {
+    return "ogg";
+  }
+  if (lower.includes("wav")) {
+    return "wav";
+  }
+  if (lower.includes("webm")) {
+    return "webm";
+  }
+  return "webm";
 }
 
 function startListening() {
@@ -291,6 +338,8 @@ async function startMediaRecording() {
   recordingStartMs = Date.now();
   recordedChunks = [];
   mediaRecorder = new MediaRecorder(mediaStream);
+  recordedMimeType = mediaRecorder.mimeType || "audio/webm";
+  recordedFileExtension = inferExtensionFromMime(recordedMimeType);
   mediaRecorder.addEventListener("dataavailable", (event) => {
     if (event.data && event.data.size > 0) {
       recordedChunks.push(event.data);
@@ -374,10 +423,11 @@ async function transcribeRecording() {
     return;
   }
   setVoiceStatus("Processing voice…");
-  const blob = new Blob(recordedChunks, { type: "audio/webm" });
+  const blob = new Blob(recordedChunks, { type: recordedMimeType || "audio/webm" });
   recordedChunks = [];
   const formData = new FormData();
-  formData.append("audio", blob, "response.webm");
+  const extension = recordedFileExtension || "webm";
+  formData.append("audio", blob, `response.${extension}`);
   try {
     const resp = await fetch("/api/transcribe", { method: "POST", body: formData });
     const payload = await resp.json().catch(() => ({}));
@@ -520,43 +570,49 @@ async function sendResponse(text) {
   }
 }
 
-recordBtn.addEventListener("click", async () => {
-  if (!voiceEnabled) return;
-  if (useSpeechRecognition && recognition) {
-    if (isRecording) {
-      stopListening();
-    } else {
-      startListening();
+if (recordBtn) {
+  recordBtn.addEventListener("click", async () => {
+    if (!voiceEnabled) return;
+    if (useSpeechRecognition && recognition) {
+      if (isRecording) {
+        stopListening();
+      } else {
+        startListening();
+      }
+      return;
     }
-    return;
-  }
-  if (mediaRecorder && mediaRecorder.state === "recording") {
-    stopMediaRecording();
-  } else {
-    await startMediaRecording();
-  }
-});
+    if (mediaRecorder && mediaRecorder.state === "recording") {
+      stopMediaRecording();
+    } else {
+      await startMediaRecording();
+    }
+  });
+}
 
-startBtn.addEventListener("click", async () => {
-  const micOk = await ensureMicPermission();
-  if (!micOk) {
-    return;
-  }
-  enableVoice();
-  startBtn.disabled = true;
-  const ok = await startCase();
-  if (!ok) {
-    startBtn.disabled = false;
-  }
-});
+if (startBtn) {
+  startBtn.addEventListener("click", async () => {
+    const micOk = await ensureMicPermission();
+    if (!micOk) {
+      return;
+    }
+    enableVoice();
+    startBtn.disabled = true;
+    const ok = await startCase();
+    if (!ok) {
+      startBtn.disabled = false;
+    }
+  });
+}
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const text = textarea.value.trim();
-  if (!text) return;
-  textarea.value = "";
-  sendResponse(text);
-});
+if (form && textarea) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const text = textarea.value.trim();
+    if (!text) return;
+    textarea.value = "";
+    sendResponse(text);
+  });
+}
 
 if (repeatPromptBtn) {
   repeatPromptBtn.addEventListener("click", () => {
@@ -566,9 +622,11 @@ if (repeatPromptBtn) {
   });
 }
 
-skipBtn.addEventListener("click", () => {
-  sendResponse("I'd like to skip ahead to the next question.");
-});
+if (skipBtn) {
+  skipBtn.addEventListener("click", () => {
+    sendResponse("I'd like to skip ahead to the next question.");
+  });
+}
 
 initSpeech();
 function hasMetMinimumRecordingTime() {

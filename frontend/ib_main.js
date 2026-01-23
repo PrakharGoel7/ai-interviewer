@@ -15,6 +15,8 @@ let useSpeechRecognition = false;
 let mediaRecorder = null;
 let mediaStream = null;
 let recordedChunks = [];
+let recordedMimeType = "audio/webm";
+let recordedFileExtension = "webm";
 let isRecording = false;
 let voiceEnabled = false;
 let recordingInterval = null;
@@ -32,6 +34,7 @@ let ibReportRedirected = false;
 
 const SILENCE_THRESHOLD = 0.02;
 const SILENCE_DURATION_MS = 1500;
+const DISABLE_BROWSER_SPEECH_RECOGNITION = true;
 
 recordBtn.disabled = true;
 
@@ -72,10 +75,33 @@ function setLoading(active, message) {
 function speak(text) {
   if (!text) return;
   if (window.audioManager) {
-    window.audioManager.play(text).catch(() => fallbackSpeak(text));
+    window.audioManager.play(text).catch((err) => {
+      if (!err || err.message !== "TTS disabled") {
+        console.error("TTS playback failed:", err);
+      }
+      fallbackSpeak(text);
+    });
     return;
   }
   fallbackSpeak(text);
+}
+
+function inferExtensionFromMime(mimeType) {
+  if (!mimeType) return "webm";
+  const lower = mimeType.toLowerCase();
+  if (lower.includes("mp4") || lower.includes("mpeg")) {
+    return "mp4";
+  }
+  if (lower.includes("ogg")) {
+    return "ogg";
+  }
+  if (lower.includes("wav")) {
+    return "wav";
+  }
+  if (lower.includes("webm")) {
+    return "webm";
+  }
+  return "webm";
 }
 
 function fallbackSpeak(text) {
@@ -94,6 +120,15 @@ function updateEvents(events) {
 }
 
 function initSpeech() {
+  if (DISABLE_BROWSER_SPEECH_RECOGNITION) {
+    useSpeechRecognition = false;
+    recognition = null;
+    if (!supportsMediaRecorder()) {
+      recordBtn.disabled = true;
+      setVoiceStatus("Voice not supported");
+    }
+    return;
+  }
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (SpeechRecognition) {
     useSpeechRecognition = true;
@@ -128,17 +163,34 @@ function initSpeech() {
       }
     });
 
-    recognition.addEventListener("error", () => {
+    recognition.addEventListener("error", (event) => {
+      if (event && event.error !== "network") {
+        console.error("Speech recognition error:", event.error);
+      }
       stopTimer();
       voiceWaveform.classList.remove("active");
       setVoiceStatus("Error. Try again.");
       recordBtn.classList.remove("recording");
       recordBtn.textContent = "Start recording";
+      if (event && event.error === "network") {
+        useSpeechRecognition = false;
+        recognition = null;
+        if (supportsMediaRecorder()) {
+          setVoiceStatus("Voice recognition unavailable. Use record.");
+        } else {
+          recordBtn.disabled = true;
+          setVoiceStatus("Voice not supported");
+        }
+      }
     });
     return;
   }
 
   useSpeechRecognition = false;
+}
+
+function supportsMediaRecorder() {
+  return !!(navigator.mediaDevices && window.MediaRecorder);
 }
 
 function startListening() {
@@ -166,6 +218,8 @@ async function startMediaRecording() {
   }
   recordedChunks = [];
   mediaRecorder = new MediaRecorder(mediaStream);
+  recordedMimeType = mediaRecorder.mimeType || "audio/webm";
+  recordedFileExtension = inferExtensionFromMime(recordedMimeType);
   mediaRecorder.addEventListener("dataavailable", (event) => {
     if (event.data && event.data.size > 0) recordedChunks.push(event.data);
   });
@@ -240,10 +294,11 @@ async function transcribeRecording() {
     return;
   }
   setVoiceStatus("Processing voice…");
-  const blob = new Blob(recordedChunks, { type: "audio/webm" });
+  const blob = new Blob(recordedChunks, { type: recordedMimeType || "audio/webm" });
   recordedChunks = [];
   const formData = new FormData();
-  formData.append("audio", blob, "response.webm");
+  const extension = recordedFileExtension || "webm";
+  formData.append("audio", blob, `response.${extension}`);
   try {
     const resp = await fetch("/api/transcribe", { method: "POST", body: formData });
     const payload = await resp.json().catch(() => ({}));

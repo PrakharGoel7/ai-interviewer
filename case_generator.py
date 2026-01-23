@@ -4,6 +4,16 @@ from schemas import GeneratedCase
 
 CONSULTING_CASE_TYPES = ["M&A", "Market Entry", "Profitability", "Market Share"]
 
+REQUIRED_STAGES = {
+    "case_intro": ["readout"],
+    "structuring": ["primary_question", "probe_question"],
+    "chart": ["primary_question", "probe_question", "chart_spec"],
+    "math": ["primary_question"],
+    "creative": ["primary_question", "probe_question"],
+    "recommendation": ["primary_question"],
+    "end_feedback": [],
+}
+
 CASE_GEN_SYSTEM = """You generate McKinsey-style case interview content.
 Return ONLY valid JSON matching the schema for GeneratedCase:
 {
@@ -77,6 +87,76 @@ END OF EXAMPLES
 Now generate ONE NEW case (different client + different industry + new numbers) that matches the same quality bar and stage intent. Return ONLY the JSON.
 """
 
+def _validate_case(case: Dict[str, Any]) -> None:
+    stages = case.get("stages") or {}
+    if not case.get("background"):
+        raise ValueError("Generated case missing background.")
+    for stage_id, fields in REQUIRED_STAGES.items():
+        if stage_id not in stages:
+            raise ValueError(f"Generated case missing stage '{stage_id}'.")
+        stage = stages.get(stage_id) or {}
+        for field in fields:
+            if field not in stage or stage.get(field) in (None, ""):
+                raise ValueError(f"Generated case stage '{stage_id}' missing '{field}'.")
+        if stage_id == "chart":
+            chart = stage.get("chart_spec") or {}
+            for key in ("type", "title", "data"):
+                if key not in chart or chart.get(key) in (None, ""):
+                    raise ValueError("Generated case chart_spec missing required fields.")
+
+
+def _fallback_case(case_type: Optional[str] = None) -> Dict[str, Any]:
+    resolved_type = case_type if case_type in CONSULTING_CASE_TYPES else "Profitability"
+    return {
+        "title": "Regional Grocery Chain Margin Slide",
+        "type": resolved_type,
+        "industry": "Retail",
+        "background": (
+            "A regional grocery chain with 120 stores has seen operating margin "
+            "decline over the last two years. The CEO wants to understand the drivers "
+            "and identify actions to restore margins within 12 months."
+        ),
+        "stages": {
+            "case_intro": {
+                "readout": (
+                    "Our client is a regional grocery chain with 120 stores across the Midwest. "
+                    "Operating margin has declined from 6% to 3% over two years. "
+                    "The CEO wants to understand the drivers and restore margins within 12 months."
+                )
+            },
+            "structuring": {
+                "primary_question": "How would you structure this problem to diagnose the margin decline?",
+                "probe_question": "Which data sources would you prioritize first and why?",
+            },
+            "chart": {
+                "primary_question": "What are 2-3 observations from this exhibit, and what do they imply?",
+                "probe_question": "What actions would you test based on these trends?",
+                "chart_spec": {
+                    "type": "bar",
+                    "title": "Store Profit by Region (Last FY)",
+                    "x_label": "Region",
+                    "y_label": "Profit ($M)",
+                    "data": {"North": 14, "South": 9, "East": 6, "West": 4},
+                },
+            },
+            "math": {
+                "primary_question": (
+                    "If average basket size is $45 and daily transactions drop by 1,500 across the chain, "
+                    "what is the annual revenue impact?"
+                )
+            },
+            "creative": {
+                "primary_question": "What levers could the client pull to improve margin within a year?",
+                "probe_question": "Which initiatives would you prioritize and why?",
+            },
+            "recommendation": {
+                "primary_question": "What is your recommendation to the CEO, and what are the next steps?",
+            },
+            "end_feedback": {},
+        },
+    }
+
+
 def generate_case(llm, case_theme: Optional[str] = None, difficulty: str = "medium", case_type: Optional[str] = None) -> Dict[str, Any]:
     user_payload = {
         "theme": case_theme or "surprise me (but business-realistic)",
@@ -89,13 +169,17 @@ def generate_case(llm, case_theme: Optional[str] = None, difficulty: str = "medi
 
     last_error = None
     for attempt in range(1, 4):
-        text = llm.run_text(CASE_GEN_SYSTEM, user_payload)  # returns JSON text
         try:
+            text = llm.run_text(CASE_GEN_SYSTEM, user_payload)  # returns JSON text
             data = json.loads(text)
             case = GeneratedCase.model_validate(data)  # validate shape
-            return case.model_dump()
-        except json.JSONDecodeError as exc:
-            print(f"⚠️  Case generation attempt {attempt} returned invalid JSON: {exc}")
-            print("Raw response snippet:", text[:500])
+            case_payload = case.model_dump()
+            _validate_case(case_payload)
+            return case_payload
+        except Exception as exc:
+            print(f"⚠️  Case generation attempt {attempt} failed: {exc}")
+            if "text" in locals():
+                print("Raw response snippet:", text[:500])
             last_error = exc
-    raise ValueError("Unable to generate valid case JSON after 3 attempts") from last_error
+    print("⚠️  Falling back to a static consulting case.")
+    return _fallback_case(case_type)
